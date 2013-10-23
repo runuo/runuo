@@ -150,6 +150,7 @@ namespace Server.Misc
 			// 10.0.0.0/8
 			// 172.16.0.0/12
 			// 192.168.0.0/16
+			// 169.254.0.0/16
 
 			if ( ip.AddressFamily == AddressFamily.InterNetworkV6 )
 				return false;
@@ -160,6 +161,8 @@ namespace Server.Misc
 				return true;
 			else if ( Utility.IPMatch( "172.16-31.*", ip ) )
 				return true;
+			else if ( Utility.IPMatch( "169.254.*", ip ) )
+				return true;
 			else
 				return false;
 		}
@@ -167,7 +170,7 @@ namespace Server.Misc
 		private static IPAddress FindPublicAddress()
 		{
 			try {
-				WebRequest req = HttpWebRequest.Create( "http://www.runuo.com/ip.php" );
+				WebRequest req = HttpWebRequest.Create( "https://zenvera.com/ip.php" );
 				req.Timeout = 15000;
 
 				WebResponse res = req.GetResponse();

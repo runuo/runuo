@@ -112,32 +112,44 @@ namespace Server
 		public static Thread Thread { get { return m_Thread; } }
 		public static MultiTextWriter MultiConsoleOut { get { return m_MultiConOut; } }
 
-#if false && !MONO
-		[DllImport("kernel32")]
-		private static extern long GetTickCount64();
-#endif
-
-		/* DateTime.Now and DateTime.UtcNow depend on the system time which is undesirable.
+		/* DateTime.Now and DateTime.UtcNow are based on actual system clock time.
+		 * The resolution is acceptable but large clock jumps are possible and cause issues.
+		 * GetTickCount and GetTickCount64 have poor resolution.
 		 * GetTickCount64 is unavailable on Windows XP and Windows Server 2003.
-		 * Stopwatch.GetTimestamp() (QueryPerformanceCounter) is high resolution,
-		 * but expensive to call and unreliable with certain system configurations.
+		 * Stopwatch.GetTimestamp() (QueryPerformanceCounter) is high resolution, but
+		 * somewhat expensive to call and unreliable with certain system configurations.
 		 */
 
-		/* The following implementation is an effective substitute for GetTickCount64 that
+		/* The following implementation contains an effective substitute for GetTickCount64 that
 		 * is reliable as long as it is retrieved once every 2^32 ms (~49 days).
 		 */
 
-#if Framework_4_0
+		/* We don't really need this, but it may be useful in the future.
 		private static ThreadLocal<long> _HighOrder = new ThreadLocal<long>();
 		private static ThreadLocal<uint> _LastTickCount = new ThreadLocal<uint>();
+		*/
 
-		private static readonly double _Frequency = 1000.0 / Stopwatch.Frequency; 
+		private static readonly bool _HighRes = Stopwatch.IsHighResolution;
+		private static readonly double _Frequency = 1000.0 / Stopwatch.Frequency;
+
+		private static bool _UseHRT;
+
+		public static bool UsingHighResolutionTiming { get { return _UseHRT && _HighRes && !m_Unix; } }
 
 		public static long TickCount {
 			get {
-				if (Stopwatch.IsHighResolution) // TODO: Unreliable with certain system configurations.
-					return (long)((double)Stopwatch.GetTimestamp() * _Frequency);
+#if !MONO
+				if (_UseHRT && _HighRes)
+				{
+					long t = 0;
+					SafeNativeMethods.QueryPerformanceCounter(out t);
+					return (long)((double)t * _Frequency);
+				}
+				else
+#endif
+					return (long)((double)DateTime.UtcNow.Ticks * 0.0001);
 
+				/* We don't really need this, but it may be useful in the future.
 				uint t = (uint)Environment.TickCount;
 
 				if (_LastTickCount.Value > t) // Wrapped
@@ -146,37 +158,9 @@ namespace Server
 				_LastTickCount.Value = t;
 				
 				return _HighOrder.Value | _LastTickCount.Value;
+				*/
 			}
 		}
-#else
-		private static long _HighOrder;
-		private static uint _LastTickCount;
-
-		private static object _TickSync = new object();
-
-		private static readonly double _Frequency = 1000.0 / Stopwatch.Frequency; 
-
-		public static long TickCount
-		{
-			get
-			{
-				if (Stopwatch.IsHighResolution) // TODO: Unreliable with certain system configurations.
-					return (long)((double)Stopwatch.GetTimestamp() * _Frequency);
-
-				lock (_TickSync)
-				{
-					uint t = (uint)Environment.TickCount;
-
-					if (_LastTickCount > t) // Wrapped
-						_HighOrder += 0x100000000;
-
-					_LastTickCount = t;
-
-					return _HighOrder | _LastTickCount;
-				}
-			}
-		}
-#endif
 
 #if Framework_4_0
 		public static readonly bool Is64Bit = Environment.Is64BitProcess;
@@ -368,6 +352,11 @@ namespace Server
 		internal delegate bool ConsoleEventHandler( ConsoleEventType type );
 		internal static ConsoleEventHandler m_ConsoleEventHandler;
 
+		internal class SafeNativeMethods {
+			[DllImport("kernel32")]
+			internal static extern bool QueryPerformanceCounter(out long value);
+		}
+
 		internal class UnsafeNativeMethods {
 			[DllImport("Kernel32")]
 			internal static extern bool SetConsoleCtrlHandler(ConsoleEventHandler callback, bool add);
@@ -472,6 +461,8 @@ namespace Server
 					m_HaltOnWarning = true;
 				else if ( Insensitive.Equals( args[i], "-vb" ) )
 					m_VBdotNET = true;
+				else if (Insensitive.Equals(args[i], "-usehrt"))
+					_UseHRT = true;
 			}
 
 			try
@@ -509,8 +500,8 @@ namespace Server
 			Version ver = m_Assembly.GetName().Version;
 
 			// Added to help future code support on forums, as a 'check' people can ask for to it see if they recompiled core or not
-			Console.WriteLine( "RunUO - [www.runuo.com] Version {0}.{1}, Build {2}.{3}", ver.Major, ver.Minor, ver.Build, ver.Revision );
-			Console.WriteLine( "Core: Running on .NET Framework Version {0}.{1}.{2}", Environment.Version.Major, Environment.Version.Minor, Environment.Version.Build );
+			Console.WriteLine("RunUO - [https://github.com/runuo/] Version {0}.{1}.{2}.{3}", ver.Major, ver.Minor, ver.Build, ver.Revision);
+			Console.WriteLine("Core: Running on .NET Framework Version {0}.{1}.{2}", Environment.Version.Major, Environment.Version.Minor, Environment.Version.Build);
 
 			string s = Arguments;
 
@@ -537,6 +528,9 @@ namespace Server
 
 			if ( GCSettings.IsServerGC )
 				Console.WriteLine("Core: Server garbage collection mode enabled");
+
+			if (_UseHRT)
+				Console.WriteLine("Core: Requested high resolution timing ({0})", UsingHighResolutionTiming ? "Supported" : "Unsupported");
 
 			Console.WriteLine("RandomImpl: {0} ({1})", RandomImpl.Type.Name, RandomImpl.IsHardwareRNG ? "Hardware" : "Software");
 

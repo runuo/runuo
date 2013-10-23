@@ -4498,9 +4498,10 @@ namespace Server
 					IPooledEnumerable<NetState> eable = map.GetClientsInRange(m_Location);
 					Packet p = null;
 
-					bool sameLoc = false;
+					foreach(NetState ns in eable) {
+						if (ns.StygianAbyss)
+								continue;
 
-					foreach( NetState ns in eable ) {
 						if( ns.Mobile != this && ns.Mobile.CanSee( this ) && ns.Mobile.InLOS( this ) && ns.Mobile.CanSee( root ) ) {
 							if (p == null) {
 								IEntity trg;
@@ -4510,14 +4511,9 @@ namespace Server
 								else
 									trg = new Entity(((Item)root).Serial, ((Item)root).Location, map);
 
-								if (m_Location == trg.Location)
-									sameLoc = true;
-
 								p = Packet.Acquire(new DragEffect(this, trg, item.ItemID, item.Hue, item.Amount));
 							}
 
-							if ( ns.StygianAbyss && sameLoc )
-								continue; // prevents crash
 							ns.Send( p );
 						}
 					}

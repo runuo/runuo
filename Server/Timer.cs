@@ -355,7 +355,7 @@ namespace Server
 					if ( loaded )
 						Core.Set();
 
-					m_Signal.WaitOne( 10, false );
+					m_Signal.WaitOne(1, false);
 				}
 			}
 		}

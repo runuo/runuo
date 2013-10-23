@@ -1236,6 +1236,8 @@ namespace Server.Mobiles
 				if ( curWeight > maxWeight )
 					this.SendLocalizedMessage( 1019035, true, String.Format( " : {0} / {1}", curWeight, maxWeight ) );
 			}
+
+			base.OnSubItemAdded(item);
 		}
 
 		public override bool CanBeHarmful( Mobile target, bool message, bool ignoreOurBlessedness )
