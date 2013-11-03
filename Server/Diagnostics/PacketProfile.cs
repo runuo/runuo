@@ -21,6 +21,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using System.IO;
 
 namespace Server.Diagnostics {
@@ -81,13 +82,8 @@ namespace Server.Diagnostics {
 
 		private long _created;
 
-		public long Created {
-			get {
-				return _created;
-			}
-			set {
-				_created = value;
-			}
+		public void Increment() {
+			Interlocked.Increment(ref _created);
 		}
 
 		public PacketSendProfile( Type type )
@@ -97,7 +93,7 @@ namespace Server.Diagnostics {
 		public override void WriteTo( TextWriter op ) {
 			base.WriteTo( op );
 
-			op.Write( "\t{0,12:N0}", Created );
+			op.Write( "\t{0,12:N0}", _created );
 		}
 	}
 
