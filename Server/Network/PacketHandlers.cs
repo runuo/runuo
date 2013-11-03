@@ -1297,11 +1297,11 @@ namespace Server.Network
 
 			if ( state.StygianAbyss ) {
 				state.Send( new MobileUpdate( m ) );
-				state.Send( new MobileIncoming( m, m ) );
 			} else {
 				state.Send( new MobileUpdateOld( m ) );
-				state.Send( new MobileIncomingOld( m, m ) );
 			}
+
+			state.Send(MobileIncoming.Create(state, m, m));
 
 			m.SendEverything();
 
@@ -2079,7 +2079,7 @@ namespace Server.Network
 
 			state.Sequence = 0;
 
-			if ( state.StygianAbyss ) {
+			if (state.NewMobileIncoming) {
 				state.Send( new MobileUpdate( m ) );
 				state.Send( new MobileUpdate( m ) );
 
@@ -2100,6 +2100,27 @@ namespace Server.Network
 				state.Send( new MobileStatus( m, m ) );
 				state.Send( Server.Network.SetWarMode.Instantiate( m.Warmode ) );
 				state.Send( new MobileIncoming( m, m ) );
+			} else if ( state.StygianAbyss ) {
+				state.Send( new MobileUpdate( m ) );
+				state.Send( new MobileUpdate( m ) );
+
+				m.CheckLightLevels( true );
+
+				state.Send( new MobileUpdate( m ) );
+
+				state.Send( new MobileIncomingSA( m, m ) );
+				//state.Send( new MobileAttributes( m ) );
+				state.Send( new MobileStatus( m, m ) );
+				state.Send( Server.Network.SetWarMode.Instantiate( m.Warmode ) );
+
+				m.SendEverything();
+
+				state.Send( SupportedFeatures.Instantiate( state ) );
+				state.Send( new MobileUpdate( m ) );
+				//state.Send( new MobileAttributes( m ) );
+				state.Send( new MobileStatus( m, m ) );
+				state.Send( Server.Network.SetWarMode.Instantiate( m.Warmode ) );
+				state.Send( new MobileIncomingSA( m, m ) );
 			} else {
 				state.Send( new MobileUpdateOld( m ) );
 				state.Send( new MobileUpdateOld( m ) );

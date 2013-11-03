@@ -165,7 +165,9 @@ namespace Server.Network {
 			set {
 				m_Version = value;
 
-				if ( value >= m_Version70300 ) {
+				if ( value >= m_Version70331 ) {
+					_ProtocolChanges = ProtocolChanges.Version70331;
+				} else if ( value >= m_Version70300 ) {
 					_ProtocolChanges = ProtocolChanges.Version70300;
 				} else if ( value >= m_Version70160 ) {
 					_ProtocolChanges = ProtocolChanges.Version70160;
@@ -205,6 +207,7 @@ namespace Server.Network {
 		private static ClientVersion m_Version70130	= new ClientVersion( "7.0.13.0" );
 		private static ClientVersion m_Version70160	= new ClientVersion( "7.0.16.0" );
 		private static ClientVersion m_Version70300	= new ClientVersion( "7.0.30.0" );
+		private static ClientVersion m_Version70331 = new ClientVersion( "7.0.33.1" );
 
 		private ProtocolChanges _ProtocolChanges;
 
@@ -221,6 +224,7 @@ namespace Server.Network {
 			NewCharacterList		= 0x00000200,
 			NewCharacterCreation		= 0x00000400,
 			ExtendedStatus				= 0x00000800,
+			NewMobileIncoming			= 0x00001000,
 
 			Version400a			= NewSpellbook,
 			Version407a			= Version400a  | DamagePacket,
@@ -233,7 +237,8 @@ namespace Server.Network {
 			Version7090			= Version7000  | HighSeas,
 			Version70130			= Version7090  | NewCharacterList,
 			Version70160			= Version70130 | NewCharacterCreation,
-			Version70300			= Version70160 | ExtendedStatus
+			Version70300	= Version70160 | ExtendedStatus,
+			Version70331	= Version70300 | NewMobileIncoming
 		}
 
 		public bool NewSpellbook { get { return ((_ProtocolChanges & ProtocolChanges.NewSpellbook) != 0); } }
@@ -248,6 +253,7 @@ namespace Server.Network {
 		public bool NewCharacterList { get { return ((_ProtocolChanges & ProtocolChanges.NewCharacterList) != 0); } }
 		public bool NewCharacterCreation { get { return ((_ProtocolChanges & ProtocolChanges.NewCharacterCreation) != 0); } }
 		public bool ExtendedStatus { get { return ((_ProtocolChanges & ProtocolChanges.ExtendedStatus) != 0); } }
+		public bool NewMobileIncoming { get { return ((_ProtocolChanges & ProtocolChanges.NewMobileIncoming) != 0); } }
 
 		public bool IsUOTDClient {
 			get {
