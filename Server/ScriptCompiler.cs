@@ -97,6 +97,8 @@ namespace Server
 
 			AppendCompilerOption( ref sb, "/d:Framework_4_0" );
 
+			AppendCompilerOption(ref sb, "/d:NEWTIMERS");
+
 			return (sb == null ? null : sb.ToString());
 		}
 
