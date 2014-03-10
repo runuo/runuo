@@ -93,7 +93,7 @@ namespace Server
 			AppendCompilerOption( ref sb, "/d:MONO" );
 #endif
 
-			//These two defines are legacy, ie, depreciated.
+			// These two defines are legacy, ie, deprecated.
 			if( Core.Is64Bit )
 				AppendCompilerOption( ref sb, "/d:x64" );
 
@@ -101,6 +101,8 @@ namespace Server
 #if Framework_4_0
 			AppendCompilerOption( ref sb, "/d:Framework_4_0" );
 #endif
+
+			AppendCompilerOption(ref sb, "/d:NEWTIMERS");
 
 			return (sb == null ? null : sb.ToString());
 		}
