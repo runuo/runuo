@@ -1,0 +1,39 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - ChatUser</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.Chat.html">Back to Server.Engines.Chat</a></h4>
+      <h2>ChatUser</h2>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> AddChatUser( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> GetChatUser( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> GetChatUser( <font color="blue">string</font> username )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> GlobalSendCommand( <!-- DBG-0 --><a href="ChatCommand.html">ChatCommand</a> command )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> GlobalSendCommand( <!-- DBG-0 --><a href="ChatCommand.html">ChatCommand</a> command, <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> initiator )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> GlobalSendCommand( <!-- DBG-0 --><a href="ChatCommand.html">ChatCommand</a> command, <font color="blue">string</font> param1 )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> GlobalSendCommand( <!-- DBG-0 --><a href="ChatCommand.html">ChatCommand</a> command, <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> initiator, <font color="blue">string</font> param1 )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> GlobalSendCommand( <!-- DBG-0 --><a href="ChatCommand.html">ChatCommand</a> command, <font color="blue">string</font> param1, <font color="blue">string</font> param2 )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> GlobalSendCommand( <!-- DBG-0 --><a href="ChatCommand.html">ChatCommand</a> command, <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> initiator, <font color="blue">string</font> param1, <font color="blue">string</font> param2 )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> RemoveChatUser( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> RemoveChatUser( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      (<font color="blue">ctor</font>) ChatUser( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">bool</font> Anonymous( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Channel.html">Channel</a> CurrentChannel( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="ChatUser.html">ChatUser</a>&gt; Ignored( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IgnorePrivateMessage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="ChatUser.html">ChatUser</a>&gt; Ignoring( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsModerator( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsOnline( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Mobile( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> Username( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> AddIgnored( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user )<br>
+      <font color="blue">bool</font> CheckOnline()<br>
+      <font color="blue">char</font> GetColorCharacter()<br>
+      <font color="blue">bool</font> IsIgnored( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> check )<br>
+      <font color="blue">void</font> RemoveIgnored( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user )<br>
+      <font color="blue">void</font> SendMessage( <font color="blue">int</font> number )<br>
+      <font color="blue">void</font> SendMessage( <font color="blue">int</font> number, <font color="blue">string</font> param1 )<br>
+      <font color="blue">void</font> SendMessage( <font color="blue">int</font> number, <font color="blue">string</font> param1, <font color="blue">string</font> param2 )<br>
+      <font color="blue">void</font> SendMessage( <font color="blue">int</font> number, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">string</font> param1, <font color="blue">string</font> param2 )<br>
+   </body>
+</html>

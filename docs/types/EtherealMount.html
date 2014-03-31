@@ -1,0 +1,37 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - EtherealMount</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Mobiles.html">Back to Server.Mobiles</a></h4>
+      <h2>EtherealMount : <!-- DBG-1 --><a href="Item.html">Item</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="IMount.html">IMount</a>, <!-- DBG-2.2 --><a href="IMountItem.html">IMountItem</a>, <!-- DBG-2.2 --><a href="IRewardItem.html">IRewardItem</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="ChargerOfTheFallen.html">ChargerOfTheFallen</a>, <!-- DBG-3 --><a href="EtherealBeetle.html">EtherealBeetle</a>, <!-- DBG-3 --><a href="EtherealCuSidhe.html">EtherealCuSidhe</a>, <!-- DBG-3 --><a href="EtherealHiryu.html">EtherealHiryu</a>, <!-- DBG-3 --><a href="EtherealHorse.html">EtherealHorse</a>, <!-- DBG-3 --><a href="EtherealKirin.html">EtherealKirin</a>, <!-- DBG-3 --><a href="EtherealLlama.html">EtherealLlama</a>, <!-- DBG-3 --><a href="EtherealOstard.html">EtherealOstard</a>, <!-- DBG-3 --><a href="EtherealReptalon.html">EtherealReptalon</a>, <!-- DBG-3 --><a href="EtherealRidgeback.html">EtherealRidgeback</a>, <!-- DBG-3 --><a href="EtherealSwampDragon.html">EtherealSwampDragon</a>, <!-- DBG-3 --><a href="EtherealUnicorn.html">EtherealUnicorn</a>, <!-- DBG-3 --><a href="RideablePolarBear.html">RideablePolarBear</a></h4>
+<h4>Nested Types: <!-- DBG-4 --><a href="EtherealSpell.html">EtherealSpell</a></h4>
+      (<font color="blue">static</font>) <font color="blue">void</font> Dismount( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> StopMounting( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      (<font color="blue">ctor</font>) EtherealMount( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) EtherealMount( <font color="blue">int</font> itemID, <font color="blue">int</font> mountID )<br>
+      <font color="blue">double</font> DefaultWeight( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> DisplayLootType( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> EtherealHue( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> FollowerSlots( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsDonationItem( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IsRewardItem( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="IMount.html">IMount</a> Mount( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> MountedID( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> RegularID( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Rider( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> AddFollowers()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">void</font> MountMe()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="DeathMoveResult.html">DeathMoveResult</a> OnParentDeath( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> parent )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnRiderDamaged( <font color="blue">int</font> amount, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">bool</font> willKill )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSingleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> RemoveFollowers()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">void</font> UnmountMe()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> Validate( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+   </body>
+</html>

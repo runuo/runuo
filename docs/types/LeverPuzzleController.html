@@ -1,0 +1,48 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - LeverPuzzleController</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.Doom.html">Back to Server.Engines.Doom</a></h4>
+      <h2>LeverPuzzleController : <!-- DBG-1 --><a href="Item.html">Item</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;</h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="LampRoomKickTimer.html">LampRoomKickTimer</a>, <!-- DBG-4 --><a href="LampRoomTimer.html">LampRoomTimer</a>, <!-- DBG-4 --><a href="RockTimer.html">RockTimer</a></h4>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Item.html">Item</a> AddLeverPuzzlePart( <font color="blue">int</font>[] Loc, <!-- DBG-0 --><a href="Item.html">Item</a> newitem )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> AniSafe( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> DoDamage( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <font color="blue">int</font> min, <font color="blue">int</font> max, <font color="blue">bool</font> poison )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> GenLampPuzzle_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Initialize()<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> IsValidDamagable( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> MoveMobileOut( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> NukeItemList( <font color="blue">List</font>&lt;<a href="Item.html">Item</a>&gt; list )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> PlayEffect( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> from, <!-- DBG-0 --><a href="IEntity.html">IEntity</a> to, <font color="blue">int</font> itemid, <font color="blue">int</font> speed, <font color="blue">bool</font> explodes )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> PlayerSendASCII( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> player, <font color="blue">int</font> index )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> PlaySounds( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> location, <font color="blue">int</font>[] sounds )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> POHMessage( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">int</font> index )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Point3D.html">Point3D</a> RandomPointIn( <!-- DBG-0 --><a href="Rectangle2D.html">Rectangle2D</a> rect, <font color="blue">int</font> z )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Point3D.html">Point3D</a> RandomPointIn( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> point, <font color="blue">int</font> range )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Point3D.html">Point3D</a> RandomPointIn( <font color="blue">int</font> x, <font color="blue">int</font> y, <font color="blue">int</font> x2, <font color="blue">int</font> y2, <font color="blue">int</font> z )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> SendLocationEffect( <!-- DBG-0 --><a href="IPoint3D.html">IPoint3D</a> p, <font color="blue">int</font> itemID, <font color="blue">int</font> speed, <font color="blue">int</font> duration, <font color="blue">int</font> hue )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="IEntity.html">IEntity</a> ZAdjustedIEFromMobile( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <font color="blue">int</font> ZDelta )<br>
+      (<font color="blue">ctor</font>) LeverPuzzleController()<br>
+      (<font color="blue">ctor</font>) LeverPuzzleController( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      <font color="blue">bool</font> CircleComplete( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Enabled( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">ushort</font> MyKey( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Successful( <font color="blue">get</font>; )<br>
+      <font color="blue">ushort</font> TheirKey( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GenKey()<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="LeverPuzzleLever.html">LeverPuzzleLever</a> GetLever( <font color="blue">int</font> index )<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> GetOccupant( <font color="blue">int</font> index )<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="LeverPuzzleStatue.html">LeverPuzzleStatue</a> GetStatue( <font color="blue">int</font> index )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> KillTimers()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> LeverPulled( <font color="blue">ushort</font> code )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> PuzzleStatus( <font color="blue">int</font> message, <font color="blue">string</font> fstring )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> RemoveSuccessful()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ResetLevers()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ResetPuzzle()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+   </body>
+</html>

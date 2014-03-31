@@ -1,0 +1,71 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseVendor</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Mobiles.html">Back to Server.Mobiles</a></h4>
+      <h2>BaseVendor : <!-- DBG-1 --><a href="BaseCreature.html">BaseCreature</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Mobile.html">Mobile</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="IHonorTarget.html">IHonorTarget</a>, <!-- DBG-2.2 --><a href="IQuestGiver.html">IQuestGiver</a>, <!-- DBG-2.2 --><a href="IVendor.html">IVendor</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="Alchemist.html">Alchemist</a>, <!-- DBG-3 --><a href="AnimalTrainer.html">AnimalTrainer</a>, <!-- DBG-3 --><a href="Architect.html">Architect</a>, <!-- DBG-3 --><a href="Armorer.html">Armorer</a>, <!-- DBG-3 --><a href="Baker.html">Baker</a>, <!-- DBG-3 --><a href="Banker.html">Banker</a>, <!-- DBG-3 --><a href="Bard.html">Bard</a>, <!-- DBG-3 --><a href="Barkeeper.html">Barkeeper</a>, <!-- DBG-3 --><a href="BaseFactionVendor.html">BaseFactionVendor</a>, <!-- DBG-3 --><a href="BaseGuildmaster.html">BaseGuildmaster</a>, <!-- DBG-3 --><a href="BaseHealer.html">BaseHealer</a>, <!-- DBG-3 --><a href="BaseQuester.html">BaseQuester</a>, <!-- DBG-3 --><a href="Beekeeper.html">Beekeeper</a>, <!-- DBG-3 --><a href="Blacksmith.html">Blacksmith</a>, <!-- DBG-3 --><a href="Bowyer.html">Bowyer</a>, <!-- DBG-3 --><a href="Butcher.html">Butcher</a>, <!-- DBG-3 --><a href="Carpenter.html">Carpenter</a>, <!-- DBG-3 --><a href="Cobbler.html">Cobbler</a>, <!-- DBG-3 --><a href="Cook.html">Cook</a>, <!-- DBG-3 --><a href="CustomHairstylist.html">CustomHairstylist</a>, <!-- DBG-3 --><a href="Farmer.html">Farmer</a>, <!-- DBG-3 --><a href="Fisherman.html">Fisherman</a>, <!-- DBG-3 --><a href="Furtrader.html">Furtrader</a>, <!-- DBG-3 --><a href="Glassblower.html">Glassblower</a>, <!-- DBG-3 --><a href="GolemCrafter.html">GolemCrafter</a>, <!-- DBG-3 --><a href="GypsyMaiden.html">GypsyMaiden</a>, <!-- DBG-3 --><a href="HairStylist.html">HairStylist</a>, <!-- DBG-3 --><a href="Hamato.html">Hamato</a>, <!-- DBG-3 --><a href="Herbalist.html">Herbalist</a>, <!-- DBG-3 --><a href="HolyMage.html">HolyMage</a>, <!-- DBG-3 --><a href="IharaSoko.html">IharaSoko</a>, <!-- DBG-3 --><a href="InnKeeper.html">InnKeeper</a>, <!-- DBG-3 --><a href="IronWorker.html">IronWorker</a>, <!-- DBG-3 --><a href="Jeweler.html">Jeweler</a>, <!-- DBG-3 --><a href="KeeperOfChivalry.html">KeeperOfChivalry</a>, <!-- DBG-3 --><a href="LeatherWorker.html">LeatherWorker</a>, <!-- DBG-3 --><a href="Mage.html">Mage</a>, <!-- DBG-3 --><a href="Mapmaker.html">Mapmaker</a>, <!-- DBG-3 --><a href="Miller.html">Miller</a>, <!-- DBG-3 --><a href="Miner.html">Miner</a>, <!-- DBG-3 --><a href="Monk.html">Monk</a>, <!-- DBG-3 --><a href="PlayerBarkeeper.html">PlayerBarkeeper</a>, <!-- DBG-3 --><a href="Provisioner.html">Provisioner</a>, <!-- DBG-3 --><a href="Rancher.html">Rancher</a>, <!-- DBG-3 --><a href="Ranger.html">Ranger</a>, <!-- DBG-3 --><a href="RealEstateBroker.html">RealEstateBroker</a>, <!-- DBG-3 --><a href="Ryuichi.html">Ryuichi</a>, <!-- DBG-3 --><a href="Scribe.html">Scribe</a>, <!-- DBG-3 --><a href="Shipwright.html">Shipwright</a>, <!-- DBG-3 --><a href="StoneCrafter.html">StoneCrafter</a>, <!-- DBG-3 --><a href="Tailor.html">Tailor</a>, <!-- DBG-3 --><a href="Tanner.html">Tanner</a>, <!-- DBG-3 --><a href="TavernKeeper.html">TavernKeeper</a>, <!-- DBG-3 --><a href="Thief.html">Thief</a>, <!-- DBG-3 --><a href="Tinker.html">Tinker</a>, <!-- DBG-3 --><a href="Vagabond.html">Vagabond</a>, <!-- DBG-3 --><a href="VarietyDealer.html">VarietyDealer</a>, <!-- DBG-3 --><a href="Veterinarian.html">Veterinarian</a>, <!-- DBG-3 --><a href="Waiter.html">Waiter</a>, <!-- DBG-3 --><a href="Weaponsmith.html">Weaponsmith</a>, <!-- DBG-3 --><a href="Weaver.html">Weaver</a></h4>
+<h4>Nested Types: <!-- DBG-4 --><a href="BulkOrderInfoEntry.html">BulkOrderInfoEntry</a></h4>
+      (<font color="blue">ctor</font>) BaseVendor( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) BaseVendor( <font color="blue">string</font> title )<br>
+      <font color="blue">bool</font> BardImmune( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Container.html">Container</a> BuyPack( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanTeach( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsActiveBuyer( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsActiveSeller( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsActiveVendor( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsInvulnerable( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsTokunoVendor( <font color="blue">get</font>; )<br>
+      DateTime LastRestock( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      DateTime NextTrickOrTreat( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="NpcGuild.html">NpcGuild</a> NpcGuild( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> PlayerRangeSensitive( <font color="blue">get</font>; )<br>
+      TimeSpan RestockDelay( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="SBInfo.html">SBInfo</a>&gt; SBInfos( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="VendorShoeType.html">VendorShoeType</a> ShoeType( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> ShowFameTitle( <font color="blue">get</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddCustomContextEntries( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">List</font>&lt;<a href="ContextMenuEntry.html">ContextMenuEntry</a>&gt; list )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> CapitalizeTitle()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckGargoyle()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> CheckMorph()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckNecromancer()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckTokuno()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckVendorAccess( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="Item.html">Item</a> CreateBulkOrder( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">bool</font> fromContextMenu )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="IBuyItemInfo.html">IBuyItemInfo</a>[] GetBuyInfo()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> GetGender()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetHairHue()<br>
+      <font color="blue">virtual</font> TimeSpan GetNextBulkOrder( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetPriceScalar()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetRandomHue()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetRandomNecromancerHue()<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="IShopSellInfo.html">IShopSellInfo</a>[] GetSellInfo()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetShoeHue()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> InitBody()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> InitOutfit()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> InitSBInfo()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> IsValidBulkOrder( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">void</font> LoadSBInfo()<br>
+      <!-- DBG-0 --><a href="GenericBuyInfo.html">GenericBuyInfo</a> LookupDisplayObject( <font color="blue">object</font> obj )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterSpawn()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnBuyItems( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> buyer, <font color="blue">List</font>&lt;<a href="BuyItemResponse.html">BuyItemResponse</a>&gt; list )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnDragDrop( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> dropped )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnMapChange( <!-- DBG-0 --><a href="Map.html">Map</a> oldMap )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnSellItems( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> seller, <font color="blue">List</font>&lt;<a href="SellItemResponse.html">SellItemResponse</a>&gt; list )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSuccessfulBulkOrderReceive( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> ProcessSinglePurchase( <!-- DBG-0 --><a href="BuyItemResponse.html">BuyItemResponse</a> buy, <!-- DBG-0 --><a href="IBuyItemInfo.html">IBuyItemInfo</a> bii, <font color="blue">List</font>&lt;<a href="BuyItemResponse.html">BuyItemResponse</a>&gt; validBuy, <font color="blue">ref</font> <font color="blue">int</font> controlSlots, <font color="blue">ref</font> <font color="blue">bool</font> fullPurchase, <font color="blue">ref</font> <font color="blue">int</font> totalCost )<br>
+      <font color="blue">void</font> ProcessValidPurchase( <font color="blue">int</font> amount, <!-- DBG-0 --><a href="IBuyItemInfo.html">IBuyItemInfo</a> bii, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> buyer, <!-- DBG-0 --><a href="Container.html">Container</a> cont )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Restock()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SendPacksTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> SupportsBulkOrders( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> TurnToGargoyle()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> TurnToNecromancer()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> TurnToTokuno()<br>
+      <font color="blue">void</font> UpdateBuyInfo()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> VendorBuy( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> VendorSell( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+   </body>
+</html>

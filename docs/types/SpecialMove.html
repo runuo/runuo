@@ -1,0 +1,44 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - SpecialMove</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Spells.html">Back to Server.Spells</a></h4>
+      <h2>SpecialMove</h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="NinjaMove.html">NinjaMove</a>, <!-- DBG-3 --><a href="SamuraiMove.html">SamuraiMove</a></h4>
+<h4>Nested Types: <!-- DBG-4 --><a href="SpecialMoveContext.html">SpecialMoveContext</a>, <!-- DBG-4 --><a href="SpecialMoveTimer.html">SpecialMoveTimer</a></h4>
+      (<font color="blue">static</font>) <font color="blue">Dictionary</font>&lt;<a href="Mobile.html">Mobile</a>,<a href="SpecialMove.html">SpecialMove</a>&gt; Table( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> AddContext( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="SpecialMoveContext.html">SpecialMoveContext</a> context )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> ClearAllMoves( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> ClearCurrentMove( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="SpecialMoveContext.html">SpecialMoveContext</a> GetContext( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> GetContext( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, Type type )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="SpecialMove.html">SpecialMove</a> GetCurrentMove( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> RemoveContext( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> SetCurrentMove( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="SpecialMove.html">SpecialMove</a> move )<br>
+      (<font color="blue">ctor</font>) SpecialMove()<br>
+      <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> AbilityMessage( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BaseMana( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> BlockedByAnimalForm( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> DelayedContext( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="SkillName.html">SkillName</a> MoveSkill( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> RequiredSkill( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> ValidatesDuringHit( <font color="blue">get</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> CheckGain( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckMana( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">bool</font> consume )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckSkills( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetAccuracyBonus( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> attacker )<br>
+      <font color="blue">virtual</font> <font color="blue">double</font> GetDamageScalar( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> attacker, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> defender )<br>
+      <font color="blue">virtual</font> <font color="blue">double</font> GetPropertyBonus( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> attacker )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> IgnoreArmor( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> attacker )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnBeforeDamage( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> attacker, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> defender )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnBeforeSwing( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> attacker, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> defender )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnClearMove( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnHit( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> attacker, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> defender, <font color="blue">int</font> damage )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnMiss( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> attacker, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> defender )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnUse( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> ScaleMana( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <font color="blue">int</font> mana )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SetContext( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> Validate( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+   </body>
+</html>

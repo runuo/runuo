@@ -1,0 +1,78 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - Faction</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Factions.html">Back to Server.Factions</a></h4>
+      <h2>Faction : <!-- DBG-2.1 --><font color="blue">IComparable</font></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="CouncilOfMages.html">CouncilOfMages</a>, <!-- DBG-3 --><a href="Minax.html">Minax</a>, <!-- DBG-3 --><a href="Shadowlords.html">Shadowlords</a>, <!-- DBG-3 --><a href="TrueBritannians.html">TrueBritannians</a></h4>
+<h4>Nested Types: <!-- DBG-4 --><a href="BroadcastPrompt.html">BroadcastPrompt</a>, <!-- DBG-4 --><a href="SkillLossContext.html">SkillLossContext</a></h4>
+      (<font color="blue">static</font>) <font color="blue">List</font>&lt;<a href="Faction.html">Faction</a>&gt; Factions( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> ApplySkillLoss( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> CheckLeaveTimer( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> ClearSkillLoss( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> ClearSkillLoss_Callback( <font color="blue">object</font> state )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> DistributePoints( <font color="blue">int</font> distrib )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> EventSink_Login( <!-- DBG-0 --><a href="LoginEventArgs.html">LoginEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> EventSink_Logout( <!-- DBG-0 --><a href="LogoutEventArgs.html">LogoutEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> FactionCommander_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> FactionCommander_OnTarget( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">object</font> obj )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> FactionElection_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> FactionElection_OnTarget( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">object</font> obj )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> FactionItemReset_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> FactionKick_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> FactionKick_OnTarget( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">object</font> obj )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> FactionReset_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> FactionTownReset_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Faction.html">Faction</a> Find( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Faction.html">Faction</a> Find( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob, <font color="blue">bool</font> inherit )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Faction.html">Faction</a> Find( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob, <font color="blue">bool</font> inherit, <font color="blue">bool</font> creatureAllegiances )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Faction.html">Faction</a> FindSmallestFaction()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> HandleAtrophy()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> HandleDeath( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> HandleDeath( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> victim, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> killer )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Initialize()<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> InSkillLoss( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> IsFactionBanned( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> IsNearType( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob, Type type, <font color="blue">int</font> range )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> IsNearType( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob, Type[] types, <font color="blue">int</font> range )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Faction.html">Faction</a> Parse( <font color="blue">string</font> name )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> ProcessTick()<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Faction.html">Faction</a> ReadReference( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> StabilityActive()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> WriteReference( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer, <!-- DBG-0 --><a href="Faction.html">Faction</a> fact )<br>
+      (<font color="blue">ctor</font>) Faction()<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Commander( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="FactionDefinition.html">FactionDefinition</a> Definition( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Election.html">Election</a> Election( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> FactionMessageReady( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> MaximumTraps( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="PlayerState.html">PlayerState</a>&gt; Members( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Silver( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="FactionState.html">FactionState</a> State( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="StrongholdRegion.html">StrongholdRegion</a> StrongholdRegion( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Tithe( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="BaseFactionTrap.html">BaseFactionTrap</a>&gt; Traps( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddMember( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      <font color="blue">bool</font> AlreadyHasCharInFaction( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      <font color="blue">int</font> AwardSilver( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob, <font color="blue">int</font> silver )<br>
+      <font color="blue">void</font> BeginBroadcast( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> BeginHonorLeadership( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> Broadcast( <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> Broadcast( <font color="blue">int</font> number )<br>
+      <font color="blue">void</font> Broadcast( <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">void</font> Broadcast( <font color="blue">int</font> hue, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> Broadcast( <font color="blue">int</font> hue, <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">bool</font> CanHandleInflux( <font color="blue">int</font> influx )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> CompareTo( <font color="blue">object</font> obj )<br>
+      <font color="blue">void</font> EndBroadcast( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> HonorLeadership_OnTarget( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">object</font> obj )<br>
+      <font color="blue">bool</font> IsCommander( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      <font color="blue">void</font> JoinAlone( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      <font color="blue">void</font> JoinGuilded( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> mob, <!-- DBG-0 --><a href="Guild.html">Guild</a> guild )<br>
+      <font color="blue">void</font> OnJoinAccepted( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      <font color="blue">void</font> RemoveMember( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      <font color="blue">void</font> RemovePlayerState( <!-- DBG-0 --><a href="PlayerState.html">PlayerState</a> pl )<br>
+      <font color="blue">virtual</font> <font color="blue">string</font> ToString()<br>
+   </body>
+</html>

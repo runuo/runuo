@@ -1,0 +1,23 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseHouseDoor</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>BaseHouseDoor : <!-- DBG-1 --><a href="BaseDoor.html">BaseDoor</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="ILockable.html">ILockable</a>, <!-- DBG-2.2 --><a href="ITelekinesisable.html">ITelekinesisable</a>, <!-- DBG-2.2 --><a href="ISecurable.html">ISecurable</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="DarkWoodHouseDoor.html">DarkWoodHouseDoor</a>, <!-- DBG-3 --><a href="GenericHouseDoor.html">GenericHouseDoor</a>, <!-- DBG-3 --><a href="MetalHouseDoor.html">MetalHouseDoor</a></h4>
+      (<font color="blue">ctor</font>) BaseHouseDoor( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) BaseHouseDoor( <!-- DBG-0 --><a href="DoorFacing.html">DoorFacing</a> facing, <font color="blue">int</font> closedID, <font color="blue">int</font> openedID, <font color="blue">int</font> openedSound, <font color="blue">int</font> closedSound, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> offset )<br>
+      <!-- DBG-0 --><a href="DoorFacing.html">DoorFacing</a> Facing( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="SecureLevel.html">SecureLevel</a> Level( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> CheckAccess( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <!-- DBG-0 --><a href="BaseHouse.html">BaseHouse</a> FindHouse()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetContextMenuEntries( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">List</font>&lt;<a href="ContextMenuEntry.html">ContextMenuEntry</a>&gt; list )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> IsInside( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnOpened( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Use( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> UseLocks()<br>
+   </body>
+</html>

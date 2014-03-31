@@ -1,0 +1,33 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - DynamicSaveStrategy</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.html">Back to Server</a></h4>
+      <h2>DynamicSaveStrategy : <!-- DBG-1 --><a href="SaveStrategy.html">SaveStrategy</a></h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="(Anonymous-Type)--c__DisplayClass3.html">(Anonymous-Type)--c__DisplayClass3</a></h4>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="QueuedMemoryWriter.html">QueuedMemoryWriter</a> <SaveGuilds>b__d()<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="QueuedMemoryWriter.html">QueuedMemoryWriter</a> <SaveItems>b__5()<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="QueuedMemoryWriter.html">QueuedMemoryWriter</a> <SaveMobiles>b__9()<br>
+      (<font color="blue">ctor</font>) DynamicSaveStrategy()<br>
+      <font color="blue">string</font> Name( <font color="blue">get</font>; )<br>
+      <font color="blue">void</font> <Save>b__0( Task[] _ )<br>
+      <!-- DBG-0 --><a href="QueuedMemoryWriter.html">QueuedMemoryWriter</a> <SaveGuilds>b__e( <!-- DBG-0 --><a href="BaseGuild.html">BaseGuild</a> guild, ParallelLoopState state, <!-- DBG-0 --><a href="QueuedMemoryWriter.html">QueuedMemoryWriter</a> writer )<br>
+      <font color="blue">void</font> <SaveGuilds>b__f( <!-- DBG-0 --><a href="QueuedMemoryWriter.html">QueuedMemoryWriter</a> writer )<br>
+      <!-- DBG-0 --><a href="QueuedMemoryWriter.html">QueuedMemoryWriter</a> <SaveItems>b__6( <!-- DBG-0 --><a href="Item.html">Item</a> item, ParallelLoopState state, <!-- DBG-0 --><a href="QueuedMemoryWriter.html">QueuedMemoryWriter</a> writer )<br>
+      <font color="blue">void</font> <SaveItems>b__7( <!-- DBG-0 --><a href="QueuedMemoryWriter.html">QueuedMemoryWriter</a> writer )<br>
+      <!-- DBG-0 --><a href="QueuedMemoryWriter.html">QueuedMemoryWriter</a> <SaveMobiles>b__a( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mobile, ParallelLoopState state, <!-- DBG-0 --><a href="QueuedMemoryWriter.html">QueuedMemoryWriter</a> writer )<br>
+      <font color="blue">void</font> <SaveMobiles>b__b( <!-- DBG-0 --><a href="QueuedMemoryWriter.html">QueuedMemoryWriter</a> writer )<br>
+      <font color="blue">void</font> CloseFiles()<br>
+      <font color="blue">void</font> OpenFiles()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ProcessDecay()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Save( <!-- DBG-0 --><a href="SaveMetrics.html">SaveMetrics</a> metrics, <font color="blue">bool</font> permitBackgroundWrite )<br>
+      Task SaveGuilds()<br>
+      Task SaveItems()<br>
+      Task SaveMobiles()<br>
+      <font color="blue">void</font> SaveTypeDatabase( <font color="blue">string</font> path, <font color="blue">List</font>&lt;<font color="blue">Type</font>&gt; types )<br>
+      <font color="blue">void</font> SaveTypeDatabases()<br>
+      Task StartCommitTask( <font color="blue">BlockingCollection</font>&lt;<a href="QueuedMemoryWriter.html">QueuedMemoryWriter</a>&gt; threadWriter, <!-- DBG-0 --><a href="SequentialFileWriter.html">SequentialFileWriter</a> data, <!-- DBG-0 --><a href="SequentialFileWriter.html">SequentialFileWriter</a> index )<br>
+      <font color="blue">void</font> WriteCount( <!-- DBG-0 --><a href="SequentialFileWriter.html">SequentialFileWriter</a> indexFile, <font color="blue">int</font> count )<br>
+   </body>
+</html>

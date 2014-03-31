@@ -1,0 +1,30 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - RentedVendor</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Mobiles.html">Back to Server.Mobiles</a></h4>
+      <h2>RentedVendor : <!-- DBG-1 --><a href="PlayerVendor.html">PlayerVendor</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Mobile.html">Mobile</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;</h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="CollectRentEntry.html">CollectRentEntry</a>, <!-- DBG-4 --><a href="ContractOptionsEntry.html">ContractOptionsEntry</a>, <!-- DBG-4 --><a href="RefundOfferPrompt.html">RefundOfferPrompt</a>, <!-- DBG-4 --><a href="RentalExpireTimer.html">RentalExpireTimer</a>, <!-- DBG-4 --><a href="TerminateContractEntry.html">TerminateContractEntry</a></h4>
+      (<font color="blue">ctor</font>) RentedVendor( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) RentedVendor( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> owner, <!-- DBG-0 --><a href="BaseHouse.html">BaseHouse</a> house, <!-- DBG-0 --><a href="VendorRentalDuration.html">VendorRentalDuration</a> duration, <font color="blue">int</font> rentalPrice, <font color="blue">bool</font> landlordRenew, <font color="blue">int</font> rentalGold )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Landlord( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> LandlordRenew( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Renew( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> RenewalPrice( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="VendorRentalDuration.html">VendorRentalDuration</a> RentalDuration( <font color="blue">get</font>; )<br>
+      DateTime RentalExpireTime( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> RentalGold( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> RentalPrice( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> RenterRenew( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> ComputeRentalExpireDelay( <font color="blue">out</font> <font color="blue">int</font> days, <font color="blue">out</font> <font color="blue">int</font> hours )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Destroy( <font color="blue">bool</font> toBackpack )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetContextMenuEntries( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">List</font>&lt;<a href="ContextMenuEntry.html">ContextMenuEntry</a>&gt; list )<br>
+      <font color="blue">bool</font> IsLandlord( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> IsOwner( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterDelete()<br>
+      <font color="blue">void</font> SendRentalExpireMessage( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+   </body>
+</html>

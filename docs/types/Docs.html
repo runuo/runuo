@@ -1,0 +1,58 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - Docs</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Commands.html">Back to Server.Commands</a></h4>
+      <h2>Docs</h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="CommandEntrySorter.html">CommandEntrySorter</a>, <!-- DBG-4 --><a href="DocCommandEntry.html">DocCommandEntry</a>, <!-- DBG-4 --><a href="MemberComparer.html">MemberComparer</a>, <!-- DBG-4 --><a href="SpeechEntry.html">SpeechEntry</a>, <!-- DBG-4 --><a href="SpeechEntrySorter.html">SpeechEntrySorter</a>, <!-- DBG-4 --><a href="TypeComparer.html">TypeComparer</a>, <!-- DBG-4 --><a href="TypeInfo.html">TypeInfo</a></h4>
+      (<font color="blue">static</font>) <font color="blue">void</font> AddIndexLink( StreamWriter html, <font color="blue">string</font> filePath, <font color="blue">string</font> label, <font color="blue">string</font> desc )<br>
+      (<font color="blue">static</font>) <font color="blue">string</font> AliasForName( <font color="blue">string</font> name )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Clean( <font color="blue">List</font>&lt;<a href="CommandEntry.html">CommandEntry</a>&gt; list )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> DeleteDirectory( <font color="blue">string</font> path )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> DocGen_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> Document()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> DocumentBodies()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> DocumentBulkOrders()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> DocumentCommand( StreamWriter html, <!-- DBG-0 --><a href="DocCommandEntry.html">DocCommandEntry</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> DocumentCommands()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> DocumentConstructableObject( StreamWriter html, Type t, ConstructorInfo[] ctors )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> DocumentConstructableObjects()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> DocumentKeywords()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> DocumentLoadedTypes()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> DocumentSmithBOD( StreamWriter html, <font color="blue">List</font>&lt;<a href="Item.html">Item</a>&gt; items, <font color="blue">string</font> amt, <!-- DBG-0 --><a href="BulkMaterialType.html">BulkMaterialType</a> material )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> DocumentTailorBOD( StreamWriter html, <font color="blue">List</font>&lt;<a href="Item.html">Item</a>&gt; items, <font color="blue">string</font> amt, <!-- DBG-0 --><a href="BulkMaterialType.html">BulkMaterialType</a> material, Type type )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> DontLink( Type type )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> EnsureDirectory( <font color="blue">string</font> path )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> FormatGeneric( Type type, <font color="blue">ref</font> <font color="blue">string</font> typeName, <font color="blue">ref</font> <font color="blue">string</font> fileName, <font color="blue">ref</font> <font color="blue">string</font> linkName )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> GenerateIndex()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> GenerateStyles()<br>
+      (<font color="blue">static</font>) <font color="blue">string</font> GetFileName( <font color="blue">string</font> root, <font color="blue">string</font> name, <font color="blue">string</font> ext )<br>
+      (<font color="blue">static</font>) <font color="blue">string</font> GetPair( Type varType, <font color="blue">string</font> name, <font color="blue">bool</font> ignoreRef )<br>
+      (<font color="blue">static</font>) <font color="blue">string</font> GetTooltipFor( ParameterInfo param )<br>
+      (<font color="blue">static</font>) StreamWriter GetWriter( <font color="blue">string</font> path )<br>
+      (<font color="blue">static</font>) StreamWriter GetWriter( <font color="blue">string</font> root, <font color="blue">string</font> name )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> InAssemblies( Type t, Assembly[] asms )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Initialize()<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> IsConstructable( ConstructorInfo ctor )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> IsConstructable( Type t, <font color="blue">out</font> <font color="blue">bool</font> isItem )<br>
+      (<font color="blue">static</font>) <font color="blue">List</font>&lt;<a href="BodyEntry.html">BodyEntry</a>&gt; LoadBodies()<br>
+      (<font color="blue">static</font>) <font color="blue">List</font>&lt;<font color="blue">Dictionary`2</font>&gt; LoadSpeechFile()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> LoadTypes( Assembly a, Assembly[] asms )<br>
+      (<font color="blue">static</font>) <font color="blue">string</font> SanitizeType( <font color="blue">string</font> name )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> SaveNamespace( <font color="blue">string</font> name, <font color="blue">List</font>&lt;<a href="TypeInfo.html">TypeInfo</a>&gt; types, StreamWriter indexHtml )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> SaveType( <!-- DBG-0 --><a href="TypeInfo.html">TypeInfo</a> info, StreamWriter nsHtml, <font color="blue">string</font> nsFileName, <font color="blue">string</font> nsName )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> WriteCtor( <font color="blue">string</font> name, ConstructorInfo ctor, StreamWriter html )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> WriteEnum( <!-- DBG-0 --><a href="TypeInfo.html">TypeInfo</a> info, StreamWriter typeHtml )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> WriteMethod( MethodInfo mi, StreamWriter html )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> WriteProperty( PropertyInfo pi, StreamWriter html )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> WriteSmithBODFooter( StreamWriter html )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> WriteSmithBODHeader( StreamWriter html, <font color="blue">string</font> title )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> WriteSmithLBOD( StreamWriter html, <font color="blue">string</font> name, <!-- DBG-0 --><a href="SmallBulkEntry.html">SmallBulkEntry</a>[] entries )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> WriteTailorBODFooter( StreamWriter html )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> WriteTailorBODHeader( StreamWriter html, <font color="blue">string</font> title )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> WriteTailorLBOD( StreamWriter html, <font color="blue">string</font> name, <!-- DBG-0 --><a href="SmallBulkEntry.html">SmallBulkEntry</a>[] entries, <font color="blue">bool</font> expandCloth, <font color="blue">bool</font> expandPlain )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> WriteType( <!-- DBG-0 --><a href="TypeInfo.html">TypeInfo</a> info, StreamWriter typeHtml )<br>
+      (<font color="blue">ctor</font>) Docs()<br>
+   </body>
+</html>

@@ -1,0 +1,85 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - Spell</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Spells.html">Back to Server.Spells</a></h4>
+      <h2>Spell : <!-- DBG-2.2 --><a href="ISpell.html">ISpell</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="ArcanistSpell.html">ArcanistSpell</a>, <!-- DBG-3 --><a href="EtherealSpell.html">EtherealSpell</a>, <!-- DBG-3 --><a href="FlySpell.html">FlySpell</a>, <!-- DBG-3 --><a href="MagerySpell.html">MagerySpell</a>, <!-- DBG-3 --><a href="NecromancerSpell.html">NecromancerSpell</a>, <!-- DBG-3 --><a href="NinjaSpell.html">NinjaSpell</a>, <!-- DBG-3 --><a href="PaladinSpell.html">PaladinSpell</a>, <!-- DBG-3 --><a href="PetSummoningSpell.html">PetSummoningSpell</a>, <!-- DBG-3 --><a href="SamuraiSpell.html">SamuraiSpell</a>, <!-- DBG-3 --><a href="SpiritSpeakSpell.html">SpiritSpeakSpell</a></h4>
+<h4>Nested Types: <!-- DBG-4 --><a href="AnimTimer.html">AnimTimer</a>, <!-- DBG-4 --><a href="CastTimer.html">CastTimer</a>, <!-- DBG-4 --><a href="DelayedDamageContextWrapper.html">DelayedDamageContextWrapper</a></h4>
+      (<font color="blue">ctor</font>) Spell( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> caster, <!-- DBG-0 --><a href="Item.html">Item</a> scroll, <!-- DBG-0 --><a href="SpellInfo.html">SpellInfo</a> info )<br>
+      <font color="blue">bool</font> BlockedByAnimalForm( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> BlockedByHorrificBeast( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> BlocksMovement( <font color="blue">get</font>; )<br>
+      TimeSpan CastDelayBase( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> CastDelayFastScalar( <font color="blue">get</font>; )<br>
+      TimeSpan CastDelayMinimum( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> CastDelaySecondsPerTick( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Caster( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> CastRecoveryBase( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> CastRecoveryFastScalar( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> CastRecoveryMinimum( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> CastRecoveryPerSecond( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="SkillName.html">SkillName</a> CastSkill( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CheckNextSpellTime( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> ClearHandsOnCast( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="SkillName.html">SkillName</a> DamageSkill( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> DelayedDamage( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> DelayedDamageStacking( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="SpellInfo.html">SpellInfo</a> Info( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsCasting( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> Mantra( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> Name( <font color="blue">get</font>; )<br>
+      Type[] Reagents( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> RevealOnCast( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> Scroll( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> ShowHandMovement( <font color="blue">get</font>; )<br>
+      <font color="blue">long</font> StartCastTime( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="SpellState.html">SpellState</a> State( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Cast()<br>
+      <font color="blue">bool</font> CheckBSequence( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target )<br>
+      <font color="blue">bool</font> CheckBSequence( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target, <font color="blue">bool</font> allowDead )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckCast()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckDisturb( <!-- DBG-0 --><a href="DisturbType.html">DisturbType</a> type, <font color="blue">bool</font> firstCircle, <font color="blue">bool</font> resistable )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckFizzle()<br>
+      <font color="blue">bool</font> CheckHSequence( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckSequence()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> ComputeKarmaAward()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> ConsumeReagents()<br>
+      <font color="blue">void</font> Disturb( <!-- DBG-0 --><a href="DisturbType.html">DisturbType</a> type )<br>
+      <font color="blue">void</font> Disturb( <!-- DBG-0 --><a href="DisturbType.html">DisturbType</a> type, <font color="blue">bool</font> firstCircle, <font color="blue">bool</font> resistable )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DoFizzle()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DoHurtFizzle()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> FinishSequence()<br>
+      <font color="blue">virtual</font> TimeSpan GetCastDelay()<br>
+      <font color="blue">virtual</font> TimeSpan GetCastRecovery()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetCastSkills( <font color="blue">out</font> <font color="blue">double</font> min, <font color="blue">out</font> <font color="blue">double</font> max )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetDamageFixed( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">double</font> GetDamageScalar( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target )<br>
+      <font color="blue">virtual</font> <font color="blue">double</font> GetDamageSkill( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> TimeSpan GetDisturbRecovery()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetInscribeFixed( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">double</font> GetInscribeSkill( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetMana()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetNewAosDamage( <font color="blue">int</font> bonus, <font color="blue">int</font> dice, <font color="blue">int</font> sides, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> singleTarget )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetNewAosDamage( <font color="blue">int</font> bonus, <font color="blue">int</font> dice, <font color="blue">int</font> sides, <font color="blue">bool</font> playerVsPlayer )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetNewAosDamage( <font color="blue">int</font> bonus, <font color="blue">int</font> dice, <font color="blue">int</font> sides, <font color="blue">bool</font> playerVsPlayer, <font color="blue">double</font> scalar )<br>
+      <font color="blue">virtual</font> <font color="blue">double</font> GetResistSkill( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">double</font> GetSlayerDamageScalar( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> defender )<br>
+      <font color="blue">void</font> HarmfulSpell( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnBeginCast()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnCast()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnCasterEquiping( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnCasterHurt()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnCasterKilled()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnCasterMoving( <!-- DBG-0 --><a href="Direction.html">Direction</a> d )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnCasterUsingObject( <font color="blue">object</font> o )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnCastInTown( <!-- DBG-0 --><a href="Region.html">Region</a> r )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnConnectionChanged()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDisturb( <!-- DBG-0 --><a href="DisturbType.html">DisturbType</a> type, <font color="blue">bool</font> message )<br>
+      <font color="blue">void</font> RemoveDelayedDamageContext( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SayMantra()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> ScaleMana( <font color="blue">int</font> mana )<br>
+      <font color="blue">void</font> StartDelayedDamageContext( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="Timer.html">Timer</a> t )<br>
+   </body>
+</html>

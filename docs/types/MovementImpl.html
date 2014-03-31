@@ -1,0 +1,22 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - MovementImpl</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Movement.html">Back to Server.Movement</a></h4>
+      <h2>MovementImpl : <!-- DBG-2.2 --><a href="IMovementImpl.html">IMovementImpl</a></h2>
+      (<font color="blue">static</font>) <font color="blue">bool</font> AlwaysIgnoreDoors( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Point3D.html">Point3D</a> Goal( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> IgnoreMovableImpassables( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> IgnoreSpellFields( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Configure()<br>
+      (<font color="blue">ctor</font>) MovementImpl()<br>
+      <font color="blue">bool</font> CanMoveOver( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> t )<br>
+      <font color="blue">bool</font> Check( <!-- DBG-0 --><a href="Map.html">Map</a> map, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <font color="blue">List</font>&lt;<a href="Item.html">Item</a>&gt; items, <font color="blue">List</font>&lt;<a href="Mobile.html">Mobile</a>&gt; mobiles, <font color="blue">int</font> x, <font color="blue">int</font> y, <font color="blue">int</font> startTop, <font color="blue">int</font> startZ, <font color="blue">bool</font> canSwim, <font color="blue">bool</font> cantWalk, <font color="blue">out</font> <font color="blue">int</font> newZ )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckMovement( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="Direction.html">Direction</a> d, <font color="blue">out</font> <font color="blue">int</font> newZ )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckMovement( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="Map.html">Map</a> map, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> loc, <!-- DBG-0 --><a href="Direction.html">Direction</a> d, <font color="blue">out</font> <font color="blue">int</font> newZ )<br>
+      <font color="blue">void</font> GetStartZ( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="Map.html">Map</a> map, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> loc, <font color="blue">List</font>&lt;<a href="Item.html">Item</a>&gt; itemList, <font color="blue">out</font> <font color="blue">int</font> zLow, <font color="blue">out</font> <font color="blue">int</font> zTop )<br>
+      <font color="blue">bool</font> IsOk( <font color="blue">bool</font> ignoreDoors, <font color="blue">bool</font> ignoreSpellFields, <font color="blue">int</font> ourZ, <font color="blue">int</font> ourTop, <!-- DBG-0 --><a href="StaticTile.html">StaticTile</a>[] tiles, <font color="blue">List</font>&lt;<a href="Item.html">Item</a>&gt; items )<br>
+      <font color="blue">void</font> Offset( <!-- DBG-0 --><a href="Direction.html">Direction</a> d, <font color="blue">ref</font> <font color="blue">int</font> x, <font color="blue">ref</font> <font color="blue">int</font> y )<br>
+   </body>
+</html>

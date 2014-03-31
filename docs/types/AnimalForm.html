@@ -1,0 +1,33 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - AnimalForm</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Spells.Ninjitsu.html">Back to Server.Spells.Ninjitsu</a></h4>
+      <h2>AnimalForm : <!-- DBG-1 --><a href="NinjaSpell.html">NinjaSpell</a>, <!-- DBG-2.2 --><a href="ISpell.html">ISpell</a></h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="AnimalFormEntry.html">AnimalFormEntry</a>, <!-- DBG-4 --><a href="AnimalFormGump.html">AnimalFormGump</a>, <!-- DBG-4 --><a href="MorphResult.html">MorphResult</a></h4>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="AnimalFormEntry.html">AnimalFormEntry</a>[] Entries( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> AddContext( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="AnimalFormContext.html">AnimalFormContext</a> context )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="AnimalFormContext.html">AnimalFormContext</a> GetContext( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Initialize()<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="MorphResult.html">MorphResult</a> Morph( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <font color="blue">int</font> entryID )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> OnLogin( <!-- DBG-0 --><a href="LoginEventArgs.html">LoginEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> RemoveContext( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <font color="blue">bool</font> resetGraphics )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> RemoveContext( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="AnimalFormContext.html">AnimalFormContext</a> context, <font color="blue">bool</font> resetGraphics )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> UnderTransformation( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> UnderTransformation( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, Type type )<br>
+      (<font color="blue">ctor</font>) AnimalForm( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> caster, <!-- DBG-0 --><a href="Item.html">Item</a> scroll )<br>
+      <font color="blue">bool</font> BlockedByAnimalForm( <font color="blue">get</font>; )<br>
+      TimeSpan CastDelayBase( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> CastRecoveryBase( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> RequiredMana( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> RequiredSkill( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CasterIsMoving()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckCast()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckDisturb( <!-- DBG-0 --><a href="DisturbType.html">DisturbType</a> type, <font color="blue">bool</font> firstCircle, <font color="blue">bool</font> resistable )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckFizzle()<br>
+      <font color="blue">int</font> GetLastAnimalForm( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnBeginCast()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnCast()<br>
+   </body>
+</html>

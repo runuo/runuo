@@ -1,0 +1,55 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - PlantSystem</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.Plants.html">Back to Server.Engines.Plants</a></h4>
+      <h2>PlantSystem</h2>
+      (<font color="blue">static</font>) <font color="blue">void</font> Configure()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> EventSink_Login( <!-- DBG-0 --><a href="LoginEventArgs.html">LoginEventArgs</a> args )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> EventSink_WorldLoad()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> EventSink_WorldSave( <!-- DBG-0 --><a href="WorldSaveEventArgs.html">WorldSaveEventArgs</a> args )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> GrowAll()<br>
+      (<font color="blue">ctor</font>) PlantSystem( <!-- DBG-0 --><a href="PlantItem.html">PlantItem</a> plant, <font color="blue">bool</font> fertileDirt )<br>
+      (<font color="blue">ctor</font>) PlantSystem( <!-- DBG-0 --><a href="PlantItem.html">PlantItem</a> plant, <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">int</font> AvailableResources( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> AvailableSeeds( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> CurePotion( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Disease( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> FertileDirt( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Fungus( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="PlantGrowthIndicator.html">PlantGrowthIndicator</a> GrowthIndicator( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> HasMaladies( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> HealPotion( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="PlantHealth.html">PlantHealth</a> Health( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Hits( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Infestation( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IsFullCurePotion( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsFullHealPotion( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsFullPoisonPotion( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsFullStrengthPotion( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsFullWater( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> LeftResources( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> LeftSeeds( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> MaxHits( <font color="blue">get</font>; )<br>
+      DateTime NextGrowth( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="PlantItem.html">PlantItem</a> Plant( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Poison( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> PoisonPotion( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> PollenProducing( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Pollinated( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="PlantHue.html">PlantHue</a> SeedHue( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="PlantType.html">PlantType</a> SeedType( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> StrengthPotion( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Water( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> ApplyBeneficEffects()<br>
+      <font color="blue">bool</font> ApplyMaladiesEffects()<br>
+      <font color="blue">void</font> DoGrowthCheck()<br>
+      <font color="blue">int</font> GetLocalizedDirtStatus()<br>
+      <font color="blue">int</font> GetLocalizedHealth()<br>
+      <font color="blue">void</font> Grow()<br>
+      <font color="blue">void</font> Reset( <font color="blue">bool</font> potions )<br>
+      <font color="blue">void</font> Save( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">void</font> UpdateMaladies()<br>
+   </body>
+</html>

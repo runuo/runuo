@@ -1,0 +1,55 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - Town</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Factions.html">Back to Server.Factions</a></h4>
+      <h2>Town : <!-- DBG-2.1 --><font color="blue">IComparable</font></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="Britain.html">Britain</a>, <!-- DBG-3 --><a href="Magincia.html">Magincia</a>, <!-- DBG-3 --><a href="Minoc.html">Minoc</a>, <!-- DBG-3 --><a href="Moonglow.html">Moonglow</a>, <!-- DBG-3 --><a href="SkaraBrae.html">SkaraBrae</a>, <!-- DBG-3 --><a href="Trinsic.html">Trinsic</a>, <!-- DBG-3 --><a href="Vesper.html">Vesper</a>, <!-- DBG-3 --><a href="Yew.html">Yew</a></h4>
+      (<font color="blue">static</font>) <font color="blue">List</font>&lt;<a href="Town.html">Town</a>&gt; Towns( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Town.html">Town</a> FromRegion( <!-- DBG-0 --><a href="Region.html">Region</a> reg )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> GrantTownSilver_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Initialize()<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Town.html">Town</a> Parse( <font color="blue">string</font> name )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Town.html">Town</a> ReadReference( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> WriteReference( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer, <!-- DBG-0 --><a href="Town.html">Town</a> town )<br>
+      (<font color="blue">ctor</font>) Town()<br>
+      <font color="blue">int</font> DailyIncome( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="TownDefinition.html">TownDefinition</a> Definition( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Finance( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> FinanceUpkeep( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="GuardList.html">GuardList</a>&gt; GuardLists( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      DateTime LastIncome( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      DateTime LastTaxChange( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="TownMonolith.html">TownMonolith</a> Monolith( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> NetCashFlow( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Faction.html">Faction</a> Owner( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Sheriff( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> SheriffUpkeep( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Silver( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="TownState.html">TownState</a> State( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Tax( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> TaxChangeReady( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="VendorList.html">VendorList</a>&gt; VendorLists( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> BeginOrderFiring( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      ArrayList BuildFinanceList()<br>
+      <font color="blue">void</font> Capture( <!-- DBG-0 --><a href="Faction.html">Faction</a> f )<br>
+      <font color="blue">void</font> CheckIncome()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> CompareTo( <font color="blue">object</font> obj )<br>
+      <font color="blue">void</font> ConstructGuardLists()<br>
+      <font color="blue">void</font> ConstructVendorLists()<br>
+      <font color="blue">void</font> EndOrderFiring( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">object</font> obj )<br>
+      <!-- DBG-0 --><a href="GuardList.html">GuardList</a> FindGuardList( Type type )<br>
+      <!-- DBG-0 --><a href="VendorList.html">VendorList</a> FindVendorList( Type type )<br>
+      <font color="blue">bool</font> IsFinance( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      <font color="blue">bool</font> IsSheriff( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      <font color="blue">void</font> ProcessIncome()<br>
+      <font color="blue">bool</font> RegisterGuard( <!-- DBG-0 --><a href="BaseFactionGuard.html">BaseFactionGuard</a> guard )<br>
+      <font color="blue">bool</font> RegisterVendor( <!-- DBG-0 --><a href="BaseFactionVendor.html">BaseFactionVendor</a> vendor )<br>
+      <font color="blue">void</font> StartIncomeTimer()<br>
+      <font color="blue">void</font> StopIncomeTimer()<br>
+      <font color="blue">virtual</font> <font color="blue">string</font> ToString()<br>
+      <font color="blue">bool</font> UnregisterGuard( <!-- DBG-0 --><a href="BaseFactionGuard.html">BaseFactionGuard</a> guard )<br>
+      <font color="blue">bool</font> UnregisterVendor( <!-- DBG-0 --><a href="BaseFactionVendor.html">BaseFactionVendor</a> vendor )<br>
+   </body>
+</html>

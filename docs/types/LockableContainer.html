@@ -1,0 +1,38 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - LockableContainer</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>LockableContainer : <!-- DBG-1 --><a href="TrapableContainer.html">TrapableContainer</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="ITelekinesisable.html">ITelekinesisable</a>, <!-- DBG-2.2 --><a href="ILockable.html">ILockable</a>, <!-- DBG-2.2 --><a href="ILockpickable.html">ILockpickable</a>, <!-- DBG-2.2 --><a href="ICraftable.html">ICraftable</a>, <!-- DBG-2.2 --><a href="IShipwreckedItem.html">IShipwreckedItem</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="BaseTreasureChest.html">BaseTreasureChest</a>, <!-- DBG-3 --><a href="ChestOfHeirlooms.html">ChestOfHeirlooms</a>, <!-- DBG-3 --><a href="FillableContainer.html">FillableContainer</a>, <!-- DBG-3 --><a href="FinishedWoodenChest.html">FinishedWoodenChest</a>, <!-- DBG-3 --><a href="GildedWoodenChest.html">GildedWoodenChest</a>, <!-- DBG-3 --><a href="LargeCrate.html">LargeCrate</a>, <!-- DBG-3 --><a href="LockableBarrel.html">LockableBarrel</a>, <!-- DBG-3 --><a href="MarkContainer.html">MarkContainer</a>, <!-- DBG-3 --><a href="MediumCrate.html">MediumCrate</a>, <!-- DBG-3 --><a href="MetalBox.html">MetalBox</a>, <!-- DBG-3 --><a href="MetalChest.html">MetalChest</a>, <!-- DBG-3 --><a href="MetalGoldenChest.html">MetalGoldenChest</a>, <!-- DBG-3 --><a href="OrnateWoodenChest.html">OrnateWoodenChest</a>, <!-- DBG-3 --><a href="ParagonChest.html">ParagonChest</a>, <!-- DBG-3 --><a href="PlainWoodenChest.html">PlainWoodenChest</a>, <!-- DBG-3 --><a href="SmallCrate.html">SmallCrate</a>, <!-- DBG-3 --><a href="TreasureChestLevel1.html">TreasureChestLevel1</a>, <!-- DBG-3 --><a href="TreasureChestLevel2.html">TreasureChestLevel2</a>, <!-- DBG-3 --><a href="TreasureChestLevel3.html">TreasureChestLevel3</a>, <!-- DBG-3 --><a href="TreasureChestLevel4.html">TreasureChestLevel4</a>, <!-- DBG-3 --><a href="TreasureMapChest.html">TreasureMapChest</a>, <!-- DBG-3 --><a href="WoodenBox.html">WoodenBox</a>, <!-- DBG-3 --><a href="WoodenChest.html">WoodenChest</a>, <!-- DBG-3 --><a href="WoodenFootLocker.html">WoodenFootLocker</a></h4>
+      (<font color="blue">ctor</font>) LockableContainer( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) LockableContainer( <font color="blue">int</font> itemID )<br>
+      <font color="blue">bool</font> DisplaysContent( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsShipwreckedItem( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">uint</font> KeyValue( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Locked( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> LockLevel( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> MaxLockLevel( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Picker( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> RequiredSkill( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> TrapOnLockpick( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> TrapOnOpen( <font color="blue">get</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddNameProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckContentDisplay( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckItemUse( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckLift( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item, <font color="blue">ref</font> <!-- DBG-0 --><a href="LRReason.html">LRReason</a> reject )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckLocked( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> LockPick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> OnCraft( <font color="blue">int</font> quality, <font color="blue">bool</font> makersMark, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="CraftSystem.html">CraftSystem</a> craftSystem, Type typeRes, <!-- DBG-0 --><a href="BaseTool.html">BaseTool</a> tool, <!-- DBG-0 --><a href="CraftItem.html">CraftItem</a> craftItem, <font color="blue">int</font> resHue )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClickSecureTrade( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnDragDropInto( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSingleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSnoop( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnTelekinesis( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Open( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> TryDropItem( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> dropped, <font color="blue">bool</font> sendFullMessage )<br>
+   </body>
+</html>

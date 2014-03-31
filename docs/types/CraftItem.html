@@ -1,0 +1,56 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - CraftItem</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.Craft.html">Back to Server.Engines.Craft</a></h4>
+      <h2>CraftItem</h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="InternalTimer.html">InternalTimer</a></h4>
+      (<font color="blue">static</font>) <font color="blue">int</font> ItemIDOf( Type type )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> RetainsColor( Type type )<br>
+      (<font color="blue">ctor</font>) CraftItem( Type type, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> groupName, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> name )<br>
+      <font color="blue">bool</font> ForceNonExceptional( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> GroupNameNumber( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> GroupNameString( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Hits( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> ItemHue( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      Type ItemType( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Mana( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> NameNumber( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> NameString( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> NeedHeat( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> NeedMill( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> NeedOven( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Recipe.html">Recipe</a> Recipe( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="BeverageType.html">BeverageType</a> RequiredBeverage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Expansion.html">Expansion</a> RequiredExpansion( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="CraftResCol.html">CraftResCol</a> Resources( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="CraftSkillCol.html">CraftSkillCol</a> Skills( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Stam( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> UseAllRes( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> UseSubRes2( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> AddRecipe( <font color="blue">int</font> id, <!-- DBG-0 --><a href="CraftSystem.html">CraftSystem</a> system )<br>
+      <font color="blue">void</font> AddRes( Type type, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> name, <font color="blue">int</font> amount )<br>
+      <font color="blue">void</font> AddRes( Type type, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> name, <font color="blue">int</font> amount, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> message )<br>
+      <font color="blue">void</font> AddSkill( <!-- DBG-0 --><a href="SkillName.html">SkillName</a> skillToMake, <font color="blue">double</font> minSkill, <font color="blue">double</font> maxSkill )<br>
+      <font color="blue">int</font> CheckHueGrouping( <!-- DBG-0 --><a href="Item.html">Item</a> a, <!-- DBG-0 --><a href="Item.html">Item</a> b )<br>
+      <font color="blue">bool</font> CheckSkills( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, Type typeRes, <!-- DBG-0 --><a href="CraftSystem.html">CraftSystem</a> craftSystem, <font color="blue">ref</font> <font color="blue">int</font> quality, <font color="blue">ref</font> <font color="blue">bool</font> allRequiredSkills )<br>
+      <font color="blue">bool</font> CheckSkills( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, Type typeRes, <!-- DBG-0 --><a href="CraftSystem.html">CraftSystem</a> craftSystem, <font color="blue">ref</font> <font color="blue">int</font> quality, <font color="blue">ref</font> <font color="blue">bool</font> allRequiredSkills, <font color="blue">bool</font> gainSkills )<br>
+      <font color="blue">void</font> CompleteCraft( <font color="blue">int</font> quality, <font color="blue">bool</font> makersMark, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="CraftSystem.html">CraftSystem</a> craftSystem, Type typeRes, <!-- DBG-0 --><a href="BaseTool.html">BaseTool</a> tool, <!-- DBG-0 --><a href="CustomCraft.html">CustomCraft</a> customCraft )<br>
+      <font color="blue">bool</font> ConsumeAttributes( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">ref</font> <font color="blue">object</font> message, <font color="blue">bool</font> consume )<br>
+      <font color="blue">int</font> ConsumeQuantity( <!-- DBG-0 --><a href="Container.html">Container</a> cont, Type[][] types, <font color="blue">int</font>[] amounts )<br>
+      <font color="blue">bool</font> ConsumeRes( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, Type typeRes, <!-- DBG-0 --><a href="CraftSystem.html">CraftSystem</a> craftSystem, <font color="blue">ref</font> <font color="blue">int</font> resHue, <font color="blue">ref</font> <font color="blue">int</font> maxAmount, <!-- DBG-0 --><a href="ConsumeType.html">ConsumeType</a> consumeType, <font color="blue">ref</font> <font color="blue">object</font> message )<br>
+      <font color="blue">bool</font> ConsumeRes( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, Type typeRes, <!-- DBG-0 --><a href="CraftSystem.html">CraftSystem</a> craftSystem, <font color="blue">ref</font> <font color="blue">int</font> resHue, <font color="blue">ref</font> <font color="blue">int</font> maxAmount, <!-- DBG-0 --><a href="ConsumeType.html">ConsumeType</a> consumeType, <font color="blue">ref</font> <font color="blue">object</font> message, <font color="blue">bool</font> isFailure )<br>
+      <font color="blue">void</font> Craft( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="CraftSystem.html">CraftSystem</a> craftSystem, Type typeRes, <!-- DBG-0 --><a href="BaseTool.html">BaseTool</a> tool )<br>
+      <font color="blue">bool</font> Find( <font color="blue">int</font> itemID, <font color="blue">int</font>[] itemIDs )<br>
+      <font color="blue">bool</font> Find( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">int</font>[] itemIDs )<br>
+      <font color="blue">double</font> GetExceptionalChance( <!-- DBG-0 --><a href="CraftSystem.html">CraftSystem</a> system, <font color="blue">double</font> chance, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">int</font> GetQuantity( <!-- DBG-0 --><a href="Container.html">Container</a> cont, Type[] types )<br>
+      <font color="blue">double</font> GetSuccessChance( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, Type typeRes, <!-- DBG-0 --><a href="CraftSystem.html">CraftSystem</a> craftSystem, <font color="blue">bool</font> gainSkills, <font color="blue">ref</font> <font color="blue">bool</font> allRequiredSkills )<br>
+      <font color="blue">bool</font> IsMarkable( Type type )<br>
+      <font color="blue">bool</font> IsQuantityType( Type[][] types )<br>
+      <font color="blue">void</font> OnResourceConsumed( <!-- DBG-0 --><a href="Item.html">Item</a> item, <font color="blue">int</font> amount )<br>
+      <font color="blue">object</font> RequiredExpansionMessage( <!-- DBG-0 --><a href="Expansion.html">Expansion</a> expansion )<br>
+      <font color="blue">bool</font> RetainsColorFrom( <!-- DBG-0 --><a href="CraftSystem.html">CraftSystem</a> system, Type type )<br>
+   </body>
+</html>

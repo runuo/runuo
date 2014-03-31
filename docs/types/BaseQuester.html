@@ -1,0 +1,32 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseQuester</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.Quests.html">Back to Server.Engines.Quests</a></h4>
+      <h2>BaseQuester : <!-- DBG-1 --><a href="BaseVendor.html">BaseVendor</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Mobile.html">Mobile</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="IHonorTarget.html">IHonorTarget</a>, <!-- DBG-2.2 --><a href="IQuestGiver.html">IQuestGiver</a>, <!-- DBG-2.2 --><a href="IVendor.html">IVendor</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="AlbertaGiacco.html">AlbertaGiacco</a>, <!-- DBG-3 --><a href="AnsellaGryen.html">AnsellaGryen</a>, <!-- DBG-3 --><a href="BaseAmbitiousSolenQueen.html">BaseAmbitiousSolenQueen</a>, <!-- DBG-3 --><a href="BaseSolenMatriarch.html">BaseSolenMatriarch</a>, <!-- DBG-3 --><a href="Blackheart.html">Blackheart</a>, <!-- DBG-3 --><a href="Chyloth.html">Chyloth</a>, <!-- DBG-3 --><a href="Dryad.html">Dryad</a>, <!-- DBG-3 --><a href="ElwoodMcCarrin.html">ElwoodMcCarrin</a>, <!-- DBG-3 --><a href="Emino.html">Emino</a>, <!-- DBG-3 --><a href="EnshroudedFigure.html">EnshroudedFigure</a>, <!-- DBG-3 --><a href="GabrielPiete.html">GabrielPiete</a>, <!-- DBG-3 --><a href="Grizelda.html">Grizelda</a>, <!-- DBG-3 --><a href="Haochi.html">Haochi</a>, <!-- DBG-3 --><a href="HaochisGuardsman.html">HaochisGuardsman</a>, <!-- DBG-3 --><a href="HiddenFigure.html">HiddenFigure</a>, <!-- DBG-3 --><a href="Horus.html">Horus</a>, <!-- DBG-3 --><a href="Impresario.html">Impresario</a>, <!-- DBG-3 --><a href="JedahEntille.html">JedahEntille</a>, <!-- DBG-3 --><a href="Maabus.html">Maabus</a>, <!-- DBG-3 --><a href="MansionGuard.html">MansionGuard</a>, <!-- DBG-3 --><a href="Mardoth.html">Mardoth</a>, <!-- DBG-3 --><a href="MilitiaCanoneer.html">MilitiaCanoneer</a>, <!-- DBG-3 --><a href="Naturalist.html">Naturalist</a>, <!-- DBG-3 --><a href="Relnia.html">Relnia</a>, <!-- DBG-3 --><a href="Schmendrick.html">Schmendrick</a>, <!-- DBG-3 --><a href="TomasONeerlan.html">TomasONeerlan</a>, <!-- DBG-3 --><a href="Uzeraan.html">Uzeraan</a>, <!-- DBG-3 --><a href="Victoria.html">Victoria</a>, <!-- DBG-3 --><a href="Zeefzorpul.html">Zeefzorpul</a>, <!-- DBG-3 --><a href="Zoel.html">Zoel</a></h4>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Container.html">Container</a> GetNewContainer()<br>
+      (<font color="blue">ctor</font>) BaseQuester()<br>
+      (<font color="blue">ctor</font>) BaseQuester( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) BaseQuester( <font color="blue">string</font> title )<br>
+      <font color="blue">bool</font> CanTeach( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> ClickTitle( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> DisallowAllMoves( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsActiveVendor( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsInvulnerable( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="SBInfo.html">SBInfo</a>&gt; SBInfos( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> TalkNumber( <font color="blue">get</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddCustomContextEntries( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">List</font>&lt;<a href="ContextMenuEntry.html">ContextMenuEntry</a>&gt; list )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanBeDamaged()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanTalkTo( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> to )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">void</font> FocusTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetAutoTalkRange( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> InitSBInfo()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnMovement( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> oldLocation )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnTalk( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> player, <font color="blue">bool</font> contextMenu )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> SetHue( <!-- DBG-0 --><a href="Item.html">Item</a> item, <font color="blue">int</font> hue )<br>
+   </body>
+</html>

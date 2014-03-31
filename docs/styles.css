@@ -1,0 +1,23 @@
+body { background-color: #FFFFFF; font-family: verdana, arial; font-size: 11px; }
+a { color: #28435E; }
+a:hover { color: #4878A9; }
+td.header { background-color: #9696AA; font-weight: bold; font-size: 12px; }
+td.lentry { background-color: #D7D7EB; width: 10%; }
+td.rentry { background-color: #FFFFFF; width: 90%; }
+td.entry { background-color: #FFFFFF; }
+td { font-size: 11px; }
+.tbl-border { background-color: #46465A; }
+td.ir { background-color: #CCCCDD; }
+td.du { background-color: #AAAAAA; }
+td.sh { background-color: #777799; }
+td.co { background-color: #DDCC99; }
+td.br { background-color: #AA8866; }
+td.go { background-color: #DDCC55; }
+td.ag { background-color: #DDAAAA; }
+td.ve { background-color: #99CC77; }
+td.va { background-color: #88AABB; }
+td.cl { background-color: #DDDDDD; }
+td.pl { background-color: #CCAA88;  }
+td.sp { background-color: #99BBBB; }
+td.ho { background-color: #CC8888; }
+td.ba { background-color: #AABBAA; }

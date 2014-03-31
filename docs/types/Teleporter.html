@@ -1,0 +1,33 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - Teleporter</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>Teleporter : <!-- DBG-1 --><a href="Item.html">Item</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;</h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="ConditionTeleporter.html">ConditionTeleporter</a>, <!-- DBG-3 --><a href="KeywordTeleporter.html">KeywordTeleporter</a>, <!-- DBG-3 --><a href="MLQuestTeleporter.html">MLQuestTeleporter</a>, <!-- DBG-3 --><a href="SkillTeleporter.html">SkillTeleporter</a>, <!-- DBG-3 --><a href="TicketTeleporter.html">TicketTeleporter</a>, <!-- DBG-3 --><a href="TimeoutTeleporter.html">TimeoutTeleporter</a></h4>
+      (<font color="blue">ctor</font>) Teleporter()<br>
+      (<font color="blue">ctor</font>) Teleporter( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) Teleporter( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> pointDest, <!-- DBG-0 --><a href="Map.html">Map</a> mapDest )<br>
+      (<font color="blue">ctor</font>) Teleporter( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> pointDest, <!-- DBG-0 --><a href="Map.html">Map</a> mapDest, <font color="blue">bool</font> creatures )<br>
+      <font color="blue">bool</font> Active( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> CombatCheck( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Creatures( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> CriminalCheck( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      TimeSpan Delay( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> DestEffect( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> LabelNumber( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Map.html">Map</a> MapDest( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Point3D.html">Point3D</a> PointDest( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> SoundID( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> SourceEffect( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanTeleport( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DoTeleport( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnMoveOver( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSingleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> StartTeleport( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+   </body>
+</html>

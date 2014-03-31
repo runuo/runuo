@@ -1,0 +1,46 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - MLQuestSystem</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.MLQuests.html">Back to Server.Engines.MLQuests</a></h4>
+      <h2>MLQuestSystem</h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="ViewContextCommand.html">ViewContextCommand</a>, <!-- DBG-4 --><a href="ViewQuestsCommand.html">ViewQuestsCommand</a></h4>
+      (<font color="blue">static</font>) <font color="blue">Dictionary</font>&lt;<a href="PlayerMobile.html">PlayerMobile</a>,<a href="MLQuestContext.html">MLQuestContext</a>&gt; Contexts( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> Enabled( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">Dictionary</font>&lt;<font color="blue">Type</font>,<font color="blue">List`1</font>&gt; QuestGivers( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">Dictionary</font>&lt;<font color="blue">Type</font>,<a href="MLQuest.html">MLQuest</a>&gt; Quests( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> CanMarkQuestItem( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm, <!-- DBG-0 --><a href="Item.html">Item</a> item, Type type )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> EventSink_QuestGumpRequest( <!-- DBG-0 --><a href="QuestGumpRequestArgs.html">QuestGumpRequestArgs</a> args )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="MLQuest.html">MLQuest</a> FindQuest( Type questType )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> FindQuest( <!-- DBG-0 --><a href="IQuestGiver.html">IQuestGiver</a> quester, <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm, <!-- DBG-0 --><a href="MLQuestContext.html">MLQuestContext</a> context, <font color="blue">out</font> <!-- DBG-0 --><a href="MLQuest.html">MLQuest</a> quest, <font color="blue">out</font> <!-- DBG-0 --><a href="MLQuestInstance.html">MLQuestInstance</a> entry )<br>
+      (<font color="blue">static</font>) <font color="blue">List</font>&lt;<a href="MLQuest.html">MLQuest</a>&gt; FindQuestList( Type questerType )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="MLQuestContext.html">MLQuestContext</a> GetContext( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="MLQuestContext.html">MLQuestContext</a> GetOrCreateContext( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> HandleDeath( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> HandleDeletion( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> HandleDeletion( <!-- DBG-0 --><a href="IQuestGiver.html">IQuestGiver</a> quester )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="MLQuestInstance.html">MLQuestInstance</a> HandleDelivery( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm, <!-- DBG-0 --><a href="IQuestGiver.html">IQuestGiver</a> quester, Type questerType )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> HandleKill( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> HandleSkillGain( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm, <!-- DBG-0 --><a href="SkillName.html">SkillName</a> skill )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Initialize()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> InvalidQuestItems_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> MarkQuestItem( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> MLQuestsInfo_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> OnDoubleClick( <!-- DBG-0 --><a href="IQuestGiver.html">IQuestGiver</a> quester, <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> OnMarkQuestItem( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm, <!-- DBG-0 --><a href="Item.html">Item</a> item, Type type )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="MLQuest.html">MLQuest</a> RandomStarterQuest( <!-- DBG-0 --><a href="IQuestGiver.html">IQuestGiver</a> quester, <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm, <!-- DBG-0 --><a href="MLQuestContext.html">MLQuestContext</a> context )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="MLQuest.html">MLQuest</a> ReadQuestRef( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Register( Type type, <!-- DBG-0 --><a href="MLQuest.html">MLQuest</a> quest )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Register( <!-- DBG-0 --><a href="MLQuest.html">MLQuest</a> quest, Type[] questerTypes )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> RegisterQuestGiver( <!-- DBG-0 --><a href="MLQuest.html">MLQuest</a> quest, Type questerType )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> SaveAllQuests_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> SaveQuest_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Tell( <!-- DBG-0 --><a href="IQuestGiver.html">IQuestGiver</a> quester, <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm, <font color="blue">int</font> cliloc )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Tell( <!-- DBG-0 --><a href="IQuestGiver.html">IQuestGiver</a> quester, <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm, <font color="blue">string</font> message )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Tell( <!-- DBG-0 --><a href="IQuestGiver.html">IQuestGiver</a> quester, <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm, <font color="blue">int</font> cliloc, <font color="blue">string</font> args )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> TellDef( <!-- DBG-0 --><a href="IQuestGiver.html">IQuestGiver</a> quester, <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> def )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> TurnToFace( <!-- DBG-0 --><a href="IQuestGiver.html">IQuestGiver</a> quester, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> WriteQuestRef( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer, <!-- DBG-0 --><a href="MLQuest.html">MLQuest</a> quest )<br>
+   </body>
+</html>

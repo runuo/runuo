@@ -1,0 +1,45 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseEscortable</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Mobiles.html">Back to Server.Mobiles</a></h4>
+      <h2>BaseEscortable : <!-- DBG-1 --><a href="BaseCreature.html">BaseCreature</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Mobile.html">Mobile</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="IHonorTarget.html">IHonorTarget</a>, <!-- DBG-2.2 --><a href="IQuestGiver.html">IQuestGiver</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="Bravehorn.html">Bravehorn</a>, <!-- DBG-3 --><a href="BrideGroom.html">BrideGroom</a>, <!-- DBG-3 --><a href="EscortableMage.html">EscortableMage</a>, <!-- DBG-3 --><a href="Lissbet.html">Lissbet</a>, <!-- DBG-3 --><a href="Merchant.html">Merchant</a>, <!-- DBG-3 --><a href="Messenger.html">Messenger</a>, <!-- DBG-3 --><a href="Noble.html">Noble</a>, <!-- DBG-3 --><a href="Peasant.html">Peasant</a>, <!-- DBG-3 --><a href="Prisoner.html">Prisoner</a>, <!-- DBG-3 --><a href="SeekerOfAdventure.html">SeekerOfAdventure</a></h4>
+<h4>Nested Types: <!-- DBG-4 --><a href="DeleteTimer.html">DeleteTimer</a></h4>
+      (<font color="blue">static</font>) Hashtable EscortTable( <font color="blue">get</font>; )<br>
+      (<font color="blue">ctor</font>) BaseEscortable()<br>
+      (<font color="blue">ctor</font>) BaseEscortable( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      <font color="blue">bool</font> CanShout( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Commandable( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> DeleteCorpseOnDeath( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> Destination( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IsBeingDeleted( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> StaticMLQuester( <font color="blue">get</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> AcceptEscorter( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddCustomContextEntries( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">List</font>&lt;<a href="ContextMenuEntry.html">ContextMenuEntry</a>&gt; list )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> BeginDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanBeRenamedBy( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckAtDestination()<br>
+      <font color="blue">virtual</font> <font color="blue">List</font>&lt;<a href="MLQuest.html">MLQuest</a>&gt; ConstructQuestList()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <!-- DBG-0 --><a href="EscortDestinationInfo.html">EscortDestinationInfo</a> GetDestination()<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="Mobile.html">Mobile</a> GetEscorter()<br>
+      <font color="blue">virtual</font> <font color="blue">string</font>[] GetPossibleDestinations()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> HandlesOnSpeech( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> InitBody()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> InitOutfit()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnBeforeDeath()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnMove( <!-- DBG-0 --><a href="Direction.html">Direction</a> d )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSpeech( <!-- DBG-0 --><a href="SpeechEventArgs.html">SpeechEventArgs</a> e )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnThink()<br>
+      <font color="blue">virtual</font> <font color="blue">string</font> PickRandomDestination()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> SayDestinationTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Shout( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> StartFollow()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> StartFollow( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> escorter )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> StopFollow()<br>
+   </body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - GauntletSpawner</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.Doom.html">Back to Server.Engines.Doom</a></h4>
+      <h2>GauntletSpawner : <!-- DBG-1 --><a href="Item.html">Item</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;</h2>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="BaseDoor.html">BaseDoor</a> CreateDoorSet( <font color="blue">int</font> xDoor, <font color="blue">int</font> yDoor, <font color="blue">bool</font> doorEastToWest, <font color="blue">int</font> hue )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> CreateMorphItem( <font color="blue">int</font> x, <font color="blue">int</font> y, <font color="blue">int</font> inactiveItemID, <font color="blue">int</font> activeItemID, <font color="blue">int</font> range, <font color="blue">int</font> hue )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> CreatePricedHealer( <font color="blue">int</font> price, <font color="blue">int</font> x, <font color="blue">int</font> y )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="GauntletSpawner.html">GauntletSpawner</a> CreateSpawner( <font color="blue">string</font> typeName, <font color="blue">int</font> xSpawner, <font color="blue">int</font> ySpawner, <font color="blue">int</font> xDoor, <font color="blue">int</font> yDoor, <font color="blue">int</font> xPentagram, <font color="blue">int</font> yPentagram, <font color="blue">bool</font> doorEastToWest, <font color="blue">int</font> xStart, <font color="blue">int</font> yStart, <font color="blue">int</font> xWidth, <font color="blue">int</font> yHeight )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> CreateTeleporter( <font color="blue">int</font> xFrom, <font color="blue">int</font> yFrom, <font color="blue">int</font> xTo, <font color="blue">int</font> yTo )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> CreateVarietyDealer( <font color="blue">int</font> x, <font color="blue">int</font> y )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> GenGauntlet_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Initialize()<br>
+      (<font color="blue">ctor</font>) GauntletSpawner()<br>
+      (<font color="blue">ctor</font>) GauntletSpawner( <font color="blue">string</font> typeName )<br>
+      (<font color="blue">ctor</font>) GauntletSpawner( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      <!-- DBG-0 --><a href="BaseAddon.html">BaseAddon</a> Addon( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Mobile.html">Mobile</a>&gt; Creatures( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> DefaultName( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="BaseDoor.html">BaseDoor</a> Door( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> HasCompleted( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Region.html">Region</a> Region( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Rectangle2D.html">Rectangle2D</a> RegionBounds( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="GauntletSpawner.html">GauntletSpawner</a> Sequence( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="GauntletSpawnerState.html">GauntletSpawnerState</a> State( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="BaseTrap.html">BaseTrap</a>&gt; Traps( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> TypeName( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ClearCreatures()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ClearTraps()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> ComputeSpawnCount()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> ComputeTrapCount()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> CreateRegion()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DestroyRegion()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> FullSpawn()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> RecurseReset()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Slice()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Spawn()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SpawnTrap()<br>
+   </body>
+</html>

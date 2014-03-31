@@ -1,0 +1,40 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - AllianceInfo</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Guilds.html">Back to Server.Guilds</a></h4>
+      <h2>AllianceInfo</h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="AllianceRosterGump.html">AllianceRosterGump</a></h4>
+      (<font color="blue">static</font>) <font color="blue">Dictionary</font>&lt;<font color="blue">String</font>,<a href="AllianceInfo.html">AllianceInfo</a>&gt; Alliances( <font color="blue">get</font>; )<br>
+      (<font color="blue">ctor</font>) AllianceInfo( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      (<font color="blue">ctor</font>) AllianceInfo( <!-- DBG-0 --><a href="Guild.html">Guild</a> leader, <font color="blue">string</font> name, <!-- DBG-0 --><a href="Guild.html">Guild</a> partner )<br>
+      <!-- DBG-0 --><a href="Guild.html">Guild</a> Leader( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> Name( <font color="blue">get</font>; )<br>
+      <font color="blue">void</font> AddPendingGuild( <!-- DBG-0 --><a href="Guild.html">Guild</a> g )<br>
+      <font color="blue">void</font> AllianceChat( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> AllianceChat( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">int</font> hue, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> AllianceMessage( <font color="blue">int</font> number )<br>
+      <font color="blue">void</font> AllianceMessage( <font color="blue">int</font> number, <font color="blue">string</font> args )<br>
+      <font color="blue">void</font> AllianceMessage( <font color="blue">int</font> number, <font color="blue">string</font> args, <font color="blue">int</font> hue )<br>
+      <font color="blue">void</font> AllianceMessage( <font color="blue">int</font> number, <font color="blue">bool</font> append, <font color="blue">string</font> affix )<br>
+      <font color="blue">void</font> AllianceMessage( <font color="blue">int</font> number, <font color="blue">bool</font> append, <font color="blue">string</font> affix, <font color="blue">string</font> args )<br>
+      <font color="blue">void</font> AllianceMessage( <font color="blue">int</font> num, <font color="blue">bool</font> append, <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">void</font> AllianceMessage( <font color="blue">int</font> number, <font color="blue">bool</font> append, <font color="blue">string</font> affix, <font color="blue">string</font> args, <font color="blue">int</font> hue )<br>
+      <font color="blue">void</font> AllianceTextMessage( <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> AllianceTextMessage( <font color="blue">int</font> hue, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> AllianceTextMessage( <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">void</font> AllianceTextMessage( <font color="blue">int</font> hue, <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">void</font> CalculateAllianceLeader()<br>
+      <font color="blue">void</font> CheckLeader()<br>
+      <font color="blue">void</font> Disband()<br>
+      <font color="blue">void</font> InvalidateMemberNotoriety()<br>
+      <font color="blue">void</font> InvalidateMemberProperties()<br>
+      <font color="blue">void</font> InvalidateMemberProperties( <font color="blue">bool</font> onlyOPL )<br>
+      <font color="blue">bool</font> IsMember( <!-- DBG-0 --><a href="Guild.html">Guild</a> g )<br>
+      <font color="blue">bool</font> IsPendingMember( <!-- DBG-0 --><a href="Guild.html">Guild</a> g )<br>
+      <font color="blue">void</font> RemoveGuild( <!-- DBG-0 --><a href="Guild.html">Guild</a> g )<br>
+      <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">void</font> TurnToMember( <!-- DBG-0 --><a href="Guild.html">Guild</a> g )<br>
+   </body>
+</html>

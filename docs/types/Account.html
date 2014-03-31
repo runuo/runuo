@@ -1,0 +1,69 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - Account</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Accounting.html">Back to Server.Accounting</a></h4>
+      <h2>Account : <!-- DBG-2.2 --><a href="IAccount.html">IAccount</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IAccount.html">IAccount</a>&gt;, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Account.html">Account</a>&gt;</h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="YoungTimer.html">YoungTimer</a></h4>
+      (<font color="blue">static</font>) <font color="blue">void</font> EventSink_Connected( <!-- DBG-0 --><a href="ConnectedEventArgs.html">ConnectedEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> EventSink_Disconnected( <!-- DBG-0 --><a href="DisconnectedEventArgs.html">DisconnectedEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> EventSink_Login( <!-- DBG-0 --><a href="LoginEventArgs.html">LoginEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">string</font> HashMD5( <font color="blue">string</font> phrase )<br>
+      (<font color="blue">static</font>) <font color="blue">string</font> HashSHA1( <font color="blue">string</font> phrase )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Initialize()<br>
+      (<font color="blue">static</font>) <font color="blue">string</font>[] LoadAccessCheck( XmlElement node )<br>
+      (<font color="blue">static</font>) IPAddress[] LoadAddressList( XmlElement node )<br>
+      (<font color="blue">static</font>) <font color="blue">List</font>&lt;<a href="AccountComment.html">AccountComment</a>&gt; LoadComments( XmlElement node )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Mobile.html">Mobile</a>[] LoadMobiles( XmlElement node )<br>
+      (<font color="blue">static</font>) <font color="blue">List</font>&lt;<a href="AccountTag.html">AccountTag</a>&gt; LoadTags( XmlElement node )<br>
+      (<font color="blue">ctor</font>) Account( XmlElement node )<br>
+      (<font color="blue">ctor</font>) Account( <font color="blue">string</font> username, <font color="blue">string</font> password )<br>
+      <!-- DBG-0 --><a href="AccessLevel.html">AccessLevel</a> AccessLevel( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Banned( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="AccountComment.html">AccountComment</a>&gt; Comments( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Count( <font color="blue">get</font>; )<br>
+      DateTime Created( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> CryptPassword( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Flags( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="HardwareInfo.html">HardwareInfo</a> HardwareInfo( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Inactive( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font>[] IPRestrictions( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Item( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      DateTime LastLogin( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Length( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Limit( <font color="blue">get</font>; )<br>
+      IPAddress[] LoginIPs( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> NewCryptPassword( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> PlainPassword( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="AccountTag.html">AccountTag</a>&gt; Tags( <font color="blue">get</font>; )<br>
+      TimeSpan TotalGameTime( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> Username( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Young( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> AddTag( <font color="blue">string</font> name, <font color="blue">string</font> value )<br>
+      <font color="blue">bool</font> CheckAccess( IPAddress ipAddress )<br>
+      <font color="blue">bool</font> CheckAccess( <!-- DBG-0 --><a href="NetState.html">NetState</a> ns )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckPassword( <font color="blue">string</font> plainPassword )<br>
+      <font color="blue">void</font> CheckYoung()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> CompareTo( <!-- DBG-0 --><a href="Account.html">Account</a> other )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> CompareTo( <!-- DBG-0 --><a href="IAccount.html">IAccount</a> other )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> CompareTo( <font color="blue">object</font> obj )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Delete()<br>
+      <font color="blue">bool</font> GetBanTags( <font color="blue">out</font> DateTime banTime, <font color="blue">out</font> TimeSpan banDuration )<br>
+      <font color="blue">bool</font> GetFlag( <font color="blue">int</font> index )<br>
+      <font color="blue">string</font> GetTag( <font color="blue">string</font> name )<br>
+      <font color="blue">bool</font> HasAccess( <!-- DBG-0 --><a href="NetState.html">NetState</a> ns )<br>
+      <font color="blue">bool</font> HasAccess( IPAddress ipAddress )<br>
+      <font color="blue">void</font> LogAccess( <!-- DBG-0 --><a href="NetState.html">NetState</a> ns )<br>
+      <font color="blue">void</font> LogAccess( IPAddress ipAddress )<br>
+      <font color="blue">void</font> RemoveTag( <font color="blue">string</font> name )<br>
+      <font color="blue">void</font> RemoveYoungStatus( <font color="blue">int</font> message )<br>
+      <font color="blue">void</font> Save( XmlTextWriter xml )<br>
+      <font color="blue">void</font> SetBanTags( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, DateTime banTime, TimeSpan banDuration )<br>
+      <font color="blue">void</font> SetFlag( <font color="blue">int</font> index, <font color="blue">bool</font> value )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SetPassword( <font color="blue">string</font> plainPassword )<br>
+      <font color="blue">void</font> SetTag( <font color="blue">string</font> name, <font color="blue">string</font> value )<br>
+      <font color="blue">void</font> SetUnspecifiedBan( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">string</font> ToString()<br>
+   </body>
+</html>

@@ -1,0 +1,648 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - Mobile</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.html">Back to Server</a></h4>
+      <h2>Mobile : <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Mobile.html">Mobile</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;</h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="BaseCreature.html">BaseCreature</a>, <!-- DBG-3 --><a href="BaseGuard.html">BaseGuard</a>, <!-- DBG-3 --><a href="CharacterStatue.html">CharacterStatue</a>, <!-- DBG-3 --><a href="PlayerMobile.html">PlayerMobile</a>, <!-- DBG-3 --><a href="PlayerVendor.html">PlayerVendor</a>, <!-- DBG-3 --><a href="TownCrier.html">TownCrier</a>, <!-- DBG-3 --><a href="Wanderer.html">Wanderer</a></h4>
+<h4>Nested Types: <!-- DBG-4 --><a href="(Anonymous-Type)--c__DisplayClass2.html">(Anonymous-Type)--c__DisplayClass2</a>, <!-- DBG-4 --><a href="AutoManifestTimer.html">AutoManifestTimer</a>, <!-- DBG-4 --><a href="CombatTimer.html">CombatTimer</a>, <!-- DBG-4 --><a href="ExpireAggressorsTimer.html">ExpireAggressorsTimer</a>, <!-- DBG-4 --><a href="ExpireCombatantTimer.html">ExpireCombatantTimer</a>, <!-- DBG-4 --><a href="ExpireCriminalTimer.html">ExpireCriminalTimer</a>, <!-- DBG-4 --><a href="FrozenTimer.html">FrozenTimer</a>, <!-- DBG-4 --><a href="HitsTimer.html">HitsTimer</a>, <!-- DBG-4 --><a href="LocationComparer.html">LocationComparer</a>, <!-- DBG-4 --><a href="LogoutTimer.html">LogoutTimer</a>, <!-- DBG-4 --><a href="ManaTimer.html">ManaTimer</a>, <!-- DBG-4 --><a href="MovementRecord.html">MovementRecord</a>, <!-- DBG-4 --><a href="ParalyzedTimer.html">ParalyzedTimer</a>, <!-- DBG-4 --><a href="SimplePrompt.html">SimplePrompt</a>, <!-- DBG-4 --><a href="SimpleStatePrompt.html">SimpleStatePrompt</a>, <!-- DBG-4 --><a href="SimpleStatePrompt-T-.html">SimpleStatePrompt</a>&lt;<font color="blue">T</font>&gt;, <!-- DBG-4 --><a href="SimpleStateTarget.html">SimpleStateTarget</a>, <!-- DBG-4 --><a href="SimpleStateTarget-T-.html">SimpleStateTarget</a>&lt;<font color="blue">T</font>&gt;, <!-- DBG-4 --><a href="SimpleTarget.html">SimpleTarget</a>, <!-- DBG-4 --><a href="StamTimer.html">StamTimer</a>, <!-- DBG-4 --><a href="WarmodeTimer.html">WarmodeTimer</a></h4>
+      (<font color="blue">static</font>) <font color="blue">int</font> ActionDelay( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> ActionMessageDelay( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="AllowBeneficialHandler.html">AllowBeneficialHandler</a> AllowBeneficialHandler( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="AllowHarmfulHandler.html">AllowHarmfulHandler</a> AllowHarmfulHandler( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="AOSStatusHandler.html">AOSStatusHandler</a> AOSStatusHandler( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> AsciiClickMessage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) TimeSpan AutoManifestTimeout( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> BodyWeight( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="CreateCorpseHandler.html">CreateCorpseHandler</a> CreateCorpseHandler( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> DefaultCanSeeVisibleDamage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) TimeSpan DefaultHitsRate( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) TimeSpan DefaultManaRate( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> DefaultShowVisibleDamage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) TimeSpan DefaultStamRate( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="IWeapon.html">IWeapon</a> DefaultWeapon( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> DisableDismountInWarmode( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> DisableHiddenSelfClick( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> DragEffects( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) TimeSpan ExpireCriminalDelay( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="AccessLevel.html">AccessLevel</a> FwdAccessOverride( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> FwdEnabled( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> FwdMaxSteps( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> FwdUOTDOverride( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">char</font>[] GhostChars( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> GlobalRegenThroughPoison( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> GuildClickMessage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="RegenRateHandler.html">RegenRateHandler</a> HitsRegenRateHandler( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> InsuranceEnabled( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="RegenRateHandler.html">RegenRateHandler</a> ManaRegenRateHandler( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> MaxPlayerResistance( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> NoSpeechLOS( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> OldPropertyTitles( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> RunFoot( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> RunMount( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="SkillCheckDirectLocationHandler.html">SkillCheckDirectLocationHandler</a> SkillCheckDirectLocationHandler( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="SkillCheckDirectTargetHandler.html">SkillCheckDirectTargetHandler</a> SkillCheckDirectTargetHandler( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="SkillCheckLocationHandler.html">SkillCheckLocationHandler</a> SkillCheckLocationHandler( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="SkillCheckTargetHandler.html">SkillCheckTargetHandler</a> SkillCheckTargetHandler( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="RegenRateHandler.html">RegenRateHandler</a> StamRegenRateHandler( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="VisibleDamageType.html">VisibleDamageType</a> VisibleDamageType( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> WalkFoot( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> WalkMount( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> <ProcessDeltaQueue>b__7( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">string</font> GetAccessLevelName( <!-- DBG-0 --><a href="AccessLevel.html">AccessLevel</a> level )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Mobile.html">Mobile</a> GetDamagerFrom( <!-- DBG-0 --><a href="DamageEntry.html">DamageEntry</a> de )<br>
+      (<font color="blue">static</font>) TimeSpan GetHitsRegenRate( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) TimeSpan GetManaRegenRate( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) TimeSpan GetStamRegenRate( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Item.html">Item</a> LiftItemDupe( <!-- DBG-0 --><a href="Item.html">Item</a> oldItem, <font color="blue">int</font> amount )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> ProcessDeltaQueue()<br>
+      (<font color="blue">ctor</font>) Mobile()<br>
+      (<font color="blue">ctor</font>) Mobile( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      <!-- DBG-0 --><a href="AccessLevel.html">AccessLevel</a> AccessLevel( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="IAccount.html">IAccount</a> Account( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="AggressorInfo.html">AggressorInfo</a>&gt; Aggressed( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="AggressorInfo.html">AggressorInfo</a>&gt; Aggressors( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Alive( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> AllowedStealthSteps( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">double</font> ArmorRating( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> ArmsArmor( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> AutoPageNotify( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> BAC( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Container.html">Container</a> Backpack( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="BankBox.html">BankBox</a> BankBox( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BaseColdResistance( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BaseEnergyResistance( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BaseFireResistance( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BasePhysicalResistance( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BasePoisonResistance( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BaseSoundID( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Blessed( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Body.html">Body</a> Body( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Body.html">Body</a> BodyMod( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> BodyValue( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> CanHearGhosts( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> CanRegenHits( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanRegenMana( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanRegenStam( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanSeeVisibleDamage( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanSwim( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> CanTarget( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CantWalk( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> ChangingCombatant( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> ChestArmor( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> ClickTitle( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> ColdResistance( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Combatant( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="ContextMenu.html">ContextMenu</a> ContextMenu( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Container.html">Container</a> Corpse( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      DateTime CreationTime( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Criminal( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="DamageEntry.html">DamageEntry</a>&gt; DamageEntries( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Deleted( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Dex( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="StatLockType.html">StatLockType</a> DexLock( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Direction.html">Direction</a> Direction( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> DisarmReady( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> DisplayGuildTitle( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> EmoteHue( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> EnergyResistance( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> FacialHairHue( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> FacialHairItemID( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Fame( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Female( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> FireResistance( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Flying( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Followers( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> FollowersMax( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Frozen( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="BaseGuild.html">BaseGuild</a> Guild( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> GuildFealty( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> GuildTitle( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> HairHue( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> HairItemID( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> HandArmor( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> HasTrade( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> HeadArmor( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Hidden( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Hits( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> HitsMax( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> Holding( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Hue( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> HuedItemID( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> HueMod( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Hunger( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Int( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="StatLockType.html">StatLockType</a> IntLock( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IsBodyMod( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsDeadBondedPet( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Item.html">Item</a>&gt; Items( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Karma( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> KeepsItemsOnDeath( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Kills( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> Language( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      DateTime LastDexGain( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      DateTime LastIntGain( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> LastKiller( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">long</font> LastMoveTime( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      DateTime LastStatGain( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      DateTime LastStrGain( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> LegsArmor( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> LightLevel( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Point3D.html">Point3D</a> Location( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Point3D.html">Point3D</a> LogoutLocation( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Map.html">Map</a> LogoutMap( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Luck( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> MagicDamageAbsorb( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Mana( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> ManaMax( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Map.html">Map</a> Map( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> MaxWeight( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Meditating( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> MeleeDamageAbsorb( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="IMount.html">IMount</a> Mount( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Mounted( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> Name( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> NameHue( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> NameMod( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> NeckArmor( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="NetState.html">NetState</a> NetState( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> NewGuildDisplay( <font color="blue">get</font>; )<br>
+      <font color="blue">long</font> NextActionMessage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">long</font> NextActionTime( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">long</font> NextCombatTime( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">long</font> NextSkillTime( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">long</font> NextSpellTime( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> NoMoveHS( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Packet.html">Packet</a> OPLPacket( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Paralyzed( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">object</font> Party( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> PhysicalResistance( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Player( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Poison.html">Poison</a> Poison( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Poisoned( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> PoisonResistance( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Timer.html">Timer</a> PoisonTimer( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> Profile( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> ProfileLocked( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Prompt.html">Prompt</a> Prompt( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> PropertyList( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> PropertyTitle( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Pushing( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="QuestArrow.html">QuestArrow</a> QuestArrow( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Race.html">Race</a> Race( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">double</font> RacialSkillBonus( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> RawDex( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> RawInt( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> RawName( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> RawStatTotal( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> RawStr( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> RegenThroughPoison( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Region.html">Region</a> Region( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Packet.html">Packet</a> RemovePacket( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="ResistanceMod.html">ResistanceMod</a>&gt; ResistanceMods( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font>[] Resistances( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> RetainPackLocsOnDeath( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Serial.html">Serial</a> Serial( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Server.ISerializable.SerialIdentity( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Server.ISerializable.TypeReference( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> ShieldArmor( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> ShortTermMurders( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> ShouldCheckStatTimers( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> ShowFameTitle( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> ShowVisibleDamage( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="SkillMod.html">SkillMod</a>&gt; SkillMods( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Skills.html">Skills</a> Skills( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> SkillsCap( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> SkillsTotal( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> SolidHueOverride( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="ISpawner.html">ISpawner</a> Spawner( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> SpeechHue( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="ISpell.html">ISpell</a> Spell( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Squelched( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Mobile.html">Mobile</a>&gt; Stabled( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Stam( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> StamMax( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> StatCap( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="StatMod.html">StatMod</a>&gt; StatMods( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Str( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="StatLockType.html">StatLockType</a> StrLock( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> StunReady( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> Talisman( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Target.html">Target</a> Target( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> TargetLocked( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Thirst( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> TithingPoints( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> Title( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> TotalGold( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> TotalItems( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> TotalWeight( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> VirtualArmor( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> VirtualArmorMod( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="VirtueInfo.html">VirtueInfo</a> Virtues( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Region.html">Region</a> WalkRegion( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Warmode( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="IWeapon.html">IWeapon</a> Weapon( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> WhisperHue( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> X( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Y( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> YellHue( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> YellowHealthbar( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Z( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> AddItem( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddNameProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddResistanceMod( <!-- DBG-0 --><a href="ResistanceMod.html">ResistanceMod</a> toAdd )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddSkillMod( <!-- DBG-0 --><a href="SkillMod.html">SkillMod</a> mod )<br>
+      <font color="blue">void</font> AddSpeechItemsFrom( <font color="blue">List</font>&lt;<a href="IEntity.html">IEntity</a>&gt; list, <!-- DBG-0 --><a href="Container.html">Container</a> cont )<br>
+      <font color="blue">void</font> AddStatMod( <!-- DBG-0 --><a href="StatMod.html">StatMod</a> mod )<br>
+      <font color="blue">bool</font> AddToBackpack( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AggressiveAction( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> aggressor )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AggressiveAction( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> aggressor, <font color="blue">bool</font> criminal )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> AllowEquipFrom( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> AllowItemUse( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> AllowSkillUse( <!-- DBG-0 --><a href="SkillName.html">SkillName</a> name )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Animate( <font color="blue">int</font> action, <font color="blue">int</font> frameCount, <font color="blue">int</font> repeatCount, <font color="blue">bool</font> forward, <font color="blue">bool</font> repeat, <font color="blue">int</font> delay )<br>
+      <font color="blue">virtual</font> <font color="blue">string</font> ApplyNameSuffix( <font color="blue">string</font> suffix )<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="ApplyPoisonResult.html">ApplyPoisonResult</a> ApplyPoison( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Poison.html">Poison</a> poison )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Attack( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">bool</font> BeginAction( <font color="blue">object</font> toLock )<br>
+      <!-- DBG-0 --><a href="Prompt.html">Prompt</a> BeginPrompt( <!-- DBG-0 --><a href="PromptCallback.html">PromptCallback</a> callback )<br>
+      <!-- DBG-0 --><a href="Prompt.html">Prompt</a> BeginPrompt( <!-- DBG-0 --><a href="PromptStateCallback.html">PromptStateCallback</a> callback, <font color="blue">object</font> state )<br>
+      <!-- DBG-0 --><a href="Prompt.html">Prompt</a> BeginPrompt( <a href="PromptStateCallback-T-.html">PromptStateCallback</a>&lt;<font color="blue">T</font>&gt; callback, T state )<br>
+      <!-- DBG-0 --><a href="Prompt.html">Prompt</a> BeginPrompt( <!-- DBG-0 --><a href="PromptCallback.html">PromptCallback</a> callback, <!-- DBG-0 --><a href="PromptCallback.html">PromptCallback</a> cancelCallback )<br>
+      <!-- DBG-0 --><a href="Prompt.html">Prompt</a> BeginPrompt( <!-- DBG-0 --><a href="PromptCallback.html">PromptCallback</a> callback, <font color="blue">bool</font> callbackHandlesCancel )<br>
+      <!-- DBG-0 --><a href="Prompt.html">Prompt</a> BeginPrompt( <!-- DBG-0 --><a href="PromptStateCallback.html">PromptStateCallback</a> callback, <font color="blue">bool</font> callbackHandlesCancel, <font color="blue">object</font> state )<br>
+      <!-- DBG-0 --><a href="Prompt.html">Prompt</a> BeginPrompt( <a href="PromptStateCallback-T-.html">PromptStateCallback</a>&lt;<font color="blue">T</font>&gt; callback, <font color="blue">bool</font> callbackHandlesCancel, T state )<br>
+      <!-- DBG-0 --><a href="Prompt.html">Prompt</a> BeginPrompt( <a href="PromptStateCallback-T-.html">PromptStateCallback</a>&lt;<font color="blue">T</font>&gt; callback, <a href="PromptStateCallback-T-.html">PromptStateCallback</a>&lt;<font color="blue">T</font>&gt; cancelCallback, T state )<br>
+      <!-- DBG-0 --><a href="Prompt.html">Prompt</a> BeginPrompt( <!-- DBG-0 --><a href="PromptStateCallback.html">PromptStateCallback</a> callback, <!-- DBG-0 --><a href="PromptStateCallback.html">PromptStateCallback</a> cancelCallback, <font color="blue">object</font> state )<br>
+      <!-- DBG-0 --><a href="Target.html">Target</a> BeginTarget( <font color="blue">int</font> range, <font color="blue">bool</font> allowGround, <!-- DBG-0 --><a href="TargetFlags.html">TargetFlags</a> flags, <!-- DBG-0 --><a href="TargetCallback.html">TargetCallback</a> callback )<br>
+      <!-- DBG-0 --><a href="Target.html">Target</a> BeginTarget( <font color="blue">int</font> range, <font color="blue">bool</font> allowGround, <!-- DBG-0 --><a href="TargetFlags.html">TargetFlags</a> flags, <!-- DBG-0 --><a href="TargetStateCallback.html">TargetStateCallback</a> callback, <font color="blue">object</font> state )<br>
+      <!-- DBG-0 --><a href="Target.html">Target</a> BeginTarget( <font color="blue">int</font> range, <font color="blue">bool</font> allowGround, <!-- DBG-0 --><a href="TargetFlags.html">TargetFlags</a> flags, <a href="TargetStateCallback-T-.html">TargetStateCallback</a>&lt;<font color="blue">T</font>&gt; callback, T state )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> BeneficialCheck( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target )<br>
+      <font color="blue">void</font> BoltEffect( <font color="blue">int</font> hue )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanBeBeneficial( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanBeBeneficial( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target, <font color="blue">bool</font> message )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanBeBeneficial( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target, <font color="blue">bool</font> message, <font color="blue">bool</font> allowDead )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanBeDamaged()<br>
+      <font color="blue">bool</font> CanBeginAction( <font color="blue">object</font> toLock )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanBeHarmful( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanBeHarmful( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target, <font color="blue">bool</font> message )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanBeHarmful( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target, <font color="blue">bool</font> message, <font color="blue">bool</font> ignoreOurBlessedness )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanBeRenamedBy( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanPaperdollBeOpenedBy( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanSee( <font color="blue">object</font> o )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanSee( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanSee( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">void</font> CheckAggrExpire()<br>
+      <font color="blue">bool</font> CheckAlive()<br>
+      <font color="blue">bool</font> CheckAlive( <font color="blue">bool</font> message )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckAttack( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckContextMenuDisplay( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> target )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckCure( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckEquip( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckHearsMutatedSpeech( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <font color="blue">object</font> context )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckHigherPoison( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Poison.html">Poison</a> poison )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckItemUse( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckLift( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item, <font color="blue">ref</font> <!-- DBG-0 --><a href="LRReason.html">LRReason</a> reject )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> CheckLightLevels( <font color="blue">bool</font> forceResend )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckMovement( <!-- DBG-0 --><a href="Direction.html">Direction</a> d, <font color="blue">out</font> <font color="blue">int</font> newZ )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckNonlocalDrop( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item, <!-- DBG-0 --><a href="Item.html">Item</a> target )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckNonlocalLift( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckPoisonImmunity( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Poison.html">Poison</a> poison )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckResurrect()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckShove( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> shoved )<br>
+      <font color="blue">bool</font> CheckSkill( <!-- DBG-0 --><a href="SkillName.html">SkillName</a> skill, <font color="blue">double</font> chance )<br>
+      <font color="blue">bool</font> CheckSkill( <!-- DBG-0 --><a href="SkillName.html">SkillName</a> skill, <font color="blue">double</font> minSkill, <font color="blue">double</font> maxSkill )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckSpeechManifest()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckSpellCast( <!-- DBG-0 --><a href="ISpell.html">ISpell</a> spell )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> CheckStatTimers()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckTarget( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Target.html">Target</a> targ, <font color="blue">object</font> targeted )<br>
+      <font color="blue">bool</font> CheckTargetSkill( <!-- DBG-0 --><a href="SkillName.html">SkillName</a> skill, <font color="blue">object</font> target, <font color="blue">double</font> chance )<br>
+      <font color="blue">bool</font> CheckTargetSkill( <!-- DBG-0 --><a href="SkillName.html">SkillName</a> skill, <font color="blue">object</font> target, <font color="blue">double</font> minSkill, <font color="blue">double</font> maxSkill )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckTrade( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to, <!-- DBG-0 --><a href="Item.html">Item</a> item, <!-- DBG-0 --><a href="SecureTradeContainer.html">SecureTradeContainer</a> cont, <font color="blue">bool</font> message, <font color="blue">bool</font> checkItems, <font color="blue">int</font> plusItems, <font color="blue">int</font> plusWeight )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ClearFastwalkStack()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ClearHand( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ClearHands()<br>
+      <font color="blue">void</font> ClearProperties()<br>
+      <font color="blue">void</font> ClearQuestArrow()<br>
+      <font color="blue">void</font> ClearScreen()<br>
+      <font color="blue">void</font> ClearTarget()<br>
+      <font color="blue">bool</font> CloseAllGumps()<br>
+      <font color="blue">bool</font> CloseAllGumps( <font color="blue">bool</font> throwOnOffline )<br>
+      <font color="blue">bool</font> CloseGump( Type type )<br>
+      <font color="blue">bool</font> CloseGump( Type type, <font color="blue">int</font> buttonID )<br>
+      <font color="blue">bool</font> CloseGump( Type type, <font color="blue">int</font> buttonID, <font color="blue">bool</font> throwOnOffline )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> CompareTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> other )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> CompareTo( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> other )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> CompareTo( <font color="blue">object</font> other )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ComputeBaseLightLevels( <font color="blue">out</font> <font color="blue">int</font> global, <font color="blue">out</font> <font color="blue">int</font> personal )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ComputeLightLevels( <font color="blue">out</font> <font color="blue">int</font> global, <font color="blue">out</font> <font color="blue">int</font> personal )<br>
+      <font color="blue">int</font> ComputeMovementSpeed()<br>
+      <font color="blue">int</font> ComputeMovementSpeed( <!-- DBG-0 --><a href="Direction.html">Direction</a> dir )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> ComputeMovementSpeed( <!-- DBG-0 --><a href="Direction.html">Direction</a> dir, <font color="blue">bool</font> checkTurning )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ComputeResistances()<br>
+      <font color="blue">void</font> ConvertHair()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> CriminalAction( <font color="blue">bool</font> message )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CurePoison( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Damage( <font color="blue">int</font> amount )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Damage( <font color="blue">int</font> amount, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Damage( <font color="blue">int</font> amount, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">bool</font> informMount )<br>
+      <font color="blue">void</font> DefaultMobileInit()<br>
+      <font color="blue">void</font> DelayChangeWarmode( <font color="blue">bool</font> value )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Delete()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Delta( <!-- DBG-0 --><a href="MobileDelta.html">MobileDelta</a> flag )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DisplayPaperdollTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DisruptiveAction()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DoBeneficial( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DoHarmful( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DoHarmful( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target, <font color="blue">bool</font> indirect )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DoSpeech( <font color="blue">string</font> text, <font color="blue">int</font>[] keywords, <!-- DBG-0 --><a href="MessageType.html">MessageType</a> type, <font color="blue">int</font> hue )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> Drop( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> loc )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> Drop( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> loc )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> Drop( <!-- DBG-0 --><a href="Item.html">Item</a> to, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> loc )<br>
+      <font color="blue">void</font> DropHolding()<br>
+      <font color="blue">void</font> Emote( <font color="blue">int</font> number )<br>
+      <font color="blue">void</font> Emote( <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> Emote( <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">void</font> Emote( <font color="blue">int</font> number, <font color="blue">string</font> args )<br>
+      <font color="blue">void</font> EndAction( <font color="blue">object</font> toLock )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> EquipItem( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <!-- DBG-0 --><a href="BankBox.html">BankBox</a> FindBankNoCreate()<br>
+      <!-- DBG-0 --><a href="DamageEntry.html">DamageEntry</a> FindDamageEntryFor( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <!-- DBG-0 --><a href="Gump.html">Gump</a> FindGump( Type type )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> FindItemOnLayer( <!-- DBG-0 --><a href="Layer.html">Layer</a> layer )<br>
+      <!-- DBG-0 --><a href="DamageEntry.html">DamageEntry</a> FindLeastRecentDamageEntry( <font color="blue">bool</font> allowSelf )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> FindLeastRecentDamager( <font color="blue">bool</font> allowSelf )<br>
+      <!-- DBG-0 --><a href="DamageEntry.html">DamageEntry</a> FindLeastTotalDamageEntry( <font color="blue">bool</font> allowSelf )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> FindLeastTotalDamger( <font color="blue">bool</font> allowSelf )<br>
+      <!-- DBG-0 --><a href="DamageEntry.html">DamageEntry</a> FindMostRecentDamageEntry( <font color="blue">bool</font> allowSelf )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> FindMostRecentDamager( <font color="blue">bool</font> allowSelf )<br>
+      <!-- DBG-0 --><a href="DamageEntry.html">DamageEntry</a> FindMostTotalDamageEntry( <font color="blue">bool</font> allowSelf )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> FindMostTotalDamger( <font color="blue">bool</font> allowSelf )<br>
+      <font color="blue">void</font> FixedEffect( <font color="blue">int</font> itemID, <font color="blue">int</font> speed, <font color="blue">int</font> duration )<br>
+      <font color="blue">void</font> FixedEffect( <font color="blue">int</font> itemID, <font color="blue">int</font> speed, <font color="blue">int</font> duration, <font color="blue">int</font> hue, <font color="blue">int</font> renderMode )<br>
+      <font color="blue">void</font> FixedParticles( <font color="blue">int</font> itemID, <font color="blue">int</font> speed, <font color="blue">int</font> duration, <font color="blue">int</font> effect, <!-- DBG-0 --><a href="EffectLayer.html">EffectLayer</a> layer )<br>
+      <font color="blue">void</font> FixedParticles( <font color="blue">int</font> itemID, <font color="blue">int</font> speed, <font color="blue">int</font> duration, <font color="blue">int</font> effect, <!-- DBG-0 --><a href="EffectLayer.html">EffectLayer</a> layer, <font color="blue">int</font> unknown )<br>
+      <font color="blue">void</font> FixedParticles( <font color="blue">int</font> itemID, <font color="blue">int</font> speed, <font color="blue">int</font> duration, <font color="blue">int</font> effect, <font color="blue">int</font> hue, <font color="blue">int</font> renderMode, <!-- DBG-0 --><a href="EffectLayer.html">EffectLayer</a> layer )<br>
+      <font color="blue">void</font> FixedParticles( <font color="blue">int</font> itemID, <font color="blue">int</font> speed, <font color="blue">int</font> duration, <font color="blue">int</font> effect, <font color="blue">int</font> hue, <font color="blue">int</font> renderMode, <!-- DBG-0 --><a href="EffectLayer.html">EffectLayer</a> layer, <font color="blue">int</font> unknown )<br>
+      <font color="blue">void</font> FreeCache()<br>
+      <font color="blue">void</font> Freeze( TimeSpan duration )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetAngerSound()<br>
+      <font color="blue">int</font> GetAOSStatus( <font color="blue">int</font> index )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetAttackSound()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetChildContextMenuEntries( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">List</font>&lt;<a href="ContextMenuEntry.html">ContextMenuEntry</a>&gt; list, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetChildNameProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetChildProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <a href="IPooledEnumerable-T-.html">IPooledEnumerable</a>&lt;<a href="NetState.html">NetState</a>&gt; GetClientsInRange( <font color="blue">int</font> range )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetContextMenuEntries( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">List</font>&lt;<a href="ContextMenuEntry.html">ContextMenuEntry</a>&gt; list )<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="Mobile.html">Mobile</a> GetDamageMaster( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> damagee )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetDeathSound()<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="IWeapon.html">IWeapon</a> GetDefaultWeapon()<br>
+      <!-- DBG-0 --><a href="Direction.html">Direction</a> GetDirectionTo( <!-- DBG-0 --><a href="Point2D.html">Point2D</a> p )<br>
+      <!-- DBG-0 --><a href="Direction.html">Direction</a> GetDirectionTo( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p )<br>
+      <!-- DBG-0 --><a href="Direction.html">Direction</a> GetDirectionTo( <!-- DBG-0 --><a href="IPoint2D.html">IPoint2D</a> p )<br>
+      <!-- DBG-0 --><a href="Direction.html">Direction</a> GetDirectionTo( <font color="blue">int</font> x, <font color="blue">int</font> y )<br>
+      <font color="blue">double</font> GetDistanceToSqrt( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p )<br>
+      <font color="blue">double</font> GetDistanceToSqrt( <!-- DBG-0 --><a href="IPoint2D.html">IPoint2D</a> p )<br>
+      <font color="blue">double</font> GetDistanceToSqrt( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetHurtSound()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetIdleSound()<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="DeathMoveResult.html">DeathMoveResult</a> GetInventoryMoveResultFor( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <a href="IPooledEnumerable-T-.html">IPooledEnumerable</a>&lt;<a href="Item.html">Item</a>&gt; GetItemsInRange( <font color="blue">int</font> range )<br>
+      <font color="blue">virtual</font> TimeSpan GetLogoutDelay()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetMaxResistance( <!-- DBG-0 --><a href="ResistanceType.html">ResistanceType</a> type )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetMinResistance( <!-- DBG-0 --><a href="ResistanceType.html">ResistanceType</a> type )<br>
+      <a href="IPooledEnumerable-T-.html">IPooledEnumerable</a>&lt;<a href="Mobile.html">Mobile</a>&gt; GetMobilesInRange( <font color="blue">int</font> range )<br>
+      <a href="IPooledEnumerable-T-.html">IPooledEnumerable</a>&lt;<a href="IEntity.html">IEntity</a>&gt; GetObjectsInRange( <font color="blue">int</font> range )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetOldPacketFlags()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetPacketFlags()<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="DeathMoveResult.html">DeathMoveResult</a> GetParentMoveResultFor( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetResistance( <!-- DBG-0 --><a href="ResistanceType.html">ResistanceType</a> type )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetSeason()<br>
+      <!-- DBG-0 --><a href="MobileDelta.html">MobileDelta</a> GetStatDelta( <!-- DBG-0 --><a href="StatType.html">StatType</a> type )<br>
+      <!-- DBG-0 --><a href="StatMod.html">StatMod</a> GetStatMod( <font color="blue">string</font> name )<br>
+      <font color="blue">int</font> GetStatOffset( <!-- DBG-0 --><a href="StatType.html">StatType</a> type )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetTotal( <!-- DBG-0 --><a href="TotalType.html">TotalType</a> type )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> HandlesOnSpeech( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> HarmfulCheck( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target )<br>
+      <font color="blue">bool</font> HasFreeHand()<br>
+      <font color="blue">bool</font> HasGump( Type type )<br>
+      <font color="blue">bool</font> HasGump( Type type, <font color="blue">bool</font> throwOnOffline )<br>
+      <font color="blue">void</font> Heal( <font color="blue">int</font> amount )<br>
+      <font color="blue">void</font> Heal( <font color="blue">int</font> amount, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> Heal( <font color="blue">int</font> amount, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">bool</font> message )<br>
+      <font color="blue">void</font> InitStats( <font color="blue">int</font> str, <font color="blue">int</font> dex, <font color="blue">int</font> intel )<br>
+      <font color="blue">bool</font> InLOS( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> target )<br>
+      <font color="blue">bool</font> InLOS( <font color="blue">object</font> target )<br>
+      <font color="blue">bool</font> InLOS( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target )<br>
+      <font color="blue">bool</font> InRange( <!-- DBG-0 --><a href="IPoint2D.html">IPoint2D</a> p, <font color="blue">int</font> range )<br>
+      <font color="blue">bool</font> InRange( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p, <font color="blue">int</font> range )<br>
+      <font color="blue">bool</font> InRange( <!-- DBG-0 --><a href="Point2D.html">Point2D</a> p, <font color="blue">int</font> range )<br>
+      <font color="blue">void</font> Internalize()<br>
+      <font color="blue">bool</font> InternalOnMove( <!-- DBG-0 --><a href="Direction.html">Direction</a> d )<br>
+      <font color="blue">void</font> InternalRemoveSkillMod( <!-- DBG-0 --><a href="SkillMod.html">SkillMod</a> mod )<br>
+      <font color="blue">void</font> InvalidateProperties()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> IsBeneficialCriminal( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> IsHarmfulCriminal( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> IsSnoop( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Kill()<br>
+      <font color="blue">void</font> LaunchBrowser( <font color="blue">string</font> url )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Lift( <!-- DBG-0 --><a href="Item.html">Item</a> item, <font color="blue">int</font> amount, <font color="blue">out</font> <font color="blue">bool</font> rejected, <font color="blue">out</font> <!-- DBG-0 --><a href="LRReason.html">LRReason</a> reject )<br>
+      <font color="blue">void</font> LocalOverheadMessage( <!-- DBG-0 --><a href="MessageType.html">MessageType</a> type, <font color="blue">int</font> hue, <font color="blue">int</font> number )<br>
+      <font color="blue">void</font> LocalOverheadMessage( <!-- DBG-0 --><a href="MessageType.html">MessageType</a> type, <font color="blue">int</font> hue, <font color="blue">bool</font> ascii, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> LocalOverheadMessage( <!-- DBG-0 --><a href="MessageType.html">MessageType</a> type, <font color="blue">int</font> hue, <font color="blue">int</font> number, <font color="blue">string</font> args )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Manifest( TimeSpan delay )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> Move( <!-- DBG-0 --><a href="Direction.html">Direction</a> d )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> MoveToWorld( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> newLocation, <!-- DBG-0 --><a href="Map.html">Map</a> map )<br>
+      <font color="blue">void</font> MovingEffect( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> to, <font color="blue">int</font> itemID, <font color="blue">int</font> speed, <font color="blue">int</font> duration, <font color="blue">bool</font> fixedDirection, <font color="blue">bool</font> explodes )<br>
+      <font color="blue">void</font> MovingEffect( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> to, <font color="blue">int</font> itemID, <font color="blue">int</font> speed, <font color="blue">int</font> duration, <font color="blue">bool</font> fixedDirection, <font color="blue">bool</font> explodes, <font color="blue">int</font> hue, <font color="blue">int</font> renderMode )<br>
+      <font color="blue">void</font> MovingParticles( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> to, <font color="blue">int</font> itemID, <font color="blue">int</font> speed, <font color="blue">int</font> duration, <font color="blue">bool</font> fixedDirection, <font color="blue">bool</font> explodes, <font color="blue">int</font> effect, <font color="blue">int</font> explodeEffect, <font color="blue">int</font> explodeSound )<br>
+      <font color="blue">void</font> MovingParticles( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> to, <font color="blue">int</font> itemID, <font color="blue">int</font> speed, <font color="blue">int</font> duration, <font color="blue">bool</font> fixedDirection, <font color="blue">bool</font> explodes, <font color="blue">int</font> effect, <font color="blue">int</font> explodeEffect, <font color="blue">int</font> explodeSound, <font color="blue">int</font> unknown )<br>
+      <font color="blue">void</font> MovingParticles( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> to, <font color="blue">int</font> itemID, <font color="blue">int</font> speed, <font color="blue">int</font> duration, <font color="blue">bool</font> fixedDirection, <font color="blue">bool</font> explodes, <font color="blue">int</font> hue, <font color="blue">int</font> renderMode, <font color="blue">int</font> effect, <font color="blue">int</font> explodeEffect, <font color="blue">int</font> explodeSound, <font color="blue">int</font> unknown )<br>
+      <font color="blue">void</font> MovingParticles( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> to, <font color="blue">int</font> itemID, <font color="blue">int</font> speed, <font color="blue">int</font> duration, <font color="blue">bool</font> fixedDirection, <font color="blue">bool</font> explodes, <font color="blue">int</font> hue, <font color="blue">int</font> renderMode, <font color="blue">int</font> effect, <font color="blue">int</font> explodeEffect, <font color="blue">int</font> explodeSound, <!-- DBG-0 --><a href="EffectLayer.html">EffectLayer</a> layer, <font color="blue">int</font> unknown )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> MutateSpeech( <font color="blue">List</font>&lt;<a href="Mobile.html">Mobile</a>&gt; hears, <font color="blue">ref</font> <font color="blue">string</font> text, <font color="blue">ref</font> <font color="blue">object</font> context )<br>
+      <font color="blue">void</font> NonlocalOverheadMessage( <!-- DBG-0 --><a href="MessageType.html">MessageType</a> type, <font color="blue">int</font> hue, <font color="blue">int</font> number )<br>
+      <font color="blue">void</font> NonlocalOverheadMessage( <!-- DBG-0 --><a href="MessageType.html">MessageType</a> type, <font color="blue">int</font> hue, <font color="blue">bool</font> ascii, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> NonlocalOverheadMessage( <!-- DBG-0 --><a href="MessageType.html">MessageType</a> type, <font color="blue">int</font> hue, <font color="blue">int</font> number, <font color="blue">string</font> args )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAccessLevelChanged( <!-- DBG-0 --><a href="AccessLevel.html">AccessLevel</a> oldLevel )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterMove( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> oldLocation )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterNameChange( <font color="blue">string</font> oldName, <font color="blue">string</font> newName )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterResurrect()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterSpawn()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAosSingleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnBeforeDeath()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnBeforeResurrect()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnBeforeSpawn( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> location, <!-- DBG-0 --><a href="Map.html">Map</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnBeneficialAction( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target, <font color="blue">bool</font> isCriminal )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnCombatantChange()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnConnected()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnCured( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Poison.html">Poison</a> oldPoison )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDamage( <font color="blue">int</font> amount, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">bool</font> willKill )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDeath( <!-- DBG-0 --><a href="Container.html">Container</a> c )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDisconnected()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClickCantSee( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClickDead( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClickOutOfRange( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnDragDrop( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> dropped )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnDragLift( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnDroppedItemInto( <!-- DBG-0 --><a href="Item.html">Item</a> item, <!-- DBG-0 --><a href="Container.html">Container</a> container, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> loc )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnDroppedItemOnto( <!-- DBG-0 --><a href="Item.html">Item</a> item, <!-- DBG-0 --><a href="Item.html">Item</a> target )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnDroppedItemToItem( <!-- DBG-0 --><a href="Item.html">Item</a> item, <!-- DBG-0 --><a href="Item.html">Item</a> target, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> loc )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnDroppedItemToMobile( <!-- DBG-0 --><a href="Item.html">Item</a> item, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnDroppedItemToWorld( <!-- DBG-0 --><a href="Item.html">Item</a> item, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> location )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnEquip( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnFailedCure( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnFameChange( <font color="blue">int</font> oldValue )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnGenderChanged( <font color="blue">bool</font> oldFemale )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnGuildChange( <!-- DBG-0 --><a href="BaseGuild.html">BaseGuild</a> oldGuild )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnGuildTitleChange( <font color="blue">string</font> oldTitle )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnHarmfulAction( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target, <font color="blue">bool</font> isCriminal )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnHeal( <font color="blue">ref</font> <font color="blue">int</font> amount, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnHelpRequest( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnHiddenChanged()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnHigherPoison( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Poison.html">Poison</a> poison )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnHitsChange( <font color="blue">int</font> oldValue )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnItemAdded( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnItemBounceCleared( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnItemLifted( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnItemRemoved( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnItemUsed( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnKarmaChange( <font color="blue">int</font> oldValue )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnKillsChange( <font color="blue">int</font> oldValue )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnLocationChange( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> oldLocation )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnManaChange( <font color="blue">int</font> oldValue )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnMapChange( <!-- DBG-0 --><a href="Map.html">Map</a> oldMap )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnMove( <!-- DBG-0 --><a href="Direction.html">Direction</a> d )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnMovement( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> oldLocation )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnMoveOff( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnMoveOver( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnNetStateChanged()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnPaperdollRequest()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnPoisoned( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Poison.html">Poison</a> poison, <!-- DBG-0 --><a href="Poison.html">Poison</a> oldPoison )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnPoisonImmunity( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Poison.html">Poison</a> poison )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnRaceChange( <!-- DBG-0 --><a href="Race.html">Race</a> oldRace )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnRawDexChange( <font color="blue">int</font> oldValue )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnRawIntChange( <font color="blue">int</font> oldValue )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnRawStatChange( <!-- DBG-0 --><a href="StatType.html">StatType</a> stat, <font color="blue">int</font> oldValue )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnRawStrChange( <font color="blue">int</font> oldValue )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnRegionChange( <!-- DBG-0 --><a href="Region.html">Region</a> Old, <!-- DBG-0 --><a href="Region.html">Region</a> New )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSaid( <!-- DBG-0 --><a href="SpeechEventArgs.html">SpeechEventArgs</a> e )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSectorActivate()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSectorDeactivate()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSingleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSkillChange( <!-- DBG-0 --><a href="SkillName.html">SkillName</a> skill, <font color="blue">double</font> oldBase )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSkillInvalidated( <!-- DBG-0 --><a href="Skill.html">Skill</a> skill )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSkillsQuery( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSpeech( <!-- DBG-0 --><a href="SpeechEventArgs.html">SpeechEventArgs</a> e )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSpellCast( <!-- DBG-0 --><a href="ISpell.html">ISpell</a> spell )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnStamChange( <font color="blue">int</font> oldValue )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnStatsQuery( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSubItemAdded( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSubItemBounceCleared( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSubItemRemoved( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnTargetChange()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnWarmodeChanged()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnWeightChange( <font color="blue">int</font> oldValue )<br>
+      <font color="blue">void</font> Paralyze( TimeSpan duration )<br>
+      <font color="blue">bool</font> PlaceInBackpack( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">void</font> PlaySound( <font color="blue">int</font> soundID )<br>
+      <font color="blue">void</font> PrivateOverheadMessage( <!-- DBG-0 --><a href="MessageType.html">MessageType</a> type, <font color="blue">int</font> hue, <font color="blue">int</font> number, <!-- DBG-0 --><a href="NetState.html">NetState</a> state )<br>
+      <font color="blue">void</font> PrivateOverheadMessage( <!-- DBG-0 --><a href="MessageType.html">MessageType</a> type, <font color="blue">int</font> hue, <font color="blue">bool</font> ascii, <font color="blue">string</font> text, <!-- DBG-0 --><a href="NetState.html">NetState</a> state )<br>
+      <font color="blue">void</font> PrivateOverheadMessage( <!-- DBG-0 --><a href="MessageType.html">MessageType</a> type, <font color="blue">int</font> hue, <font color="blue">int</font> number, <font color="blue">string</font> args, <!-- DBG-0 --><a href="NetState.html">NetState</a> state )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ProcessDelta()<br>
+      <font color="blue">void</font> PublicOverheadMessage( <!-- DBG-0 --><a href="MessageType.html">MessageType</a> type, <font color="blue">int</font> hue, <font color="blue">int</font> number )<br>
+      <font color="blue">void</font> PublicOverheadMessage( <!-- DBG-0 --><a href="MessageType.html">MessageType</a> type, <font color="blue">int</font> hue, <font color="blue">bool</font> ascii, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> PublicOverheadMessage( <!-- DBG-0 --><a href="MessageType.html">MessageType</a> type, <font color="blue">int</font> hue, <font color="blue">int</font> number, <font color="blue">string</font> args )<br>
+      <font color="blue">void</font> PublicOverheadMessage( <!-- DBG-0 --><a href="MessageType.html">MessageType</a> type, <font color="blue">int</font> hue, <font color="blue">bool</font> ascii, <font color="blue">string</font> text, <font color="blue">bool</font> noLineOfSight )<br>
+      <font color="blue">void</font> PublicOverheadMessage( <!-- DBG-0 --><a href="MessageType.html">MessageType</a> type, <font color="blue">int</font> hue, <font color="blue">int</font> number, <font color="blue">string</font> args, <font color="blue">bool</font> noLineOfSight )<br>
+      <font color="blue">void</font> PublicOverheadMessage( <!-- DBG-0 --><a href="MessageType.html">MessageType</a> type, <font color="blue">int</font> hue, <font color="blue">int</font> number, <!-- DBG-0 --><a href="AffixType.html">AffixType</a> affixType, <font color="blue">string</font> affix, <font color="blue">string</font> args )<br>
+      <font color="blue">void</font> PublicOverheadMessage( <!-- DBG-0 --><a href="MessageType.html">MessageType</a> type, <font color="blue">int</font> hue, <font color="blue">int</font> number, <!-- DBG-0 --><a href="AffixType.html">AffixType</a> affixType, <font color="blue">string</font> affix, <font color="blue">string</font> args, <font color="blue">bool</font> noLineOfSight )<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="DamageEntry.html">DamageEntry</a> RegisterDamage( <font color="blue">int</font> amount, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> RemoveAggressed( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> aggressed )<br>
+      <font color="blue">void</font> RemoveAggressor( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> aggressor )<br>
+      <font color="blue">void</font> RemoveItem( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> RemoveResistanceMod( <!-- DBG-0 --><a href="ResistanceMod.html">ResistanceMod</a> toRemove )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> RemoveSkillMod( <!-- DBG-0 --><a href="SkillMod.html">SkillMod</a> mod )<br>
+      <font color="blue">bool</font> RemoveStatMod( <font color="blue">string</font> name )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Resurrect()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> RevealingAction()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> SafeBody( <font color="blue">int</font> body )<br>
+      <font color="blue">void</font> Say( <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> Say( <font color="blue">int</font> number )<br>
+      <font color="blue">void</font> Say( <font color="blue">bool</font> ascii, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> Say( <font color="blue">int</font> number, <font color="blue">string</font> args )<br>
+      <font color="blue">void</font> Say( <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">void</font> Say( <font color="blue">int</font> number, <!-- DBG-0 --><a href="AffixType.html">AffixType</a> type, <font color="blue">string</font> affix, <font color="blue">string</font> args )<br>
+      <font color="blue">void</font> SayTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to, <font color="blue">int</font> number )<br>
+      <font color="blue">void</font> SayTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> SayTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to, <font color="blue">bool</font> ascii, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> SayTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to, <font color="blue">int</font> number, <font color="blue">string</font> args )<br>
+      <font color="blue">void</font> SayTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to, <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">void</font> SayTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to, <font color="blue">bool</font> ascii, <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">bool</font> Send( <!-- DBG-0 --><a href="Packet.html">Packet</a> p )<br>
+      <font color="blue">bool</font> Send( <!-- DBG-0 --><a href="Packet.html">Packet</a> p, <font color="blue">bool</font> throwOnOffline )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SendActionMessage()<br>
+      <font color="blue">void</font> SendAsciiMessage( <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> SendAsciiMessage( <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">void</font> SendAsciiMessage( <font color="blue">int</font> hue, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> SendAsciiMessage( <font color="blue">int</font> hue, <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SendDropEffect( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">void</font> SendEverything()<br>
+      <font color="blue">bool</font> SendGump( <!-- DBG-0 --><a href="Gump.html">Gump</a> g )<br>
+      <font color="blue">bool</font> SendGump( <!-- DBG-0 --><a href="Gump.html">Gump</a> g, <font color="blue">bool</font> throwOnOffline )<br>
+      <font color="blue">bool</font> SendHuePicker( <!-- DBG-0 --><a href="HuePicker.html">HuePicker</a> p )<br>
+      <font color="blue">bool</font> SendHuePicker( <!-- DBG-0 --><a href="HuePicker.html">HuePicker</a> p, <font color="blue">bool</font> throwOnOffline )<br>
+      <font color="blue">void</font> SendIncomingPacket()<br>
+      <font color="blue">void</font> SendLocalizedMessage( <font color="blue">int</font> number )<br>
+      <font color="blue">void</font> SendLocalizedMessage( <font color="blue">int</font> number, <font color="blue">string</font> args )<br>
+      <font color="blue">void</font> SendLocalizedMessage( <font color="blue">int</font> number, <font color="blue">bool</font> append, <font color="blue">string</font> affix )<br>
+      <font color="blue">void</font> SendLocalizedMessage( <font color="blue">int</font> number, <font color="blue">string</font> args, <font color="blue">int</font> hue )<br>
+      <font color="blue">void</font> SendLocalizedMessage( <font color="blue">int</font> number, <font color="blue">bool</font> append, <font color="blue">string</font> affix, <font color="blue">string</font> args )<br>
+      <font color="blue">void</font> SendLocalizedMessage( <font color="blue">int</font> number, <font color="blue">bool</font> append, <font color="blue">string</font> affix, <font color="blue">string</font> args, <font color="blue">int</font> hue )<br>
+      <font color="blue">bool</font> SendMenu( <!-- DBG-0 --><a href="IMenu.html">IMenu</a> m )<br>
+      <font color="blue">bool</font> SendMenu( <!-- DBG-0 --><a href="IMenu.html">IMenu</a> m, <font color="blue">bool</font> throwOnOffline )<br>
+      <font color="blue">void</font> SendMessage( <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> SendMessage( <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">void</font> SendMessage( <font color="blue">int</font> hue, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> SendMessage( <font color="blue">int</font> hue, <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SendPropertiesTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> SendRemovePacket()<br>
+      <font color="blue">void</font> SendRemovePacket( <font color="blue">bool</font> everyone )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SendSkillMessage()<br>
+      <font color="blue">void</font> SendSound( <font color="blue">int</font> soundID )<br>
+      <font color="blue">void</font> SendSound( <font color="blue">int</font> soundID, <!-- DBG-0 --><a href="IPoint3D.html">IPoint3D</a> p )<br>
+      <font color="blue">void</font> SendVisibleDamageEveryone( <font color="blue">int</font> amount )<br>
+      <font color="blue">void</font> SendVisibleDamageRelated( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">int</font> amount )<br>
+      <font color="blue">void</font> SendVisibleDamageSelective( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">int</font> amount )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">void</font> SetDirection( <!-- DBG-0 --><a href="Direction.html">Direction</a> dir )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SetLocation( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> newLocation, <font color="blue">bool</font> isTeleport )<br>
+      <font color="blue">void</font> StopAggrExpire()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ToggleFlying()<br>
+      <font color="blue">virtual</font> <font color="blue">string</font> ToString()<br>
+      <font color="blue">void</font> UpdateAggrExpire()<br>
+      <font color="blue">void</font> UpdateRegion()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> UpdateResistances()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> UpdateSkillMods()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> UpdateTotal( <!-- DBG-0 --><a href="Item.html">Item</a> sender, <!-- DBG-0 --><a href="TotalType.html">TotalType</a> type, <font color="blue">int</font> delta )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> UpdateTotals()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Use( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Use( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> UseSkill( <!-- DBG-0 --><a href="SkillName.html">SkillName</a> name )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> UseSkill( <font color="blue">int</font> skillID )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ValidateSkillMods()<br>
+      <font color="blue">void</font> Whisper( <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> Whisper( <font color="blue">int</font> number )<br>
+      <font color="blue">void</font> Whisper( <font color="blue">int</font> number, <font color="blue">string</font> args )<br>
+      <font color="blue">void</font> Whisper( <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">void</font> Yell( <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> Yell( <font color="blue">int</font> number )<br>
+      <font color="blue">void</font> Yell( <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">void</font> Yell( <font color="blue">int</font> number, <font color="blue">string</font> args )<br>
+   </body>
+</html>

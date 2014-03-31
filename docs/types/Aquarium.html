@@ -1,0 +1,54 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - Aquarium</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>Aquarium : <!-- DBG-1 --><a href="BaseAddonContainer.html">BaseAddonContainer</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="IChopable.html">IChopable</a>, <!-- DBG-2.2 --><a href="IAddon.html">IAddon</a></h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="CancelVacationMode.html">CancelVacationMode</a>, <!-- DBG-4 --><a href="CollectRewardEntry.html">CollectRewardEntry</a>, <!-- DBG-4 --><a href="ExamineEntry.html">ExamineEntry</a>, <!-- DBG-4 --><a href="GMAddFood.html">GMAddFood</a>, <!-- DBG-4 --><a href="GMAddWater.html">GMAddWater</a>, <!-- DBG-4 --><a href="GMFill.html">GMFill</a>, <!-- DBG-4 --><a href="GMForceEvaluate.html">GMForceEvaluate</a>, <!-- DBG-4 --><a href="GMOpen.html">GMOpen</a>, <!-- DBG-4 --><a href="ViewEventEntry.html">ViewEventEntry</a></h4>
+      (<font color="blue">static</font>) <font color="blue">int</font>[] FishHues( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> Accepts( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="FishBowl.html">FishBowl</a> GetEmptyBowl( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      (<font color="blue">ctor</font>) Aquarium( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) Aquarium( <font color="blue">int</font> itemID )<br>
+      <font color="blue">int</font> DeadCreatures( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="BaseAddonContainerDeed.html">BaseAddonContainerDeed</a> Deed( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> DefaultWeight( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<font color="blue">Int32</font>&gt; Events( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="AquariumState.html">AquariumState</a> Food( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IsFull( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> LiveCreatures( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> MaxLiveCreatures( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> OptimalState( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> RewardAvailable( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> VacationLeft( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="AquariumState.html">AquariumState</a> Water( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> AddDecoration( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> AddDecoration( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> AddFish( <!-- DBG-0 --><a href="BaseFish.html">BaseFish</a> fish )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> AddFish( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="BaseFish.html">BaseFish</a> fish )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddNameProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckItemUse( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckLift( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item, <font color="blue">ref</font> <!-- DBG-0 --><a href="LRReason.html">LRReason</a> reject )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DropItemsToGround()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Evaluate()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ExamineAquarium( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">int</font> FoodNumber()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetContextMenuEntries( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">List</font>&lt;<a href="ContextMenuEntry.html">ContextMenuEntry</a>&gt; list )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GiveReward( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> HasAccess( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> KillFish( <font color="blue">int</font> amount )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnDragDrop( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> dropped )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSingleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> RecountLiveCreatures()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> RemoveItem( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">int</font> at )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> UpdateFoodState()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> UpdateWaterState()<br>
+      <font color="blue">void</font> Validate()<br>
+      <font color="blue">int</font> WaterNumber()<br>
+   </body>
+</html>

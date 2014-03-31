@@ -1,0 +1,29 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - TextDefinition</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.html">Back to Server</a></h4>
+      <h2>TextDefinition</h2>
+      (<font color="blue">static</font>) <font color="blue">void</font> AddHtmlText( <!-- DBG-0 --><a href="Gump.html">Gump</a> g, <font color="blue">int</font> x, <font color="blue">int</font> y, <font color="blue">int</font> width, <font color="blue">int</font> height, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> def, <font color="blue">bool</font> back, <font color="blue">bool</font> scroll )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> AddHtmlText( <!-- DBG-0 --><a href="Gump.html">Gump</a> g, <font color="blue">int</font> x, <font color="blue">int</font> y, <font color="blue">int</font> width, <font color="blue">int</font> height, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> def, <font color="blue">bool</font> back, <font color="blue">bool</font> scroll, <font color="blue">int</font> numberColor, <font color="blue">int</font> stringColor )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> AddTo( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> def )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> IsNullOrEmpty( <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> def )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> Parse( <font color="blue">string</font> value )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> PublicOverheadMessage( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="MessageType.html">MessageType</a> messageType, <font color="blue">int</font> hue, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> def )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> SendMessageTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> def )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> SendMessageTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> def, <font color="blue">int</font> hue )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> def )<br>
+      (<font color="blue">ctor</font>) TextDefinition()<br>
+      (<font color="blue">ctor</font>) TextDefinition( <font color="blue">int</font> number )<br>
+      (<font color="blue">ctor</font>) TextDefinition( <font color="blue">string</font> text )<br>
+      (<font color="blue">ctor</font>) TextDefinition( <font color="blue">int</font> number, <font color="blue">string</font> text )<br>
+      <font color="blue">bool</font> IsEmpty( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Number( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> String( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> Format( <font color="blue">bool</font> propsGump )<br>
+      <font color="blue">string</font> GetValue()<br>
+      <font color="blue">virtual</font> <font color="blue">string</font> ToString()<br>
+   </body>
+</html>

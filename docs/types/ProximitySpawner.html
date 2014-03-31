@@ -1,0 +1,29 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - ProximitySpawner</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Mobiles.html">Back to Server.Mobiles</a></h4>
+      <h2>ProximitySpawner : <!-- DBG-1 --><a href="Spawner.html">Spawner</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="ISpawner.html">ISpawner</a></h2>
+      (<font color="blue">ctor</font>) ProximitySpawner()<br>
+      (<font color="blue">ctor</font>) ProximitySpawner( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) ProximitySpawner( <font color="blue">string</font> spawnName )<br>
+      (<font color="blue">ctor</font>) ProximitySpawner( <font color="blue">int</font> amount, TimeSpan minDelay, TimeSpan maxDelay, <font color="blue">int</font> team, <font color="blue">int</font> homeRange, <font color="blue">List</font>&lt;<font color="blue">String</font>&gt; spawnNames )<br>
+      (<font color="blue">ctor</font>) ProximitySpawner( <font color="blue">int</font> amount, <font color="blue">int</font> minDelay, <font color="blue">int</font> maxDelay, <font color="blue">int</font> team, <font color="blue">int</font> homeRange, <font color="blue">string</font> spawnName )<br>
+      (<font color="blue">ctor</font>) ProximitySpawner( <font color="blue">int</font> amount, <font color="blue">int</font> minDelay, <font color="blue">int</font> maxDelay, <font color="blue">int</font> team, <font color="blue">int</font> homeRange, <font color="blue">string</font> spawnName, <font color="blue">int</font> triggerRange, <font color="blue">string</font> spawnMessage, <font color="blue">bool</font> instantFlag )<br>
+      (<font color="blue">ctor</font>) ProximitySpawner( <font color="blue">int</font> amount, TimeSpan minDelay, TimeSpan maxDelay, <font color="blue">int</font> team, <font color="blue">int</font> homeRange, <font color="blue">List</font>&lt;<font color="blue">String</font>&gt; spawnNames, <font color="blue">int</font> triggerRange, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> spawnMessage, <font color="blue">bool</font> instantFlag )<br>
+      <font color="blue">string</font> DefaultName( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> HandlesOnMovement( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> InstantFlag( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> SpawnMessage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> TriggerRange( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckSpawnerFull()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DoTimer( TimeSpan delay )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnMovement( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> oldLocation )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Respawn()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Spawn()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> ValidTrigger( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+   </body>
+</html>

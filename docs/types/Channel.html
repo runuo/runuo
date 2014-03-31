@@ -1,0 +1,62 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - Channel</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.Chat.html">Back to Server.Engines.Chat</a></h4>
+      <h2>Channel</h2>
+      (<font color="blue">static</font>) <font color="blue">List</font>&lt;<a href="Channel.html">Channel</a>&gt; Channels( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Channel.html">Channel</a> AddChannel( <font color="blue">string</font> name )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Channel.html">Channel</a> AddChannel( <font color="blue">string</font> name, <font color="blue">string</font> password )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> AddStaticChannel( <font color="blue">string</font> name )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Channel.html">Channel</a> FindChannelByName( <font color="blue">string</font> name )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Initialize()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> RemoveChannel( <font color="blue">string</font> name )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> RemoveChannel( <!-- DBG-0 --><a href="Channel.html">Channel</a> channel )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> SendChannelsTo( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user )<br>
+      (<font color="blue">ctor</font>) Channel( <font color="blue">string</font> name )<br>
+      (<font color="blue">ctor</font>) Channel( <font color="blue">string</font> name, <font color="blue">string</font> password )<br>
+      <font color="blue">bool</font> AlwaysAvailable( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> Name( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> Password( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> VoiceRestricted( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> AdBan( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user )<br>
+      <font color="blue">void</font> AddBan( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user, <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> moderator )<br>
+      <font color="blue">void</font> AddModerator( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user )<br>
+      <font color="blue">void</font> AddModerator( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user, <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> moderator )<br>
+      <font color="blue">bool</font> AddUser( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user )<br>
+      <font color="blue">bool</font> AddUser( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user, <font color="blue">string</font> password )<br>
+      <font color="blue">void</font> AddVoiced( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user )<br>
+      <font color="blue">void</font> AddVoiced( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user, <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> moderator )<br>
+      <font color="blue">bool</font> CanTalk( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user )<br>
+      <font color="blue">bool</font> Contains( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user )<br>
+      <font color="blue">bool</font> IsBanned( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user )<br>
+      <font color="blue">bool</font> IsModerator( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user )<br>
+      <font color="blue">bool</font> IsVoiced( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user )<br>
+      <font color="blue">void</font> Kick( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user )<br>
+      <font color="blue">void</font> Kick( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user, <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> moderator )<br>
+      <font color="blue">void</font> Kick( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user, <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> moderator, <font color="blue">bool</font> wasBanned )<br>
+      <font color="blue">void</font> RemoveBan( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user )<br>
+      <font color="blue">void</font> RemoveModerator( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user )<br>
+      <font color="blue">void</font> RemoveModerator( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user, <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> moderator )<br>
+      <font color="blue">void</font> RemoveUser( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user )<br>
+      <font color="blue">void</font> RemoveVoiced( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user, <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> moderator )<br>
+      <font color="blue">void</font> SendCommand( <!-- DBG-0 --><a href="ChatCommand.html">ChatCommand</a> command )<br>
+      <font color="blue">void</font> SendCommand( <!-- DBG-0 --><a href="ChatCommand.html">ChatCommand</a> command, <font color="blue">string</font> param1 )<br>
+      <font color="blue">void</font> SendCommand( <!-- DBG-0 --><a href="ChatCommand.html">ChatCommand</a> command, <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> initiator )<br>
+      <font color="blue">void</font> SendCommand( <!-- DBG-0 --><a href="ChatCommand.html">ChatCommand</a> command, <font color="blue">string</font> param1, <font color="blue">string</font> param2 )<br>
+      <font color="blue">void</font> SendCommand( <!-- DBG-0 --><a href="ChatCommand.html">ChatCommand</a> command, <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> initiator, <font color="blue">string</font> param1 )<br>
+      <font color="blue">void</font> SendCommand( <!-- DBG-0 --><a href="ChatCommand.html">ChatCommand</a> command, <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> initiator, <font color="blue">string</font> param1, <font color="blue">string</font> param2 )<br>
+      <font color="blue">void</font> SendIgnorableMessage( <font color="blue">int</font> number, <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> from, <font color="blue">string</font> param1, <font color="blue">string</font> param2 )<br>
+      <font color="blue">void</font> SendMessage( <font color="blue">int</font> number )<br>
+      <font color="blue">void</font> SendMessage( <font color="blue">int</font> number, <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> initiator )<br>
+      <font color="blue">void</font> SendMessage( <font color="blue">int</font> number, <font color="blue">string</font> param1 )<br>
+      <font color="blue">void</font> SendMessage( <font color="blue">int</font> number, <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> initiator, <font color="blue">string</font> param1 )<br>
+      <font color="blue">void</font> SendMessage( <font color="blue">int</font> number, <font color="blue">string</font> param1, <font color="blue">string</font> param2 )<br>
+      <font color="blue">void</font> SendMessage( <font color="blue">int</font> number, <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> initiator, <font color="blue">string</font> param1, <font color="blue">string</font> param2 )<br>
+      <font color="blue">void</font> SendUsersTo( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> to )<br>
+      <font color="blue">bool</font> ValidateAccess( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> from, <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> target )<br>
+      <font color="blue">bool</font> ValidateModerator( <!-- DBG-0 --><a href="ChatUser.html">ChatUser</a> user )<br>
+      <font color="blue">bool</font> ValidatePassword( <font color="blue">string</font> password )<br>
+   </body>
+</html>

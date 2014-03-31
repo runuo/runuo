@@ -1,0 +1,35 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - PacketWriter</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Network.html">Back to Server.Network</a></h4>
+      <h2>PacketWriter</h2>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="PacketWriter.html">PacketWriter</a> CreateInstance()<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="PacketWriter.html">PacketWriter</a> CreateInstance( <font color="blue">int</font> capacity )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> ReleaseInstance( <!-- DBG-0 --><a href="PacketWriter.html">PacketWriter</a> pw )<br>
+      (<font color="blue">ctor</font>) PacketWriter()<br>
+      (<font color="blue">ctor</font>) PacketWriter( <font color="blue">int</font> capacity )<br>
+      <font color="blue">long</font> Length( <font color="blue">get</font>; )<br>
+      <font color="blue">long</font> Position( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      MemoryStream UnderlyingStream( <font color="blue">get</font>; )<br>
+      <font color="blue">void</font> Fill()<br>
+      <font color="blue">void</font> Fill( <font color="blue">int</font> length )<br>
+      <font color="blue">long</font> Seek( <font color="blue">long</font> offset, SeekOrigin origin )<br>
+      <font color="blue">byte</font>[] ToArray()<br>
+      <font color="blue">void</font> Write( <font color="blue">short</font> value )<br>
+      <font color="blue">void</font> Write( <font color="blue">uint</font> value )<br>
+      <font color="blue">void</font> Write( <font color="blue">int</font> value )<br>
+      <font color="blue">void</font> Write( <font color="blue">ushort</font> value )<br>
+      <font color="blue">void</font> Write( <font color="blue">bool</font> value )<br>
+      <font color="blue">void</font> Write( <font color="blue">sbyte</font> value )<br>
+      <font color="blue">void</font> Write( <font color="blue">byte</font> value )<br>
+      <font color="blue">void</font> Write( <font color="blue">byte</font>[] buffer, <font color="blue">int</font> offset, <font color="blue">int</font> size )<br>
+      <font color="blue">void</font> WriteAsciiFixed( <font color="blue">string</font> value, <font color="blue">int</font> size )<br>
+      <font color="blue">void</font> WriteAsciiNull( <font color="blue">string</font> value )<br>
+      <font color="blue">void</font> WriteBigUniFixed( <font color="blue">string</font> value, <font color="blue">int</font> size )<br>
+      <font color="blue">void</font> WriteBigUniNull( <font color="blue">string</font> value )<br>
+      <font color="blue">void</font> WriteLittleUniFixed( <font color="blue">string</font> value, <font color="blue">int</font> size )<br>
+      <font color="blue">void</font> WriteLittleUniNull( <font color="blue">string</font> value )<br>
+   </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseCamp</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Multis.html">Back to Server.Multis</a></h4>
+      <h2>BaseCamp : <!-- DBG-1 --><a href="BaseMulti.html">BaseMulti</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;</h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="BankerCamp.html">BankerCamp</a>, <!-- DBG-3 --><a href="BrigandCamp.html">BrigandCamp</a>, <!-- DBG-3 --><a href="HealerCamp.html">HealerCamp</a>, <!-- DBG-3 --><a href="LizardmenCamp.html">LizardmenCamp</a>, <!-- DBG-3 --><a href="MageCamp.html">MageCamp</a>, <!-- DBG-3 --><a href="OrcCamp.html">OrcCamp</a>, <!-- DBG-3 --><a href="RatCamp.html">RatCamp</a></h4>
+      (<font color="blue">ctor</font>) BaseCamp( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) BaseCamp( <font color="blue">int</font> multiID )<br>
+      TimeSpan DecayDelay( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> EventRange( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> HandlesOnMovement( <font color="blue">get</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddComponents()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddItem( <!-- DBG-0 --><a href="Item.html">Item</a> item, <font color="blue">int</font> xOffset, <font color="blue">int</font> yOffset, <font color="blue">int</font> zOffset )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddMobile( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <font color="blue">int</font> wanderRange, <font color="blue">int</font> xOffset, <font color="blue">int</font> yOffset, <font color="blue">int</font> zOffset )<br>
+      <font color="blue">void</font> CheckAddComponents()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnEnter( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnExit( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnMovement( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> oldLocation )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> RefreshDecay( <font color="blue">bool</font> setDecayTime )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+   </body>
+</html>

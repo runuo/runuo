@@ -1,0 +1,53 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - SpawnEntry</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Regions.html">Back to Server.Regions</a></h4>
+      <h2>SpawnEntry : <!-- DBG-2.2 --><a href="ISpawner.html">ISpawner</a></h2>
+      (<font color="blue">static</font>) Hashtable Table( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> DelAllRegionSpawns_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> args )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> DelRegionSpawns_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> args )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="BaseRegion.html">BaseRegion</a> GetCommandData( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> args )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Initialize()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Remove( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader, <font color="blue">int</font> version )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> RespawnAllRegions_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> args )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> RespawnRegion_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> args )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> StartAllRegionSpawns_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> args )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> StartRegionSpawns_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> args )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> StopAllRegionSpawns_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> args )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> StopRegionSpawns_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> args )<br>
+      (<font color="blue">ctor</font>) SpawnEntry( <font color="blue">int</font> id, <!-- DBG-0 --><a href="BaseRegion.html">BaseRegion</a> region, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> home, <font color="blue">int</font> range, <!-- DBG-0 --><a href="Direction.html">Direction</a> direction, <!-- DBG-0 --><a href="SpawnDefinition.html">SpawnDefinition</a> definition, <font color="blue">int</font> max, TimeSpan minSpawnTime, TimeSpan maxSpawnTime )<br>
+      <font color="blue">bool</font> Complete( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="SpawnDefinition.html">SpawnDefinition</a> Definition( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Direction.html">Direction</a> Direction( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Point3D.html">Point3D</a> HomeLocation( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> HomeRange( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> ID( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Max( <font color="blue">get</font>; )<br>
+      TimeSpan MaxSpawnTime( <font color="blue">get</font>; )<br>
+      TimeSpan MinSpawnTime( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="BaseRegion.html">BaseRegion</a> Region( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> RemoveIfUntamed( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> ReturnOnDeactivate( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Running( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="ISpawnable.html">ISpawnable</a>&gt; SpawnedObjects( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Spawning( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> UnlinkOnTaming( <font color="blue">get</font>; )<br>
+      <font color="blue">void</font> Add( <!-- DBG-0 --><a href="ISpawnable.html">ISpawnable</a> spawn )<br>
+      <font color="blue">void</font> CheckTimer()<br>
+      <font color="blue">void</font> Delete()<br>
+      <font color="blue">void</font> DeleteSpawnedObjects()<br>
+      <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader, <font color="blue">int</font> version )<br>
+      <font color="blue">void</font> InternalDeleteSpawnedObjects()<br>
+      <!-- DBG-0 --><a href="Point3D.html">Point3D</a> RandomSpawnLocation( <font color="blue">int</font> spawnHeight, <font color="blue">bool</font> land, <font color="blue">bool</font> water )<br>
+      TimeSpan RandomTime()<br>
+      <font color="blue">void</font> Respawn()<br>
+      <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Server.ISpawner.Remove( <!-- DBG-0 --><a href="ISpawnable.html">ISpawnable</a> spawn )<br>
+      <font color="blue">void</font> Spawn()<br>
+      <font color="blue">void</font> Start()<br>
+      <font color="blue">void</font> Stop()<br>
+      <font color="blue">void</font> TimerCallback()<br>
+   </body>
+</html>

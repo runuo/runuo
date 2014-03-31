@@ -1,0 +1,109 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - Container</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>Container : <!-- DBG-1 --><a href="Item.html">Item</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;</h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="BankBox.html">BankBox</a>, <!-- DBG-3 --><a href="BaseBoard.html">BaseBoard</a>, <!-- DBG-3 --><a href="BaseContainer.html">BaseContainer</a>, <!-- DBG-3 --><a href="BaseQuiver.html">BaseQuiver</a>, <!-- DBG-3 --><a href="BaseWaterContainer.html">BaseWaterContainer</a>, <!-- DBG-3 --><a href="Corpse.html">Corpse</a>, <!-- DBG-3 --><a href="DecayedCorpse.html">DecayedCorpse</a>, <!-- DBG-3 --><a href="DisplayCache.html">DisplayCache</a>, <!-- DBG-3 --><a href="Hold.html">Hold</a>, <!-- DBG-3 --><a href="MovingCrate.html">MovingCrate</a>, <!-- DBG-3 --><a href="SecureTradeContainer.html">SecureTradeContainer</a>, <!-- DBG-3 --><a href="TrashBarrel.html">TrashBarrel</a>, <!-- DBG-3 --><a href="TrashChest.html">TrashChest</a></h4>
+<h4>Nested Types: <!-- DBG-4 --><a href="GroupComparer.html">GroupComparer</a>, <!-- DBG-4 --><a href="SaveFlag.html">SaveFlag</a></h4>
+      (<font color="blue">static</font>) <font color="blue">int</font> GlobalMaxItems( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> GlobalMaxWeight( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="ContainerSnoopHandler.html">ContainerSnoopHandler</a> SnoopHandler( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> GetSaveFlag( <!-- DBG-0 --><a href="SaveFlag.html">SaveFlag</a> flags, <!-- DBG-0 --><a href="SaveFlag.html">SaveFlag</a> toGet )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> InTypeList( <!-- DBG-0 --><a href="Item.html">Item</a> item, Type[] types )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> RecurseConsumeUpTo( <!-- DBG-0 --><a href="Item.html">Item</a> current, Type type, <font color="blue">int</font> amount, <font color="blue">bool</font> recurse, <font color="blue">ref</font> <font color="blue">int</font> consumed, <font color="blue">Queue</font>&lt;<a href="Item.html">Item</a>&gt; toDelete )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Item.html">Item</a> RecurseFindItemByType( <!-- DBG-0 --><a href="Item.html">Item</a> current, Type[] types, <font color="blue">bool</font> recurse )<br>
+      (<font color="blue">static</font>) T RecurseFindItemByType( <!-- DBG-0 --><a href="Item.html">Item</a> current, <font color="blue">bool</font> recurse, <font color="blue">Predicate</font>&lt;<font color="blue">T</font>&gt; predicate )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Item.html">Item</a> RecurseFindItemByType( <!-- DBG-0 --><a href="Item.html">Item</a> current, Type type, <font color="blue">bool</font> recurse )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> RecurseFindItemsByType( <!-- DBG-0 --><a href="Item.html">Item</a> current, <font color="blue">bool</font> recurse, <font color="blue">List</font>&lt;<font color="blue">T</font>&gt; list, <font color="blue">Predicate</font>&lt;<font color="blue">T</font>&gt; predicate )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> RecurseFindItemsByType( <!-- DBG-0 --><a href="Item.html">Item</a> current, Type type, <font color="blue">bool</font> recurse, <font color="blue">List</font>&lt;<a href="Item.html">Item</a>&gt; list )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> RecurseFindItemsByType( <!-- DBG-0 --><a href="Item.html">Item</a> current, Type[] types, <font color="blue">bool</font> recurse, <font color="blue">List</font>&lt;<a href="Item.html">Item</a>&gt; list )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> SetSaveFlag( <font color="blue">ref</font> <!-- DBG-0 --><a href="SaveFlag.html">SaveFlag</a> flags, <!-- DBG-0 --><a href="SaveFlag.html">SaveFlag</a> toSet, <font color="blue">bool</font> setIf )<br>
+      (<font color="blue">ctor</font>) Container( <font color="blue">int</font> itemID )<br>
+      (<font color="blue">ctor</font>) Container( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      <!-- DBG-0 --><a href="Rectangle2D.html">Rectangle2D</a> Bounds( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="ContainerData.html">ContainerData</a> ContainerData( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> DefaultDropSound( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> DefaultGumpID( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> DefaultMaxItems( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> DefaultMaxWeight( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> DisplaysContent( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> DropSound( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> GumpID( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IsDecoContainer( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsPublicContainer( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> ItemID( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> LiftOverride( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> MaxItems( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> MaxWeight( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Mobile.html">Mobile</a>&gt; Openers( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckContentDisplay( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">bool</font> CheckHold( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="Item.html">Item</a> item, <font color="blue">bool</font> message )<br>
+      <font color="blue">bool</font> CheckHold( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="Item.html">Item</a> item, <font color="blue">bool</font> message, <font color="blue">bool</font> checkItems )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckHold( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="Item.html">Item</a> item, <font color="blue">bool</font> message, <font color="blue">bool</font> checkItems, <font color="blue">int</font> plusItems, <font color="blue">int</font> plusWeight )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckItemUse( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckLift( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item, <font color="blue">ref</font> <!-- DBG-0 --><a href="LRReason.html">LRReason</a> reject )<br>
+      <font color="blue">int</font> ConsumeTotal( Type[] types, <font color="blue">int</font>[] amounts )<br>
+      <font color="blue">bool</font> ConsumeTotal( Type type, <font color="blue">int</font> amount )<br>
+      <font color="blue">int</font> ConsumeTotal( Type[][] types, <font color="blue">int</font>[] amounts )<br>
+      <font color="blue">bool</font> ConsumeTotal( Type type, <font color="blue">int</font> amount, <font color="blue">bool</font> recurse )<br>
+      <font color="blue">int</font> ConsumeTotal( Type[][] types, <font color="blue">int</font>[] amounts, <font color="blue">bool</font> recurse )<br>
+      <font color="blue">int</font> ConsumeTotal( Type[] types, <font color="blue">int</font>[] amounts, <font color="blue">bool</font> recurse )<br>
+      <font color="blue">bool</font> ConsumeTotal( Type type, <font color="blue">int</font> amount, <font color="blue">bool</font> recurse, <!-- DBG-0 --><a href="OnItemConsumed.html">OnItemConsumed</a> callback )<br>
+      <font color="blue">int</font> ConsumeTotal( Type[] types, <font color="blue">int</font>[] amounts, <font color="blue">bool</font> recurse, <!-- DBG-0 --><a href="OnItemConsumed.html">OnItemConsumed</a> callback )<br>
+      <font color="blue">int</font> ConsumeTotal( Type[][] types, <font color="blue">int</font>[] amounts, <font color="blue">bool</font> recurse, <!-- DBG-0 --><a href="OnItemConsumed.html">OnItemConsumed</a> callback )<br>
+      <font color="blue">int</font> ConsumeTotalGrouped( Type[] types, <font color="blue">int</font>[] amounts, <font color="blue">bool</font> recurse, <!-- DBG-0 --><a href="OnItemConsumed.html">OnItemConsumed</a> callback, <!-- DBG-0 --><a href="CheckItemGroup.html">CheckItemGroup</a> grouper )<br>
+      <font color="blue">int</font> ConsumeTotalGrouped( Type[][] types, <font color="blue">int</font>[] amounts, <font color="blue">bool</font> recurse, <!-- DBG-0 --><a href="OnItemConsumed.html">OnItemConsumed</a> callback, <!-- DBG-0 --><a href="CheckItemGroup.html">CheckItemGroup</a> grouper )<br>
+      <font color="blue">bool</font> ConsumeTotalGrouped( Type type, <font color="blue">int</font> amount, <font color="blue">bool</font> recurse, <!-- DBG-0 --><a href="OnItemConsumed.html">OnItemConsumed</a> callback, <!-- DBG-0 --><a href="CheckItemGroup.html">CheckItemGroup</a> grouper )<br>
+      <font color="blue">int</font> ConsumeUpTo( Type type, <font color="blue">int</font> amount )<br>
+      <font color="blue">int</font> ConsumeUpTo( Type type, <font color="blue">int</font> amount, <font color="blue">bool</font> recurse )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Destroy()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DisplayTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DropItem( <!-- DBG-0 --><a href="Item.html">Item</a> dropped )<br>
+      T FindItemByType()<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> FindItemByType( Type[] types )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> FindItemByType( Type type )<br>
+      T FindItemByType( <font color="blue">bool</font> recurse )<br>
+      T FindItemByType( <font color="blue">Predicate</font>&lt;<font color="blue">T</font>&gt; predicate )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> FindItemByType( Type[] types, <font color="blue">bool</font> recurse )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> FindItemByType( Type type, <font color="blue">bool</font> recurse )<br>
+      T FindItemByType( <font color="blue">bool</font> recurse, <font color="blue">Predicate</font>&lt;<font color="blue">T</font>&gt; predicate )<br>
+      <font color="blue">List</font>&lt;<font color="blue">T</font>&gt; FindItemsByType()<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a>[] FindItemsByType( Type type )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a>[] FindItemsByType( Type[] types )<br>
+      <font color="blue">List</font>&lt;<font color="blue">T</font>&gt; FindItemsByType( <font color="blue">bool</font> recurse )<br>
+      <font color="blue">List</font>&lt;<font color="blue">T</font>&gt; FindItemsByType( <font color="blue">Predicate</font>&lt;<font color="blue">T</font>&gt; predicate )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a>[] FindItemsByType( Type[] types, <font color="blue">bool</font> recurse )<br>
+      <font color="blue">List</font>&lt;<font color="blue">T</font>&gt; FindItemsByType( <font color="blue">bool</font> recurse, <font color="blue">Predicate</font>&lt;<font color="blue">T</font>&gt; predicate )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a>[] FindItemsByType( Type type, <font color="blue">bool</font> recurse )<br>
+      <font color="blue">int</font> GetAmount( Type type )<br>
+      <font color="blue">int</font> GetAmount( Type[] types )<br>
+      <font color="blue">int</font> GetAmount( Type type, <font color="blue">bool</font> recurse )<br>
+      <font color="blue">int</font> GetAmount( Type[] types, <font color="blue">bool</font> recurse )<br>
+      <font color="blue">int</font> GetBestGroupAmount( Type type, <font color="blue">bool</font> recurse, <!-- DBG-0 --><a href="CheckItemGroup.html">CheckItemGroup</a> grouper )<br>
+      <font color="blue">int</font> GetBestGroupAmount( Type[][] types, <font color="blue">bool</font> recurse, <!-- DBG-0 --><a href="CheckItemGroup.html">CheckItemGroup</a> grouper )<br>
+      <font color="blue">int</font> GetBestGroupAmount( Type[] types, <font color="blue">bool</font> recurse, <!-- DBG-0 --><a href="CheckItemGroup.html">CheckItemGroup</a> grouper )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetDroppedSound( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetTotal( <!-- DBG-0 --><a href="TotalType.html">TotalType</a> type )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClickSecureTrade( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnDragDrop( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> dropped )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnDragDropInto( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSingleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSnoop( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnStackAttempt( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> stack, <!-- DBG-0 --><a href="Item.html">Item</a> dropped )<br>
+      <font color="blue">void</font> ProcessOpeners( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> opener )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SendCantStoreMessage( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SendFullItemsMessage( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SendFullWeightMessage( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> TryDropItem( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> dropped, <font color="blue">bool</font> sendFullMessage )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> UpdateContainerData()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> UpdateTotal( <!-- DBG-0 --><a href="Item.html">Item</a> sender, <!-- DBG-0 --><a href="TotalType.html">TotalType</a> type, <font color="blue">int</font> delta )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> UpdateTotals()<br>
+   </body>
+</html>

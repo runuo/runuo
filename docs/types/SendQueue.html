@@ -1,0 +1,21 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - SendQueue</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Network.html">Back to Server.Network</a></h4>
+      <h2>SendQueue</h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="Gram.html">Gram</a></h4>
+      (<font color="blue">static</font>) <font color="blue">int</font> CoalesceBufferSize( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">byte</font>[] AcquireBuffer()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> ReleaseBuffer( <font color="blue">byte</font>[] buffer )<br>
+      (<font color="blue">ctor</font>) SendQueue()<br>
+      <font color="blue">bool</font> IsEmpty( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsFlushReady( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Gram.html">Gram</a> CheckFlushReady()<br>
+      <font color="blue">void</font> Clear()<br>
+      <!-- DBG-0 --><a href="Gram.html">Gram</a> Dequeue()<br>
+      <!-- DBG-0 --><a href="Gram.html">Gram</a> Enqueue( <font color="blue">byte</font>[] buffer, <font color="blue">int</font> length )<br>
+      <!-- DBG-0 --><a href="Gram.html">Gram</a> Enqueue( <font color="blue">byte</font>[] buffer, <font color="blue">int</font> offset, <font color="blue">int</font> length )<br>
+   </body>
+</html>

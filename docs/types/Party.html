@@ -1,0 +1,44 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - Party</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.PartySystem.html">Back to Server.Engines.PartySystem</a></h4>
+      <h2>Party : <!-- DBG-2.2 --><a href="IParty.html">IParty</a></h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="RejoinTimer.html">RejoinTimer</a></h4>
+      (<font color="blue">static</font>) <font color="blue">void</font> EventSink_Login( <!-- DBG-0 --><a href="LoginEventArgs.html">LoginEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> EventSink_Logout( <!-- DBG-0 --><a href="LogoutEventArgs.html">LogoutEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> EventSink_PlayerDeath( <!-- DBG-0 --><a href="PlayerDeathEventArgs.html">PlayerDeathEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Party.html">Party</a> Get( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Initialize()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Invite( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> ListenToParty_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> ListenToParty_OnTarget( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">object</font> obj )<br>
+      (<font color="blue">ctor</font>) Party( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> leader )<br>
+      <font color="blue">bool</font> Active( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Mobile.html">Mobile</a>&gt; Candidates( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Count( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="PartyMemberInfo.html">PartyMemberInfo</a> Item( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="PartyMemberInfo.html">PartyMemberInfo</a> Item( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Leader( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="PartyMemberInfo.html">PartyMemberInfo</a>&gt; Members( <font color="blue">get</font>; )<br>
+      <font color="blue">void</font> Add( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">bool</font> Contains( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">void</font> Disband()<br>
+      <font color="blue">void</font> OnAccept( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> OnAccept( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">bool</font> force )<br>
+      <font color="blue">void</font> OnDecline( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> leader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnManaChanged( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnStamChanged( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnStatsQuery( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> beholder, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> beheld )<br>
+      <font color="blue">void</font> Remove( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">void</font> SendPrivateMessage( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> SendPublicMessage( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> SendToAll( <!-- DBG-0 --><a href="Packet.html">Packet</a> p )<br>
+      <font color="blue">void</font> SendToAll( <font color="blue">int</font> number )<br>
+      <font color="blue">void</font> SendToAll( <font color="blue">int</font> number, <font color="blue">string</font> args )<br>
+      <font color="blue">void</font> SendToAll( <font color="blue">int</font> number, <font color="blue">string</font> args, <font color="blue">int</font> hue )<br>
+      <font color="blue">void</font> SendToStaffMessage( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> SendToStaffMessage( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+   </body>
+</html>

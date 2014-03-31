@@ -1,0 +1,35 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - MLQuestContext</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.MLQuests.html">Back to Server.Engines.MLQuests</a></h4>
+      <h2>MLQuestContext</h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="MLDoneQuestInfo.html">MLDoneQuestInfo</a></h4>
+      (<font color="blue">ctor</font>) MLQuestContext( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> owner )<br>
+      (<font color="blue">ctor</font>) MLQuestContext( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader, <font color="blue">int</font> version )<br>
+      <font color="blue">bool</font> BedlamAccess( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="MLQuest.html">MLQuest</a>&gt; ChainOffers( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsFull( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> Owner( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="MLQuestInstance.html">MLQuestInstance</a>&gt; QuestInstances( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Spellweaving( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> SummonFey( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> SummonFiend( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="MLQuestInstance.html">MLQuestInstance</a> FindInstance( Type questType )<br>
+      <!-- DBG-0 --><a href="MLQuestInstance.html">MLQuestInstance</a> FindInstance( <!-- DBG-0 --><a href="MLQuest.html">MLQuest</a> quest )<br>
+      <font color="blue">bool</font> GetFlag( <!-- DBG-0 --><a href="MLQuestFlag.html">MLQuestFlag</a> flag )<br>
+      <font color="blue">void</font> HandleDeath()<br>
+      <font color="blue">void</font> HandleDeletion()<br>
+      <font color="blue">bool</font> HasDoneQuest( <!-- DBG-0 --><a href="MLQuest.html">MLQuest</a> quest )<br>
+      <font color="blue">bool</font> HasDoneQuest( Type questType )<br>
+      <font color="blue">bool</font> HasDoneQuest( <!-- DBG-0 --><a href="MLQuest.html">MLQuest</a> quest, <font color="blue">out</font> DateTime nextAvailable )<br>
+      <font color="blue">bool</font> IsDoingQuest( <!-- DBG-0 --><a href="MLQuest.html">MLQuest</a> quest )<br>
+      <font color="blue">bool</font> IsDoingQuest( Type questType )<br>
+      <font color="blue">void</font> RemoveDoneQuest( <!-- DBG-0 --><a href="MLQuest.html">MLQuest</a> quest )<br>
+      <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">void</font> SetDoneQuest( <!-- DBG-0 --><a href="MLQuest.html">MLQuest</a> quest )<br>
+      <font color="blue">void</font> SetDoneQuest( <!-- DBG-0 --><a href="MLQuest.html">MLQuest</a> quest, DateTime nextAvailable )<br>
+      <font color="blue">void</font> SetFlag( <!-- DBG-0 --><a href="MLQuestFlag.html">MLQuestFlag</a> flag, <font color="blue">bool</font> value )<br>
+   </body>
+</html>

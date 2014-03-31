@@ -1,0 +1,31 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseTool</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>BaseTool : <!-- DBG-1 --><a href="Item.html">Item</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="IUsesRemaining.html">IUsesRemaining</a>, <!-- DBG-2.2 --><a href="ICraftable.html">ICraftable</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="AncientSmithyHammer.html">AncientSmithyHammer</a>, <!-- DBG-3 --><a href="BaseRunicTool.html">BaseRunicTool</a>, <!-- DBG-3 --><a href="Blowpipe.html">Blowpipe</a>, <!-- DBG-3 --><a href="DovetailSaw.html">DovetailSaw</a>, <!-- DBG-3 --><a href="DrawKnife.html">DrawKnife</a>, <!-- DBG-3 --><a href="FletcherTools.html">FletcherTools</a>, <!-- DBG-3 --><a href="FlourSifter.html">FlourSifter</a>, <!-- DBG-3 --><a href="Froe.html">Froe</a>, <!-- DBG-3 --><a href="Hammer.html">Hammer</a>, <!-- DBG-3 --><a href="Inshave.html">Inshave</a>, <!-- DBG-3 --><a href="JointingPlane.html">JointingPlane</a>, <!-- DBG-3 --><a href="MalletAndChisel.html">MalletAndChisel</a>, <!-- DBG-3 --><a href="MapmakersPen.html">MapmakersPen</a>, <!-- DBG-3 --><a href="MortarPestle.html">MortarPestle</a>, <!-- DBG-3 --><a href="MouldingPlane.html">MouldingPlane</a>, <!-- DBG-3 --><a href="Nails.html">Nails</a>, <!-- DBG-3 --><a href="RollingPin.html">RollingPin</a>, <!-- DBG-3 --><a href="Saw.html">Saw</a>, <!-- DBG-3 --><a href="Scorp.html">Scorp</a>, <!-- DBG-3 --><a href="ScribesPen.html">ScribesPen</a>, <!-- DBG-3 --><a href="SewingKit.html">SewingKit</a>, <!-- DBG-3 --><a href="Skillet.html">Skillet</a>, <!-- DBG-3 --><a href="SledgeHammer.html">SledgeHammer</a>, <!-- DBG-3 --><a href="SmithHammer.html">SmithHammer</a>, <!-- DBG-3 --><a href="SmoothingPlane.html">SmoothingPlane</a>, <!-- DBG-3 --><a href="TinkersTools.html">TinkersTools</a>, <!-- DBG-3 --><a href="TinkerTools.html">TinkerTools</a>, <!-- DBG-3 --><a href="Tongs.html">Tongs</a></h4>
+      (<font color="blue">static</font>) <font color="blue">bool</font> CheckAccessible( <!-- DBG-0 --><a href="Item.html">Item</a> tool, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> CheckTool( <!-- DBG-0 --><a href="Item.html">Item</a> tool, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">ctor</font>) BaseTool( <font color="blue">int</font> itemID )<br>
+      (<font color="blue">ctor</font>) BaseTool( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) BaseTool( <font color="blue">int</font> uses, <font color="blue">int</font> itemID )<br>
+      <font color="blue">bool</font> BreakOnDepletion( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Crafter( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="CraftSystem.html">CraftSystem</a> CraftSystem( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="ToolQuality.html">ToolQuality</a> Quality( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> ShowUsesRemaining( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> UsesRemaining( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DisplayDurabilityTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">int</font> GetUsesScalar()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> OnCraft( <font color="blue">int</font> quality, <font color="blue">bool</font> makersMark, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="CraftSystem.html">CraftSystem</a> craftSystem, Type typeRes, <!-- DBG-0 --><a href="BaseTool.html">BaseTool</a> tool, <!-- DBG-0 --><a href="CraftItem.html">CraftItem</a> craftItem, <font color="blue">int</font> resHue )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSingleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> ScaleUses()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">void</font> UnscaleUses()<br>
+   </body>
+</html>

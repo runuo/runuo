@@ -1,0 +1,32 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - StaffHistory</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.Reports.html">Back to Server.Engines.Reports</a></h4>
+      <h2>StaffHistory : <!-- DBG-1 --><a href="PersistableObject.html">PersistableObject</a></h2>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="PersistableObject.html">PersistableObject</a> Construct()<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> GetPageCount( <!-- DBG-0 --><a href="StaffInfo.html">StaffInfo</a> staff, DateTime min, DateTime max )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> GetPageCount( <!-- DBG-0 --><a href="PageInfoCollection.html">PageInfoCollection</a> pages, <!-- DBG-0 --><a href="PageResolution.html">PageResolution</a> res, DateTime min, DateTime max )<br>
+      (<font color="blue">ctor</font>) StaffHistory()<br>
+      <!-- DBG-0 --><a href="PageInfoCollection.html">PageInfoCollection</a> Pages( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="QueueStatusCollection.html">QueueStatusCollection</a> QueueStats( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      Hashtable StaffInfo( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="PersistableType.html">PersistableType</a> TypeID( <font color="blue">get</font>; )<br>
+      Hashtable UserInfo( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> AddPage( <!-- DBG-0 --><a href="PageInfo.html">PageInfo</a> info )<br>
+      <!-- DBG-0 --><a href="PieChart.html">PieChart</a>[] ChartTotalPages( <!-- DBG-0 --><a href="StaffInfo.html">StaffInfo</a>[] staff, TimeSpan ts, <font color="blue">string</font> title, <font color="blue">string</font> fname )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DeserializeChildren( <!-- DBG-0 --><a href="PersistanceReader.html">PersistanceReader</a> ip )<br>
+      <!-- DBG-0 --><a href="StaffInfo.html">StaffInfo</a>[] GetStaff()<br>
+      <!-- DBG-0 --><a href="StaffInfo.html">StaffInfo</a> GetStaffInfo( <font color="blue">string</font> account )<br>
+      <!-- DBG-0 --><a href="UserInfo.html">UserInfo</a> GetUserInfo( <font color="blue">string</font> account )<br>
+      <!-- DBG-0 --><a href="BarGraph.html">BarGraph</a> GraphHourlyPages( <!-- DBG-0 --><a href="StaffInfo.html">StaffInfo</a> staff )<br>
+      <!-- DBG-0 --><a href="BarGraph.html">BarGraph</a> GraphHourlyPages( <!-- DBG-0 --><a href="PageInfoCollection.html">PageInfoCollection</a> pages, <!-- DBG-0 --><a href="PageResolution.html">PageResolution</a> res, <font color="blue">string</font> title, <font color="blue">string</font> fname )<br>
+      <!-- DBG-0 --><a href="BarGraph.html">BarGraph</a> GraphQueueStatus()<br>
+      <font color="blue">void</font> Load()<br>
+      <font color="blue">void</font> Render( <!-- DBG-0 --><a href="ObjectCollection.html">ObjectCollection</a> objects )<br>
+      <!-- DBG-0 --><a href="Report.html">Report</a> ReportTotalPages( <!-- DBG-0 --><a href="StaffInfo.html">StaffInfo</a>[] staff, TimeSpan ts, <font color="blue">string</font> title )<br>
+      <font color="blue">void</font> Save()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SerializeChildren( <!-- DBG-0 --><a href="PersistanceWriter.html">PersistanceWriter</a> op )<br>
+   </body>
+</html>

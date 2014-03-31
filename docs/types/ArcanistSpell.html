@@ -1,0 +1,29 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - ArcanistSpell</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Spells.Spellweaving.html">Back to Server.Spells.Spellweaving</a></h4>
+      <h2>ArcanistSpell : <!-- DBG-1 --><a href="Spell.html">Spell</a>, <!-- DBG-2.2 --><a href="ISpell.html">ISpell</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="ArcaneCircleSpell.html">ArcaneCircleSpell</a>, <!-- DBG-3 --><a href="ArcaneForm.html">ArcaneForm</a>, <!-- DBG-3 --><a href="ArcaneSummon-T-.html">ArcaneSummon</a>&lt;<font color="blue">T</font>&gt;, <!-- DBG-3 --><a href="AttuneWeaponSpell.html">AttuneWeaponSpell</a>, <!-- DBG-3 --><a href="EssenceOfWindSpell.html">EssenceOfWindSpell</a>, <!-- DBG-3 --><a href="GiftOfLifeSpell.html">GiftOfLifeSpell</a>, <!-- DBG-3 --><a href="GiftOfRenewalSpell.html">GiftOfRenewalSpell</a>, <!-- DBG-3 --><a href="ImmolatingWeaponSpell.html">ImmolatingWeaponSpell</a>, <!-- DBG-3 --><a href="NatureFurySpell.html">NatureFurySpell</a>, <!-- DBG-3 --><a href="ThunderstormSpell.html">ThunderstormSpell</a>, <!-- DBG-3 --><a href="WordOfDeathSpell.html">WordOfDeathSpell</a></h4>
+      (<font color="blue">static</font>) <font color="blue">bool</font> CheckExpansion( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="ArcaneFocus.html">ArcaneFocus</a> FindArcaneFocus( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> GetFocusLevel( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      (<font color="blue">ctor</font>) ArcanistSpell( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> caster, <!-- DBG-0 --><a href="Item.html">Item</a> scroll, <!-- DBG-0 --><a href="SpellInfo.html">SpellInfo</a> info )<br>
+      <!-- DBG-0 --><a href="SkillName.html">SkillName</a> CastSkill( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> ClearHandsOnCast( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="SkillName.html">SkillName</a> DamageSkill( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> FocusLevel( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> RequiredMana( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> RequiredSkill( <font color="blue">get</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckCast()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckResisted( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DoFizzle()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DoHurtFizzle()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetCastSkills( <font color="blue">out</font> <font color="blue">double</font> min, <font color="blue">out</font> <font color="blue">double</font> max )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetMana()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnBeginCast()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDisturb( <!-- DBG-0 --><a href="DisturbType.html">DisturbType</a> type, <font color="blue">bool</font> message )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SendCastEffect()<br>
+   </body>
+</html>

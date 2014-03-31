@@ -1,0 +1,27 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - ParallelSaveStrategy</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.html">Back to Server</a></h4>
+      <h2>ParallelSaveStrategy : <!-- DBG-1 --><a href="SaveStrategy.html">SaveStrategy</a></h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="ConsumableEntry.html">ConsumableEntry</a>, <!-- DBG-4 --><a href="Consumer.html">Consumer</a>, <!-- DBG-4 --><a href="Producer.html">Producer</a></h4>
+      (<font color="blue">static</font>) WaitHandle <Save>b__0( <!-- DBG-0 --><a href="Consumer.html">Consumer</a> input )<br>
+      (<font color="blue">ctor</font>) ParallelSaveStrategy( <font color="blue">int</font> processorCount )<br>
+      <font color="blue">string</font> Name( <font color="blue">get</font>; )<br>
+      <font color="blue">void</font> CloseFiles()<br>
+      <font color="blue">bool</font> Commit()<br>
+      <font color="blue">bool</font> Enqueue( <!-- DBG-0 --><a href="ISerializable.html">ISerializable</a> value )<br>
+      <font color="blue">int</font> GetThreadCount()<br>
+      <font color="blue">void</font> OnSerialized( <!-- DBG-0 --><a href="ConsumableEntry.html">ConsumableEntry</a> entry )<br>
+      <font color="blue">void</font> OpenFiles()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ProcessDecay()<br>
+      <font color="blue">void</font> Save( <!-- DBG-0 --><a href="Item.html">Item</a> item, <!-- DBG-0 --><a href="BinaryMemoryWriter.html">BinaryMemoryWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Save( <!-- DBG-0 --><a href="SaveMetrics.html">SaveMetrics</a> metrics, <font color="blue">bool</font> permitBackgroundWrite )<br>
+      <font color="blue">void</font> Save( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob, <!-- DBG-0 --><a href="BinaryMemoryWriter.html">BinaryMemoryWriter</a> writer )<br>
+      <font color="blue">void</font> Save( <!-- DBG-0 --><a href="BaseGuild.html">BaseGuild</a> guild, <!-- DBG-0 --><a href="BinaryMemoryWriter.html">BinaryMemoryWriter</a> writer )<br>
+      <font color="blue">void</font> SaveTypeDatabase( <font color="blue">string</font> path, <font color="blue">List</font>&lt;<font color="blue">Type</font>&gt; types )<br>
+      <font color="blue">void</font> SaveTypeDatabases()<br>
+      <font color="blue">void</font> WriteCount( <!-- DBG-0 --><a href="SequentialFileWriter.html">SequentialFileWriter</a> indexFile, <font color="blue">int</font> count )<br>
+   </body>
+</html>

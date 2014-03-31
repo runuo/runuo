@@ -1,0 +1,50 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - PlayerBarkeeper</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Mobiles.html">Back to Server.Mobiles</a></h4>
+      <h2>PlayerBarkeeper : <!-- DBG-1 --><a href="BaseVendor.html">BaseVendor</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Mobile.html">Mobile</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="IHonorTarget.html">IHonorTarget</a>, <!-- DBG-2.2 --><a href="IQuestGiver.html">IQuestGiver</a>, <!-- DBG-2.2 --><a href="IVendor.html">IVendor</a></h2>
+      (<font color="blue">ctor</font>) PlayerBarkeeper( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) PlayerBarkeeper( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> owner, <!-- DBG-0 --><a href="BaseHouse.html">BaseHouse</a> house )<br>
+      <font color="blue">bool</font> DisallowAllMoves( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="BaseHouse.html">BaseHouse</a> House( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IsActiveBuyer( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsActiveSeller( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> NoHouseRestrictions( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Owner( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="BarkeeperRumor.html">BarkeeperRumor</a>[] Rumors( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="SBInfo.html">SBInfo</a>&gt; SBInfos( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="VendorShoeType.html">VendorShoeType</a> ShoeType( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> TipMessage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> BeginChangeAppearance( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> BeginChangeRumor( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">int</font> index )<br>
+      <font color="blue">void</font> BeginChangeTip( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> BeginChangeTitle( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> BeginManagement( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> CancelChangeTitle( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> ChangeGender( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckGold( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> dropped )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">void</font> Dismiss()<br>
+      <font color="blue">void</font> EndChangeKeyword( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">int</font> index, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> EndChangeRumor( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">int</font> index, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> EndChangeTip( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> EndChangeTitle( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">string</font> title, <font color="blue">bool</font> vendor )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetContextMenuEntries( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">List</font>&lt;<a href="ContextMenuEntry.html">ContextMenuEntry</a>&gt; list )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> GetGender()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> HandlesOnSpeech( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> InitBody()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> InitOutfit()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> InitSBInfo()<br>
+      <font color="blue">bool</font> IsOwner( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnBeforeDeath()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSpeech( <!-- DBG-0 --><a href="SpeechEventArgs.html">SpeechEventArgs</a> e )<br>
+      <font color="blue">void</font> RemoveRumor( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">int</font> index )<br>
+      <font color="blue">void</font> RemoveTip( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">void</font> ShoutNews_Callback( <font color="blue">object</font> state )<br>
+      <font color="blue">void</font> UpgradeFromVersion0()<br>
+   </body>
+</html>

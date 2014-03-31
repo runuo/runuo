@@ -1,0 +1,68 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - PlayerVendor</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Mobiles.html">Back to Server.Mobiles</a></h4>
+      <h2>PlayerVendor : <!-- DBG-1 --><a href="Mobile.html">Mobile</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Mobile.html">Mobile</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;</h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="RentedVendor.html">RentedVendor</a></h4>
+<h4>Nested Types: <!-- DBG-4 --><a href="CollectGoldPrompt.html">CollectGoldPrompt</a>, <!-- DBG-4 --><a href="PayTimer.html">PayTimer</a>, <!-- DBG-4 --><a href="PVBuyTarget.html">PVBuyTarget</a>, <!-- DBG-4 --><a href="ReturnVendorEntry.html">ReturnVendorEntry</a>, <!-- DBG-4 --><a href="ShopNamePrompt.html">ShopNamePrompt</a>, <!-- DBG-4 --><a href="VendorNamePrompt.html">VendorNamePrompt</a>, <!-- DBG-4 --><a href="VendorPricePrompt.html">VendorPricePrompt</a></h4>
+      (<font color="blue">static</font>) <font color="blue">void</font> TryToBuy( <!-- DBG-0 --><a href="Item.html">Item</a> item, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      (<font color="blue">ctor</font>) PlayerVendor( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) PlayerVendor( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> owner, <!-- DBG-0 --><a href="BaseHouse.html">BaseHouse</a> house )<br>
+      <font color="blue">int</font> BankAccount( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> ChargePerDay( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> ChargePerRealWorldDay( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> HoldGold( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="BaseHouse.html">BaseHouse</a> House( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      DateTime NextPayTime( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Owner( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="PlayerVendorPlaceholder.html">PlayerVendorPlaceholder</a> Placeholder( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> ShopName( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> ActivateNewVendorSystem()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> AllowEquipFrom( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanBeDamaged()<br>
+      <font color="blue">bool</font> CanBeVendorItem( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">bool</font> CanInteractWith( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">bool</font> ownerOnly )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckNonlocalDrop( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item, <!-- DBG-0 --><a href="Item.html">Item</a> target )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckNonlocalLift( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">bool</font> CheckTeleport( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to )<br>
+      <font color="blue">void</font> CollectGold( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Destroy( <font color="blue">bool</font> toBackpack )<br>
+      <font color="blue">void</font> Dismiss( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DisplayPaperdollTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">void</font> FixDresswear()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetContextMenuEntries( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">List</font>&lt;<a href="ContextMenuEntry.html">ContextMenuEntry</a>&gt; list )<br>
+      <font color="blue">List</font>&lt;<a href="Item.html">Item</a>&gt; GetItems()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <!-- DBG-0 --><a href="VendorItem.html">VendorItem</a> GetVendorItem( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">int</font> GiveGold( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to, <font color="blue">int</font> amount )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> HandlesOnSpeech( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> InitBody()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> InitOutfit()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> IsOwner( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> IsSnoop( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> NonLocalDropCallback( <font color="blue">object</font> state )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnDragDrop( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">void</font> OnItemGiven( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnItemRemoved( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSpeech( <!-- DBG-0 --><a href="SpeechEventArgs.html">SpeechEventArgs</a> e )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSubItemAdded( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSubItemBounceCleared( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSubItemRemoved( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">void</font> OpenBackpack( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> RemoveVendorItem( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">void</font> Rename( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> RenameShop( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> Return()<br>
+      <font color="blue">void</font> SendOwnerGump( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <!-- DBG-0 --><a href="VendorItem.html">VendorItem</a> SetVendorItem( <!-- DBG-0 --><a href="Item.html">Item</a> item, <font color="blue">int</font> price, <font color="blue">string</font> description )<br>
+      <!-- DBG-0 --><a href="VendorItem.html">VendorItem</a> SetVendorItem( <!-- DBG-0 --><a href="Item.html">Item</a> item, <font color="blue">int</font> price, <font color="blue">string</font> description, DateTime created )<br>
+      <font color="blue">void</font> UpgradeFromVersion0( <font color="blue">object</font> newVendorSystem )<br>
+      <font color="blue">bool</font> WasNamed( <font color="blue">string</font> speech )<br>
+   </body>
+</html>

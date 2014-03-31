@@ -1,0 +1,44 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - HouseRaffleStone</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>HouseRaffleStone : <!-- DBG-1 --><a href="Item.html">Item</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;</h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="ActivateEntry.html">ActivateEntry</a>, <!-- DBG-4 --><a href="EditEntry.html">EditEntry</a>, <!-- DBG-4 --><a href="ManagementEntry.html">ManagementEntry</a>, <!-- DBG-4 --><a href="RaffleContextMenuEntry.html">RaffleContextMenuEntry</a></h4>
+      (<font color="blue">static</font>) <font color="blue">void</font> CheckEnd_OnTick()<br>
+      (<font color="blue">static</font>) <font color="blue">string</font> FormatLocation( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> loc, <!-- DBG-0 --><a href="Map.html">Map</a> map, <font color="blue">bool</font> displayMap )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Initialize()<br>
+      (<font color="blue">ctor</font>) HouseRaffleStone()<br>
+      (<font color="blue">ctor</font>) HouseRaffleStone( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      <!-- DBG-0 --><a href="HouseRaffleState.html">HouseRaffleState</a> CurrentState( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="HouseRaffleDeed.html">HouseRaffleDeed</a> Deed( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> DefaultName( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> DisplayWeight( <font color="blue">get</font>; )<br>
+      TimeSpan Duration( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="RaffleEntry.html">RaffleEntry</a>&gt; Entries( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="HouseRaffleExpireAction.html">HouseRaffleExpireAction</a> ExpireAction( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IsExpired( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Rectangle2D.html">Rectangle2D</a> PlotBounds( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Map.html">Map</a> PlotFacet( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      DateTime Started( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> TicketPrice( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Winner( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> CheckEnd()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">string</font> FormatLocation()<br>
+      <font color="blue">string</font> FormatPrice()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetContextMenuEntries( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">List</font>&lt;<a href="ContextMenuEntry.html">ContextMenuEntry</a>&gt; list )<br>
+      <!-- DBG-0 --><a href="Point3D.html">Point3D</a> GetPlotCenter()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">bool</font> HasEntered( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> InvalidateRegion()<br>
+      <font color="blue">bool</font> IsAtIPLimit( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSingleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> Purchase_Callback( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">bool</font> okay, <font color="blue">object</font> state )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">bool</font> ValidLocation()<br>
+   </body>
+</html>

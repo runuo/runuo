@@ -1,0 +1,28 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseAxe</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>BaseAxe : <!-- DBG-1 --><a href="BaseMeleeWeapon.html">BaseMeleeWeapon</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="IWeapon.html">IWeapon</a>, <!-- DBG-2.2 --><a href="IFactionItem.html">IFactionItem</a>, <!-- DBG-2.2 --><a href="ICraftable.html">ICraftable</a>, <!-- DBG-2.2 --><a href="ISlayer.html">ISlayer</a>, <!-- DBG-2.2 --><a href="IDurability.html">IDurability</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="Axe.html">Axe</a>, <!-- DBG-3 --><a href="BattleAxe.html">BattleAxe</a>, <!-- DBG-3 --><a href="DoubleAxe.html">DoubleAxe</a>, <!-- DBG-3 --><a href="ExecutionersAxe.html">ExecutionersAxe</a>, <!-- DBG-3 --><a href="GargoylesPickaxe.html">GargoylesPickaxe</a>, <!-- DBG-3 --><a href="Hatchet.html">Hatchet</a>, <!-- DBG-3 --><a href="LargeBattleAxe.html">LargeBattleAxe</a>, <!-- DBG-3 --><a href="OrnateAxe.html">OrnateAxe</a>, <!-- DBG-3 --><a href="Pickaxe.html">Pickaxe</a>, <!-- DBG-3 --><a href="SturdyPickaxe.html">SturdyPickaxe</a>, <!-- DBG-3 --><a href="TwoHandedAxe.html">TwoHandedAxe</a>, <!-- DBG-3 --><a href="WarAxe.html">WarAxe</a></h4>
+      (<font color="blue">ctor</font>) BaseAxe( <font color="blue">int</font> itemID )<br>
+      (<font color="blue">ctor</font>) BaseAxe( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      <!-- DBG-0 --><a href="WeaponAnimation.html">WeaponAnimation</a> DefAnimation( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> DefHitSound( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> DefMissSound( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="SkillName.html">SkillName</a> DefSkill( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="WeaponType.html">WeaponType</a> DefType( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="HarvestSystem.html">HarvestSystem</a> HarvestSystem( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> ShowUsesRemaining( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> UsesRemaining( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetContextMenuEntries( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">List</font>&lt;<a href="ContextMenuEntry.html">ContextMenuEntry</a>&gt; list )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetUsesScalar()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnHit( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> attacker, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> defender, <font color="blue">double</font> damageBonus )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ScaleDurability()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> UnscaleDurability()<br>
+   </body>
+</html>

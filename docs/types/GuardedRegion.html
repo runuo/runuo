@@ -1,0 +1,36 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - GuardedRegion</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Regions.html">Back to Server.Regions</a></h4>
+      <h2>GuardedRegion : <!-- DBG-1 --><a href="BaseRegion.html">BaseRegion</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="SafeZone.html">SafeZone</a>, <!-- DBG-3 --><a href="TownRegion.html">TownRegion</a></h4>
+<h4>Nested Types: <!-- DBG-4 --><a href="GuardTimer.html">GuardTimer</a></h4>
+      (<font color="blue">static</font>) <font color="blue">void</font> CheckGuarded_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="GuardedRegion.html">GuardedRegion</a> Disable( <!-- DBG-0 --><a href="GuardedRegion.html">GuardedRegion</a> reg )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Initialize()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> SetGuarded_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> ToggleGuarded_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">ctor</font>) GuardedRegion( XmlElement xml, <!-- DBG-0 --><a href="Map.html">Map</a> map, <!-- DBG-0 --><a href="Region.html">Region</a> parent )<br>
+      (<font color="blue">ctor</font>) GuardedRegion( <font color="blue">string</font> name, <!-- DBG-0 --><a href="Map.html">Map</a> map, <font color="blue">int</font> priority, <!-- DBG-0 --><a href="Rectangle2D.html">Rectangle2D</a>[] area )<br>
+      (<font color="blue">ctor</font>) GuardedRegion( <font color="blue">string</font> name, <!-- DBG-0 --><a href="Map.html">Map</a> map, <font color="blue">int</font> priority, <!-- DBG-0 --><a href="Rectangle3D.html">Rectangle3D</a>[] area )<br>
+      <font color="blue">bool</font> AllowReds( <font color="blue">get</font>; )<br>
+      Type DefaultGuardType( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Disabled( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> AllowHousing( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p )<br>
+      <font color="blue">void</font> CallGuards( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p )<br>
+      <font color="blue">void</font> CheckGuardCandidate( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckVendorAccess( <!-- DBG-0 --><a href="BaseVendor.html">BaseVendor</a> vendor, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> IsDisabled()<br>
+      <font color="blue">bool</font> IsGuardCandidate( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> MakeGuard( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> focus )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAggressed( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> aggressor, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> aggressed, <font color="blue">bool</font> criminal )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnBeginSpellCast( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="ISpell.html">ISpell</a> s )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnCriminalAction( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <font color="blue">bool</font> message )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnEnter( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnExit( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnGotBeneficialAction( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> helper, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> helped )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSpeech( <!-- DBG-0 --><a href="SpeechEventArgs.html">SpeechEventArgs</a> args )<br>
+   </body>
+</html>

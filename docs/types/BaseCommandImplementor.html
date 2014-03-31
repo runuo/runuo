@@ -1,0 +1,30 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseCommandImplementor</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Commands.Generic.html">Back to Server.Commands.Generic</a></h4>
+      <h2>BaseCommandImplementor</h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="AreaCommandImplementor.html">AreaCommandImplementor</a>, <!-- DBG-3 --><a href="ContainedCommandImplementor.html">ContainedCommandImplementor</a>, <!-- DBG-3 --><a href="FacetCommandImplementor.html">FacetCommandImplementor</a>, <!-- DBG-3 --><a href="GlobalCommandImplementor.html">GlobalCommandImplementor</a>, <!-- DBG-3 --><a href="IPAddressCommandImplementor.html">IPAddressCommandImplementor</a>, <!-- DBG-3 --><a href="MultiCommandImplementor.html">MultiCommandImplementor</a>, <!-- DBG-3 --><a href="OnlineCommandImplementor.html">OnlineCommandImplementor</a>, <!-- DBG-3 --><a href="RangeCommandImplementor.html">RangeCommandImplementor</a>, <!-- DBG-3 --><a href="RegionCommandImplementor.html">RegionCommandImplementor</a>, <!-- DBG-3 --><a href="ScreenCommandImplementor.html">ScreenCommandImplementor</a>, <!-- DBG-3 --><a href="SelfCommandImplementor.html">SelfCommandImplementor</a>, <!-- DBG-3 --><a href="SerialCommandImplementor.html">SerialCommandImplementor</a>, <!-- DBG-3 --><a href="SingleCommandImplementor.html">SingleCommandImplementor</a></h4>
+      (<font color="blue">static</font>) <font color="blue">List</font>&lt;<a href="BaseCommandImplementor.html">BaseCommandImplementor</a>&gt; Implementors( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Register( <!-- DBG-0 --><a href="BaseCommandImplementor.html">BaseCommandImplementor</a> impl )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> RegisterImplementors()<br>
+      (<font color="blue">ctor</font>) BaseCommandImplementor()<br>
+      <!-- DBG-0 --><a href="AccessLevel.html">AccessLevel</a> AccessLevel( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font>[] Accessors( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">Dictionary</font>&lt;<font color="blue">String</font>,<a href="BaseCommand.html">BaseCommand</a>&gt; Commands( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> Description( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="CommandSupport.html">CommandSupport</a> SupportRequirement( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> SupportsConditionals( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> Usage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> CheckObjectTypes( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="BaseCommand.html">BaseCommand</a> command, <!-- DBG-0 --><a href="Extensions.html">Extensions</a> ext, <font color="blue">out</font> <font color="blue">bool</font> items, <font color="blue">out</font> <font color="blue">bool</font> mobiles )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Compile( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="BaseCommand.html">BaseCommand</a> command, <font color="blue">ref</font> <font color="blue">string</font>[] args, <font color="blue">ref</font> <font color="blue">object</font> obj )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Execute( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      <font color="blue">string</font> GenerateArgString( <font color="blue">string</font>[] args )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Process( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="BaseCommand.html">BaseCommand</a> command, <font color="blue">string</font>[] args )<br>
+      <font color="blue">void</font> Register()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Register( <!-- DBG-0 --><a href="BaseCommand.html">BaseCommand</a> command )<br>
+      <font color="blue">void</font> RunCommand( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="BaseCommand.html">BaseCommand</a> command, <font color="blue">string</font>[] args )<br>
+      <font color="blue">void</font> RunCommand( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">object</font> obj, <!-- DBG-0 --><a href="BaseCommand.html">BaseCommand</a> command, <font color="blue">string</font>[] args )<br>
+   </body>
+</html>

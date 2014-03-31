@@ -1,0 +1,31 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - InhumanSpeech</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Misc.html">Back to Server.Misc</a></h4>
+      <h2>InhumanSpeech</h2>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="InhumanSpeech.html">InhumanSpeech</a> Lizardman( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="InhumanSpeech.html">InhumanSpeech</a> Orc( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="InhumanSpeech.html">InhumanSpeech</a> Ratman( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="InhumanSpeech.html">InhumanSpeech</a> Wisp( <font color="blue">get</font>; )<br>
+      (<font color="blue">ctor</font>) InhumanSpeech()<br>
+      <!-- DBG-0 --><a href="IHSFlags.html">IHSFlags</a> Flags( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Hue( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font>[] Keywords( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font>[] Responses( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Sound( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font>[] Syllables( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> ConstructSentance( <font color="blue">int</font> wordCount )<br>
+      <font color="blue">string</font> ConstructWord( <font color="blue">int</font> syllableCount )<br>
+      <font color="blue">string</font> GetRandomResponseWord( <font color="blue">List</font>&lt;<font color="blue">String</font>&gt; keywordsFound )<br>
+      <font color="blue">string</font> GetRandomSyllable()<br>
+      <font color="blue">void</font> OnConstruct( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      <font color="blue">void</font> OnDamage( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob, <font color="blue">int</font> amount )<br>
+      <font color="blue">void</font> OnDeath( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      <font color="blue">void</font> OnMovement( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mover, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> oldLocation )<br>
+      <font color="blue">bool</font> OnSpeech( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> speaker, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> SayRandomTranslate( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob, <font color="blue">string</font>[] sentancesInEnglish )<br>
+      <font color="blue">void</font> SaySentance( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob, <font color="blue">int</font> wordCount )<br>
+   </body>
+</html>

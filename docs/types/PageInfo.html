@@ -1,0 +1,33 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - PageInfo</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.Reports.html">Back to Server.Engines.Reports</a></h4>
+      <h2>PageInfo : <!-- DBG-1 --><a href="PersistableObject.html">PersistableObject</a></h2>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="PersistableObject.html">PersistableObject</a> Construct()<br>
+      (<font color="blue">static</font>) <font color="blue">string</font> GetAccount( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="PageResolution.html">PageResolution</a> ResFromResp( <font color="blue">string</font> resp )<br>
+      (<font color="blue">ctor</font>) PageInfo()<br>
+      (<font color="blue">ctor</font>) PageInfo( <!-- DBG-0 --><a href="PageEntry.html">PageEntry</a> entry )<br>
+      <!-- DBG-0 --><a href="StaffHistory.html">StaffHistory</a> History( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> Message( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="PageType.html">PageType</a> PageType( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="PageResolution.html">PageResolution</a> Resolution( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> ResolvedBy( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="StaffInfo.html">StaffInfo</a> Resolver( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="ResponseInfoCollection.html">ResponseInfoCollection</a> Responses( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="UserInfo.html">UserInfo</a> Sender( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> SentBy( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      DateTime TimeResolved( <font color="blue">get</font>; )<br>
+      DateTime TimeSent( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="PersistableType.html">PersistableType</a> TypeID( <font color="blue">get</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DeserializeAttributes( <!-- DBG-0 --><a href="PersistanceReader.html">PersistanceReader</a> ip )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DeserializeChildren( <!-- DBG-0 --><a href="PersistanceReader.html">PersistanceReader</a> ip )<br>
+      <!-- DBG-0 --><a href="PageResolution.html">PageResolution</a> GetResolution( <font color="blue">out</font> <font color="blue">string</font> resolvedBy, <font color="blue">out</font> DateTime timeResolved )<br>
+      <font color="blue">bool</font> IsStaffResolution( <!-- DBG-0 --><a href="PageResolution.html">PageResolution</a> res )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SerializeAttributes( <!-- DBG-0 --><a href="PersistanceWriter.html">PersistanceWriter</a> op )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SerializeChildren( <!-- DBG-0 --><a href="PersistanceWriter.html">PersistanceWriter</a> op )<br>
+      <font color="blue">void</font> UpdateResolver()<br>
+   </body>
+</html>

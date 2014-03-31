@@ -1,0 +1,36 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseRegion</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Regions.html">Back to Server.Regions</a></h4>
+      <h2>BaseRegion : <!-- DBG-1 --><a href="Region.html">Region</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="CancelQuestRegion.html">CancelQuestRegion</a>, <!-- DBG-3 --><a href="ChampionSpawnRegion.html">ChampionSpawnRegion</a>, <!-- DBG-3 --><a href="DungeonRegion.html">DungeonRegion</a>, <!-- DBG-3 --><a href="GauntletRegion.html">GauntletRegion</a>, <!-- DBG-3 --><a href="GreenAcres.html">GreenAcres</a>, <!-- DBG-3 --><a href="GuardedRegion.html">GuardedRegion</a>, <!-- DBG-3 --><a href="HouseRaffleRegion.html">HouseRaffleRegion</a>, <!-- DBG-3 --><a href="HouseRegion.html">HouseRegion</a>, <!-- DBG-3 --><a href="Jail.html">Jail</a>, <!-- DBG-3 --><a href="LampRoomRegion.html">LampRoomRegion</a>, <!-- DBG-3 --><a href="LeverPuzzleRegion.html">LeverPuzzleRegion</a>, <!-- DBG-3 --><a href="NoHousingRegion.html">NoHousingRegion</a>, <!-- DBG-3 --><a href="QuestCompleteObjectiveRegion.html">QuestCompleteObjectiveRegion</a>, <!-- DBG-3 --><a href="QuestNoEntryRegion.html">QuestNoEntryRegion</a>, <!-- DBG-3 --><a href="QuestOfferRegion.html">QuestOfferRegion</a>, <!-- DBG-3 --><a href="StrongholdRegion.html">StrongholdRegion</a>, <!-- DBG-3 --><a href="TempNoHousingRegion.html">TempNoHousingRegion</a>, <!-- DBG-3 --><a href="TreasureRegion.html">TreasureRegion</a></h4>
+      (<font color="blue">static</font>) <font color="blue">bool</font> CanSpawn( <!-- DBG-0 --><a href="Region.html">Region</a> region, Type[] types )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Configure()<br>
+      (<font color="blue">static</font>) <font color="blue">string</font> GetRuneNameFor( <!-- DBG-0 --><a href="Region.html">Region</a> region )<br>
+      (<font color="blue">ctor</font>) BaseRegion( XmlElement xml, <!-- DBG-0 --><a href="Map.html">Map</a> map, <!-- DBG-0 --><a href="Region.html">Region</a> parent )<br>
+      (<font color="blue">ctor</font>) BaseRegion( <font color="blue">string</font> name, <!-- DBG-0 --><a href="Map.html">Map</a> map, <font color="blue">int</font> priority, <!-- DBG-0 --><a href="Rectangle3D.html">Rectangle3D</a>[] area )<br>
+      (<font color="blue">ctor</font>) BaseRegion( <font color="blue">string</font> name, <!-- DBG-0 --><a href="Map.html">Map</a> map, <!-- DBG-0 --><a href="Region.html">Region</a> parent, <!-- DBG-0 --><a href="Rectangle3D.html">Rectangle3D</a>[] area )<br>
+      (<font color="blue">ctor</font>) BaseRegion( <font color="blue">string</font> name, <!-- DBG-0 --><a href="Map.html">Map</a> map, <!-- DBG-0 --><a href="Region.html">Region</a> parent, <!-- DBG-0 --><a href="Rectangle2D.html">Rectangle2D</a>[] area )<br>
+      (<font color="blue">ctor</font>) BaseRegion( <font color="blue">string</font> name, <!-- DBG-0 --><a href="Map.html">Map</a> map, <font color="blue">int</font> priority, <!-- DBG-0 --><a href="Rectangle2D.html">Rectangle2D</a>[] area )<br>
+      <font color="blue">bool</font> DeadMayEnter( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> ExcludeFromParentSpawns( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> LogoutAllowed( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> MountsAllowed( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> NoLogoutDelay( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> ResurrectionAllowed( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> RuneName( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="SpawnEntry.html">SpawnEntry</a>[] Spawns( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="SpawnZLevel.html">SpawnZLevel</a> SpawnZLevel( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> YoungMayEnter( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> YoungProtected( <font color="blue">get</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> AcceptsSpawnsFrom( <!-- DBG-0 --><a href="Region.html">Region</a> region )<br>
+      <font color="blue">virtual</font> TimeSpan GetLogoutDelay( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">void</font> InitRectangles()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnEnter( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnUnregister()<br>
+      <!-- DBG-0 --><a href="Point3D.html">Point3D</a> RandomSpawnLocation( <font color="blue">int</font> spawnHeight, <font color="blue">bool</font> land, <font color="blue">bool</font> water, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> home, <font color="blue">int</font> range )<br>
+      <font color="blue">virtual</font> <font color="blue">string</font> ToString()<br>
+   </body>
+</html>

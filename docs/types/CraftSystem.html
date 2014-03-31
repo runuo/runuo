@@ -1,0 +1,72 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - CraftSystem</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.Craft.html">Back to Server.Engines.Craft</a></h4>
+      <h2>CraftSystem</h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="DefAlchemy.html">DefAlchemy</a>, <!-- DBG-3 --><a href="DefBlacksmithy.html">DefBlacksmithy</a>, <!-- DBG-3 --><a href="DefBowFletching.html">DefBowFletching</a>, <!-- DBG-3 --><a href="DefCarpentry.html">DefCarpentry</a>, <!-- DBG-3 --><a href="DefCartography.html">DefCartography</a>, <!-- DBG-3 --><a href="DefCooking.html">DefCooking</a>, <!-- DBG-3 --><a href="DefGlassblowing.html">DefGlassblowing</a>, <!-- DBG-3 --><a href="DefInscription.html">DefInscription</a>, <!-- DBG-3 --><a href="DefMasonry.html">DefMasonry</a>, <!-- DBG-3 --><a href="DefTailoring.html">DefTailoring</a>, <!-- DBG-3 --><a href="DefTinkering.html">DefTinkering</a></h4>
+      (<font color="blue">ctor</font>) CraftSystem( <font color="blue">int</font> minCraftEffect, <font color="blue">int</font> maxCraftEffect, <font color="blue">double</font> delay )<br>
+      <font color="blue">bool</font> CanEnhance( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="CraftGroupCol.html">CraftGroupCol</a> CraftGroups( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="CraftItemCol.html">CraftItemCol</a> CraftItems( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="CraftSubResCol.html">CraftSubResCol</a> CraftSubRes( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="CraftSubResCol.html">CraftSubResCol</a> CraftSubRes2( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> Delay( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="CraftECA.html">CraftECA</a> ECA( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> GumpTitleNumber( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> GumpTitleString( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="SkillName.html">SkillName</a> MainSkill( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> MarkOption( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> MaxCraftEffect( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> MinCraftEffect( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Repair( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Resmelt( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> AddCraft( Type typeItem, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> group, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> name, <font color="blue">double</font> minSkill, <font color="blue">double</font> maxSkill, Type typeRes, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> nameRes, <font color="blue">int</font> amount )<br>
+      <font color="blue">int</font> AddCraft( Type typeItem, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> group, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> name, <font color="blue">double</font> minSkill, <font color="blue">double</font> maxSkill, Type typeRes, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> nameRes, <font color="blue">int</font> amount, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> message )<br>
+      <font color="blue">int</font> AddCraft( Type typeItem, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> group, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> name, <!-- DBG-0 --><a href="SkillName.html">SkillName</a> skillToMake, <font color="blue">double</font> minSkill, <font color="blue">double</font> maxSkill, Type typeRes, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> nameRes, <font color="blue">int</font> amount )<br>
+      <font color="blue">int</font> AddCraft( Type typeItem, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> group, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> name, <!-- DBG-0 --><a href="SkillName.html">SkillName</a> skillToMake, <font color="blue">double</font> minSkill, <font color="blue">double</font> maxSkill, Type typeRes, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> nameRes, <font color="blue">int</font> amount, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> message )<br>
+      <font color="blue">void</font> AddQuestRecipe( <font color="blue">int</font> index, <font color="blue">int</font> id )<br>
+      <font color="blue">void</font> AddRareRecipe( <font color="blue">int</font> index, <font color="blue">int</font> id )<br>
+      <font color="blue">void</font> AddRecipe( <font color="blue">int</font> index, <font color="blue">int</font> id )<br>
+      <font color="blue">void</font> AddRecipeBase( <font color="blue">int</font> index, <font color="blue">int</font> id )<br>
+      <font color="blue">void</font> AddRes( <font color="blue">int</font> index, Type type, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> name, <font color="blue">int</font> amount )<br>
+      <font color="blue">void</font> AddRes( <font color="blue">int</font> index, Type type, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> name, <font color="blue">int</font> amount, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> message )<br>
+      <font color="blue">void</font> AddSkill( <font color="blue">int</font> index, <!-- DBG-0 --><a href="SkillName.html">SkillName</a> skillToMake, <font color="blue">double</font> minSkill, <font color="blue">double</font> maxSkill )<br>
+      <font color="blue">void</font> AddSubRes( Type type, <font color="blue">int</font> name, <font color="blue">double</font> reqSkill, <font color="blue">object</font> message )<br>
+      <font color="blue">void</font> AddSubRes( Type type, <font color="blue">string</font> name, <font color="blue">double</font> reqSkill, <font color="blue">object</font> message )<br>
+      <font color="blue">void</font> AddSubRes( Type type, <font color="blue">int</font> name, <font color="blue">double</font> reqSkill, <font color="blue">int</font> genericName, <font color="blue">object</font> message )<br>
+      <font color="blue">void</font> AddSubRes2( Type type, <font color="blue">int</font> name, <font color="blue">double</font> reqSkill, <font color="blue">object</font> message )<br>
+      <font color="blue">void</font> AddSubRes2( Type type, <font color="blue">string</font> name, <font color="blue">double</font> reqSkill, <font color="blue">object</font> message )<br>
+      <font color="blue">void</font> AddSubRes2( Type type, <font color="blue">int</font> name, <font color="blue">double</font> reqSkill, <font color="blue">int</font> genericName, <font color="blue">object</font> message )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> CanCraft( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="BaseTool.html">BaseTool</a> tool, Type itemType )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> ConsumeOnFailure( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, Type resourceType, <!-- DBG-0 --><a href="CraftItem.html">CraftItem</a> craftItem )<br>
+      <font color="blue">void</font> CreateItem( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, Type type, Type typeRes, <!-- DBG-0 --><a href="BaseTool.html">BaseTool</a> tool, <!-- DBG-0 --><a href="CraftItem.html">CraftItem</a> realCraftItem )<br>
+      <font color="blue">void</font> DoGroup( <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> groupName, <!-- DBG-0 --><a href="CraftItem.html">CraftItem</a> craftItem )<br>
+      <font color="blue">void</font> ForceNonExceptional( <font color="blue">int</font> index )<br>
+      <font color="blue">virtual</font> <font color="blue">double</font> GetChanceAtMin( <!-- DBG-0 --><a href="CraftItem.html">CraftItem</a> item )<br>
+      <!-- DBG-0 --><a href="CraftContext.html">CraftContext</a> GetContext( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> InitCraftList()<br>
+      <font color="blue">void</font> OnMade( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="CraftItem.html">CraftItem</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> PlayCraftEffect( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> PlayEndingEffect( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">bool</font> failed, <font color="blue">bool</font> lostMaterial, <font color="blue">bool</font> toolBroken, <font color="blue">int</font> quality, <font color="blue">bool</font> makersMark, <!-- DBG-0 --><a href="CraftItem.html">CraftItem</a> item )<br>
+      <font color="blue">int</font> RandomRareRecipe()<br>
+      <font color="blue">int</font> RandomRecipe()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> RetainsColorFrom( <!-- DBG-0 --><a href="CraftItem.html">CraftItem</a> item, Type type )<br>
+      <font color="blue">void</font> SetBeverageType( <font color="blue">int</font> index, <!-- DBG-0 --><a href="BeverageType.html">BeverageType</a> requiredBeverage )<br>
+      <font color="blue">void</font> SetHitsReq( <font color="blue">int</font> index, <font color="blue">int</font> hits )<br>
+      <font color="blue">void</font> SetItemHue( <font color="blue">int</font> index, <font color="blue">int</font> hue )<br>
+      <font color="blue">void</font> SetManaReq( <font color="blue">int</font> index, <font color="blue">int</font> mana )<br>
+      <font color="blue">void</font> SetNeededExpansion( <font color="blue">int</font> index, <!-- DBG-0 --><a href="Expansion.html">Expansion</a> expansion )<br>
+      <font color="blue">void</font> SetNeedHeat( <font color="blue">int</font> index, <font color="blue">bool</font> needHeat )<br>
+      <font color="blue">void</font> SetNeedMill( <font color="blue">int</font> index, <font color="blue">bool</font> needMill )<br>
+      <font color="blue">void</font> SetNeedOven( <font color="blue">int</font> index, <font color="blue">bool</font> needOven )<br>
+      <font color="blue">void</font> SetStamReq( <font color="blue">int</font> index, <font color="blue">int</font> stam )<br>
+      <font color="blue">void</font> SetSubRes( Type type, <font color="blue">int</font> name )<br>
+      <font color="blue">void</font> SetSubRes( Type type, <font color="blue">string</font> name )<br>
+      <font color="blue">void</font> SetSubRes2( Type type, <font color="blue">string</font> name )<br>
+      <font color="blue">void</font> SetSubRes2( Type type, <font color="blue">int</font> name )<br>
+      <font color="blue">void</font> SetUseAllRes( <font color="blue">int</font> index, <font color="blue">bool</font> useAll )<br>
+      <font color="blue">void</font> SetUseSubRes2( <font color="blue">int</font> index, <font color="blue">bool</font> val )<br>
+   </body>
+</html>

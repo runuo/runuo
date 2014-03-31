@@ -1,0 +1,99 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - Map</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.html">Back to Server</a></h4>
+      <h2>Map : <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Map.html">Map</a>&gt;</h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="ClientEnumerator.html">ClientEnumerator</a>, <!-- DBG-4 --><a href="EntityEnumerator.html">EntityEnumerator</a>, <!-- DBG-4 --><a href="ItemEnumerator.html">ItemEnumerator</a>, <!-- DBG-4 --><a href="MobileEnumerator.html">MobileEnumerator</a>, <!-- DBG-4 --><a href="MultiTileEnumerator.html">MultiTileEnumerator</a>, <!-- DBG-4 --><a href="NullEnumerable-T-.html">NullEnumerable</a>&lt;<font color="blue">T</font>&gt;, <!-- DBG-4 --><a href="PooledEnumerable-T-.html">PooledEnumerable</a>&lt;<font color="blue">T</font>&gt;, <!-- DBG-4 --><a href="ZComparer.html">ZComparer</a></h4>
+      (<font color="blue">static</font>) <font color="blue">List</font>&lt;<a href="Map.html">Map</a>&gt; AllMaps( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Map.html">Map</a> Felucca( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Map.html">Map</a> Ilshenar( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Map.html">Map</a> Internal( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font>[] InvalidLandTiles( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Map.html">Map</a> Malas( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Map.html">Map</a>[] Maps( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> MaxLOSDistance( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Map.html">Map</a> TerMur( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Map.html">Map</a> Tokuno( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Map.html">Map</a> Trammel( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> CheckNamesAndValues()<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> FloorAverage( <font color="blue">int</font> a, <font color="blue">int</font> b )<br>
+      (<font color="blue">static</font>) <font color="blue">string</font>[] GetMapNames()<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Map.html">Map</a>[] GetMapValues()<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Map.html">Map</a> Parse( <font color="blue">string</font> value )<br>
+      (<font color="blue">ctor</font>) Map( <font color="blue">int</font> mapID, <font color="blue">int</font> mapIndex, <font color="blue">int</font> fileIndex, <font color="blue">int</font> width, <font color="blue">int</font> height, <font color="blue">int</font> season, <font color="blue">string</font> name, <!-- DBG-0 --><a href="MapRules.html">MapRules</a> rules )<br>
+      <!-- DBG-0 --><a href="Region.html">Region</a> DefaultRegion( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Height( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Sector.html">Sector</a> InvalidSector( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> MapID( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> MapIndex( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> Name( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">Dictionary</font>&lt;<font color="blue">String</font>,<a href="Region.html">Region</a>&gt; Regions( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="MapRules.html">MapRules</a> Rules( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Season( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="TileMatrix.html">TileMatrix</a> Tiles( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Width( <font color="blue">get</font>; )<br>
+      <font color="blue">void</font> ActivateSectors( <font color="blue">int</font> cx, <font color="blue">int</font> cy )<br>
+      <font color="blue">void</font> AddMulti( <!-- DBG-0 --><a href="BaseMulti.html">BaseMulti</a> m, <!-- DBG-0 --><a href="Sector.html">Sector</a> start, <!-- DBG-0 --><a href="Sector.html">Sector</a> end )<br>
+      <!-- DBG-0 --><a href="Point2D.html">Point2D</a> Bound( <!-- DBG-0 --><a href="Point2D.html">Point2D</a> p )<br>
+      <font color="blue">void</font> Bound( <font color="blue">int</font> x, <font color="blue">int</font> y, <font color="blue">out</font> <font color="blue">int</font> newX, <font color="blue">out</font> <font color="blue">int</font> newY )<br>
+      <font color="blue">bool</font> CanFit( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p, <font color="blue">int</font> height )<br>
+      <font color="blue">bool</font> CanFit( <!-- DBG-0 --><a href="Point2D.html">Point2D</a> p, <font color="blue">int</font> z, <font color="blue">int</font> height )<br>
+      <font color="blue">bool</font> CanFit( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p, <font color="blue">int</font> height, <font color="blue">bool</font> checkBlocksFit )<br>
+      <font color="blue">bool</font> CanFit( <font color="blue">int</font> x, <font color="blue">int</font> y, <font color="blue">int</font> z, <font color="blue">int</font> height )<br>
+      <font color="blue">bool</font> CanFit( <!-- DBG-0 --><a href="Point2D.html">Point2D</a> p, <font color="blue">int</font> z, <font color="blue">int</font> height, <font color="blue">bool</font> checkBlocksFit )<br>
+      <font color="blue">bool</font> CanFit( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p, <font color="blue">int</font> height, <font color="blue">bool</font> checkBlocksFit, <font color="blue">bool</font> checkMobiles )<br>
+      <font color="blue">bool</font> CanFit( <font color="blue">int</font> x, <font color="blue">int</font> y, <font color="blue">int</font> z, <font color="blue">int</font> height, <font color="blue">bool</font> checksBlocksFit )<br>
+      <font color="blue">bool</font> CanFit( <font color="blue">int</font> x, <font color="blue">int</font> y, <font color="blue">int</font> z, <font color="blue">int</font> height, <font color="blue">bool</font> checkBlocksFit, <font color="blue">bool</font> checkMobiles )<br>
+      <font color="blue">bool</font> CanFit( <font color="blue">int</font> x, <font color="blue">int</font> y, <font color="blue">int</font> z, <font color="blue">int</font> height, <font color="blue">bool</font> checkBlocksFit, <font color="blue">bool</font> checkMobiles, <font color="blue">bool</font> requireSurface )<br>
+      <font color="blue">bool</font> CanSpawnMobile( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p )<br>
+      <font color="blue">bool</font> CanSpawnMobile( <!-- DBG-0 --><a href="Point2D.html">Point2D</a> p, <font color="blue">int</font> z )<br>
+      <font color="blue">bool</font> CanSpawnMobile( <font color="blue">int</font> x, <font color="blue">int</font> y, <font color="blue">int</font> z )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> CompareTo( <!-- DBG-0 --><a href="Map.html">Map</a> other )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> CompareTo( <font color="blue">object</font> other )<br>
+      <font color="blue">void</font> DeactivateSectors( <font color="blue">int</font> cx, <font color="blue">int</font> cy )<br>
+      <font color="blue">void</font> FixColumn( <font color="blue">int</font> x, <font color="blue">int</font> y )<br>
+      <font color="blue">int</font> GetAverageZ( <font color="blue">int</font> x, <font color="blue">int</font> y )<br>
+      <font color="blue">void</font> GetAverageZ( <font color="blue">int</font> x, <font color="blue">int</font> y, <font color="blue">ref</font> <font color="blue">int</font> z, <font color="blue">ref</font> <font color="blue">int</font> avg, <font color="blue">ref</font> <font color="blue">int</font> top )<br>
+      <a href="IPooledEnumerable-T-.html">IPooledEnumerable</a>&lt;<a href="NetState.html">NetState</a>&gt; GetClientsInBounds( <!-- DBG-0 --><a href="Rectangle2D.html">Rectangle2D</a> bounds )<br>
+      <a href="IPooledEnumerable-T-.html">IPooledEnumerable</a>&lt;<a href="NetState.html">NetState</a>&gt; GetClientsInRange( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p )<br>
+      <a href="IPooledEnumerable-T-.html">IPooledEnumerable</a>&lt;<a href="NetState.html">NetState</a>&gt; GetClientsInRange( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p, <font color="blue">int</font> range )<br>
+      <a href="IPooledEnumerable-T-.html">IPooledEnumerable</a>&lt;<a href="Item.html">Item</a>&gt; GetItemsInBounds( <!-- DBG-0 --><a href="Rectangle2D.html">Rectangle2D</a> bounds )<br>
+      <a href="IPooledEnumerable-T-.html">IPooledEnumerable</a>&lt;<a href="Item.html">Item</a>&gt; GetItemsInRange( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p )<br>
+      <a href="IPooledEnumerable-T-.html">IPooledEnumerable</a>&lt;<a href="Item.html">Item</a>&gt; GetItemsInRange( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p, <font color="blue">int</font> range )<br>
+      <a href="IPooledEnumerable-T-.html">IPooledEnumerable</a>&lt;<a href="Mobile.html">Mobile</a>&gt; GetMobilesInBounds( <!-- DBG-0 --><a href="Rectangle2D.html">Rectangle2D</a> bounds )<br>
+      <a href="IPooledEnumerable-T-.html">IPooledEnumerable</a>&lt;<a href="Mobile.html">Mobile</a>&gt; GetMobilesInRange( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p )<br>
+      <a href="IPooledEnumerable-T-.html">IPooledEnumerable</a>&lt;<a href="Mobile.html">Mobile</a>&gt; GetMobilesInRange( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p, <font color="blue">int</font> range )<br>
+      <!-- DBG-0 --><a href="Sector.html">Sector</a> GetMultiMaxSector( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> loc, <!-- DBG-0 --><a href="MultiComponentList.html">MultiComponentList</a> mcl )<br>
+      <!-- DBG-0 --><a href="Sector.html">Sector</a> GetMultiMinSector( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> loc, <!-- DBG-0 --><a href="MultiComponentList.html">MultiComponentList</a> mcl )<br>
+      <a href="IPooledEnumerable-T-.html">IPooledEnumerable</a>&lt;<a href="StaticTile[].html">StaticTile[]</a>&gt; GetMultiTilesAt( <font color="blue">int</font> x, <font color="blue">int</font> y )<br>
+      <a href="IPooledEnumerable-T-.html">IPooledEnumerable</a>&lt;<a href="IEntity.html">IEntity</a>&gt; GetObjectsInBounds( <!-- DBG-0 --><a href="Rectangle2D.html">Rectangle2D</a> bounds )<br>
+      <a href="IPooledEnumerable-T-.html">IPooledEnumerable</a>&lt;<a href="IEntity.html">IEntity</a>&gt; GetObjectsInRange( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p )<br>
+      <a href="IPooledEnumerable-T-.html">IPooledEnumerable</a>&lt;<a href="IEntity.html">IEntity</a>&gt; GetObjectsInRange( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p, <font color="blue">int</font> range )<br>
+      <!-- DBG-0 --><a href="Point3D.html">Point3D</a> GetPoint( <font color="blue">object</font> o, <font color="blue">bool</font> eye )<br>
+      <!-- DBG-0 --><a href="Sector.html">Sector</a> GetRealSector( <font color="blue">int</font> x, <font color="blue">int</font> y )<br>
+      <!-- DBG-0 --><a href="Sector.html">Sector</a> GetSector( <!-- DBG-0 --><a href="IPoint2D.html">IPoint2D</a> p )<br>
+      <!-- DBG-0 --><a href="Sector.html">Sector</a> GetSector( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p )<br>
+      <!-- DBG-0 --><a href="Sector.html">Sector</a> GetSector( <!-- DBG-0 --><a href="Point2D.html">Point2D</a> p )<br>
+      <!-- DBG-0 --><a href="Sector.html">Sector</a> GetSector( <font color="blue">int</font> x, <font color="blue">int</font> y )<br>
+      <font color="blue">object</font> GetTopSurface( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p )<br>
+      <!-- DBG-0 --><a href="Sector.html">Sector</a> InternalGetSector( <font color="blue">int</font> x, <font color="blue">int</font> y )<br>
+      <font color="blue">bool</font> LineOfSight( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> target )<br>
+      <font color="blue">bool</font> LineOfSight( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to )<br>
+      <font color="blue">bool</font> LineOfSight( <font color="blue">object</font> from, <font color="blue">object</font> dest )<br>
+      <font color="blue">bool</font> LineOfSight( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> org, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> dest )<br>
+      <font color="blue">void</font> OnClientChange( <!-- DBG-0 --><a href="NetState.html">NetState</a> oldState, <!-- DBG-0 --><a href="NetState.html">NetState</a> newState, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">void</font> OnEnter( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">void</font> OnEnter( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">void</font> OnLeave( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">void</font> OnLeave( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">void</font> OnMove( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> oldLocation, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">void</font> OnMove( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> oldLocation, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">bool</font> PlayersInRange( <!-- DBG-0 --><a href="Sector.html">Sector</a> sect, <font color="blue">int</font> range )<br>
+      <font color="blue">void</font> RegisterRegion( <!-- DBG-0 --><a href="Region.html">Region</a> reg )<br>
+      <font color="blue">void</font> RemoveMulti( <!-- DBG-0 --><a href="BaseMulti.html">BaseMulti</a> m, <!-- DBG-0 --><a href="Sector.html">Sector</a> start, <!-- DBG-0 --><a href="Sector.html">Sector</a> end )<br>
+      <font color="blue">virtual</font> <font color="blue">string</font> ToString()<br>
+      <font color="blue">void</font> UnregisterRegion( <!-- DBG-0 --><a href="Region.html">Region</a> reg )<br>
+   </body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - EffectController</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>EffectController : <!-- DBG-1 --><a href="Item.html">Item</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;</h2>
+      (<font color="blue">ctor</font>) EffectController()<br>
+      (<font color="blue">ctor</font>) EffectController( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      <font color="blue">string</font> DefaultName( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Duration( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      TimeSpan EffectDelay( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> EffectHue( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> EffectItemID( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="EffectLayer.html">EffectLayer</a> EffectLayer( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="ECEffectType.html">ECEffectType</a> EffectType( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> ExplodeParticleEffect( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Explodes( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> ExplodeSound( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> FixedDirection( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> HandlesOnMovement( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> ParticleEffect( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> PlaySoundAtTrigger( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> RenderMode( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="EffectController.html">EffectController</a> Sequence( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      TimeSpan SoundDelay( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> SoundID( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> SourceItem( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> SourceMobile( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> SourceNull( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Speed( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> TargetItem( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> TargetMobile( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> TargetNull( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      TimeSpan TriggerDelay( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> TriggerRange( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="EffectTriggerType.html">EffectTriggerType</a> TriggerType( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Unknown( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">void</font> DoEffect( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> trigger )<br>
+      <font color="blue">void</font> InternalDoEffect( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> trigger )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnMovement( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> oldLocation )<br>
+      <font color="blue">void</font> PlaySound( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> trigger )<br>
+      <!-- DBG-0 --><a href="IEntity.html">IEntity</a> ReadEntity( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+   </body>
+</html>

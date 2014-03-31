@@ -1,0 +1,444 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseCreature</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Mobiles.html">Back to Server.Mobiles</a></h4>
+      <h2>BaseCreature : <!-- DBG-1 --><a href="Mobile.html">Mobile</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Mobile.html">Mobile</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="IHonorTarget.html">IHonorTarget</a>, <!-- DBG-2.2 --><a href="IQuestGiver.html">IQuestGiver</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="AbysmalHorror.html">AbysmalHorror</a>, <!-- DBG-3 --><a href="AcidElemental.html">AcidElemental</a>, <!-- DBG-3 --><a href="Actor.html">Actor</a>, <!-- DBG-3 --><a href="Aeluva.html">Aeluva</a>, <!-- DBG-3 --><a href="Aernya.html">Aernya</a>, <!-- DBG-3 --><a href="AgapiteElemental.html">AgapiteElemental</a>, <!-- DBG-3 --><a href="Ahie.html">Ahie</a>, <!-- DBG-3 --><a href="AirElemental.html">AirElemental</a>, <!-- DBG-3 --><a href="AldenArmstrong.html">AldenArmstrong</a>, <!-- DBG-3 --><a href="Alefian.html">Alefian</a>, <!-- DBG-3 --><a href="Alejaha.html">Alejaha</a>, <!-- DBG-3 --><a href="Alelle.html">Alelle</a>, <!-- DBG-3 --><a href="Alligator.html">Alligator</a>, <!-- DBG-3 --><a href="Aluniol.html">Aluniol</a>, <!-- DBG-3 --><a href="AncientLich.html">AncientLich</a>, <!-- DBG-3 --><a href="AncientWyrm.html">AncientWyrm</a>, <!-- DBG-3 --><a href="AndreasVesalius.html">AndreasVesalius</a>, <!-- DBG-3 --><a href="Andric.html">Andric</a>, <!-- DBG-3 --><a href="Andros.html">Andros</a>, <!-- DBG-3 --><a href="Aniel.html">Aniel</a>, <!-- DBG-3 --><a href="Anolly.html">Anolly</a>, <!-- DBG-3 --><a href="AntLion.html">AntLion</a>, <!-- DBG-3 --><a href="ArcaneDaemon.html">ArcaneDaemon</a>, <!-- DBG-3 --><a href="ArcaneFey.html">ArcaneFey</a>, <!-- DBG-3 --><a href="ArcaneFiend.html">ArcaneFiend</a>, <!-- DBG-3 --><a href="ArcticOgreLord.html">ArcticOgreLord</a>, <!-- DBG-3 --><a href="Artist.html">Artist</a>, <!-- DBG-3 --><a href="Asandos.html">Asandos</a>, <!-- DBG-3 --><a href="Athailon.html">Athailon</a>, <!-- DBG-3 --><a href="Aulan.html">Aulan</a>, <!-- DBG-3 --><a href="Aurelia.html">Aurelia</a>, <!-- DBG-3 --><a href="Avicenna.html">Avicenna</a>, <!-- DBG-3 --><a href="BakeKitsune.html">BakeKitsune</a>, <!-- DBG-3 --><a href="Balron.html">Balron</a>, <!-- DBG-3 --><a href="BaseChampion.html">BaseChampion</a>, <!-- DBG-3 --><a href="BaseEnraged.html">BaseEnraged</a>, <!-- DBG-3 --><a href="BaseEscortable.html">BaseEscortable</a>, <!-- DBG-3 --><a href="BaseFactionGuard.html">BaseFactionGuard</a>, <!-- DBG-3 --><a href="BaseFamiliar.html">BaseFamiliar</a>, <!-- DBG-3 --><a href="BaseMount.html">BaseMount</a>, <!-- DBG-3 --><a href="BaseShieldGuard.html">BaseShieldGuard</a>, <!-- DBG-3 --><a href="BaseTalismanSummon.html">BaseTalismanSummon</a>, <!-- DBG-3 --><a href="BaseVendor.html">BaseVendor</a>, <!-- DBG-3 --><a href="Belulah.html">Belulah</a>, <!-- DBG-3 --><a href="Ben.html">Ben</a>, <!-- DBG-3 --><a href="Beotham.html">Beotham</a>, <!-- DBG-3 --><a href="Betrayer.html">Betrayer</a>, <!-- DBG-3 --><a href="Bird.html">Bird</a>, <!-- DBG-3 --><a href="BlackBear.html">BlackBear</a>, <!-- DBG-3 --><a href="BlackSolenInfiltratorQueen.html">BlackSolenInfiltratorQueen</a>, <!-- DBG-3 --><a href="BlackSolenInfiltratorWarrior.html">BlackSolenInfiltratorWarrior</a>, <!-- DBG-3 --><a href="BlackSolenQueen.html">BlackSolenQueen</a>, <!-- DBG-3 --><a href="BlackSolenWarrior.html">BlackSolenWarrior</a>, <!-- DBG-3 --><a href="BlackSolenWorker.html">BlackSolenWorker</a>, <!-- DBG-3 --><a href="BladeSpirits.html">BladeSpirits</a>, <!-- DBG-3 --><a href="BloodElemental.html">BloodElemental</a>, <!-- DBG-3 --><a href="Boar.html">Boar</a>, <!-- DBG-3 --><a href="Bogle.html">Bogle</a>, <!-- DBG-3 --><a href="Bogling.html">Bogling</a>, <!-- DBG-3 --><a href="BogThing.html">BogThing</a>, <!-- DBG-3 --><a href="Bolaevin.html">Bolaevin</a>, <!-- DBG-3 --><a href="BoneDemon.html">BoneDemon</a>, <!-- DBG-3 --><a href="BoneKnight.html">BoneKnight</a>, <!-- DBG-3 --><a href="BoneMagi.html">BoneMagi</a>, <!-- DBG-3 --><a href="Braen.html">Braen</a>, <!-- DBG-3 --><a href="Brigand.html">Brigand</a>, <!-- DBG-3 --><a href="Brinnae.html">Brinnae</a>, <!-- DBG-3 --><a href="BronzeElemental.html">BronzeElemental</a>, <!-- DBG-3 --><a href="BrownBear.html">BrownBear</a>, <!-- DBG-3 --><a href="Bull.html">Bull</a>, <!-- DBG-3 --><a href="BullFrog.html">BullFrog</a>, <!-- DBG-3 --><a href="Caelas.html">Caelas</a>, <!-- DBG-3 --><a href="Cailla.html">Cailla</a>, <!-- DBG-3 --><a href="Canir.html">Canir</a>, <!-- DBG-3 --><a href="Cat.html">Cat</a>, <!-- DBG-3 --><a href="Centaur.html">Centaur</a>, <!-- DBG-3 --><a href="Changeling.html">Changeling</a>, <!-- DBG-3 --><a href="ChaosDaemon.html">ChaosDaemon</a>, <!-- DBG-3 --><a href="ChaosDragoon.html">ChaosDragoon</a>, <!-- DBG-3 --><a href="ChaosDragoonElite.html">ChaosDragoonElite</a>, <!-- DBG-3 --><a href="Chicken.html">Chicken</a>, <!-- DBG-3 --><a href="Chiyo.html">Chiyo</a>, <!-- DBG-3 --><a href="Churchill.html">Churchill</a>, <!-- DBG-3 --><a href="Ciala.html">Ciala</a>, <!-- DBG-3 --><a href="Cillitha.html">Cillitha</a>, <!-- DBG-3 --><a href="Clairesse.html">Clairesse</a>, <!-- DBG-3 --><a href="Clehin.html">Clehin</a>, <!-- DBG-3 --><a href="Clone.html">Clone</a>, <!-- DBG-3 --><a href="Cloorne.html">Cloorne</a>, <!-- DBG-3 --><a href="CopperElemental.html">CopperElemental</a>, <!-- DBG-3 --><a href="CorporealBrume.html">CorporealBrume</a>, <!-- DBG-3 --><a href="Corpser.html">Corpser</a>, <!-- DBG-3 --><a href="CorrosiveSlime.html">CorrosiveSlime</a>, <!-- DBG-3 --><a href="CorruptedSoul.html">CorruptedSoul</a>, <!-- DBG-3 --><a href="Cougar.html">Cougar</a>, <!-- DBG-3 --><a href="Cow.html">Cow</a>, <!-- DBG-3 --><a href="Crane.html">Crane</a>, <!-- DBG-3 --><a href="CrystalDaemon.html">CrystalDaemon</a>, <!-- DBG-3 --><a href="CrystalElemental.html">CrystalElemental</a>, <!-- DBG-3 --><a href="CrystalLatticeSeeker.html">CrystalLatticeSeeker</a>, <!-- DBG-3 --><a href="CrystalVortex.html">CrystalVortex</a>, <!-- DBG-3 --><a href="Cursed.html">Cursed</a>, <!-- DBG-3 --><a href="CursedSoul.html">CursedSoul</a>, <!-- DBG-3 --><a href="Cyclops.html">Cyclops</a>, <!-- DBG-3 --><a href="Daelas.html">Daelas</a>, <!-- DBG-3 --><a href="Daemon.html">Daemon</a>, <!-- DBG-3 --><a href="Dallid.html">Dallid</a>, <!-- DBG-3 --><a href="Danoel.html">Danoel</a>, <!-- DBG-3 --><a href="DarkGuardian.html">DarkGuardian</a>, <!-- DBG-3 --><a href="DarknightCreeper.html">DarknightCreeper</a>, <!-- DBG-3 --><a href="DarkWisp.html">DarkWisp</a>, <!-- DBG-3 --><a href="DeadlyImp.html">DeadlyImp</a>, <!-- DBG-3 --><a href="DeathwatchBeetle.html">DeathwatchBeetle</a>, <!-- DBG-3 --><a href="DeathwatchBeetleHatchling.html">DeathwatchBeetleHatchling</a>, <!-- DBG-3 --><a href="DeepSeaSerpent.html">DeepSeaSerpent</a>, <!-- DBG-3 --><a href="DemonKnight.html">DemonKnight</a>, <!-- DBG-3 --><a href="Devourer.html">Devourer</a>, <!-- DBG-3 --><a href="Dimethro.html">Dimethro</a>, <!-- DBG-3 --><a href="DireWolf.html">DireWolf</a>, <!-- DBG-3 --><a href="DiseasedCat.html">DiseasedCat</a>, <!-- DBG-3 --><a href="Dog.html">Dog</a>, <!-- DBG-3 --><a href="Dolphin.html">Dolphin</a>, <!-- DBG-3 --><a href="DoneQuestCollector.html">DoneQuestCollector</a>, <!-- DBG-3 --><a href="Doppleganger.html">Doppleganger</a>, <!-- DBG-3 --><a href="Dragon.html">Dragon</a>, <!-- DBG-3 --><a href="Drake.html">Drake</a>, <!-- DBG-3 --><a href="DreadSpider.html">DreadSpider</a>, <!-- DBG-3 --><a href="Drithen.html">Drithen</a>, <!-- DBG-3 --><a href="DullCopperElemental.html">DullCopperElemental</a>, <!-- DBG-3 --><a href="Dummy.html">Dummy</a>, <!-- DBG-3 --><a href="Eagle.html">Eagle</a>, <!-- DBG-3 --><a href="EarthElemental.html">EarthElemental</a>, <!-- DBG-3 --><a href="Efreet.html">Efreet</a>, <!-- DBG-3 --><a href="ElderAbbein.html">ElderAbbein</a>, <!-- DBG-3 --><a href="ElderAcob.html">ElderAcob</a>, <!-- DBG-3 --><a href="ElderAlethanian.html">ElderAlethanian</a>, <!-- DBG-3 --><a href="ElderBrae.html">ElderBrae</a>, <!-- DBG-3 --><a href="ElderGazer.html">ElderGazer</a>, <!-- DBG-3 --><a href="ElderJothan.html">ElderJothan</a>, <!-- DBG-3 --><a href="ElderMallew.html">ElderMallew</a>, <!-- DBG-3 --><a href="ElderOnallan.html">ElderOnallan</a>, <!-- DBG-3 --><a href="ElderTaellia.html">ElderTaellia</a>, <!-- DBG-3 --><a href="ElderVicaie.html">ElderVicaie</a>, <!-- DBG-3 --><a href="ElfBrigand.html">ElfBrigand</a>, <!-- DBG-3 --><a href="EliteNinja.html">EliteNinja</a>, <!-- DBG-3 --><a href="Emerillo.html">Emerillo</a>, <!-- DBG-3 --><a href="Emilio.html">Emilio</a>, <!-- DBG-3 --><a href="EnergyVortex.html">EnergyVortex</a>, <!-- DBG-3 --><a href="Enigma.html">Enigma</a>, <!-- DBG-3 --><a href="EnslavedGargoyle.html">EnslavedGargoyle</a>, <!-- DBG-3 --><a href="EtherealWarrior.html">EtherealWarrior</a>, <!-- DBG-3 --><a href="Ettin.html">Ettin</a>, <!-- DBG-3 --><a href="Evan.html">Evan</a>, <!-- DBG-3 --><a href="EvilMage.html">EvilMage</a>, <!-- DBG-3 --><a href="EvilMageLord.html">EvilMageLord</a>, <!-- DBG-3 --><a href="Executioner.html">Executioner</a>, <!-- DBG-3 --><a href="ExodusMinion.html">ExodusMinion</a>, <!-- DBG-3 --><a href="ExodusOverseer.html">ExodusOverseer</a>, <!-- DBG-3 --><a href="FanDancer.html">FanDancer</a>, <!-- DBG-3 --><a href="FerelTreefellow.html">FerelTreefellow</a>, <!-- DBG-3 --><a href="Ferret.html">Ferret</a>, <!-- DBG-3 --><a href="FetidEssence.html">FetidEssence</a>, <!-- DBG-3 --><a href="FierceDragon.html">FierceDragon</a>, <!-- DBG-3 --><a href="FireElemental.html">FireElemental</a>, <!-- DBG-3 --><a href="FireGargoyle.html">FireGargoyle</a>, <!-- DBG-3 --><a href="FleshGolem.html">FleshGolem</a>, <!-- DBG-3 --><a href="FleshRenderer.html">FleshRenderer</a>, <!-- DBG-3 --><a href="Frederic.html">Frederic</a>, <!-- DBG-3 --><a href="FrostOoze.html">FrostOoze</a>, <!-- DBG-3 --><a href="FrostSpider.html">FrostSpider</a>, <!-- DBG-3 --><a href="FrostTroll.html">FrostTroll</a>, <!-- DBG-3 --><a href="Gaman.html">Gaman</a>, <!-- DBG-3 --><a href="Gargoyle.html">Gargoyle</a>, <!-- DBG-3 --><a href="GargoyleDestroyer.html">GargoyleDestroyer</a>, <!-- DBG-3 --><a href="GargoyleEnforcer.html">GargoyleEnforcer</a>, <!-- DBG-3 --><a href="Gazer.html">Gazer</a>, <!-- DBG-3 --><a href="GazerLarva.html">GazerLarva</a>, <!-- DBG-3 --><a href="Gervis.html">Gervis</a>, <!-- DBG-3 --><a href="Ghoul.html">Ghoul</a>, <!-- DBG-3 --><a href="GiantBlackWidow.html">GiantBlackWidow</a>, <!-- DBG-3 --><a href="GiantIceWorm.html">GiantIceWorm</a>, <!-- DBG-3 --><a href="GiantRat.html">GiantRat</a>, <!-- DBG-3 --><a href="GiantSerpent.html">GiantSerpent</a>, <!-- DBG-3 --><a href="GiantSpider.html">GiantSpider</a>, <!-- DBG-3 --><a href="GiantToad.html">GiantToad</a>, <!-- DBG-3 --><a href="Gibberling.html">Gibberling</a>, <!-- DBG-3 --><a href="Goat.html">Goat</a>, <!-- DBG-3 --><a href="GoldenElemental.html">GoldenElemental</a>, <!-- DBG-3 --><a href="Golem.html">Golem</a>, <!-- DBG-3 --><a href="GolemController.html">GolemController</a>, <!-- DBG-3 --><a href="GoreFiend.html">GoreFiend</a>, <!-- DBG-3 --><a href="Gorilla.html">Gorilla</a>, <!-- DBG-3 --><a href="Gorrow.html">Gorrow</a>, <!-- DBG-3 --><a href="GrandpaCharley.html">GrandpaCharley</a>, <!-- DBG-3 --><a href="GreaterDragon.html">GreaterDragon</a>, <!-- DBG-3 --><a href="GreaterMongbat.html">GreaterMongbat</a>, <!-- DBG-3 --><a href="GreatHart.html">GreatHart</a>, <!-- DBG-3 --><a href="GreyWolf.html">GreyWolf</a>, <!-- DBG-3 --><a href="GrimmochDrummel.html">GrimmochDrummel</a>, <!-- DBG-3 --><a href="GrizzlyBear.html">GrizzlyBear</a>, <!-- DBG-3 --><a href="Guardian.html">Guardian</a>, <!-- DBG-3 --><a href="Gustar.html">Gustar</a>, <!-- DBG-3 --><a href="Gypsy.html">Gypsy</a>, <!-- DBG-3 --><a href="HarborMaster.html">HarborMaster</a>, <!-- DBG-3 --><a href="Hargrove.html">Hargrove</a>, <!-- DBG-3 --><a href="Harpy.html">Harpy</a>, <!-- DBG-3 --><a href="Harrower.html">Harrower</a>, <!-- DBG-3 --><a href="HarrowerTentacles.html">HarrowerTentacles</a>, <!-- DBG-3 --><a href="HeadlessOne.html">HeadlessOne</a>, <!-- DBG-3 --><a href="HellCat.html">HellCat</a>, <!-- DBG-3 --><a href="HellHound.html">HellHound</a>, <!-- DBG-3 --><a href="Henchman.html">Henchman</a>, <!-- DBG-3 --><a href="Hind.html">Hind</a>, <!-- DBG-3 --><a href="HolyFamiliar.html">HolyFamiliar</a>, <!-- DBG-3 --><a href="HordeMinion.html">HordeMinion</a>, <!-- DBG-3 --><a href="Hydra.html">Hydra</a>, <!-- DBG-3 --><a href="IceElemental.html">IceElemental</a>, <!-- DBG-3 --><a href="IceFiend.html">IceFiend</a>, <!-- DBG-3 --><a href="IceSerpent.html">IceSerpent</a>, <!-- DBG-3 --><a href="IceSnake.html">IceSnake</a>, <!-- DBG-3 --><a href="Imp.html">Imp</a>, <!-- DBG-3 --><a href="Impaler.html">Impaler</a>, <!-- DBG-3 --><a href="InjuredWolf.html">InjuredWolf</a>, <!-- DBG-3 --><a href="InterredGrizzle.html">InterredGrizzle</a>, <!-- DBG-3 --><a href="Iosep.html">Iosep</a>, <!-- DBG-3 --><a href="JackRabbit.html">JackRabbit</a>, <!-- DBG-3 --><a href="JacobWaltz.html">JacobWaltz</a>, <!-- DBG-3 --><a href="Jamal.html">Jamal</a>, <!-- DBG-3 --><a href="Jelrice.html">Jelrice</a>, <!-- DBG-3 --><a href="Jillian.html">Jillian</a>, <!-- DBG-3 --><a href="Jockles.html">Jockles</a>, <!-- DBG-3 --><a href="Juggernaut.html">Juggernaut</a>, <!-- DBG-3 --><a href="JukaLord.html">JukaLord</a>, <!-- DBG-3 --><a href="JukaMage.html">JukaMage</a>, <!-- DBG-3 --><a href="JukaWarrior.html">JukaWarrior</a>, <!-- DBG-3 --><a href="Jun.html">Jun</a>, <!-- DBG-3 --><a href="Jusae.html">Jusae</a>, <!-- DBG-3 --><a href="Jwilson.html">Jwilson</a>, <!-- DBG-3 --><a href="Kaelynna.html">Kaelynna</a>, <!-- DBG-3 --><a href="Kappa.html">Kappa</a>, <!-- DBG-3 --><a href="Kashiel.html">Kashiel</a>, <!-- DBG-3 --><a href="KazeKemono.html">KazeKemono</a>, <!-- DBG-3 --><a href="KhaldunRevenant.html">KhaldunRevenant</a>, <!-- DBG-3 --><a href="KhaldunSummoner.html">KhaldunSummoner</a>, <!-- DBG-3 --><a href="KhaldunZealot.html">KhaldunZealot</a>, <!-- DBG-3 --><a href="Kia.html">Kia</a>, <!-- DBG-3 --><a href="Koole.html">Koole</a>, <!-- DBG-3 --><a href="Kraken.html">Kraken</a>, <!-- DBG-3 --><a href="LadyOfTheSnow.html">LadyOfTheSnow</a>, <!-- DBG-3 --><a href="Landy.html">Landy</a>, <!-- DBG-3 --><a href="LavaLizard.html">LavaLizard</a>, <!-- DBG-3 --><a href="LavaSerpent.html">LavaSerpent</a>, <!-- DBG-3 --><a href="LavaSnake.html">LavaSnake</a>, <!-- DBG-3 --><a href="Leon.html">Leon</a>, <!-- DBG-3 --><a href="Leviathan.html">Leviathan</a>, <!-- DBG-3 --><a href="Lich.html">Lich</a>, <!-- DBG-3 --><a href="LichLord.html">LichLord</a>, <!-- DBG-3 --><a href="Lizardman.html">Lizardman</a>, <!-- DBG-3 --><a href="Llama.html">Llama</a>, <!-- DBG-3 --><a href="Lohn.html">Lohn</a>, <!-- DBG-3 --><a href="LorekeeperAneen.html">LorekeeperAneen</a>, <!-- DBG-3 --><a href="LorekeeperBroolol.html">LorekeeperBroolol</a>, <!-- DBG-3 --><a href="LorekeeperCalendor.html">LorekeeperCalendor</a>, <!-- DBG-3 --><a href="LorekeeperNillaen.html">LorekeeperNillaen</a>, <!-- DBG-3 --><a href="LorekeeperOolua.html">LorekeeperOolua</a>, <!-- DBG-3 --><a href="LorekeeperRollarn.html">LorekeeperRollarn</a>, <!-- DBG-3 --><a href="LorekeeperRyal.html">LorekeeperRyal</a>, <!-- DBG-3 --><a href="LorekeeperSiarra.html">LorekeeperSiarra</a>, <!-- DBG-3 --><a href="Lowel.html">Lowel</a>, <!-- DBG-3 --><a href="Lyle.html">Lyle</a>, <!-- DBG-3 --><a href="LysanderGathenwale.html">LysanderGathenwale</a>, <!-- DBG-3 --><a href="MantraEffervescence.html">MantraEffervescence</a>, <!-- DBG-3 --><a href="MasterGnosos.html">MasterGnosos</a>, <!-- DBG-3 --><a href="MeerCaptain.html">MeerCaptain</a>, <!-- DBG-3 --><a href="MeerEternal.html">MeerEternal</a>, <!-- DBG-3 --><a href="MeerMage.html">MeerMage</a>, <!-- DBG-3 --><a href="MeerWarrior.html">MeerWarrior</a>, <!-- DBG-3 --><a href="Mielan.html">Mielan</a>, <!-- DBG-3 --><a href="MilitiaFighter.html">MilitiaFighter</a>, <!-- DBG-3 --><a href="Minotaur.html">Minotaur</a>, <!-- DBG-3 --><a href="MinotaurCaptain.html">MinotaurCaptain</a>, <!-- DBG-3 --><a href="MinotaurScout.html">MinotaurScout</a>, <!-- DBG-3 --><a href="Mithneral.html">Mithneral</a>, <!-- DBG-3 --><a href="MLDryad.html">MLDryad</a>, <!-- DBG-3 --><a href="Moloch.html">Moloch</a>, <!-- DBG-3 --><a href="Mongbat.html">Mongbat</a>, <!-- DBG-3 --><a href="MorgBergen.html">MorgBergen</a>, <!-- DBG-3 --><a href="MoundOfMaggots.html">MoundOfMaggots</a>, <!-- DBG-3 --><a href="MountainGoat.html">MountainGoat</a>, <!-- DBG-3 --><a href="Mugg.html">Mugg</a>, <!-- DBG-3 --><a href="Mummy.html">Mummy</a>, <!-- DBG-3 --><a href="NatureFury.html">NatureFury</a>, <!-- DBG-3 --><a href="NaughtyTwin.html">NaughtyTwin</a>, <!-- DBG-3 --><a href="Nibbet.html">Nibbet</a>, <!-- DBG-3 --><a href="Ninja.html">Ninja</a>, <!-- DBG-3 --><a href="Norton.html">Norton</a>, <!-- DBG-3 --><a href="Nythalia.html">Nythalia</a>, <!-- DBG-3 --><a href="Ogre.html">Ogre</a>, <!-- DBG-3 --><a href="OgreLord.html">OgreLord</a>, <!-- DBG-3 --><a href="Olaeni.html">Olaeni</a>, <!-- DBG-3 --><a href="Olla.html">Olla</a>, <!-- DBG-3 --><a href="Oni.html">Oni</a>, <!-- DBG-3 --><a href="OphidianArchmage.html">OphidianArchmage</a>, <!-- DBG-3 --><a href="OphidianKnight.html">OphidianKnight</a>, <!-- DBG-3 --><a href="OphidianMage.html">OphidianMage</a>, <!-- DBG-3 --><a href="OphidianMatriarch.html">OphidianMatriarch</a>, <!-- DBG-3 --><a href="OphidianWarrior.html">OphidianWarrior</a>, <!-- DBG-3 --><a href="Orc.html">Orc</a>, <!-- DBG-3 --><a href="OrcBomber.html">OrcBomber</a>, <!-- DBG-3 --><a href="OrcBrute.html">OrcBrute</a>, <!-- DBG-3 --><a href="OrcCaptain.html">OrcCaptain</a>, <!-- DBG-3 --><a href="OrcishLord.html">OrcishLord</a>, <!-- DBG-3 --><a href="OrcishMage.html">OrcishMage</a>, <!-- DBG-3 --><a href="PackHorse.html">PackHorse</a>, <!-- DBG-3 --><a href="PackLlama.html">PackLlama</a>, <!-- DBG-3 --><a href="Panther.html">Panther</a>, <!-- DBG-3 --><a href="Parrot.html">Parrot</a>, <!-- DBG-3 --><a href="PatchworkSkeleton.html">PatchworkSkeleton</a>, <!-- DBG-3 --><a href="Patricus.html">Patricus</a>, <!-- DBG-3 --><a href="PestilentBandage.html">PestilentBandage</a>, <!-- DBG-3 --><a href="Phoenix.html">Phoenix</a>, <!-- DBG-3 --><a href="Pig.html">Pig</a>, <!-- DBG-3 --><a href="Pixie.html">Pixie</a>, <!-- DBG-3 --><a href="PlagueBeast.html">PlagueBeast</a>, <!-- DBG-3 --><a href="PlagueBeastLord.html">PlagueBeastLord</a>, <!-- DBG-3 --><a href="PlagueSpawn.html">PlagueSpawn</a>, <!-- DBG-3 --><a href="PoisonElemental.html">PoisonElemental</a>, <!-- DBG-3 --><a href="PolarBear.html">PolarBear</a>, <!-- DBG-3 --><a href="PredatorHellCat.html">PredatorHellCat</a>, <!-- DBG-3 --><a href="Protector.html">Protector</a>, <!-- DBG-3 --><a href="PumpkinHead.html">PumpkinHead</a>, <!-- DBG-3 --><a href="Quagmire.html">Quagmire</a>, <!-- DBG-3 --><a href="Rabbit.html">Rabbit</a>, <!-- DBG-3 --><a href="RagingGrizzlyBear.html">RagingGrizzlyBear</a>, <!-- DBG-3 --><a href="RaiJu.html">RaiJu</a>, <!-- DBG-3 --><a href="Rat.html">Rat</a>, <!-- DBG-3 --><a href="Ratman.html">Ratman</a>, <!-- DBG-3 --><a href="RatmanArcher.html">RatmanArcher</a>, <!-- DBG-3 --><a href="RatmanMage.html">RatmanMage</a>, <!-- DBG-3 --><a href="Ravager.html">Ravager</a>, <!-- DBG-3 --><a href="Reaper.html">Reaper</a>, <!-- DBG-3 --><a href="Rebinil.html">Rebinil</a>, <!-- DBG-3 --><a href="Recaro.html">Recaro</a>, <!-- DBG-3 --><a href="RedSolenInfiltratorQueen.html">RedSolenInfiltratorQueen</a>, <!-- DBG-3 --><a href="RedSolenInfiltratorWarrior.html">RedSolenInfiltratorWarrior</a>, <!-- DBG-3 --><a href="RedSolenQueen.html">RedSolenQueen</a>, <!-- DBG-3 --><a href="RedSolenWarrior.html">RedSolenWarrior</a>, <!-- DBG-3 --><a href="RedSolenWorker.html">RedSolenWorker</a>, <!-- DBG-3 --><a href="Regina.html">Regina</a>, <!-- DBG-3 --><a href="RestlessSoul.html">RestlessSoul</a>, <!-- DBG-3 --><a href="Revenant.html">Revenant</a>, <!-- DBG-3 --><a href="RevenantLion.html">RevenantLion</a>, <!-- DBG-3 --><a href="Ronin.html">Ronin</a>, <!-- DBG-3 --><a href="RottingCorpse.html">RottingCorpse</a>, <!-- DBG-3 --><a href="RuneBeetle.html">RuneBeetle</a>, <!-- DBG-3 --><a href="Sadrah.html">Sadrah</a>, <!-- DBG-3 --><a href="Salaenih.html">Salaenih</a>, <!-- DBG-3 --><a href="Samurai.html">Samurai</a>, <!-- DBG-3 --><a href="SandVortex.html">SandVortex</a>, <!-- DBG-3 --><a href="Saril.html">Saril</a>, <!-- DBG-3 --><a href="SarsmeaSmythe.html">SarsmeaSmythe</a>, <!-- DBG-3 --><a href="Satyr.html">Satyr</a>, <!-- DBG-3 --><a href="Savage.html">Savage</a>, <!-- DBG-3 --><a href="SavageRider.html">SavageRider</a>, <!-- DBG-3 --><a href="SavageShaman.html">SavageShaman</a>, <!-- DBG-3 --><a href="Scorpion.html">Scorpion</a>, <!-- DBG-3 --><a href="Sculptor.html">Sculptor</a>, <!-- DBG-3 --><a href="SeaSerpent.html">SeaSerpent</a>, <!-- DBG-3 --><a href="SerpentineDragon.html">SerpentineDragon</a>, <!-- DBG-3 --><a href="ServantOfSemidar.html">ServantOfSemidar</a>, <!-- DBG-3 --><a href="Sewerrat.html">Sewerrat</a>, <!-- DBG-3 --><a href="Shade.html">Shade</a>, <!-- DBG-3 --><a href="ShadowFiend.html">ShadowFiend</a>, <!-- DBG-3 --><a href="ShadowIronElemental.html">ShadowIronElemental</a>, <!-- DBG-3 --><a href="ShadowKnight.html">ShadowKnight</a>, <!-- DBG-3 --><a href="ShadowWisp.html">ShadowWisp</a>, <!-- DBG-3 --><a href="ShadowWyrm.html">ShadowWyrm</a>, <!-- DBG-3 --><a href="Sheep.html">Sheep</a>, <!-- DBG-3 --><a href="Silvani.html">Silvani</a>, <!-- DBG-3 --><a href="SilverSerpent.html">SilverSerpent</a>, <!-- DBG-3 --><a href="SkeletalDragon.html">SkeletalDragon</a>, <!-- DBG-3 --><a href="SkeletalKnight.html">SkeletalKnight</a>, <!-- DBG-3 --><a href="SkeletalMage.html">SkeletalMage</a>, <!-- DBG-3 --><a href="Skeleton.html">Skeleton</a>, <!-- DBG-3 --><a href="SkeletonOfSzandor.html">SkeletonOfSzandor</a>, <!-- DBG-3 --><a href="SkitteringHopper.html">SkitteringHopper</a>, <!-- DBG-3 --><a href="Sledge.html">Sledge</a>, <!-- DBG-3 --><a href="Sleen.html">Sleen</a>, <!-- DBG-3 --><a href="Slime.html">Slime</a>, <!-- DBG-3 --><a href="Snake.html">Snake</a>, <!-- DBG-3 --><a href="SnowElemental.html">SnowElemental</a>, <!-- DBG-3 --><a href="SnowLeopard.html">SnowLeopard</a>, <!-- DBG-3 --><a href="SpectralArmour.html">SpectralArmour</a>, <!-- DBG-3 --><a href="Spectre.html">Spectre</a>, <!-- DBG-3 --><a href="Squirrel.html">Squirrel</a>, <!-- DBG-3 --><a href="StoneGargoyle.html">StoneGargoyle</a>, <!-- DBG-3 --><a href="StoneHarpy.html">StoneHarpy</a>, <!-- DBG-3 --><a href="StrongMongbat.html">StrongMongbat</a>, <!-- DBG-3 --><a href="Succubus.html">Succubus</a>, <!-- DBG-3 --><a href="SummonedAirElemental.html">SummonedAirElemental</a>, <!-- DBG-3 --><a href="SummonedDaemon.html">SummonedDaemon</a>, <!-- DBG-3 --><a href="SummonedEarthElemental.html">SummonedEarthElemental</a>, <!-- DBG-3 --><a href="SummonedFireElemental.html">SummonedFireElemental</a>, <!-- DBG-3 --><a href="SummonedPaladin.html">SummonedPaladin</a>, <!-- DBG-3 --><a href="SummonedWaterElemental.html">SummonedWaterElemental</a>, <!-- DBG-3 --><a href="SwampTentacle.html">SwampTentacle</a>, <!-- DBG-3 --><a href="Synaeva.html">Synaeva</a>, <!-- DBG-3 --><a href="Tallinin.html">Tallinin</a>, <!-- DBG-3 --><a href="Tamm.html">Tamm</a>, <!-- DBG-3 --><a href="TavaraSewel.html">TavaraSewel</a>, <!-- DBG-3 --><a href="TerathanAvenger.html">TerathanAvenger</a>, <!-- DBG-3 --><a href="TerathanDrone.html">TerathanDrone</a>, <!-- DBG-3 --><a href="TerathanMatriarch.html">TerathanMatriarch</a>, <!-- DBG-3 --><a href="TerathanWarrior.html">TerathanWarrior</a>, <!-- DBG-3 --><a href="Thalia.html">Thalia</a>, <!-- DBG-3 --><a href="Thallary.html">Thallary</a>, <!-- DBG-3 --><a href="Tholef.html">Tholef</a>, <!-- DBG-3 --><a href="Tiana.html">Tiana</a>, <!-- DBG-3 --><a href="Tillanil.html">Tillanil</a>, <!-- DBG-3 --><a href="TimberWolf.html">TimberWolf</a>, <!-- DBG-3 --><a href="Titan.html">Titan</a>, <!-- DBG-3 --><a href="TormentedMinotaur.html">TormentedMinotaur</a>, <!-- DBG-3 --><a href="Treefellow.html">Treefellow</a>, <!-- DBG-3 --><a href="Troglodyte.html">Troglodyte</a>, <!-- DBG-3 --><a href="Troll.html">Troll</a>, <!-- DBG-3 --><a href="TropicalBird.html">TropicalBird</a>, <!-- DBG-3 --><a href="TsukiWolf.html">TsukiWolf</a>, <!-- DBG-3 --><a href="Tyeelor.html">Tyeelor</a>, <!-- DBG-3 --><a href="TylAriadne.html">TylAriadne</a>, <!-- DBG-3 --><a href="UnfrozenMummy.html">UnfrozenMummy</a>, <!-- DBG-3 --><a href="UnholyFamiliar.html">UnholyFamiliar</a>, <!-- DBG-3 --><a href="Unoelil.html">Unoelil</a>, <!-- DBG-3 --><a href="ValoriteElemental.html">ValoriteElemental</a>, <!-- DBG-3 --><a href="VampireBat.html">VampireBat</a>, <!-- DBG-3 --><a href="VeriteElemental.html">VeriteElemental</a>, <!-- DBG-3 --><a href="Vilo.html">Vilo</a>, <!-- DBG-3 --><a href="VorpalBunny.html">VorpalBunny</a>, <!-- DBG-3 --><a href="Waelian.html">Waelian</a>, <!-- DBG-3 --><a href="WailingBanshee.html">WailingBanshee</a>, <!-- DBG-3 --><a href="Walker.html">Walker</a>, <!-- DBG-3 --><a href="Walrus.html">Walrus</a>, <!-- DBG-3 --><a href="WandererOfTheVoid.html">WandererOfTheVoid</a>, <!-- DBG-3 --><a href="WaterElemental.html">WaterElemental</a>, <!-- DBG-3 --><a href="WhippingVine.html">WhippingVine</a>, <!-- DBG-3 --><a href="WhiteWolf.html">WhiteWolf</a>, <!-- DBG-3 --><a href="WhiteWyrm.html">WhiteWyrm</a>, <!-- DBG-3 --><a href="Wisp.html">Wisp</a>, <!-- DBG-3 --><a href="Wraith.html">Wraith</a>, <!-- DBG-3 --><a href="Wyvern.html">Wyvern</a>, <!-- DBG-3 --><a href="Yamandon.html">Yamandon</a>, <!-- DBG-3 --><a href="Yellienir.html">Yellienir</a>, <!-- DBG-3 --><a href="YomotsuElder.html">YomotsuElder</a>, <!-- DBG-3 --><a href="YomotsuPriest.html">YomotsuPriest</a>, <!-- DBG-3 --><a href="YomotsuWarrior.html">YomotsuWarrior</a>, <!-- DBG-3 --><a href="Yorus.html">Yorus</a>, <!-- DBG-3 --><a href="YoungNinja.html">YoungNinja</a>, <!-- DBG-3 --><a href="YoungRonin.html">YoungRonin</a>, <!-- DBG-3 --><a href="Zombie.html">Zombie</a>, <!-- DBG-3 --><a href="ZombieSkeleton.html">ZombieSkeleton</a></h4>
+<h4>Nested Types: <!-- DBG-4 --><a href="Allegiance.html">Allegiance</a>, <!-- DBG-4 --><a href="DeathAdderCharmTarget.html">DeathAdderCharmTarget</a>, <!-- DBG-4 --><a href="DeleteTimer.html">DeleteTimer</a>, <!-- DBG-4 --><a href="FKEntry.html">FKEntry</a>, <!-- DBG-4 --><a href="TameEntry.html">TameEntry</a>, <!-- DBG-4 --><a href="TeachResult.html">TeachResult</a></h4>
+      (<font color="blue">static</font>) <font color="blue">bool</font> Summoning( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Cap( <font color="blue">ref</font> <font color="blue">int</font> val, <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      (<font color="blue">static</font>) <font color="blue">List</font>&lt;<a href="DamageStore.html">DamageStore</a>&gt; GetLootingRights( <font color="blue">List</font>&lt;<a href="DamageEntry.html">DamageEntry</a>&gt; damageEntries, <font color="blue">int</font> hitsMax )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> GetRandomAOSStats( <font color="blue">int</font> minLevel, <font color="blue">int</font> maxLevel, <font color="blue">out</font> <font color="blue">int</font> attributeCount, <font color="blue">out</font> <font color="blue">int</font> min, <font color="blue">out</font> <font color="blue">int</font> max )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> RandomMinMaxScaled( <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> Summon( <!-- DBG-0 --><a href="BaseCreature.html">BaseCreature</a> creature, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> caster, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p, <font color="blue">int</font> sound, TimeSpan duration )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> Summon( <!-- DBG-0 --><a href="BaseCreature.html">BaseCreature</a> creature, <font color="blue">bool</font> controlled, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> caster, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p, <font color="blue">int</font> sound, TimeSpan duration )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> TeleportPets( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> master, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> loc, <!-- DBG-0 --><a href="Map.html">Map</a> map )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> TeleportPets( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> master, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> loc, <!-- DBG-0 --><a href="Map.html">Map</a> map, <font color="blue">bool</font> onlyBonded )<br>
+      (<font color="blue">ctor</font>) BaseCreature( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) BaseCreature( <!-- DBG-0 --><a href="AIType.html">AIType</a> ai, <!-- DBG-0 --><a href="FightMode.html">FightMode</a> mode, <font color="blue">int</font> iRangePerception, <font color="blue">int</font> iRangeFight, <font color="blue">double</font> dActiveSpeed, <font color="blue">double</font> dPassiveSpeed )<br>
+      <font color="blue">bool</font> AcquireOnApproach( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> AcquireOnApproachRange( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> ActiveSpeed( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="AIType.html">AIType</a> AI( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="BaseAI.html">BaseAI</a> AIObject( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> AllowFemaleTamer( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> AllowMaleTamer( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> AllowNewPetFriend( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> AlwaysAttackable( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> AlwaysMurderer( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> AreaPeaceImmune( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> AuraBaseDamage( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> AuraChaosDamage( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> AuraColdDamage( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> AuraEnergyDamage( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> AuraFireDamage( <font color="blue">get</font>; )<br>
+      TimeSpan AuraInterval( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> AuraPhysicalDamage( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> AuraPoisonDamage( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> AuraRange( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> AutoDispel( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> AutoDispelChance( <font color="blue">get</font>; )<br>
+      DateTime BardEndTime( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> BardImmune( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> BardMaster( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> BardPacified( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> BardProvoked( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> BardTarget( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> BaseColdResistance( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BaseEnergyResistance( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BaseFireResistance( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BasePhysicalResistance( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BasePoisonResistance( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> BleedImmune( <font color="blue">get</font>; )<br>
+      TimeSpan BondingAbandonDelay( <font color="blue">get</font>; )<br>
+      DateTime BondingBegin( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      TimeSpan BondingDelay( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> BonusPetDamageScalar( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BreathAngerAnimation( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BreathAngerSound( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BreathChaosDamage( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BreathColdDamage( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> BreathDamageDelay( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> BreathDamageScalar( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> BreathEffectDelay( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BreathEffectDuration( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> BreathEffectExplodes( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> BreathEffectFixedDir( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BreathEffectHue( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BreathEffectItemID( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BreathEffectRenderMode( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BreathEffectSound( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BreathEffectSpeed( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BreathEnergyDamage( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BreathFireDamage( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> BreathImmune( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> BreathMaxDelay( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> BreathMinDelay( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BreathPhysicalDamage( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BreathPoisonDamage( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BreathRange( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> BreathStallTime( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanAngerOnTame( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanBeDistracted( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanBreath( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanDestroyObstacles( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanDrop( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanFlee( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanFly( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanGiveMLQuest( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanHeal( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanHealOwner( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanMoveOverObstacles( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanOpenDoors( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanRegenHits( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanRegenMana( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanRegenStam( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanRummageCorpses( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanShout( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CanTeach( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> ChaosDamage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> ColdDamage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> ColdResistSeed( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Commandable( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> ConstantFocus( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Point3D.html">Point3D</a> ControlDest( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Controlled( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> ControlMaster( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="OrderType.html">OrderType</a> ControlOrder( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> ControlSlots( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> ControlTarget( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> CorpseNameOverride( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">double</font> CurrentSpeed( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="WayPoint.html">WayPoint</a> CurrentWayPoint( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> DamageMax( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> DamageMin( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> DeathAdderCharmable( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Debug( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> DeleteCorpseOnDeath( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> DeleteOnRelease( <font color="blue">get</font>; )<br>
+      TimeSpan DeleteTimeLeft( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> DirectDamage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> DisallowAllMoves( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> DispelDifficulty( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> DispelFocus( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> DisplayWeight( <font color="blue">get</font>; )<br>
+      DateTime EndFleeTime( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> EnergyDamage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> EnergyResistSeed( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Ethic.html">Ethic</a> EthicAllegiance( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Faction.html">Faction</a> FactionAllegiance( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> FactionSilverWorth( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="FoodType.html">FoodType</a> FavoriteFood( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Feathers( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="FightMode.html">FightMode</a> FightMode( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> FireDamage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> FireResistSeed( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> FocusMob( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="BaseAI.html">BaseAI</a> ForcedAI( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Mobile.html">Mobile</a>&gt; Friends( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> GivesMLMinorArtifact( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> HasAura( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> HasBreath( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> HasManaOveride( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> HealDelay( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> HealEndRange( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> HealFully( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> HealInterval( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> HealOwnerDelay( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> HealOwnerFully( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> HealOwnerInterval( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> HealOwnerTrigger( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> HealScalar( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> HealSound( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> HealStartRange( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> HealTrigger( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Hides( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="HideType.html">HideType</a> HideType( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Poison.html">Poison</a> HitPoison( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> HitPoisonChance( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> HitsMax( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> HitsMaxSeed( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Point3D.html">Point3D</a> Home( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IgnoreYoungProtection( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> InitialInnocent( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsAnimatedDead( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsBondable( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsBonded( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IsDeadBondedPet( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsDeadPet( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IsDispellable( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsHealing( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsHouseSummonable( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsInvulnerable( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsNecroFamiliar( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsParagon( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IsPrisoner( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IsScaredOfScaryThings( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsScaryToPets( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsStabled( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IsSubdued( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> LastOwner( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Loyalty( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> ManaMax( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> ManaMaxSeed( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Meat( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="MeatType.html">MeatType</a> MeatType( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> MinTameSkill( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="MLQuest.html">MLQuest</a>&gt; MLQuests( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Spawner.html">Spawner</a> MySpawner( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">long</font> NextReacquireTime( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> NoHouseRestrictions( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> NoKillAwards( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="OppositionGroup.html">OppositionGroup</a> OppositionGroup( <font color="blue">get</font>; )<br>
+      DateTime OwnerAbandonTime( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Mobile.html">Mobile</a>&gt; Owners( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="PackInstinct.html">PackInstinct</a> PackInstinct( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> PassiveSpeed( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> PhysicalDamage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> PhysicalResistanceSeed( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> PlayerRangeSensitive( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> PoisonDamage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Poison.html">Poison</a> PoisonImmune( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> PoisonResistSeed( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> RangeFight( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> RangeHome( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> RangePerception( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      TimeSpan ReacquireDelay( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> ReacquireOnMovement( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="HonorContext.html">HonorContext</a> ReceivedHonorContext( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> ReduceSpeedWithDamage( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> RemoveIfUntamed( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> RemoveStep( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> ReturnsToHome( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Scales( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="ScaleType.html">ScaleType</a> ScaleType( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> SeeksHome( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> ShouldCheckStatTimers( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="InhumanSpeech.html">InhumanSpeech</a> SpeechType( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> StabledBy( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> StamMax( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> StamMaxSeed( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> StaticMLQuester( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> StatLossAfterTame( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> SubdueBeforeTame( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Summoned( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      DateTime SummonEnd( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> SummonMaster( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Tamable( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="IPoint2D.html">IPoint2D</a> TargetLocation( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Team( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">double</font> TreasureMapChance( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> TreasureMapLevel( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Uncalmable( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Unprovokable( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> WeaponAbilityChance( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Wool( <font color="blue">get</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddCustomContextEntries( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">List</font>&lt;<a href="ContextMenuEntry.html">ContextMenuEntry</a>&gt; list )<br>
+      <font color="blue">void</font> AddFollowers()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddLoot( <!-- DBG-0 --><a href="LootPack.html">LootPack</a> pack )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddLoot( <!-- DBG-0 --><a href="LootPack.html">LootPack</a> pack, <font color="blue">int</font> amount )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddNameProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddPetFriend( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">void</font> AddSpellAttack( Type type )<br>
+      <font color="blue">void</font> AddSpellDefense( Type type )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AggressiveAction( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> aggressor, <font color="blue">bool</font> criminal )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AlterDamageScalarFrom( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> caster, <font color="blue">ref</font> <font color="blue">double</font> scalar )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AlterDamageScalarTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target, <font color="blue">ref</font> <font color="blue">double</font> scalar )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AlterMeleeDamageFrom( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">ref</font> <font color="blue">int</font> damage )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AlterMeleeDamageTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to, <font color="blue">ref</font> <font color="blue">int</font> damage )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AlterSpellDamageFrom( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">ref</font> <font color="blue">int</font> damage )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AlterSpellDamageTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to, <font color="blue">ref</font> <font color="blue">int</font> damage )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Animate( <font color="blue">int</font> action, <font color="blue">int</font> frameCount, <font color="blue">int</font> repeatCount, <font color="blue">bool</font> forward, <font color="blue">bool</font> repeat, <font color="blue">int</font> delay )<br>
+      <font color="blue">virtual</font> <font color="blue">string</font> ApplyNameSuffix( <font color="blue">string</font> suffix )<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="ApplyPoisonResult.html">ApplyPoisonResult</a> ApplyPoison( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Poison.html">Poison</a> poison )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AuraDamage()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AuraEffect( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">void</font> BeginDeleteTimer()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> BeginFlee( TimeSpan maxDuration )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> BreathComputeDamage()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> BreathDamage_Callback( <font color="blue">object</font> state )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> BreathDealDamage( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> BreathEffect_Callback( <font color="blue">object</font> state )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> BreathPlayAngerAnimation()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> BreathPlayAngerSound()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> BreathPlayEffect( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> BreathPlayEffectSound()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> BreathStallMovement()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> BreathStart( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanBeControlledBy( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanBeDamaged()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanBeHarmful( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target, <font color="blue">bool</font> message, <font color="blue">bool</font> ignoreOurBlessedness )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanBeRenamedBy( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> ChangeAIToDefault()<br>
+      <font color="blue">void</font> ChangeAIType( <!-- DBG-0 --><a href="AIType.html">AIType</a> NewAI )<br>
+      <font color="blue">void</font> CheckAIActive()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckControlChance( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> CheckDistracted( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> CheckedAnimate( <font color="blue">int</font> action, <font color="blue">int</font> frameCount, <font color="blue">int</font> repeatCount, <font color="blue">bool</font> forward, <font color="blue">bool</font> repeat, <font color="blue">int</font> delay )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckFeed( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> dropped )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckFlee()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckFoodPreference( <!-- DBG-0 --><a href="Item.html">Item</a> f )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckFoodPreference( <!-- DBG-0 --><a href="Item.html">Item</a> fed, <!-- DBG-0 --><a href="FoodType.html">FoodType</a> type, Type[] types )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckGold( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> dropped )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckIdle()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckPoisonImmunity( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Poison.html">Poison</a> poison )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> CheckReflect( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> caster, <font color="blue">ref</font> <font color="blue">bool</font> reflect )<br>
+      <font color="blue">void</font> CheckShout( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> oldLocation )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckTeach( <!-- DBG-0 --><a href="SkillName.html">SkillName</a> skill, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckTeachingMatch( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="TeachResult.html">TeachResult</a> CheckTeachSkills( <!-- DBG-0 --><a href="SkillName.html">SkillName</a> skill, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <font color="blue">int</font> maxPointsToLearn, <font color="blue">ref</font> <font color="blue">int</font> pointsToLearn, <font color="blue">bool</font> doTeach )<br>
+      <font color="blue">int</font> ComputeBonusDamage( <font color="blue">List</font>&lt;<a href="DamageEntry.html">DamageEntry</a>&gt; list, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">List</font>&lt;<a href="MLQuest.html">MLQuest</a>&gt; ConstructQuestList()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> CriminalAction( <font color="blue">bool</font> message )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Damage( <font color="blue">int</font> amount, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> DebugSay( <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> DebugSay( <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Dispel( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DoHarmful( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target, <font color="blue">bool</font> indirect )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DropBackpack()<br>
+      <font color="blue">bool</font> FindMyName( <font color="blue">string</font> str, <font color="blue">bool</font> bWithAll )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ForceReacquire()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GenerateLoot()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GenerateLoot( <font color="blue">bool</font> spawning )<br>
+      <!-- DBG-0 --><a href="Spell.html">Spell</a> GetAttackSpellRandom()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetContextMenuEntries( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">List</font>&lt;<a href="ContextMenuEntry.html">ContextMenuEntry</a>&gt; list )<br>
+      <font color="blue">double</font> GetControlChance( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">double</font> GetControlChance( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <font color="blue">bool</font> useBaseSkill )<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="Mobile.html">Mobile</a> GetDamageMaster( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> damagee )<br>
+      <!-- DBG-0 --><a href="Spell.html">Spell</a> GetDefenseSpellRandom()<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="Allegiance.html">Allegiance</a> GetEthicAllegiance( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="Allegiance.html">Allegiance</a> GetFactionAllegiance( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      <font color="blue">virtual</font> <font color="blue">double</font> GetFightModeRanking( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="FightMode.html">FightMode</a> acqType, <font color="blue">bool</font> bPlayerOnly )<br>
+      <font color="blue">double</font> GetHomeDistance()<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> GetMaster()<br>
+      <!-- DBG-0 --><a href="Spell.html">Spell</a> GetSpellSpecific( Type type )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetTeamSize( <font color="blue">int</font> iRange )<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="WeaponAbility.html">WeaponAbility</a> GetWeaponAbility()<br>
+      <font color="blue">void</font> GoHome_Callback()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> HandlesOnSpeech( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Heal( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> patient )<br>
+      <font color="blue">void</font> Heal_Callback( <font color="blue">object</font> state )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> HealEffect( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> patient )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> HealStart( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> patient )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> IsEnemy( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> IsFriend( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> IsHarmfulCriminal( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> IsHumanInTown()<br>
+      <font color="blue">bool</font> IsHurt()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> IsPetFriend( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">bool</font> IsSpawnerBound()<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="Item.html">Item</a> NewHarmfulItem()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnActionBackoff()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnActionCombat()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnActionFlee()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnActionGuard()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnActionInteract()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnActionWander()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnBeforeDeath()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnBeforeSpawn( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> location, <!-- DBG-0 --><a href="Map.html">Map</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnCarve( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Corpse.html">Corpse</a> corpse, <!-- DBG-0 --><a href="Item.html">Item</a> with )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnCombatantChange()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDamage( <font color="blue">int</font> amount, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">bool</font> willKill )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDamagedBySpell( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDeath( <!-- DBG-0 --><a href="Container.html">Container</a> c )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnDragDrop( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> dropped )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnGaveMeleeAttack( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> defender )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnGoldGiven( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Gold.html">Gold</a> dropped )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnGotMeleeAttack( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> attacker )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnHarmfulSpell( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnKilledBy( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnLocationChange( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> oldLocation )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnMapChange( <!-- DBG-0 --><a href="Map.html">Map</a> oldMap )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnMovement( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> oldLocation )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnMoveOver( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnRegionChange( <!-- DBG-0 --><a href="Region.html">Region</a> Old, <!-- DBG-0 --><a href="Region.html">Region</a> New )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSectorActivate()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSectorDeactivate()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSingleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSpeech( <!-- DBG-0 --><a href="SpeechEventArgs.html">SpeechEventArgs</a> e )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnTeamChange()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnThink()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OverrideBondingReqs()<br>
+      <font color="blue">void</font> Pacify( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> master, DateTime endtime )<br>
+      <font color="blue">void</font> PackArcanceScroll( <font color="blue">double</font> chance )<br>
+      <font color="blue">void</font> PackArcaneScroll()<br>
+      <font color="blue">void</font> PackArcaneScroll( <font color="blue">int</font> amount )<br>
+      <font color="blue">void</font> PackArcaneScroll( <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      <font color="blue">bool</font> PackArmor( <font color="blue">int</font> minLevel, <font color="blue">int</font> maxLevel )<br>
+      <font color="blue">bool</font> PackArmor( <font color="blue">int</font> minLevel, <font color="blue">int</font> maxLevel, <font color="blue">double</font> chance )<br>
+      <font color="blue">void</font> PackGem()<br>
+      <font color="blue">void</font> PackGem( <font color="blue">int</font> amount )<br>
+      <font color="blue">void</font> PackGem( <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      <font color="blue">void</font> PackGold( <font color="blue">int</font> amount )<br>
+      <font color="blue">void</font> PackGold( <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      <font color="blue">void</font> PackItem( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">void</font> PackMagicItems( <font color="blue">int</font> minLevel, <font color="blue">int</font> maxLevel )<br>
+      <font color="blue">void</font> PackMagicItems( <font color="blue">int</font> minLevel, <font color="blue">int</font> maxLevel, <font color="blue">double</font> armorChance, <font color="blue">double</font> weaponChance )<br>
+      <font color="blue">void</font> PackNecroReg()<br>
+      <font color="blue">void</font> PackNecroReg( <font color="blue">int</font> amount )<br>
+      <font color="blue">void</font> PackNecroReg( <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      <font color="blue">void</font> PackNecroScroll( <font color="blue">int</font> index )<br>
+      <font color="blue">void</font> PackPotion()<br>
+      <font color="blue">void</font> PackReg( <font color="blue">int</font> amount )<br>
+      <font color="blue">void</font> PackReg( <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      <font color="blue">void</font> PackScroll( <font color="blue">int</font> circle )<br>
+      <font color="blue">void</font> PackScroll( <font color="blue">int</font> minCircle, <font color="blue">int</font> maxCircle )<br>
+      <font color="blue">bool</font> PackSlayer()<br>
+      <font color="blue">bool</font> PackSlayer( <font color="blue">double</font> chance )<br>
+      <font color="blue">void</font> PackStatue()<br>
+      <font color="blue">void</font> PackStatue( <font color="blue">int</font> amount )<br>
+      <font color="blue">void</font> PackStatue( <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      <font color="blue">bool</font> PackWeapon( <font color="blue">int</font> minLevel, <font color="blue">int</font> maxLevel )<br>
+      <font color="blue">bool</font> PackWeapon( <font color="blue">int</font> minLevel, <font color="blue">int</font> maxLevel, <font color="blue">double</font> chance )<br>
+      <font color="blue">void</font> Provoke( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> master, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target, <font color="blue">bool</font> bSuccess )<br>
+      <font color="blue">void</font> ReleaseGuardDupeLock()<br>
+      <font color="blue">void</font> ReleaseGuardLock()<br>
+      <font color="blue">void</font> RemoveFollowers()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> RemovePetFriend( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ResurrectPet()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> RevealingAction()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> Rummage()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> Type Server.Engines.MLQuests.IQuestGiver.GetType()<br>
+      <font color="blue">bool</font> SetControlMaster( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">void</font> SetDamage( <font color="blue">int</font> val )<br>
+      <font color="blue">void</font> SetDamage( <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      <font color="blue">void</font> SetDamageType( <!-- DBG-0 --><a href="ResistanceType.html">ResistanceType</a> type, <font color="blue">int</font> val )<br>
+      <font color="blue">void</font> SetDamageType( <!-- DBG-0 --><a href="ResistanceType.html">ResistanceType</a> type, <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      <font color="blue">void</font> SetDex( <font color="blue">int</font> val )<br>
+      <font color="blue">void</font> SetDex( <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      <font color="blue">void</font> SetFameLevel( <font color="blue">int</font> level )<br>
+      <font color="blue">void</font> SetHits( <font color="blue">int</font> val )<br>
+      <font color="blue">void</font> SetHits( <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      <font color="blue">void</font> SetInt( <font color="blue">int</font> val )<br>
+      <font color="blue">void</font> SetInt( <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      <font color="blue">void</font> SetKarmaLevel( <font color="blue">int</font> level )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SetLocation( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> newLocation, <font color="blue">bool</font> isTeleport )<br>
+      <font color="blue">void</font> SetMana( <font color="blue">int</font> val )<br>
+      <font color="blue">void</font> SetMana( <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      <font color="blue">void</font> SetResistance( <!-- DBG-0 --><a href="ResistanceType.html">ResistanceType</a> type, <font color="blue">int</font> val )<br>
+      <font color="blue">void</font> SetResistance( <!-- DBG-0 --><a href="ResistanceType.html">ResistanceType</a> type, <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      <font color="blue">void</font> SetSkill( <!-- DBG-0 --><a href="SkillName.html">SkillName</a> name, <font color="blue">double</font> val )<br>
+      <font color="blue">void</font> SetSkill( <!-- DBG-0 --><a href="SkillName.html">SkillName</a> name, <font color="blue">double</font> min, <font color="blue">double</font> max )<br>
+      <font color="blue">void</font> SetStam( <font color="blue">int</font> val )<br>
+      <font color="blue">void</font> SetStam( <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      <font color="blue">void</font> SetStr( <font color="blue">int</font> val )<br>
+      <font color="blue">void</font> SetStr( <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Shout( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm )<br>
+      <font color="blue">void</font> SpillAcid( <font color="blue">int</font> Amount )<br>
+      <font color="blue">void</font> SpillAcid( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> target, <font color="blue">int</font> Amount )<br>
+      <font color="blue">void</font> StopDeleteTimer()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> StopFlee()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> StopHeal()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> Teach( <!-- DBG-0 --><a href="SkillName.html">SkillName</a> skill, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <font color="blue">int</font> maxPointsToLearn, <font color="blue">bool</font> doTeach )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Turn( <font color="blue">int</font> iTurnSteps )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> TurnInternal( <font color="blue">int</font> iTurnSteps )<br>
+      <font color="blue">void</font> Unpacify()<br>
+   </body>
+</html>

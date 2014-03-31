@@ -1,0 +1,48 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseFactionGuard</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Factions.html">Back to Server.Factions</a></h4>
+      <h2>BaseFactionGuard : <!-- DBG-1 --><a href="BaseCreature.html">BaseCreature</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Mobile.html">Mobile</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="IHonorTarget.html">IHonorTarget</a>, <!-- DBG-2.2 --><a href="IQuestGiver.html">IQuestGiver</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="FactionBerserker.html">FactionBerserker</a>, <!-- DBG-3 --><a href="FactionDeathKnight.html">FactionDeathKnight</a>, <!-- DBG-3 --><a href="FactionDragoon.html">FactionDragoon</a>, <!-- DBG-3 --><a href="FactionHenchman.html">FactionHenchman</a>, <!-- DBG-3 --><a href="FactionKnight.html">FactionKnight</a>, <!-- DBG-3 --><a href="FactionMercenary.html">FactionMercenary</a>, <!-- DBG-3 --><a href="FactionNecromancer.html">FactionNecromancer</a>, <!-- DBG-3 --><a href="FactionPaladin.html">FactionPaladin</a>, <!-- DBG-3 --><a href="FactionSorceress.html">FactionSorceress</a>, <!-- DBG-3 --><a href="FactionWizard.html">FactionWizard</a></h4>
+      (<font color="blue">ctor</font>) BaseFactionGuard( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) BaseFactionGuard( <font color="blue">string</font> title )<br>
+      <font color="blue">bool</font> BardImmune( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> ClickTitle( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Faction.html">Faction</a> Faction( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="BaseAI.html">BaseAI</a> ForcedAI( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="GuardAI.html">GuardAI</a> GuardAI( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Orders.html">Orders</a> Orders( <font color="blue">get</font>; )<br>
+      TimeSpan ReacquireDelay( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Town.html">Town</a> Town( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> ChangeReaction( <!-- DBG-0 --><a href="Faction.html">Faction</a> faction, <!-- DBG-0 --><a href="ReactionType.html">ReactionType</a> type )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GenerateBody( <font color="blue">bool</font> isFemale, <font color="blue">bool</font> randomHair )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GenerateRandomHair()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> HandlesOnSpeech( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> Immovable( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> IsEnemy( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> Layered( <!-- DBG-0 --><a href="Item.html">Item</a> item, <!-- DBG-0 --><a href="Layer.html">Layer</a> layer )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> Newbied( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDeath( <!-- DBG-0 --><a href="Container.html">Container</a> c )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnMovement( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> oldLocation )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSingleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSpeech( <!-- DBG-0 --><a href="SpeechEventArgs.html">SpeechEventArgs</a> e )<br>
+      <font color="blue">void</font> PackStrongPotion()<br>
+      <font color="blue">void</font> PackStrongPotions( <font color="blue">int</font> count )<br>
+      <font color="blue">void</font> PackStrongPotions( <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      <font color="blue">void</font> PackWeakPotion()<br>
+      <font color="blue">void</font> PackWeakPotions( <font color="blue">int</font> count )<br>
+      <font color="blue">void</font> PackWeakPotions( <font color="blue">int</font> min, <font color="blue">int</font> max )<br>
+      <font color="blue">void</font> Register()<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> Rehued( <!-- DBG-0 --><a href="Item.html">Item</a> item, <font color="blue">int</font> hue )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> Resourced( <!-- DBG-0 --><a href="BaseWeapon.html">BaseWeapon</a> weapon, <!-- DBG-0 --><a href="CraftResource.html">CraftResource</a> resource )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> Resourced( <!-- DBG-0 --><a href="BaseArmor.html">BaseArmor</a> armor, <!-- DBG-0 --><a href="CraftResource.html">CraftResource</a> resource )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">void</font> Unregister()<br>
+      <font color="blue">bool</font> WasNamed( <font color="blue">string</font> speech )<br>
+   </body>
+</html>

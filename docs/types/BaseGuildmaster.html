@@ -1,0 +1,31 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseGuildmaster</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Mobiles.html">Back to Server.Mobiles</a></h4>
+      <h2>BaseGuildmaster : <!-- DBG-1 --><a href="BaseVendor.html">BaseVendor</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Mobile.html">Mobile</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="IHonorTarget.html">IHonorTarget</a>, <!-- DBG-2.2 --><a href="IQuestGiver.html">IQuestGiver</a>, <!-- DBG-2.2 --><a href="IVendor.html">IVendor</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="BardGuildmaster.html">BardGuildmaster</a>, <!-- DBG-3 --><a href="BlacksmithGuildmaster.html">BlacksmithGuildmaster</a>, <!-- DBG-3 --><a href="FisherGuildmaster.html">FisherGuildmaster</a>, <!-- DBG-3 --><a href="HealerGuildmaster.html">HealerGuildmaster</a>, <!-- DBG-3 --><a href="MageGuildmaster.html">MageGuildmaster</a>, <!-- DBG-3 --><a href="MerchantGuildmaster.html">MerchantGuildmaster</a>, <!-- DBG-3 --><a href="MinerGuildmaster.html">MinerGuildmaster</a>, <!-- DBG-3 --><a href="RangerGuildmaster.html">RangerGuildmaster</a>, <!-- DBG-3 --><a href="TailorGuildmaster.html">TailorGuildmaster</a>, <!-- DBG-3 --><a href="ThiefGuildmaster.html">ThiefGuildmaster</a>, <!-- DBG-3 --><a href="TinkerGuildmaster.html">TinkerGuildmaster</a>, <!-- DBG-3 --><a href="WarriorGuildmaster.html">WarriorGuildmaster</a></h4>
+      (<font color="blue">ctor</font>) BaseGuildmaster( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) BaseGuildmaster( <font color="blue">string</font> title )<br>
+      <font color="blue">bool</font> ClickTitle( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsActiveVendor( <font color="blue">get</font>; )<br>
+      TimeSpan JoinAge( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> JoinCost( <font color="blue">get</font>; )<br>
+      TimeSpan JoinGameAge( <font color="blue">get</font>; )<br>
+      TimeSpan QuitAge( <font color="blue">get</font>; )<br>
+      TimeSpan QuitGameAge( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="SBInfo.html">SBInfo</a>&gt; SBInfos( <font color="blue">get</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckCustomReqs( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> pm )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> HandlesOnSpeech( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> InitSBInfo()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnGoldGiven( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Gold.html">Gold</a> dropped )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSpeech( <!-- DBG-0 --><a href="SpeechEventArgs.html">SpeechEventArgs</a> e )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SayGuildTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SayPriceTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SayWelcomeTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> WasNamed( <font color="blue">string</font> speech )<br>
+   </body>
+</html>

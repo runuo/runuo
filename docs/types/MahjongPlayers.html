@@ -1,0 +1,47 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - MahjongPlayers</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.Mahjong.html">Back to Server.Engines.Mahjong</a></h4>
+      <h2>MahjongPlayers</h2>
+      (<font color="blue">ctor</font>) MahjongPlayers( <!-- DBG-0 --><a href="MahjongGame.html">MahjongGame</a> game, <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      (<font color="blue">ctor</font>) MahjongPlayers( <!-- DBG-0 --><a href="MahjongGame.html">MahjongGame</a> game, <font color="blue">int</font> maxPlayers, <font color="blue">int</font> baseScore )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Dealer( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> DealerPosition( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="MahjongGame.html">MahjongGame</a> Game( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Seats( <font color="blue">get</font>; )<br>
+      <font color="blue">void</font> AddPlayer( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> player, <font color="blue">int</font> index, <font color="blue">bool</font> sendJoinGame )<br>
+      <font color="blue">void</font> AddSpectator( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mobile )<br>
+      <font color="blue">void</font> AssignDealer( <font color="blue">int</font> index )<br>
+      <font color="blue">void</font> CheckPlayers()<br>
+      ArrayList GetInGameMobiles( <font color="blue">bool</font> players, <font color="blue">bool</font> spectators )<br>
+      <font color="blue">int</font> GetNextSeat()<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> GetPlayer( <font color="blue">int</font> index )<br>
+      <font color="blue">int</font> GetPlayerIndex( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mobile )<br>
+      <font color="blue">int</font> GetScore( <font color="blue">int</font> index )<br>
+      <font color="blue">bool</font> IsInGameDealer( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mobile )<br>
+      <font color="blue">bool</font> IsInGamePlayer( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mobile )<br>
+      <font color="blue">bool</font> IsInGamePlayer( <font color="blue">int</font> index )<br>
+      <font color="blue">bool</font> IsPublic( <font color="blue">int</font> index )<br>
+      <font color="blue">bool</font> IsSpectator( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mobile )<br>
+      <font color="blue">void</font> Join( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mobile )<br>
+      <font color="blue">void</font> LeaveGame( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> player )<br>
+      <font color="blue">void</font> OpenSeat( <font color="blue">int</font> index )<br>
+      <font color="blue">void</font> ResetScores( <font color="blue">int</font> value )<br>
+      <font color="blue">void</font> Save( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">void</font> SendDealerChangedMessage()<br>
+      <font color="blue">void</font> SendGeneralPacket( <font color="blue">bool</font> players, <font color="blue">bool</font> spectators )<br>
+      <font color="blue">void</font> SendLocalizedMessage( <font color="blue">int</font> number )<br>
+      <font color="blue">void</font> SendLocalizedMessage( <font color="blue">int</font> number, <font color="blue">string</font> args )<br>
+      <font color="blue">void</font> SendPlayerExitMessage( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> who )<br>
+      <font color="blue">void</font> SendPlayersPacket( <font color="blue">bool</font> players, <font color="blue">bool</font> spectators )<br>
+      <font color="blue">void</font> SendRelievePacket( <font color="blue">bool</font> players, <font color="blue">bool</font> spectators )<br>
+      <font color="blue">void</font> SendTilePacket( <!-- DBG-0 --><a href="MahjongTile.html">MahjongTile</a> tile, <font color="blue">bool</font> players, <font color="blue">bool</font> spectators )<br>
+      <font color="blue">void</font> SendTilesPacket( <font color="blue">bool</font> players, <font color="blue">bool</font> spectators )<br>
+      <font color="blue">void</font> SetPublic( <font color="blue">int</font> index, <font color="blue">bool</font> value )<br>
+      <font color="blue">void</font> TransferScore( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">int</font> toPosition, <font color="blue">int</font> amount )<br>
+      <font color="blue">void</font> UpdateDealer( <font color="blue">bool</font> message )<br>
+      <font color="blue">bool</font> UpdateSpectators()<br>
+   </body>
+</html>

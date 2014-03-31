@@ -1,0 +1,54 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - MethodEmitter</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.html">Back to Server</a></h4>
+      <h2>MethodEmitter</h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="(Anonymous-Type)--c__DisplayClass4.html">(Anonymous-Type)--c__DisplayClass4</a>, <!-- DBG-4 --><a href="Callback.html">Callback</a>, <!-- DBG-4 --><a href="CallInfo.html">CallInfo</a></h4>
+      (<font color="blue">static</font>) <font color="blue">bool</font> <CompareTo>b__1( Type type, <font color="blue">object</font> obj )<br>
+      (<font color="blue">ctor</font>) MethodEmitter( TypeBuilder typeBuilder )<br>
+      Type Active( <font color="blue">get</font>; )<br>
+      ILGenerator Generator( <font color="blue">get</font>; )<br>
+      MethodBuilder Method( <font color="blue">get</font>; )<br>
+      TypeBuilder Type( <font color="blue">get</font>; )<br>
+      LocalBuilder AcquireTemp( Type localType )<br>
+      <font color="blue">void</font> ArgumentPushed()<br>
+      <font color="blue">void</font> BeginCall( MethodInfo method )<br>
+      <font color="blue">void</font> Branch( Label label )<br>
+      <font color="blue">void</font> BranchIfFalse( Label label )<br>
+      <font color="blue">void</font> BranchIfTrue( Label label )<br>
+      <font color="blue">void</font> Call( MethodInfo method )<br>
+      <font color="blue">void</font> CastAs( Type type )<br>
+      <font color="blue">void</font> Chain( <!-- DBG-0 --><a href="Property.html">Property</a> prop )<br>
+      <font color="blue">void</font> Compare( OpCode opCode )<br>
+      <font color="blue">bool</font> CompareTo( <font color="blue">int</font> sign, <!-- DBG-0 --><a href="Callback.html">Callback</a> argGenerator )<br>
+      Label CreateLabel()<br>
+      LocalBuilder CreateLocal( Type localType )<br>
+      <font color="blue">void</font> Define( <font color="blue">string</font> name, MethodAttributes attr, Type returnType, Type[] parms )<br>
+      <font color="blue">void</font> FinishCall()<br>
+      <font color="blue">void</font> Load( <font color="blue">double</font> value )<br>
+      <font color="blue">void</font> Load( <font color="blue">int</font> value )<br>
+      <font color="blue">void</font> Load( <font color="blue">char</font> value )<br>
+      <font color="blue">void</font> Load( <font color="blue">bool</font> value )<br>
+      <font color="blue">void</font> Load( <font color="blue">float</font> value )<br>
+      <font color="blue">void</font> Load( <font color="blue">string</font> value )<br>
+      <font color="blue">void</font> Load( Enum value )<br>
+      <font color="blue">void</font> Load( <font color="blue">long</font> value )<br>
+      <font color="blue">void</font> LoadArgument( <font color="blue">int</font> index )<br>
+      <font color="blue">void</font> LoadField( FieldInfo field )<br>
+      <font color="blue">void</font> LoadLocal( LocalBuilder local )<br>
+      <font color="blue">void</font> LoadNull()<br>
+      <font color="blue">void</font> LoadNull( Type type )<br>
+      <font color="blue">void</font> LogicalNot()<br>
+      <font color="blue">void</font> MarkLabel( Label label )<br>
+      <font color="blue">void</font> Neg()<br>
+      <font color="blue">void</font> Pop()<br>
+      <font color="blue">void</font> Pop( Type expected )<br>
+      <font color="blue">void</font> Push( Type type )<br>
+      <font color="blue">void</font> ReleaseTemp( LocalBuilder local )<br>
+      <font color="blue">void</font> Return()<br>
+      <font color="blue">void</font> StoreLocal( LocalBuilder local )<br>
+      <font color="blue">void</font> Xor()<br>
+   </body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseAddonContainer</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>BaseAddonContainer : <!-- DBG-1 --><a href="BaseContainer.html">BaseContainer</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="IChopable.html">IChopable</a>, <!-- DBG-2.2 --><a href="IAddon.html">IAddon</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="Aquarium.html">Aquarium</a>, <!-- DBG-3 --><a href="BoilingCauldronAddon.html">BoilingCauldronAddon</a>, <!-- DBG-3 --><a href="FountainOfLife.html">FountainOfLife</a>, <!-- DBG-3 --><a href="SacrificialAltarAddon.html">SacrificialAltarAddon</a>, <!-- DBG-3 --><a href="VanityAddon.html">VanityAddon</a></h4>
+      (<font color="blue">ctor</font>) BaseAddonContainer( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) BaseAddonContainer( <font color="blue">int</font> itemID )<br>
+      <font color="blue">List</font>&lt;<a href="AddonContainerComponent.html">AddonContainerComponent</a>&gt; Components( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="BaseAddonContainerDeed.html">BaseAddonContainerDeed</a> Deed( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> DisplayWeight( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Hue( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> NeedsWall( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="CraftResource.html">CraftResource</a> Resource( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> RetainDeedHue( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> Server.Items.IAddon.Deed( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> ShareHue( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Point3D.html">Point3D</a> WallPosition( <font color="blue">get</font>; )<br>
+      <font color="blue">void</font> AddComponent( <!-- DBG-0 --><a href="AddonContainerComponent.html">AddonContainerComponent</a> c, <font color="blue">int</font> x, <font color="blue">int</font> y, <font color="blue">int</font> z )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CouldFit( <!-- DBG-0 --><a href="IPoint3D.html">IPoint3D</a> p, <!-- DBG-0 --><a href="Map.html">Map</a> map )<br>
+      <!-- DBG-0 --><a href="AddonFitResult.html">AddonFitResult</a> CouldFit( <!-- DBG-0 --><a href="IPoint3D.html">IPoint3D</a> p, <!-- DBG-0 --><a href="Map.html">Map</a> map, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">ref</font> <!-- DBG-0 --><a href="BaseHouse.html">BaseHouse</a> house )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DropItemsToGround()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnChop( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnComponentLoaded( <!-- DBG-0 --><a href="AddonContainerComponent.html">AddonContainerComponent</a> c )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnComponentUsed( <!-- DBG-0 --><a href="AddonContainerComponent.html">AddonContainerComponent</a> c, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnLocationChange( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> oldLoc )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnMapChange()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+   </body>
+</html>

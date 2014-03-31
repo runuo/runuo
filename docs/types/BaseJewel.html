@@ -1,0 +1,36 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseJewel</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>BaseJewel : <!-- DBG-1 --><a href="Item.html">Item</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="ICraftable.html">ICraftable</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="BaseBracelet.html">BaseBracelet</a>, <!-- DBG-3 --><a href="BaseEarrings.html">BaseEarrings</a>, <!-- DBG-3 --><a href="BaseNecklace.html">BaseNecklace</a>, <!-- DBG-3 --><a href="BaseRing.html">BaseRing</a>, <!-- DBG-3 --><a href="EarringsOfProtection.html">EarringsOfProtection</a>, <!-- DBG-3 --><a href="LuckyNecklace.html">LuckyNecklace</a></h4>
+      (<font color="blue">ctor</font>) BaseJewel( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) BaseJewel( <font color="blue">int</font> itemID, <!-- DBG-0 --><a href="Layer.html">Layer</a> layer )<br>
+      <font color="blue">int</font> ArtifactRarity( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="AosAttributes.html">AosAttributes</a> Attributes( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> BaseGemTypeNumber( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> ColdResistance( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> EnergyResistance( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> FireResistance( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="GemType.html">GemType</a> GemType( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> HitPoints( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> InitMaxHits( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> InitMinHits( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> LabelNumber( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> MaxHitPoints( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> PhysicalResistance( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> PoisonResistance( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="AosElementAttributes.html">AosElementAttributes</a> Resistances( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="CraftResource.html">CraftResource</a> Resource( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="AosSkillBonuses.html">AosSkillBonuses</a> SkillBonuses( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAdded( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> parent )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterDuped( <!-- DBG-0 --><a href="Item.html">Item</a> newItem )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> OnCraft( <font color="blue">int</font> quality, <font color="blue">bool</font> makersMark, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="CraftSystem.html">CraftSystem</a> craftSystem, Type typeRes, <!-- DBG-0 --><a href="BaseTool.html">BaseTool</a> tool, <!-- DBG-0 --><a href="CraftItem.html">CraftItem</a> craftItem, <font color="blue">int</font> resHue )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnRemoved( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> parent )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+   </body>
+</html>

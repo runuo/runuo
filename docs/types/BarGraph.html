@@ -1,0 +1,26 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BarGraph</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.Reports.html">Back to Server.Engines.Reports</a></h4>
+      <h2>BarGraph : <!-- DBG-1 --><a href="Chart.html">Chart</a></h2>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="PersistableObject.html">PersistableObject</a> Construct()<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="BarGraph.html">BarGraph</a> DailyAverage( <!-- DBG-0 --><a href="SnapshotHistory.html">SnapshotHistory</a> history, <font color="blue">string</font> reportName, <font color="blue">string</font> valueName )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="BarGraph.html">BarGraph</a> Growth( <!-- DBG-0 --><a href="SnapshotHistory.html">SnapshotHistory</a> history, <font color="blue">string</font> reportName, <font color="blue">string</font> valueName )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> LookupReportValue( <!-- DBG-0 --><a href="Snapshot.html">Snapshot</a> ss, <font color="blue">string</font> reportName, <font color="blue">string</font> valueName )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="BarGraph.html">BarGraph</a> OverTime( <!-- DBG-0 --><a href="SnapshotHistory.html">SnapshotHistory</a> history, <font color="blue">string</font> reportName, <font color="blue">string</font> valueName, <font color="blue">int</font> step, <font color="blue">int</font> max, <font color="blue">int</font> ival )<br>
+      (<font color="blue">ctor</font>) BarGraph()<br>
+      (<font color="blue">ctor</font>) BarGraph( <font color="blue">string</font> name, <font color="blue">string</font> fileName, <font color="blue">int</font> ticks, <font color="blue">string</font> xTitle, <font color="blue">string</font> yTitle, <!-- DBG-0 --><a href="BarGraphRenderMode.html">BarGraphRenderMode</a> rm )<br>
+      <font color="blue">int</font> FontSize( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Interval( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="BarRegion.html">BarRegion</a>[] Regions( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="BarGraphRenderMode.html">BarGraphRenderMode</a> RenderMode( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Ticks( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="PersistableType.html">PersistableType</a> TypeID( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> xTitle( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> yTitle( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DeserializeAttributes( <!-- DBG-0 --><a href="PersistanceReader.html">PersistanceReader</a> ip )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SerializeAttributes( <!-- DBG-0 --><a href="PersistanceWriter.html">PersistanceWriter</a> op )<br>
+   </body>
+</html>

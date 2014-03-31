@@ -1,0 +1,45 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseBeverage</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>BaseBeverage : <!-- DBG-1 --><a href="Item.html">Item</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="IHasQuantity.html">IHasQuantity</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="BeverageBottle.html">BeverageBottle</a>, <!-- DBG-3 --><a href="CeramicMug.html">CeramicMug</a>, <!-- DBG-3 --><a href="GlassMug.html">GlassMug</a>, <!-- DBG-3 --><a href="Goblet.html">Goblet</a>, <!-- DBG-3 --><a href="Jug.html">Jug</a>, <!-- DBG-3 --><a href="PewterMug.html">PewterMug</a>, <!-- DBG-3 --><a href="Pitcher.html">Pitcher</a></h4>
+<h4>Nested Types: <!-- DBG-4 --><a href="HeaveTimer.html">HeaveTimer</a></h4>
+      (<font color="blue">static</font>) <font color="blue">void</font> CheckHeaveTimer( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> ConsumeTotal( <!-- DBG-0 --><a href="Container.html">Container</a> pack, <!-- DBG-0 --><a href="BeverageType.html">BeverageType</a> content, <font color="blue">int</font> quantity )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> ConsumeTotal( <!-- DBG-0 --><a href="Container.html">Container</a> pack, Type itemType, <!-- DBG-0 --><a href="BeverageType.html">BeverageType</a> content, <font color="blue">int</font> quantity )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> EventSink_Login( <!-- DBG-0 --><a href="LoginEventArgs.html">LoginEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Initialize()<br>
+      (<font color="blue">ctor</font>) BaseBeverage()<br>
+      (<font color="blue">ctor</font>) BaseBeverage( <!-- DBG-0 --><a href="BeverageType.html">BeverageType</a> type )<br>
+      (<font color="blue">ctor</font>) BaseBeverage( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      <font color="blue">int</font> BaseLabelNumber( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> ContainsAlchohol( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="BeverageType.html">BeverageType</a> Content( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> EmptyLabelNumber( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Fillable( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsEmpty( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsFull( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> LabelNumber( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> MaxQuantity( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Poison.html">Poison</a> Poison( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Poisoner( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Pourable( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Quantity( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> ShowQuantity( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> CheckType( <font color="blue">string</font> name )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> ComputeItemID()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Fill_OnTarget( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">object</font> targ )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetQuantityDescription()<br>
+      <font color="blue">void</font> InternalDeserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader, <font color="blue">bool</font> read )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSingleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Pour_OnTarget( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">object</font> targ )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> ValidateUse( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">bool</font> message )<br>
+   </body>
+</html>

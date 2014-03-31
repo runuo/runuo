@@ -1,0 +1,87 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - Guild</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Guilds.html">Back to Server.Guilds</a></h4>
+      <h2>Guild : <!-- DBG-1 --><a href="BaseGuild.html">BaseGuild</a>, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a></h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="GuildPropsTarget.html">GuildPropsTarget</a></h4>
+      (<font color="blue">static</font>) <font color="blue">bool</font> NewGuildSystem( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> OrderChaos( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Configure()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> EventSink_CreateGuild( <!-- DBG-0 --><a href="CreateGuildEventArgs.html">CreateGuildEventArgs</a> args )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> EventSink_GuildGumpRequest( <!-- DBG-0 --><a href="GuildGumpRequestArgs.html">GuildGumpRequestArgs</a> args )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Guild.html">Guild</a> GetAllianceLeader( <!-- DBG-0 --><a href="Guild.html">Guild</a> g )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> GuildProps_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> HandleDeath( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> victim )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> HandleDeath( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> victim, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> killer )<br>
+      (<font color="blue">ctor</font>) Guild( <font color="blue">int</font> id )<br>
+      (<font color="blue">ctor</font>) Guild( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> leader, <font color="blue">string</font> name, <font color="blue">string</font> abbreviation )<br>
+      <font color="blue">string</font> Abbreviation( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Mobile.html">Mobile</a>&gt; Accepted( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="WarDeclaration.html">WarDeclaration</a>&gt; AcceptedWars( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="AllianceInfo.html">AllianceInfo</a> Alliance( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Guild.html">Guild</a> AllianceLeader( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> AllianceName( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Guild.html">Guild</a>&gt; Allies( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Guild.html">Guild</a>&gt; AllyDeclarations( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Guild.html">Guild</a>&gt; AllyInvitations( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Mobile.html">Mobile</a>&gt; Candidates( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> Charter( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Disbanded( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Guild.html">Guild</a>&gt; Enemies( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> Guildstone( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IsAllianceMember( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsAlliancePendingMember( <font color="blue">get</font>; )<br>
+      DateTime LastFealty( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Leader( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Mobile.html">Mobile</a>&gt; Members( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> Name( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="WarDeclaration.html">WarDeclaration</a>&gt; PendingWars( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Item.html">Item</a> Teleporter( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="GuildType.html">GuildType</a> Type( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      DateTime TypeLastChange( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Guild.html">Guild</a>&gt; WarDeclarations( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Guild.html">Guild</a>&gt; WarInvitations( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> Website( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> AddAlly( <!-- DBG-0 --><a href="Guild.html">Guild</a> g )<br>
+      <font color="blue">void</font> AddEnemy( <!-- DBG-0 --><a href="Guild.html">Guild</a> g )<br>
+      <font color="blue">void</font> AddMember( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">void</font> CalculateGuildmaster()<br>
+      <font color="blue">bool</font> CanBeVotedFor( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">bool</font> CanVote( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">void</font> CheckExpiredWars()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">void</font> Disband()<br>
+      <!-- DBG-0 --><a href="WarDeclaration.html">WarDeclaration</a> FindActiveWar( <!-- DBG-0 --><a href="Guild.html">Guild</a> g )<br>
+      <!-- DBG-0 --><a href="WarDeclaration.html">WarDeclaration</a> FindPendingWar( <!-- DBG-0 --><a href="Guild.html">Guild</a> g )<br>
+      <font color="blue">void</font> GuildChat( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> GuildChat( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">int</font> hue, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> GuildMessage( <font color="blue">int</font> number )<br>
+      <font color="blue">void</font> GuildMessage( <font color="blue">int</font> number, <font color="blue">string</font> args )<br>
+      <font color="blue">void</font> GuildMessage( <font color="blue">int</font> number, <font color="blue">string</font> args, <font color="blue">int</font> hue )<br>
+      <font color="blue">void</font> GuildMessage( <font color="blue">int</font> number, <font color="blue">bool</font> append, <font color="blue">string</font> affix )<br>
+      <font color="blue">void</font> GuildMessage( <font color="blue">int</font> number, <font color="blue">bool</font> append, <font color="blue">string</font> affix, <font color="blue">string</font> args )<br>
+      <font color="blue">void</font> GuildMessage( <font color="blue">int</font> num, <font color="blue">bool</font> append, <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">void</font> GuildMessage( <font color="blue">int</font> number, <font color="blue">bool</font> append, <font color="blue">string</font> affix, <font color="blue">string</font> args, <font color="blue">int</font> hue )<br>
+      <font color="blue">void</font> GuildTextMessage( <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> GuildTextMessage( <font color="blue">int</font> hue, <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> GuildTextMessage( <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">void</font> GuildTextMessage( <font color="blue">int</font> hue, <font color="blue">string</font> format, <font color="blue">object</font>[] args )<br>
+      <font color="blue">void</font> InvalidateMemberNotoriety()<br>
+      <font color="blue">void</font> InvalidateMemberProperties()<br>
+      <font color="blue">void</font> InvalidateMemberProperties( <font color="blue">bool</font> onlyOPL )<br>
+      <font color="blue">void</font> InvalidateWarNotoriety()<br>
+      <font color="blue">bool</font> IsAlly( <!-- DBG-0 --><a href="Guild.html">Guild</a> g )<br>
+      <font color="blue">bool</font> IsEnemy( <!-- DBG-0 --><a href="Guild.html">Guild</a> g )<br>
+      <font color="blue">bool</font> IsMember( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">bool</font> IsWar( <!-- DBG-0 --><a href="Guild.html">Guild</a> g )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDelete( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      <font color="blue">void</font> RemoveAlly( <!-- DBG-0 --><a href="Guild.html">Guild</a> g )<br>
+      <font color="blue">void</font> RemoveEnemy( <!-- DBG-0 --><a href="Guild.html">Guild</a> g )<br>
+      <font color="blue">void</font> RemoveMember( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">void</font> RemoveMember( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <font color="blue">int</font> message )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">void</font> VerifyGuild_Callback()<br>
+   </body>
+</html>

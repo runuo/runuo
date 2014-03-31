@@ -1,0 +1,41 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - WeaponAbility</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>WeaponAbility</h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="ArmorIgnore.html">ArmorIgnore</a>, <!-- DBG-3 --><a href="ArmorPierce.html">ArmorPierce</a>, <!-- DBG-3 --><a href="BleedAttack.html">BleedAttack</a>, <!-- DBG-3 --><a href="Block.html">Block</a>, <!-- DBG-3 --><a href="ConcussionBlow.html">ConcussionBlow</a>, <!-- DBG-3 --><a href="CrushingBlow.html">CrushingBlow</a>, <!-- DBG-3 --><a href="DefenseMastery.html">DefenseMastery</a>, <!-- DBG-3 --><a href="Disarm.html">Disarm</a>, <!-- DBG-3 --><a href="Dismount.html">Dismount</a>, <!-- DBG-3 --><a href="Disrobe.html">Disrobe</a>, <!-- DBG-3 --><a href="DoubleShot.html">DoubleShot</a>, <!-- DBG-3 --><a href="DoubleStrike.html">DoubleStrike</a>, <!-- DBG-3 --><a href="DualWield.html">DualWield</a>, <!-- DBG-3 --><a href="Feint.html">Feint</a>, <!-- DBG-3 --><a href="FrenziedWhirlwind.html">FrenziedWhirlwind</a>, <!-- DBG-3 --><a href="InfectiousStrike.html">InfectiousStrike</a>, <!-- DBG-3 --><a href="MortalStrike.html">MortalStrike</a>, <!-- DBG-3 --><a href="MovingShot.html">MovingShot</a>, <!-- DBG-3 --><a href="NerveStrike.html">NerveStrike</a>, <!-- DBG-3 --><a href="ParalyzingBlow.html">ParalyzingBlow</a>, <!-- DBG-3 --><a href="RidingSwipe.html">RidingSwipe</a>, <!-- DBG-3 --><a href="ShadowStrike.html">ShadowStrike</a>, <!-- DBG-3 --><a href="TalonStrike.html">TalonStrike</a>, <!-- DBG-3 --><a href="WhirlwindAttack.html">WhirlwindAttack</a></h4>
+<h4>Nested Types: <!-- DBG-4 --><a href="WeaponAbilityContext.html">WeaponAbilityContext</a>, <!-- DBG-4 --><a href="WeaponAbilityTimer.html">WeaponAbilityTimer</a></h4>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="WeaponAbility.html">WeaponAbility</a>[] Abilities( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) Hashtable Table( <font color="blue">get</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> AddContext( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="WeaponAbilityContext.html">WeaponAbilityContext</a> context )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> ClearCurrentAbility( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> EventSink_SetAbility( <!-- DBG-0 --><a href="SetAbilityEventArgs.html">SetAbilityEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="WeaponAbilityContext.html">WeaponAbilityContext</a> GetContext( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="WeaponAbility.html">WeaponAbility</a> GetCurrentAbility( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Initialize()<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> IsWeaponAbility( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="WeaponAbility.html">WeaponAbility</a> a )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> RemoveContext( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> RemoveContext( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="WeaponAbilityContext.html">WeaponAbilityContext</a> context )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> SetCurrentAbility( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="WeaponAbility.html">WeaponAbility</a> a )<br>
+      (<font color="blue">ctor</font>) WeaponAbility()<br>
+      <font color="blue">int</font> AccuracyBonus( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BaseMana( <font color="blue">get</font>; )<br>
+      <font color="blue">double</font> DamageScalar( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> RequiresSE( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> ValidatesDuringHit( <font color="blue">get</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> CalculateMana( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckMana( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">bool</font> consume )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckSkills( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckWeaponSkill( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">double</font> GetRequiredSkill( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">double</font> GetSkill( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="SkillName.html">SkillName</a> skillName )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnBeforeDamage( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> attacker, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> defender )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnBeforeSwing( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> attacker, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> defender )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnHit( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> attacker, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> defender, <font color="blue">int</font> damage )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnMiss( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> attacker, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> defender )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> RequiresTactics( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> Validate( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+   </body>
+</html>

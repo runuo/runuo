@@ -1,0 +1,61 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - Spellbook</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>Spellbook : <!-- DBG-1 --><a href="Item.html">Item</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="ICraftable.html">ICraftable</a>, <!-- DBG-2.2 --><a href="ISlayer.html">ISlayer</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="BookOfBushido.html">BookOfBushido</a>, <!-- DBG-3 --><a href="BookOfChivalry.html">BookOfChivalry</a>, <!-- DBG-3 --><a href="BookOfNinjitsu.html">BookOfNinjitsu</a>, <!-- DBG-3 --><a href="HallowedSpellbook.html">HallowedSpellbook</a>, <!-- DBG-3 --><a href="NecromancerSpellbook.html">NecromancerSpellbook</a>, <!-- DBG-3 --><a href="SpellweavingBook.html">SpellweavingBook</a>, <!-- DBG-3 --><a href="TomeOfEnlightenment.html">TomeOfEnlightenment</a>, <!-- DBG-3 --><a href="TomeOfLostKnowledge.html">TomeOfLostKnowledge</a></h4>
+      (<font color="blue">static</font>) <font color="blue">void</font> AllSpells_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> AllSpells_OnTarget( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">object</font> obj )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> EventSink_CastSpellRequest( <!-- DBG-0 --><a href="CastSpellRequestEventArgs.html">CastSpellRequestEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> EventSink_OpenSpellbookRequest( <!-- DBG-0 --><a href="OpenSpellbookRequestEventArgs.html">OpenSpellbookRequestEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Spellbook.html">Spellbook</a> Find( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">int</font> spellID )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Spellbook.html">Spellbook</a> Find( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">int</font> spellID, <!-- DBG-0 --><a href="SpellbookType.html">SpellbookType</a> type )<br>
+      (<font color="blue">static</font>) <font color="blue">List</font>&lt;<a href="Spellbook.html">Spellbook</a>&gt; FindAllSpellbooks( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Spellbook.html">Spellbook</a> FindArcanist( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Spellbook.html">Spellbook</a> FindEquippedSpellbook( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Spellbook.html">Spellbook</a> FindNecromancer( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Spellbook.html">Spellbook</a> FindNinja( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Spellbook.html">Spellbook</a> FindPaladin( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Spellbook.html">Spellbook</a> FindRegular( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Spellbook.html">Spellbook</a> FindSamurai( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Spellbook.html">Spellbook</a> FindSpellbookInList( <font color="blue">List</font>&lt;<a href="Spellbook.html">Spellbook</a>&gt; list, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">int</font> spellID, <!-- DBG-0 --><a href="SpellbookType.html">SpellbookType</a> type )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="SpellbookType.html">SpellbookType</a> GetTypeForSpell( <font color="blue">int</font> spellID )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Initialize()<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> ValidateSpellbook( <!-- DBG-0 --><a href="Spellbook.html">Spellbook</a> book, <font color="blue">int</font> spellID, <!-- DBG-0 --><a href="SpellbookType.html">SpellbookType</a> type )<br>
+      (<font color="blue">ctor</font>) Spellbook()<br>
+      (<font color="blue">ctor</font>) Spellbook( <font color="blue">ulong</font> content )<br>
+      (<font color="blue">ctor</font>) Spellbook( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) Spellbook( <font color="blue">ulong</font> content, <font color="blue">int</font> itemID )<br>
+      <!-- DBG-0 --><a href="AosAttributes.html">AosAttributes</a> Attributes( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> BookCount( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> BookOffset( <font color="blue">get</font>; )<br>
+      <font color="blue">ulong</font> Content( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Crafter( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> DisplayLootType( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> DisplayWeight( <font color="blue">get</font>; )<br>
+      <font color="blue">string</font> EngravedText( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="BookQuality.html">BookQuality</a> Quality( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="AosSkillBonuses.html">AosSkillBonuses</a> SkillBonuses( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="SlayerName.html">SlayerName</a> Slayer( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="SlayerName.html">SlayerName</a> Slayer2( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="SpellbookType.html">SpellbookType</a> SpellbookType( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> SpellCount( <font color="blue">get</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> AllowEquipedCast( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> AllowSecureTrade( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> newOwner, <font color="blue">bool</font> accepted )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanEquip( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">void</font> DisplayTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">bool</font> HasSpell( <font color="blue">int</font> spellID )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAdded( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> parent )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterDuped( <!-- DBG-0 --><a href="Item.html">Item</a> newItem )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> OnCraft( <font color="blue">int</font> quality, <font color="blue">bool</font> makersMark, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="CraftSystem.html">CraftSystem</a> craftSystem, Type typeRes, <!-- DBG-0 --><a href="BaseTool.html">BaseTool</a> tool, <!-- DBG-0 --><a href="CraftItem.html">CraftItem</a> craftItem, <font color="blue">int</font> resHue )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> OnDragDrop( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> dropped )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnRemoved( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> parent )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSingleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+   </body>
+</html>

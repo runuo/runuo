@@ -1,0 +1,42 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - Tournament</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.ConPVP.html">Back to Server.Engines.ConPVP</a></h4>
+      <h2>Tournament</h2>
+      (<font color="blue">ctor</font>) Tournament()<br>
+      (<font color="blue">ctor</font>) Tournament( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      ArrayList Arenas( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="TournamentStage.html">TournamentStage</a> CurrentStage( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="EventController.html">EventController</a> EventController( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="GroupingType.html">GroupingType</a> GroupType( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IsNotoRestricted( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> LevelRequirement( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      ArrayList Participants( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> ParticipantsPerMatch( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> PlayersPerParticipant( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="TournyPyramid.html">TournyPyramid</a> Pyramid( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Ruleset.html">Ruleset</a> Ruleset( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      TimeSpan SignupPeriod( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      DateTime SignupStart( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="TournamentStage.html">TournamentStage</a> Stage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      TimeSpan SuddenDeath( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> SuddenDeathRounds( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="TieType.html">TieType</a> TieType( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="TournyType.html">TournyType</a> TournyType( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      ArrayList Undefeated( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> Alert( <font color="blue">string</font>[] alerts )<br>
+      <font color="blue">void</font> Alert( <!-- DBG-0 --><a href="Arena.html">Arena</a> arena, <font color="blue">string</font>[] alerts )<br>
+      <font color="blue">void</font> Alert_Callback( <font color="blue">object</font> state )<br>
+      <font color="blue">int</font> ComputeCashAward()<br>
+      <font color="blue">void</font> GiveAwards()<br>
+      <font color="blue">void</font> GiveAwards( ArrayList players, <!-- DBG-0 --><a href="TrophyRank.html">TrophyRank</a> rank, <font color="blue">int</font> cash )<br>
+      <font color="blue">void</font> HandleTie( <!-- DBG-0 --><a href="Arena.html">Arena</a> arena, <!-- DBG-0 --><a href="TournyMatch.html">TournyMatch</a> match, ArrayList remaining )<br>
+      <font color="blue">void</font> HandleWon( <!-- DBG-0 --><a href="Arena.html">Arena</a> arena, <!-- DBG-0 --><a href="TournyMatch.html">TournyMatch</a> match, <!-- DBG-0 --><a href="TournyParticipant.html">TournyParticipant</a> winner )<br>
+      <font color="blue">bool</font> HasParticipant( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      <font color="blue">void</font> OnEliminated( <!-- DBG-0 --><a href="DuelPlayer.html">DuelPlayer</a> player )<br>
+      <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">void</font> Slice()<br>
+   </body>
+</html>

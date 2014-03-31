@@ -1,0 +1,41 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BarGraphRenderer</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.Reports.html">Back to Server.Engines.Reports</a></h4>
+      <h2>BarGraphRenderer : <!-- DBG-1 --><a href="ChartRenderer.html">ChartRenderer</a></h2>
+      (<font color="blue">ctor</font>) BarGraphRenderer()<br>
+      (<font color="blue">ctor</font>) BarGraphRenderer( Color bgColor )<br>
+      Color BackgroundColor( <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> BottomBuffer( <font color="blue">set</font>; )<br>
+      Color FontColor( <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> FontFamily( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Height( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="BarGraphRenderMode.html">BarGraphRenderMode</a> RenderMode( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> ShowData( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> ShowLegend( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> TopBuffer( <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> VerticalLabel( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> VerticalTickCount( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Width( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> AssignDefaultSettings()<br>
+      <font color="blue">void</font> CalculateBarWidth( <font color="blue">int</font> dataCount, <font color="blue">float</font> barGraphWidth )<br>
+      <font color="blue">void</font> CalculateGraphDimension()<br>
+      <font color="blue">float</font> CalculateImgFontWidth( <font color="blue">string</font> text, <font color="blue">float</font> size, <font color="blue">string</font> family )<br>
+      <font color="blue">void</font> CalculateSweepValues()<br>
+      <font color="blue">void</font> CalculateTickAndMax()<br>
+      <font color="blue">void</font> CollectDataPoints( <font color="blue">string</font>[] values )<br>
+      <font color="blue">void</font> CollectDataPoints( <font color="blue">string</font>[] labels, <font color="blue">string</font>[] values )<br>
+      <font color="blue">virtual</font> Bitmap Draw()<br>
+      <font color="blue">void</font> DrawBars( Graphics graph )<br>
+      <font color="blue">void</font> DrawLegend( Graphics graph )<br>
+      <font color="blue">void</font> DrawRegions( Graphics gfx )<br>
+      <font color="blue">void</font> DrawVerticalLabelArea( Graphics graph )<br>
+      <font color="blue">void</font> DrawXLabelArea( Graphics graph )<br>
+      <font color="blue">void</font> DrawXLabelBack( Graphics graph )<br>
+      <font color="blue">void</font> FindLongestTickValue()<br>
+      <font color="blue">string</font> MakeShortLabel( <font color="blue">string</font> text )<br>
+      <font color="blue">void</font> SetTitles( <font color="blue">string</font> xTitle, <font color="blue">string</font> yTitle )<br>
+   </body>
+</html>

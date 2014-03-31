@@ -1,0 +1,29 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BasePotion</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>BasePotion : <!-- DBG-1 --><a href="Item.html">Item</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="ICraftable.html">ICraftable</a>, <!-- DBG-2.2 --><a href="ICommodity.html">ICommodity</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="BaseAgilityPotion.html">BaseAgilityPotion</a>, <!-- DBG-3 --><a href="BaseConflagrationPotion.html">BaseConflagrationPotion</a>, <!-- DBG-3 --><a href="BaseConfusionBlastPotion.html">BaseConfusionBlastPotion</a>, <!-- DBG-3 --><a href="BaseCurePotion.html">BaseCurePotion</a>, <!-- DBG-3 --><a href="BaseExplosionPotion.html">BaseExplosionPotion</a>, <!-- DBG-3 --><a href="BaseHealPotion.html">BaseHealPotion</a>, <!-- DBG-3 --><a href="BasePoisonPotion.html">BasePoisonPotion</a>, <!-- DBG-3 --><a href="BaseRefreshPotion.html">BaseRefreshPotion</a>, <!-- DBG-3 --><a href="BaseStrengthPotion.html">BaseStrengthPotion</a>, <!-- DBG-3 --><a href="InvisibilityPotion.html">InvisibilityPotion</a>, <!-- DBG-3 --><a href="NightSightPotion.html">NightSightPotion</a></h4>
+      (<font color="blue">static</font>) <font color="blue">int</font> EnhancePotions( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> HasFreeHand( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> PlayDrinkEffect( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> Scale( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <font color="blue">int</font> v )<br>
+      (<font color="blue">static</font>) <font color="blue">double</font> Scale( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <font color="blue">double</font> v )<br>
+      (<font color="blue">static</font>) TimeSpan Scale( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, TimeSpan v )<br>
+      (<font color="blue">ctor</font>) BasePotion( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) BasePotion( <font color="blue">int</font> itemID, <!-- DBG-0 --><a href="PotionEffect.html">PotionEffect</a> effect )<br>
+      <font color="blue">int</font> LabelNumber( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="PotionEffect.html">PotionEffect</a> PotionEffect( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> RequireFreeHand( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Server.Items.ICommodity.DescriptionNumber( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> Server.Items.ICommodity.IsDeedable( <font color="blue">get</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Drink( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> OnCraft( <font color="blue">int</font> quality, <font color="blue">bool</font> makersMark, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="CraftSystem.html">CraftSystem</a> craftSystem, Type typeRes, <!-- DBG-0 --><a href="BaseTool.html">BaseTool</a> tool, <!-- DBG-0 --><a href="CraftItem.html">CraftItem</a> craftItem, <font color="blue">int</font> resHue )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> StackWith( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> dropped, <font color="blue">bool</font> playSound )<br>
+   </body>
+</html>

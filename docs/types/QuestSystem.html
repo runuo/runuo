@@ -1,0 +1,50 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - QuestSystem</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.Quests.html">Back to Server.Engines.Quests</a></h4>
+      <h2>QuestSystem</h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="AmbitiousQueenQuest.html">AmbitiousQueenQuest</a>, <!-- DBG-3 --><a href="CollectorQuest.html">CollectorQuest</a>, <!-- DBG-3 --><a href="DarkTidesQuest.html">DarkTidesQuest</a>, <!-- DBG-3 --><a href="EminosUndertakingQuest.html">EminosUndertakingQuest</a>, <!-- DBG-3 --><a href="HaochisTrialsQuest.html">HaochisTrialsQuest</a>, <!-- DBG-3 --><a href="SolenMatriarchQuest.html">SolenMatriarchQuest</a>, <!-- DBG-3 --><a href="StudyOfSolenQuest.html">StudyOfSolenQuest</a>, <!-- DBG-3 --><a href="TerribleHatchlingsQuest.html">TerribleHatchlingsQuest</a>, <!-- DBG-3 --><a href="TheSummoningQuest.html">TheSummoningQuest</a>, <!-- DBG-3 --><a href="UzeraanTurmoilQuest.html">UzeraanTurmoilQuest</a>, <!-- DBG-3 --><a href="WitchApprenticeQuest.html">WitchApprenticeQuest</a></h4>
+      (<font color="blue">static</font>) <font color="blue">bool</font> CanOfferQuest( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> check, Type questType )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> CanOfferQuest( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> check, Type questType, <font color="blue">out</font> <font color="blue">bool</font> inRestartPeriod )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> FocusTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> who, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> RandomBrightHue()<br>
+      (<font color="blue">ctor</font>) QuestSystem()<br>
+      (<font color="blue">ctor</font>) QuestSystem( <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> from )<br>
+      ArrayList Conversations( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> From( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IsTutorial( <font color="blue">get</font>; )<br>
+      <font color="blue">object</font> Name( <font color="blue">get</font>; )<br>
+      ArrayList Objectives( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">object</font> OfferMessage( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Picture( <font color="blue">get</font>; )<br>
+      TimeSpan RestartDelay( <font color="blue">get</font>; )<br>
+      Type[] TypeReferenceTable( <font color="blue">get</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Accept()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddConversation( <!-- DBG-0 --><a href="QuestConversation.html">QuestConversation</a> conv )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddObjective( <!-- DBG-0 --><a href="QuestObjective.html">QuestObjective</a> obj )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> BaseDeserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> BaseSerialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> BeginCancelQuest()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Cancel()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ChildDeserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ChildSerialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ClearQuest( <font color="blue">bool</font> completed )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Complete()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Decline()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> EndCancelQuest( <font color="blue">bool</font> shouldCancel )<br>
+      <!-- DBG-0 --><a href="QuestObjective.html">QuestObjective</a> FindObjective( Type type )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetContextMenuEntries( <font color="blue">List</font>&lt;<a href="ContextMenuEntry.html">ContextMenuEntry</a>&gt; list )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> IgnoreYoungProtection( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">bool</font> IsObjectiveInProgress( Type type )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnKill( <!-- DBG-0 --><a href="BaseCreature.html">BaseCreature</a> creature, <!-- DBG-0 --><a href="Container.html">Container</a> corpse )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SendOffer()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ShowQuestConversation()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ShowQuestLog()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ShowQuestLogUpdated()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Slice()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> StartTimer()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> StopTimer()<br>
+   </body>
+</html>

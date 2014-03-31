@@ -1,0 +1,32 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - FillableContainer</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>FillableContainer : <!-- DBG-1 --><a href="LockableContainer.html">LockableContainer</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="ITelekinesisable.html">ITelekinesisable</a>, <!-- DBG-2.2 --><a href="ILockable.html">ILockable</a>, <!-- DBG-2.2 --><a href="ILockpickable.html">ILockpickable</a>, <!-- DBG-2.2 --><a href="ICraftable.html">ICraftable</a>, <!-- DBG-2.2 --><a href="IShipwreckedItem.html">IShipwreckedItem</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="FillableBarrel.html">FillableBarrel</a>, <!-- DBG-3 --><a href="FillableLargeCrate.html">FillableLargeCrate</a>, <!-- DBG-3 --><a href="FillableMetalBox.html">FillableMetalBox</a>, <!-- DBG-3 --><a href="FillableMetalChest.html">FillableMetalChest</a>, <!-- DBG-3 --><a href="FillableMetalGoldenChest.html">FillableMetalGoldenChest</a>, <!-- DBG-3 --><a href="FillableSmallCrate.html">FillableSmallCrate</a>, <!-- DBG-3 --><a href="FillableWoodenBox.html">FillableWoodenBox</a>, <!-- DBG-3 --><a href="FillableWoodenChest.html">FillableWoodenChest</a>, <!-- DBG-3 --><a href="LibraryBookcase.html">LibraryBookcase</a></h4>
+      (<font color="blue">ctor</font>) FillableContainer( <font color="blue">int</font> itemID )<br>
+      (<font color="blue">ctor</font>) FillableContainer( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      <!-- DBG-0 --><a href="FillableContent.html">FillableContent</a> Content( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="FillableContentType.html">FillableContentType</a> ContentType( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IsLockable( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsTrapable( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> MaxRespawnMinutes( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> MinRespawnMinutes( <font color="blue">get</font>; )<br>
+      DateTime NextRespawnTime( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> SpawnThreshold( <font color="blue">get</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AcquireContent()<br>
+      <font color="blue">void</font> CheckRespawn()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GenerateContent()<br>
+      <font color="blue">int</font> GetItemsCount()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> GetSpawnCount()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnItemRemoved( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnLocationChange( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> oldLocation )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnMapChange()<br>
+      <font color="blue">void</font> Respawn()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+   </body>
+</html>

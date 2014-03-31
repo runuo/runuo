@@ -1,0 +1,27 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseCommand</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Commands.Generic.html">Back to Server.Commands.Generic</a></h4>
+      <h2>BaseCommand</h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="AddCommand.html">AddCommand</a>, <!-- DBG-3 --><a href="AddToPackCommand.html">AddToPackCommand</a>, <!-- DBG-3 --><a href="AliasedSetCommand.html">AliasedSetCommand</a>, <!-- DBG-3 --><a href="Batch.html">Batch</a>, <!-- DBG-3 --><a href="BringToPackCommand.html">BringToPackCommand</a>, <!-- DBG-3 --><a href="ConditionCommand.html">ConditionCommand</a>, <!-- DBG-3 --><a href="CountCommand.html">CountCommand</a>, <!-- DBG-3 --><a href="DeleteCommand.html">DeleteCommand</a>, <!-- DBG-3 --><a href="DesignInsertCommand.html">DesignInsertCommand</a>, <!-- DBG-3 --><a href="DismountCommand.html">DismountCommand</a>, <!-- DBG-3 --><a href="FactionKickCommand.html">FactionKickCommand</a>, <!-- DBG-3 --><a href="FirewallCommand.html">FirewallCommand</a>, <!-- DBG-3 --><a href="GetCommand.html">GetCommand</a>, <!-- DBG-3 --><a href="GetTypeCommand.html">GetTypeCommand</a>, <!-- DBG-3 --><a href="HideCommand.html">HideCommand</a>, <!-- DBG-3 --><a href="IncreaseCommand.html">IncreaseCommand</a>, <!-- DBG-3 --><a href="InterfaceCommand.html">InterfaceCommand</a>, <!-- DBG-3 --><a href="KickCommand.html">KickCommand</a>, <!-- DBG-3 --><a href="KillCommand.html">KillCommand</a>, <!-- DBG-3 --><a href="OpenBrowserCommand.html">OpenBrowserCommand</a>, <!-- DBG-3 --><a href="PrivSoundCommand.html">PrivSoundCommand</a>, <!-- DBG-3 --><a href="RefreshHouseCommand.html">RefreshHouseCommand</a>, <!-- DBG-3 --><a href="RestockCommand.html">RestockCommand</a>, <!-- DBG-3 --><a href="SetCommand.html">SetCommand</a>, <!-- DBG-3 --><a href="TeleCommand.html">TeleCommand</a>, <!-- DBG-3 --><a href="TellCommand.html">TellCommand</a>, <!-- DBG-3 --><a href="ToggleCommand.html">ToggleCommand</a>, <!-- DBG-3 --><a href="TraceLockdownCommand.html">TraceLockdownCommand</a>, <!-- DBG-3 --><a href="ViewContextCommand.html">ViewContextCommand</a>, <!-- DBG-3 --><a href="ViewQuestsCommand.html">ViewQuestsCommand</a></h4>
+<h4>Nested Types: <!-- DBG-4 --><a href="MessageEntry.html">MessageEntry</a></h4>
+      (<font color="blue">static</font>) <font color="blue">bool</font> IsAccessible( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">object</font> obj )<br>
+      (<font color="blue">ctor</font>) BaseCommand()<br>
+      <!-- DBG-0 --><a href="AccessLevel.html">AccessLevel</a> AccessLevel( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font>[] Commands( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> Description( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> ListOptimized( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="ObjectTypes.html">ObjectTypes</a> ObjectTypes( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="CommandSupport.html">CommandSupport</a> Supports( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> Usage( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> AddResponse( <!-- DBG-0 --><a href="Gump.html">Gump</a> gump )<br>
+      <font color="blue">void</font> AddResponse( <font color="blue">string</font> message )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Execute( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e, <font color="blue">object</font> obj )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> ExecuteList( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e, ArrayList list )<br>
+      <font color="blue">void</font> Flush( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">bool</font> flushToLog )<br>
+      <font color="blue">void</font> LogFailure( <font color="blue">string</font> message )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> ValidateArgs( <!-- DBG-0 --><a href="BaseCommandImplementor.html">BaseCommandImplementor</a> impl, <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+   </body>
+</html>

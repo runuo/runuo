@@ -1,0 +1,39 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - PlantItem</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.Plants.html">Back to Server.Engines.Plants</a></h4>
+      <h2>PlantItem : <!-- DBG-1 --><a href="Item.html">Item</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="ISecurable.html">ISecurable</a></h2>
+      (<font color="blue">static</font>) ArrayList Plants( <font color="blue">get</font>; )<br>
+      (<font color="blue">ctor</font>) PlantItem()<br>
+      (<font color="blue">ctor</font>) PlantItem( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) PlantItem( <font color="blue">bool</font> fertileDirt )<br>
+      <font color="blue">bool</font> ForceShowProperties( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsCrossable( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsGrowable( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="SecureLevel.html">SecureLevel</a> Level( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="PlantHue.html">PlantHue</a> PlantHue( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="PlantStatus.html">PlantStatus</a> PlantStatus( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="PlantSystem.html">PlantSystem</a> PlantSystem( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="PlantType.html">PlantType</a> PlantType( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Reproduces( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> ShowType( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> ValidGrowthLocation( <font color="blue">get</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddNameProperty( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">bool</font> ApplyPotion( <!-- DBG-0 --><a href="PotionEffect.html">PotionEffect</a> effect, <font color="blue">bool</font> testOnly, <font color="blue">out</font> <font color="blue">int</font> message )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">void</font> Die()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetContextMenuEntries( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">List</font>&lt;<a href="ContextMenuEntry.html">ContextMenuEntry</a>&gt; list )<br>
+      <font color="blue">int</font> GetLocalizedContainerType()<br>
+      <font color="blue">int</font> GetLocalizedPlantStatus()<br>
+      <font color="blue">bool</font> IsUsableBy( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSingleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> PlantSeed( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Seed.html">Seed</a> seed )<br>
+      <font color="blue">void</font> Pour( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">void</font> Update()<br>
+   </body>
+</html>

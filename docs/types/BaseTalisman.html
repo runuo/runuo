@@ -1,0 +1,66 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseTalisman</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>BaseTalisman : <!-- DBG-1 --><a href="Item.html">Item</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;</h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="BloodwoodSpirit.html">BloodwoodSpirit</a>, <!-- DBG-3 --><a href="RandomTalisman.html">RandomTalisman</a>, <!-- DBG-3 --><a href="TotemOfVoid.html">TotemOfVoid</a></h4>
+<h4>Nested Types: <!-- DBG-4 --><a href="SaveFlag.html">SaveFlag</a>, <!-- DBG-4 --><a href="TalismanTarget.html">TalismanTarget</a></h4>
+      (<font color="blue">static</font>) <font color="blue">bool</font> GetRandomBlessed()<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> GetRandomCharges()<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> GetRandomExceptional()<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> GetRandomItemID()<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="TalismanAttribute.html">TalismanAttribute</a> GetRandomKiller()<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="TalismanAttribute.html">TalismanAttribute</a> GetRandomKiller( <font color="blue">bool</font> includingNone )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="TalismanAttribute.html">TalismanAttribute</a> GetRandomProtection()<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="TalismanAttribute.html">TalismanAttribute</a> GetRandomProtection( <font color="blue">bool</font> includingNone )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="TalismanRemoval.html">TalismanRemoval</a> GetRandomRemoval()<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="SkillName.html">SkillName</a> GetRandomSkill()<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="TalismanSlayerName.html">TalismanSlayerName</a> GetRandomSlayer()<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> GetRandomSuccessful()<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="TalismanAttribute.html">TalismanAttribute</a> GetRandomSummoner()<br>
+      (<font color="blue">static</font>) Type GetRandomSummonType()<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> GetSaveFlag( <!-- DBG-0 --><a href="SaveFlag.html">SaveFlag</a> flags, <!-- DBG-0 --><a href="SaveFlag.html">SaveFlag</a> toGet )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Initialize()<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> RandomTalisman_OnCommand( <!-- DBG-0 --><a href="CommandEventArgs.html">CommandEventArgs</a> e )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> SetSaveFlag( <font color="blue">ref</font> <!-- DBG-0 --><a href="SaveFlag.html">SaveFlag</a> flags, <!-- DBG-0 --><a href="SaveFlag.html">SaveFlag</a> toSet, <font color="blue">bool</font> setIf )<br>
+      (<font color="blue">ctor</font>) BaseTalisman()<br>
+      (<font color="blue">ctor</font>) BaseTalisman( <font color="blue">int</font> itemID )<br>
+      (<font color="blue">ctor</font>) BaseTalisman( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      <!-- DBG-0 --><a href="AosAttributes.html">AosAttributes</a> Attributes( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Blessed( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> Charges( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> ChargeTime( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> ExceptionalBonus( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> ForceShowName( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="TalismanAttribute.html">TalismanAttribute</a> Killer( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> LabelNumber( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> MaxCharges( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> MaxChargeTime( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="TalismanAttribute.html">TalismanAttribute</a> Protection( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="TalismanRemoval.html">TalismanRemoval</a> Removal( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="SkillName.html">SkillName</a> Skill( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="AosSkillBonuses.html">AosSkillBonuses</a> SkillBonuses( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="TalismanSlayerName.html">TalismanSlayerName</a> Slayer( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> SuccessBonus( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="TalismanAttribute.html">TalismanAttribute</a> Summoner( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> AddNameProperty( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CanEquip( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">virtual</font> Type GetSummoner()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAdded( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> parent )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterDuped( <!-- DBG-0 --><a href="Item.html">Item</a> newItem )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterUse( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnRemoved( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> parent )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SetKiller( Type type, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> name, <font color="blue">int</font> amount )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SetProtection( Type type, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> name, <font color="blue">int</font> amount )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SetSummoner( Type type, <!-- DBG-0 --><a href="TextDefinition.html">TextDefinition</a> name )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Slice()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> StartTimer()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> StopTimer()<br>
+   </body>
+</html>

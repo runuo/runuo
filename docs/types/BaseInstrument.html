@@ -1,0 +1,51 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseInstrument</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>BaseInstrument : <!-- DBG-1 --><a href="Item.html">Item</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="ICraftable.html">ICraftable</a>, <!-- DBG-2.2 --><a href="ISlayer.html">ISlayer</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="BambooFlute.html">BambooFlute</a>, <!-- DBG-3 --><a href="Drums.html">Drums</a>, <!-- DBG-3 --><a href="Harp.html">Harp</a>, <!-- DBG-3 --><a href="LapHarp.html">LapHarp</a>, <!-- DBG-3 --><a href="Lute.html">Lute</a>, <!-- DBG-3 --><a href="Tambourine.html">Tambourine</a>, <!-- DBG-3 --><a href="TambourineTassel.html">TambourineTassel</a></h4>
+<h4>Nested Types: <!-- DBG-4 --><a href="InternalTimer.html">InternalTimer</a></h4>
+      (<font color="blue">static</font>) <font color="blue">bool</font> CheckMusicianship( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> GetBardRange( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> bard, <!-- DBG-0 --><a href="SkillName.html">SkillName</a> skill )<br>
+      (<font color="blue">static</font>) <font color="blue">double</font> GetBaseDifficulty( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> targ )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="BaseInstrument.html">BaseInstrument</a> GetInstrument( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      (<font color="blue">static</font>) <font color="blue">int</font> GetPoisonLevel( <!-- DBG-0 --><a href="BaseCreature.html">BaseCreature</a> bc )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> IsFireBreathingCreature( <!-- DBG-0 --><a href="BaseCreature.html">BaseCreature</a> bc )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> IsMageryCreature( <!-- DBG-0 --><a href="BaseCreature.html">BaseCreature</a> bc )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> IsPoisonImmune( <!-- DBG-0 --><a href="BaseCreature.html">BaseCreature</a> bc )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> OnPickedInstrument( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <font color="blue">object</font> targeted, <font color="blue">object</font> state )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> PickInstrument( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="InstrumentPickedCallback.html">InstrumentPickedCallback</a> callback )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> SetInstrument( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="BaseInstrument.html">BaseInstrument</a> item )<br>
+      (<font color="blue">ctor</font>) BaseInstrument( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) BaseInstrument( <font color="blue">int</font> itemID, <font color="blue">int</font> wellSound, <font color="blue">int</font> badlySound )<br>
+      TimeSpan ChargeReplenishRate( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> Crafter( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> FailureSound( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> InitMaxUses( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> InitMinUses( <font color="blue">get</font>; )<br>
+      DateTime LastReplenished( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="InstrumentQuality.html">InstrumentQuality</a> Quality( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> ReplenishesCharges( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="SlayerName.html">SlayerName</a> Slayer( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="SlayerName.html">SlayerName</a> Slayer2( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> SuccessSound( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> UsesRemaining( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> CheckReplenishUses()<br>
+      <font color="blue">void</font> CheckReplenishUses( <font color="blue">bool</font> invalidate )<br>
+      <font color="blue">void</font> ConsumeUse( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">double</font> GetDifficultyFor( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> targ )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <font color="blue">int</font> GetUsesScalar()<br>
+      <font color="blue">virtual</font> <font color="blue">int</font> OnCraft( <font color="blue">int</font> quality, <font color="blue">bool</font> makersMark, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="CraftSystem.html">CraftSystem</a> craftSystem, Type typeRes, <!-- DBG-0 --><a href="BaseTool.html">BaseTool</a> tool, <!-- DBG-0 --><a href="CraftItem.html">CraftItem</a> craftItem, <font color="blue">int</font> resHue )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSingleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> PlayInstrumentBadly( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> PlayInstrumentWell( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> ScaleUses()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">void</font> UnscaleUses()<br>
+   </body>
+</html>

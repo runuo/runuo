@@ -1,0 +1,22 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - Mining</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Engines.Harvest.html">Back to Server.Engines.Harvest</a></h4>
+      <h2>Mining : <!-- DBG-1 --><a href="HarvestSystem.html">HarvestSystem</a></h2>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="Mining.html">Mining</a> System( <font color="blue">get</font>; )<br>
+      (<font color="blue">ctor</font>) Mining()<br>
+      <!-- DBG-0 --><a href="HarvestDefinition.html">HarvestDefinition</a> OreAndStone( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="HarvestDefinition.html">HarvestDefinition</a> Sand( <font color="blue">get</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> BeginHarvesting( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> tool )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckHarvest( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> tool )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckHarvest( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> tool, <!-- DBG-0 --><a href="HarvestDefinition.html">HarvestDefinition</a> def, <font color="blue">object</font> toHarvest )<br>
+      <font color="blue">virtual</font> Type GetResourceType( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> tool, <!-- DBG-0 --><a href="HarvestDefinition.html">HarvestDefinition</a> def, <!-- DBG-0 --><a href="Map.html">Map</a> map, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> loc, <!-- DBG-0 --><a href="HarvestResource.html">HarvestResource</a> resource )<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="HarvestVein.html">HarvestVein</a> MutateVein( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> tool, <!-- DBG-0 --><a href="HarvestDefinition.html">HarvestDefinition</a> def, <!-- DBG-0 --><a href="HarvestBank.html">HarvestBank</a> bank, <font color="blue">object</font> toHarvest, <!-- DBG-0 --><a href="HarvestVein.html">HarvestVein</a> vein )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnBadHarvestTarget( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> tool, <font color="blue">object</font> toHarvest )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnHarvestFinished( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> tool, <!-- DBG-0 --><a href="HarvestDefinition.html">HarvestDefinition</a> def, <!-- DBG-0 --><a href="HarvestVein.html">HarvestVein</a> vein, <!-- DBG-0 --><a href="HarvestBank.html">HarvestBank</a> bank, <!-- DBG-0 --><a href="HarvestResource.html">HarvestResource</a> resource, <font color="blue">object</font> harvested )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnHarvestStarted( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> tool, <!-- DBG-0 --><a href="HarvestDefinition.html">HarvestDefinition</a> def, <font color="blue">object</font> toHarvest )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SendSuccessTo( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Item.html">Item</a> item, <!-- DBG-0 --><a href="HarvestResource.html">HarvestResource</a> resource )<br>
+   </body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - ScriptCompiler</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.html">Back to Server</a></h4>
+      <h2>ScriptCompiler</h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="Compiler.html">Compiler</a></h4>
+      (<font color="blue">static</font>) Assembly[] Assemblies( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> AppendCompilerOption( <font color="blue">ref</font> StringBuilder sb, <font color="blue">string</font> define )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> Compile()<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> Compile( <font color="blue">bool</font> debug )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> Compile( <font color="blue">bool</font> debug, <font color="blue">bool</font> cache )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> CompileCSScripts( <font color="blue">out</font> Assembly assembly )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> CompileCSScripts( <font color="blue">bool</font> debug, <font color="blue">out</font> Assembly assembly )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> CompileCSScripts( <font color="blue">bool</font> debug, <font color="blue">bool</font> cache, <font color="blue">out</font> Assembly assembly )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> CompileVBScripts( <font color="blue">out</font> Assembly assembly )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> CompileVBScripts( <font color="blue">bool</font> debug, <font color="blue">out</font> Assembly assembly )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> CompileVBScripts( <font color="blue">bool</font> debug, <font color="blue">bool</font> cache, <font color="blue">out</font> Assembly assembly )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> DeleteFiles( <font color="blue">string</font> mask )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Display( CompilerResults results )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> EnsureDirectory( <font color="blue">string</font> dir )<br>
+      (<font color="blue">static</font>) Type FindTypeByFullName( <font color="blue">string</font> fullName )<br>
+      (<font color="blue">static</font>) Type FindTypeByFullName( <font color="blue">string</font> fullName, <font color="blue">bool</font> ignoreCase )<br>
+      (<font color="blue">static</font>) Type FindTypeByName( <font color="blue">string</font> name )<br>
+      (<font color="blue">static</font>) Type FindTypeByName( <font color="blue">string</font> name, <font color="blue">bool</font> ignoreCase )<br>
+      (<font color="blue">static</font>) <font color="blue">string</font> GetCompilerOptions( <font color="blue">bool</font> debug )<br>
+      (<font color="blue">static</font>) <font color="blue">byte</font>[] GetHashCode( <font color="blue">string</font> compiledFile, <font color="blue">string</font>[] scriptFiles, <font color="blue">bool</font> debug )<br>
+      (<font color="blue">static</font>) <font color="blue">string</font>[] GetReferenceAssemblies()<br>
+      (<font color="blue">static</font>) <font color="blue">string</font>[] GetScripts( <font color="blue">string</font> filter )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> GetScripts( <font color="blue">List</font>&lt;<font color="blue">String</font>&gt; list, <font color="blue">string</font> path, <font color="blue">string</font> filter )<br>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="TypeCache.html">TypeCache</a> GetTypeCache( Assembly asm )<br>
+      (<font color="blue">static</font>) <font color="blue">string</font> GetUnusedPath( <font color="blue">string</font> name )<br>
+      (<font color="blue">static</font>) <font color="blue">void</font> Invoke( <font color="blue">string</font> method )<br>
+   </body>
+</html>

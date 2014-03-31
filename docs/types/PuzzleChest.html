@@ -1,0 +1,31 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - PuzzleChest</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Items.html">Back to Server.Items</a></h4>
+      <h2>PuzzleChest : <!-- DBG-1 --><a href="BaseTreasureChest.html">BaseTreasureChest</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="ITelekinesisable.html">ITelekinesisable</a>, <!-- DBG-2.2 --><a href="ILockable.html">ILockable</a>, <!-- DBG-2.2 --><a href="ILockpickable.html">ILockpickable</a>, <!-- DBG-2.2 --><a href="ICraftable.html">ICraftable</a>, <!-- DBG-2.2 --><a href="IShipwreckedItem.html">IShipwreckedItem</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="MetalGoldenPuzzleChest.html">MetalGoldenPuzzleChest</a>, <!-- DBG-3 --><a href="StrongBoxPuzzle.html">StrongBoxPuzzle</a></h4>
+<h4>Nested Types: <!-- DBG-4 --><a href="PuzzleGump.html">PuzzleGump</a>, <!-- DBG-4 --><a href="StatusGump.html">StatusGump</a></h4>
+      (<font color="blue">static</font>) <font color="blue">void</font> GetRandomAOSStats( <font color="blue">out</font> <font color="blue">int</font> attributeCount, <font color="blue">out</font> <font color="blue">int</font> min, <font color="blue">out</font> <font color="blue">int</font> max )<br>
+      (<font color="blue">ctor</font>) PuzzleChest( <font color="blue">int</font> itemID )<br>
+      (<font color="blue">ctor</font>) PuzzleChest( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      <font color="blue">string</font> DefaultName( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="PuzzleChestCylinder.html">PuzzleChestCylinder</a> FirstHint( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="PuzzleChestCylinder.html">PuzzleChestCylinder</a>[] Hints( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="PuzzleChestCylinder.html">PuzzleChestCylinder</a> SecondHint( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="PuzzleChestSolution.html">PuzzleChestSolution</a> Solution( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="PuzzleChestCylinder.html">PuzzleChestCylinder</a> ThirdHint( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckLocked( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> CleanupGuesses()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">void</font> DoDamage( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> to )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GenerateTreasure()<br>
+      <!-- DBG-0 --><a href="PuzzleChestSolutionAndTime.html">PuzzleChestSolutionAndTime</a> GetLastGuess( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br>
+      <font color="blue">void</font> InitHints()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> LockPick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> SetLockLevel()<br>
+      <font color="blue">void</font> SubmitSolution( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m, <!-- DBG-0 --><a href="PuzzleChestSolution.html">PuzzleChestSolution</a> solution )<br>
+   </body>
+</html>

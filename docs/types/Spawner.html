@@ -1,0 +1,72 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - Spawner</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.Mobiles.html">Back to Server.Mobiles</a></h4>
+      <h2>Spawner : <!-- DBG-1 --><a href="Item.html">Item</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.1 --><font color="blue">IComparable</font>, <!-- DBG-2.1 --><font color="blue">IComparable</font>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="ISpawner.html">ISpawner</a></h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="ProximitySpawner.html">ProximitySpawner</a></h4>
+<h4>Nested Types: <!-- DBG-4 --><a href="InternalTimer.html">InternalTimer</a>, <!-- DBG-4 --><a href="WarnTimer.html">WarnTimer</a></h4>
+      (<font color="blue">static</font>) <!-- DBG-0 --><a href="ISpawnable.html">ISpawnable</a> Build( Type type, <font color="blue">string</font>[] args )<br>
+      (<font color="blue">static</font>) <font color="blue">bool</font> IsValidWater( <!-- DBG-0 --><a href="Map.html">Map</a> map, <font color="blue">int</font> x, <font color="blue">int</font> y, <font color="blue">int</font> z )<br>
+      (<font color="blue">static</font>) <font color="blue">string</font> ParseType( <font color="blue">string</font> s )<br>
+      (<font color="blue">ctor</font>) Spawner()<br>
+      (<font color="blue">ctor</font>) Spawner( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br>
+      (<font color="blue">ctor</font>) Spawner( <font color="blue">string</font> spawnName )<br>
+      (<font color="blue">ctor</font>) Spawner( <font color="blue">int</font> amount, TimeSpan minDelay, TimeSpan maxDelay, <font color="blue">int</font> team, <font color="blue">int</font> homeRange, <font color="blue">List</font>&lt;<font color="blue">String</font>&gt; spawnNames )<br>
+      (<font color="blue">ctor</font>) Spawner( <font color="blue">int</font> amount, <font color="blue">int</font> minDelay, <font color="blue">int</font> maxDelay, <font color="blue">int</font> team, <font color="blue">int</font> homeRange, <font color="blue">string</font> spawnName )<br>
+      (<font color="blue">ctor</font>) Spawner( <font color="blue">int</font> amount, TimeSpan minDelay, TimeSpan maxDelay, <font color="blue">int</font> team, <font color="blue">int</font> homeRange, <font color="blue">string</font> spawnName )<br>
+      <font color="blue">int</font> Count( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">string</font> DefaultName( <font color="blue">get</font>; )<br>
+      DateTime End( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Group( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="Point3D.html">Point3D</a> HomeLocation( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> HomeRange( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IgnoreHousing( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> IsEmpty( <font color="blue">get</font>; )<br>
+      <font color="blue">bool</font> IsFull( <font color="blue">get</font>; )<br>
+      TimeSpan MaxDelay( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      TimeSpan MinDelay( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> MobilesSeekHome( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      TimeSpan NextSpawn( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Running( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> Server.ISpawner.UnlinkOnTaming( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Rectangle2D.html">Rectangle2D</a> SpawnArea( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="ISpawnable.html">ISpawnable</a>&gt; Spawned( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<font color="blue">String</font>&gt; SpawnNames( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> SpawnNamesCount( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Team( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">bool</font> UsesSpawnerHome( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">int</font> WalkingRange( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <!-- DBG-0 --><a href="WayPoint.html">WayPoint</a> WayPoint( <font color="blue">get</font>; <font color="blue">set</font>; )<br>
+      <font color="blue">void</font> BringToHome()<br>
+      <font color="blue">virtual</font> <font color="blue">bool</font> CheckSpawnerFull()<br>
+      <font color="blue">int</font> CountCreatures( <font color="blue">string</font> creatureName )<br>
+      <font color="blue">virtual</font> <!-- DBG-0 --><a href="ISpawnable.html">ISpawnable</a> CreateSpawnedObject( <font color="blue">int</font> index )<br>
+      <font color="blue">void</font> Defrag()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br>
+      <font color="blue">void</font> DoTimer()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> DoTimer( TimeSpan delay )<br>
+      <font color="blue">int</font> GetAdjustedLocation( <font color="blue">int</font> range, <font color="blue">int</font> side, <font color="blue">int</font> coord, <font color="blue">int</font> coord_this )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> GetProperties( <!-- DBG-0 --><a href="ObjectPropertyList.html">ObjectPropertyList</a> list )<br>
+      <!-- DBG-0 --><a href="Point3D.html">Point3D</a> GetSpawnPosition()<br>
+      <!-- DBG-0 --><a href="Point3D.html">Point3D</a> GetSpawnPosition( <!-- DBG-0 --><a href="ISpawnable.html">ISpawnable</a> spawned )<br>
+      <font color="blue">void</font> InitSpawner( <font color="blue">int</font> amount, TimeSpan minDelay, TimeSpan maxDelay, <font color="blue">int</font> team, <font color="blue">int</font> homeRange, <font color="blue">List</font>&lt;<font color="blue">String</font>&gt; spawnNames )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnAfterDuped( <!-- DBG-0 --><a href="Item.html">Item</a> newItem )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDelete()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnDoubleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> OnSingleClick( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br>
+      <font color="blue">void</font> OnTick()<br>
+      <font color="blue">void</font> RemoveSpawned()<br>
+      <font color="blue">void</font> RemoveSpawned( <font color="blue">string</font> creatureName )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Respawn()<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Server.ISpawner.Remove( <!-- DBG-0 --><a href="ISpawnable.html">ISpawnable</a> spawn )<br>
+      <font color="blue">virtual</font> <font color="blue">void</font> Spawn()<br>
+      <font color="blue">void</font> Spawn( <font color="blue">string</font> creatureName )<br>
+      <font color="blue">void</font> Spawn( <font color="blue">int</font> index )<br>
+      <font color="blue">string</font> SpawnedStats()<br>
+      <font color="blue">void</font> Start()<br>
+      <font color="blue">void</font> Stop()<br>
+   </body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - Sector</title>
+   </head>
+   <body bgcolor="white" style="font-family: Courier New" text="#000000" link="#000000" vlink="#000000" alink="#808080">
+      <h4><a href="../namespaces/Server.html">Back to Server</a></h4>
+      <h2>Sector</h2>
+      (<font color="blue">ctor</font>) Sector( <font color="blue">int</font> x, <font color="blue">int</font> y, <!-- DBG-0 --><a href="Map.html">Map</a> owner )<br>
+      <font color="blue">bool</font> Active( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="NetState.html">NetState</a>&gt; Clients( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Item.html">Item</a>&gt; Items( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Mobile.html">Mobile</a>&gt; Mobiles( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="BaseMulti.html">BaseMulti</a>&gt; Multis( <font color="blue">get</font>; )<br>
+      <!-- DBG-0 --><a href="Map.html">Map</a> Owner( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="Mobile.html">Mobile</a>&gt; Players( <font color="blue">get</font>; )<br>
+      <font color="blue">List</font>&lt;<a href="RegionRect.html">RegionRect</a>&gt; RegionRects( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> X( <font color="blue">get</font>; )<br>
+      <font color="blue">int</font> Y( <font color="blue">get</font>; )<br>
+      <font color="blue">void</font> Activate()<br>
+      <font color="blue">void</font> Add( <font color="blue">ref</font> <font color="blue">List</font>&lt;<font color="blue">T</font>&gt; list, T value )<br>
+      <font color="blue">void</font> Deactivate()<br>
+      <font color="blue">void</font> OnClientChange( <!-- DBG-0 --><a href="NetState.html">NetState</a> oldState, <!-- DBG-0 --><a href="NetState.html">NetState</a> newState )<br>
+      <font color="blue">void</font> OnEnter( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      <font color="blue">void</font> OnEnter( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">void</font> OnEnter( <!-- DBG-0 --><a href="Region.html">Region</a> region, <!-- DBG-0 --><a href="Rectangle3D.html">Rectangle3D</a> rect )<br>
+      <font color="blue">void</font> OnLeave( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br>
+      <font color="blue">void</font> OnLeave( <!-- DBG-0 --><a href="Region.html">Region</a> region )<br>
+      <font color="blue">void</font> OnLeave( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> mob )<br>
+      <font color="blue">void</font> OnMultiEnter( <!-- DBG-0 --><a href="BaseMulti.html">BaseMulti</a> multi )<br>
+      <font color="blue">void</font> OnMultiLeave( <!-- DBG-0 --><a href="BaseMulti.html">BaseMulti</a> multi )<br>
+      <font color="blue">void</font> Remove( <font color="blue">ref</font> <font color="blue">List</font>&lt;<font color="blue">T</font>&gt; list, T value )<br>
+      <font color="blue">void</font> Replace( <font color="blue">ref</font> <font color="blue">List</font>&lt;<font color="blue">T</font>&gt; list, T oldValue, T newValue )<br>
+      <font color="blue">void</font> UpdateMobileRegions()<br>
+   </body>
+</html>
