@@ -31,29 +31,33 @@
         <h1>
 <a name="runuo" class="anchor" href="#runuo"><span class="octicon octicon-link"></span></a>runuo</h1>
 
-<p>RunUO Git Repository</p>
+<h2>
+<a name="runuo-git-repository" class="anchor" href="#runuo-git-repository"><span class="octicon octicon-link"></span></a>RunUO Git Repository</h2>
 
-<p>Typical Windows Build</p>
+<h4>
+<a name="typical-windows-build" class="anchor" href="#typical-windows-build"><span class="octicon octicon-link"></span></a>Typical Windows Build</h4>
 
 <pre><code>PS C:\runuo&gt; C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc /optimize /unsafe /t:exe /out:RunUO.exe /win32icon:Server\runuo.ico /recurse:Server\\*.cs
 </code></pre>
 
-<p>Typical Linux Build (MONO)</p>
+<h4>
+<a name="typical-linux-build-mono" class="anchor" href="#typical-linux-build-mono"><span class="octicon octicon-link"></span></a>Typical Linux Build (MONO)</h4>
 
 <pre><code>~/runuo$ dmcs -optimize+ -unsafe -t:exe -out:RunUO.exe -win32icon:Server/runuo.ico -nowarn:219,414 -d:MONO -recurse:Server/*.cs
 </code></pre>
 
-<p>zlib is required for certain functionality. Windows zlib builds are packaged with releases and can also be obtained separately here: <a href="https://github.com/msturgill/zlib/releases/latest">https://github.com/msturgill/zlib/releases/latest</a></p>
+<p>zlib is required for certain functionality. Windows zlib builds are packaged with releases and can also be obtained separately <a href="https://github.com/msturgill/zlib/releases/latest">here</a>. </p>
 
-<p>RunUO supports Intel's hardware random number generator (Secure Key, Bull Mountain, rdrand, etc). If rdrand32.dll/rdrand64.dll are present in the base directory and the hardware supports that functionality, it will be used automatically. You can find those libraries here: <a href="https://github.com/msturgill/rdrand/releases/latest">https://github.com/msturgill/rdrand/releases/latest</a></p>
+<p>RunUO supports Intel's hardware random number generator (Secure Key, Bull Mountain, rdrand, etc). If rdrand32.dll/rdrand64.dll are present in the base directory and the hardware supports that functionality, it will be used automatically. You can find those libraries <a href="https://github.com/msturgill/rdrand/releases/latest">here</a>.</p>
 
-<p>Class documentation can be found at <a href="http://run.uo.cx/docs/">http://run.uo.cx/docs/</a></p>
+<h4>
+<a name="additional-resources" class="anchor" href="#additional-resources"><span class="octicon octicon-link"></span></a>Additional Resources</h4>
 
-<p>Latest Razor builds can be found at <a href="https://github.com/msturgill/razor/releases/latest">https://github.com/msturgill/razor/releases/latest</a></p>
-
-<p>Latest UOSteam builds (previously AssistUO) can be found at <a href="http://uosteam.com">http://uosteam.com</a></p>
-
-<p>IRC: chat.freenode.net #runuo</p>
+<ul>
+<li><a href="http://run.uo.cx/docs/">Class Documentation</a></li>
+<li><a href="https://github.com/msturgill/razor/releases/latest">Razor</a></li>
+<li><a href="http://uosteam.com">UOSteam</a></li>
+</ul><p>IRC: chat.freenode.net #runuo</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/runuo">runuo</a></p>
