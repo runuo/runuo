@@ -34,14 +34,12 @@
 <h2>
 <a name="runuo-git-repository" class="anchor" href="#runuo-git-repository"><span class="octicon octicon-link"></span></a>RunUO Git Repository</h2>
 
-<h4>
-<a name="typical-windows-build" class="anchor" href="#typical-windows-build"><span class="octicon octicon-link"></span></a>Typical Windows Build</h4>
+<p><strong>Typical Windows Build</strong></p>
 
 <pre><code>PS C:\runuo&gt; C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc /optimize /unsafe /t:exe /out:RunUO.exe /win32icon:Server\runuo.ico /recurse:Server\\*.cs
 </code></pre>
 
-<h4>
-<a name="typical-linux-build-mono" class="anchor" href="#typical-linux-build-mono"><span class="octicon octicon-link"></span></a>Typical Linux Build (MONO)</h4>
+<p><strong>Typical Linux Build (MONO)</strong></p>
 
 <pre><code>~/runuo$ dmcs -optimize+ -unsafe -t:exe -out:RunUO.exe -win32icon:Server/runuo.ico -nowarn:219,414 -d:MONO -recurse:Server/*.cs
 </code></pre>
@@ -50,8 +48,7 @@
 
 <p>RunUO supports Intel's hardware random number generator (Secure Key, Bull Mountain, rdrand, etc). If rdrand32.dll/rdrand64.dll are present in the base directory and the hardware supports that functionality, it will be used automatically. You can find those libraries <a href="https://github.com/msturgill/rdrand/releases/latest">here</a>.</p>
 
-<h4>
-<a name="additional-resources" class="anchor" href="#additional-resources"><span class="octicon octicon-link"></span></a>Additional Resources</h4>
+<p><strong>Additional Resources</strong></p>
 
 <ul>
 <li><a href="http://run.uo.cx/docs/">Class Documentation</a></li>
