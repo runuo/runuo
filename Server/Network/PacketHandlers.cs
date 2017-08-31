@@ -376,6 +376,37 @@ namespace Server.Network
 
 					break;
 				}
+				case 3: // Update Gold
+				{
+					Serial serial = pvSrc.ReadInt32();
+
+					SecureTradeContainer cont = World.FindItem(serial) as SecureTradeContainer;
+
+					if (cont != null)
+					{
+						int gold = pvSrc.ReadInt32();
+						int plat = pvSrc.ReadInt32();
+
+						SecureTrade trade = cont.Trade;
+
+						if (trade != null)
+						{
+							if (trade.From.Mobile == state.Mobile)
+							{
+								trade.From.Gold = gold;
+								trade.From.Plat = plat;
+								trade.UpdateFromCurrency();
+							}
+							else if (trade.To.Mobile == state.Mobile)
+							{
+								trade.To.Gold = gold;
+								trade.To.Plat = plat;
+								trade.UpdateToCurrency();
+							}
+						}
+					}
+				}
+				break;
 			}
 		}
 
@@ -1214,6 +1245,33 @@ namespace Server.Network
 
 			foreach ( Gump gump in state.Gumps ) {
 				if ( gump.Serial == serial && gump.TypeID == typeID ) {
+					var buttonExists = buttonID == 0; // 0 is always 'close'
+
+					if (!buttonExists)
+					{
+						foreach (var e in gump.Entries)
+						{
+							if (e is GumpButton && ((GumpButton)e).ButtonID == buttonID)
+							{
+								buttonExists = true;
+								break;
+							}
+
+							if (e is GumpImageTileButton && ((GumpImageTileButton)e).ButtonID == buttonID)
+							{
+								buttonExists = true;
+								break;
+							}
+						}
+					}
+
+					if (!buttonExists)
+					{
+						state.WriteConsole("Invalid gump response, disconnecting...");
+						state.Dispose();
+						return;
+					}
+
 					int switchCount = pvSrc.ReadInt32();
 
 					if ( switchCount < 0 || switchCount > gump.m_Switches ) {
