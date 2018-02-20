@@ -143,7 +143,7 @@ namespace Server.Factions
 				if ( m_Bandage == null )
 					return TimeSpan.MaxValue;
 
-				TimeSpan ts = ( m_BandageStart + m_Bandage.Timer.Delay ) - DateTime.UtcNow;
+				TimeSpan ts = m_Bandage.Timer.Remaining;
 
 				if ( ts < TimeSpan.FromSeconds( -1.0 ) )
 				{

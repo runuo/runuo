@@ -1390,7 +1390,7 @@ namespace Server.Mobiles
 
 			protected override void OnTick()
 			{
-				m_Vendor.m_NextPayTime = DateTime.UtcNow + this.Interval;
+				m_Vendor.m_NextPayTime = DateTime.UtcNow + GetInterval();
 
 				int pay;
 				int totalGold;

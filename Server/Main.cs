@@ -38,7 +38,6 @@ namespace Server
 	public static class Core
 	{
 		private static bool m_Crashed;
-		private static Thread timerThread;
 		private static string m_BaseDirectory;
 		private static string m_ExePath;
 
@@ -374,8 +373,6 @@ namespace Server
 			if( !m_Crashed )
 				EventSink.InvokeShutdown( new ShutdownEventArgs() );
 
-			Timer.TimerThread.Set();
-
 			Console.WriteLine( "done" );
 		}
 
@@ -427,12 +424,6 @@ namespace Server
 
 			if( BaseDirectory.Length > 0 )
 				Directory.SetCurrentDirectory( BaseDirectory );
-
-			Timer.TimerThread ttObj = new Timer.TimerThread();
-			timerThread = new Thread(ttObj.TimerMain)
-			{
-				Name = "Timer Thread"
-			};
 
 			Version ver = m_Assembly.GetName().Version;
 
@@ -489,8 +480,6 @@ namespace Server
 			ScriptCompiler.Invoke( "Initialize" );
 
 			m_MessagePump = new MessagePump();
-
-			timerThread.Start();
 
 			foreach (Map m in Map.AllMaps)
 				m.Tiles.Force();

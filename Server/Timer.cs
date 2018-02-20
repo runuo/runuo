@@ -19,15 +19,13 @@
  ***************************************************************************/
 
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Threading;
-using System.Threading.Tasks;
-using Server.Diagnostics;
+using System.Diagnostics;
 
 namespace Server
 {
+	/* This no longer does anything. It remains here to maintain API
+	 * compatibility */
 	public enum TimerPriority
 	{
 		EveryTick,
@@ -46,14 +44,23 @@ namespace Server
 
 	public class Timer
 	{
-		private long m_Next;
-		private long m_Delay;
-		private long m_Interval;
-		private bool m_Running;
-		private int m_Index, m_Count;
-		private TimerPriority m_Priority;
-		private List<Timer> m_List;
-		private bool m_PrioritySet;
+		private long m_Expiration; /* The time at which this timer will next expire, in ticks */
+		private long m_Delay; /* Relative delay until first expiry, in ticks */
+		private long m_Interval; /* Relative delay between subsequent expiries, in ticks */
+		private bool m_Running; /* Whether the timer is currently scheduled */
+		private bool m_Reschedule; /* Whether to reschedule the timer when it expires */
+		private int m_Count; /* The number of times to reschedule the timer automatically */
+		private TimerPriority m_Priority; /* Priority is no longer used and only remains for API compatibility */
+
+		/* A pointer to the next timer in the current time wheel bin. Only
+		 * intended to be used by the HierarchicalTimeWheel */
+		private Timer m_Next;
+		/* The previous timer in the current bin */
+		private Timer m_Prev;
+		/* The current level in the time wheel */
+		private uint m_Level;
+		/* The current bin in the time wheel */
+		private uint m_Bin;
 
 		private static string FormatDelegate( Delegate callback )
 		{
@@ -63,333 +70,228 @@ namespace Server
 			return String.Format( "{0}.{1}", callback.Method.DeclaringType.FullName, callback.Method.Name );
 		}
 
+
+		#region static data
+
 		public static void DumpInfo( TextWriter tw )
 		{
-			TimerThread.DumpInfo( tw );
+			// TODO
 		}
+
+		private static HierarchicalTimeWheel m_TimeWheel = new HierarchicalTimeWheel();
+
+		public static void Slice()
+		{
+			m_TimeWheel.Expire();
+		}
+
+		#endregion
 
 		public TimerPriority Priority
 		{
+			/* Timers no longer have priority. To avoid removing the priority system,
+			 * just fake it.
+			 */
 			get
 			{
 				return m_Priority;
 			}
 			set
 			{
-				if ( !m_PrioritySet )
-					m_PrioritySet = true;
+				m_Priority = value;
+			}
+		}
 
-				if ( m_Priority != value )
-				{
-					m_Priority = value;
-
-					if ( m_Running )
-						TimerThread.PriorityChange( this, (int)m_Priority );
-				}
+		public TimeSpan Remaining
+		{
+			get
+			{
+				/* Convert timer ticks to milliseconds */
+				return TimeSpan.FromMilliseconds((m_Expiration - Core.Now) * Core.MILLISECONDS_PER_ENGINE_TICK);
 			}
 		}
 
 		public DateTime Next
 		{
-			// Obnoxious
-			get { return DateTime.UtcNow + TimeSpan.FromMilliseconds(m_Next-Core.TickCount); }
+			get { return DateTime.UtcNow + Remaining; }
 		}
 
 		public TimeSpan Delay
 		{
-			get { return TimeSpan.FromMilliseconds(m_Delay); }
-			set { m_Delay = (long)value.TotalMilliseconds; }
+			set
+			{
+				long ms = (long)value.TotalMilliseconds;
+
+				if (ms > 0 && ms < Core.MILLISECONDS_PER_ENGINE_TICK)
+				{
+					Console.WriteLine("Attempted to set a timer for less than a single engine tick.");
+					ms = (long)Core.MILLISECONDS_PER_ENGINE_TICK;
+				}
+
+				m_Delay = (ms * Core.HW_TICKS_PER_MILLISECOND) >> Core.HW_TICKS_PER_ENGINE_TICK_POW_2;
+			}
 		}
 
 		public TimeSpan Interval
 		{
-			get { return TimeSpan.FromMilliseconds(m_Interval); }
-			set { m_Interval = (long)value.TotalMilliseconds; }
+			set
+			{
+				long ms = (long)value.TotalMilliseconds;
+
+				if (ms > 0 && ms < Core.MILLISECONDS_PER_ENGINE_TICK)
+				{
+					Console.WriteLine("Attempted to set a timer for less than a single engine tick.");
+					ms = (long)Core.MILLISECONDS_PER_ENGINE_TICK;
+				}
+
+				m_Interval = (ms * Core.HW_TICKS_PER_MILLISECOND) >> Core.HW_TICKS_PER_ENGINE_TICK_POW_2;
+			}
 		}
 
 		public bool Running
 		{
 			get { return m_Running; }
-			set {
-				if ( value ) {
-					Start();
-				} else {
-					Stop();
-				}
-			}
 		}
 
-		public TimerProfile GetProfile()
+		public class HierarchicalTimeWheel
 		{
-			if ( !Core.Profiling ) {
-				return null;
-			}
+			/* The size of the wheel, as a power of two.
+			 * 7 is chosen because it results in 8 levels of 128,
+			 * which is exactly enough to handle any 32 bit
+			 * integer. */
+			private const int WHEEL_SIZE_POW_TWO = 7;
+			private const uint NUM_LEVELS = 8;
 
-			string name = ToString();
+			/* The size of the wheel as an integer. Don't modify
+			 * this value. Modify the power of two value instead.
+			 */
+			private const uint WHEEL_SIZE = 1 << WHEEL_SIZE_POW_TWO;
 
-			if ( name == null ) {
-				name = "null";
-			}
+			private Timer[,] m_Wheels;
+			private uint[] m_WheelPosition;
 
-			return TimerProfile.Acquire( name );
-		}
-
-		public class TimerThread
-		{
-			private static Dictionary<Timer,TimerChangeEntry> m_Changed = new Dictionary<Timer,TimerChangeEntry>();
-
-			private static long[] m_NextPriorities = new long[8];
-			private static long[] m_PriorityDelays = new long[8]
+			public HierarchicalTimeWheel()
 			{
-				0,
-				10,
-				25,
-				50,
-				250,
-				1000,
-				5000,
-				60000
-			};
+				m_Wheels = new Timer[NUM_LEVELS, WHEEL_SIZE];
+				m_WheelPosition = new uint[NUM_LEVELS];
 
-			private static List<Timer>[] m_Timers = new List<Timer>[8]
-			{
-				new List<Timer>(),
-				new List<Timer>(),
-				new List<Timer>(),
-				new List<Timer>(),
-				new List<Timer>(),
-				new List<Timer>(),
-				new List<Timer>(),
-				new List<Timer>(),
-			};
-
-			public static void DumpInfo( TextWriter tw )
-			{
-				for ( int i = 0; i < 8; ++i )
+				for (int i = 0; i < NUM_LEVELS; i++)
 				{
-					tw.WriteLine( "Priority: {0}", (TimerPriority)i );
-					tw.WriteLine();
+					m_WheelPosition[i] = WHEEL_SIZE - 1;
+				}
+			}
 
-					Dictionary<string, List<Timer>> hash = new Dictionary<string, List<Timer>>();
+			public void Insert(Timer t)
+			{
+				/* Determine the time left until expiry */
+				if (Core.Now > t.m_Expiration)
+				{
+					/* The timer is already expired */
+					t.Expire();
+					return;
+				}
 
-					for ( int j = 0; j < m_Timers[i].Count; ++j )
+				var delta = t.m_Expiration - Core.Now;
+
+				/* Determine which level and bin to place the timer in */
+				for (uint level = 0; level < NUM_LEVELS; level++)
+				{
+					if ((delta & ~(WHEEL_SIZE - 1)) == 0)
 					{
-						Timer t = m_Timers[i][j];
+						/* This is the appropriate level for the wheel */
+						uint bin = (uint)delta;
 
-						string key = t.ToString();
+						/* Account for the wheel being circular */
+						bin = (m_WheelPosition[level] + bin) % WHEEL_SIZE;
 
-						List<Timer> list;
-						hash.TryGetValue( key, out list );
-
-						if ( list == null )
-							hash[key] = list = new List<Timer>();
-
-						list.Add( t );
-					}
-
-					foreach ( KeyValuePair<string, List<Timer>> kv in hash )
-					{
-						string key = kv.Key;
-						List<Timer> list = kv.Value;
-
-						tw.WriteLine( "Type: {0}; Count: {1}; Percent: {2}%", key, list.Count, (int)(100 * (list.Count / (double)m_Timers[i].Count)) );
-					}
-
-					tw.WriteLine();
-					tw.WriteLine();
-				}
-			}
-
-			private class TimerChangeEntry
-			{
-				public Timer m_Timer;
-				public int m_NewIndex;
-				public bool m_IsAdd;
-
-				private TimerChangeEntry( Timer t, int newIndex, bool isAdd )
-				{
-					m_Timer = t;
-					m_NewIndex = newIndex;
-					m_IsAdd = isAdd;
-				}
-
-				public void Free()
-				{
-					lock (m_InstancePool) {
-						if (m_InstancePool.Count < 200) // Arbitrary
-							m_InstancePool.Enqueue( this );
-					}
-				}
-
-				private static Queue<TimerChangeEntry> m_InstancePool = new Queue<TimerChangeEntry>();
-
-				public static TimerChangeEntry GetInstance( Timer t, int newIndex, bool isAdd )
-				{
-					TimerChangeEntry e = null;
-
-					lock (m_InstancePool) {
-						if ( m_InstancePool.Count > 0 ) {
-							e = m_InstancePool.Dequeue();
-						}
-					}
-
-					if (e != null) {
-						e.m_Timer = t;
-						e.m_NewIndex = newIndex;
-						e.m_IsAdd = isAdd;
-					} else {
-						e = new TimerChangeEntry( t, newIndex, isAdd );
-					}
-
-					return e;
-				}
-			}
-
-			public TimerThread()
-			{
-			}
-
-			public static void Change( Timer t, int newIndex, bool isAdd )
-			{
-				lock (m_Changed)
-					m_Changed[t] = TimerChangeEntry.GetInstance(t, newIndex, isAdd);
-				m_Signal.Set();
-			}
-
-			public static void AddTimer( Timer t )
-			{
-				Change( t, (int)t.Priority, true );
-			}
-
-			public static void PriorityChange( Timer t, int newPrio )
-			{
-				Change( t, newPrio, false );
-			}
-
-			public static void RemoveTimer( Timer t )
-			{
-				Change( t, -1, false );
-			}
-
-			private static void ProcessChanged()
-			{
-				lock (m_Changed) {
-					long curTicks = Core.TickCount;
-
-					foreach (TimerChangeEntry tce in m_Changed.Values) {
-						Timer timer = tce.m_Timer;
-						int newIndex = tce.m_NewIndex;
-
-						if (timer.m_List != null)
-							timer.m_List.Remove(timer);
-
-						if (tce.m_IsAdd) {
-							timer.m_Next = curTicks + timer.m_Delay;
-							timer.m_Index = 0;
-						}
-
-						if (newIndex >= 0) {
-							timer.m_List = m_Timers[newIndex];
-							timer.m_List.Add(timer);
-						} else {
-							timer.m_List = null;
-						}
-
-						tce.Free();
-					}
-
-					m_Changed.Clear();
-				}
-			}
-
-			private static AutoResetEvent m_Signal = new AutoResetEvent( false );
-			public static void Set() { m_Signal.Set(); }
-
-			public void TimerMain()
-			{
-				long now;
-				int i, j;
-
-				while ( !Core.Closing )
-				{
-					if (World.Loading || World.Saving)
-					{
-						m_Signal.WaitOne(1, false);
-						continue;
-					}
-
-					ProcessChanged();
-
-					for ( i = 0; i < m_Timers.Length; i++)
-					{
-						now = Core.TickCount;
-						if ( now < m_NextPriorities[i] )
-							break;
-
-						m_NextPriorities[i] = now + m_PriorityDelays[i];
-
-						for ( j = 0; j < m_Timers[i].Count; j++)
+						/* Insert the timer */
+						t.m_Prev = null;
+						t.m_Next = m_Wheels[level, bin];
+						t.m_Level = level;
+						t.m_Bin = bin;
+						if (m_Wheels[level, bin] != null)
 						{
-							Timer t = m_Timers[i][j];
-
-							if ( !t.m_Queued && now > t.m_Next )
-							{
-								t.m_Queued = true;
-
-								lock ( m_Queue )
-									m_Queue.Enqueue( t );
-									
-								if ( t.m_Count != 0 && (++t.m_Index >= t.m_Count) )
-								{
-									t.Stop();
-								}
-								else
-								{
-									t.m_Next = now + t.m_Interval;
-								}
-							}
+							m_Wheels[level, bin].m_Prev = t;
 						}
+						m_Wheels[level, bin] = t;
+						break;
+
 					}
 
-					m_Signal.WaitOne(1, false);
+					delta >>= WHEEL_SIZE_POW_TWO;
 				}
 			}
-		}
 
-		private static Queue<Timer> m_Queue = new Queue<Timer>();
-		private static int m_BreakCount = 20000;
-
-		public static int BreakCount{ get{ return m_BreakCount; } set{ m_BreakCount = value; } }
-
-		private static int m_QueueCountAtSlice;
-
-		private bool m_Queued;
-
-		public static void Slice()
-		{
-			lock ( m_Queue )
+			public void Remove(Timer t)
 			{
-				m_QueueCountAtSlice = m_Queue.Count;
-
-				int index = 0;
-
-				while ( index < m_BreakCount && m_Queue.Count != 0 )
+				if (m_Wheels[t.m_Level, t.m_Bin] == t)
 				{
-					Timer t = m_Queue.Dequeue();
-					TimerProfile prof = t.GetProfile();
-
-					if ( prof != null ) {
-						prof.Start();
-					}
-
-					t.OnTick();
-					t.m_Queued = false;
-					++index;
-
-					if ( prof != null ) {
-						prof.Finish();
+					m_Wheels[t.m_Level, t.m_Bin] = t.m_Next;
+					if (m_Wheels[t.m_Level, t.m_Bin] != null)
+					{
+						m_Wheels[t.m_Level, t.m_Bin].m_Prev = null;
 					}
 				}
+
+				if (t.m_Next != null)
+				{
+					t.m_Next.m_Prev = t.m_Prev;
+				}
+
+				if (t.m_Prev != null)
+				{
+					t.m_Prev.m_Next = t.m_Next;
+				}
+			}
+
+			public void AdvanceLevel(int level)
+			{
+				if (level == NUM_LEVELS)
+				{
+					return;
+				}
+
+				m_WheelPosition[level] = (m_WheelPosition[level] + 1) % WHEEL_SIZE;
+
+				/* Pull all timers from the current bin and re-insert them
+				 * into the level below */
+				var t = m_Wheels[level, m_WheelPosition[level]];
+				m_Wheels[level, m_WheelPosition[level]] = null;
+				while (t != null)
+				{
+					var next = t.m_Next;
+					Insert(t);
+					t = next;
+				}
+
+				if (m_WheelPosition[level] == (WHEEL_SIZE - 1))
+				{
+					/* Recursively transfer timers down a level */
+					AdvanceLevel(level + 1);
+				}
+			}
+
+			public void Expire()
+			{
+				/* Advance the current position by one */
+				m_WheelPosition[0] = (m_WheelPosition[0] + 1) % WHEEL_SIZE;
+
+				/* Expire all timers in this bin */
+				var t = m_Wheels[0, m_WheelPosition[0]];
+				m_Wheels[0, m_WheelPosition[0]] = null;
+				while (t != null)
+				{
+					var next = t.m_Next;
+					t.Expire();
+					t = next;
+				}
+
+				if (m_WheelPosition[0] == (WHEEL_SIZE - 1))
+				{
+					/* Recursively transfer timers from the given level to this one */
+					AdvanceLevel(1);
+				}
+
 			}
 		}
 
@@ -401,37 +303,27 @@ namespace Server
 		{
 		}
 
-		public virtual bool DefRegCreation
+		public Timer( TimeSpan delay, TimeSpan interval, int count ) : this((uint)delay.TotalMilliseconds, (uint)interval.TotalMilliseconds, count)
 		{
-			get{ return true; }
 		}
 
-		public void RegCreation()
+		/* Note that this is specifically a 32 bit unsigned integer and the
+		 * units are in milliseconds. This allows for delays up to
+		 * 49.7 days. */
+		public Timer(uint DelayInMs, uint IntervalInMs, int count)
 		{
-			TimerProfile prof = GetProfile();
-
-			if ( prof != null ) {
-				prof.Created++;
-			}
-		}
-
-		public Timer( TimeSpan delay, TimeSpan interval, int count )
-		{
-			m_Delay = (long)delay.TotalMilliseconds;
-			m_Interval = (long)interval.TotalMilliseconds;
+			m_Delay = (DelayInMs * Core.HW_TICKS_PER_MILLISECOND) >> Core.HW_TICKS_PER_ENGINE_TICK_POW_2;
+			m_Interval = (IntervalInMs * Core.HW_TICKS_PER_MILLISECOND) >> Core.HW_TICKS_PER_ENGINE_TICK_POW_2;
 			m_Count = count;
+			m_Running = false;
 
-			if ( !m_PrioritySet ) {
-				if ( count == 1 ) {
-					m_Priority = ComputePriority( delay );
-				} else {
-					m_Priority = ComputePriority( interval );
-				}
-				m_PrioritySet = true;
+			if (IntervalInMs > 0)
+			{
+				m_Reschedule = true;
+			} else
+			{
+				m_Reschedule = false;
 			}
-
-			if ( DefRegCreation )
-				RegCreation();
 		}
 
 		public override string ToString()
@@ -439,27 +331,33 @@ namespace Server
 			return GetType().FullName;
 		}
 
-		public static TimerPriority ComputePriority( TimeSpan ts )
+		private void Expire()
 		{
-			if ( ts >= TimeSpan.FromMinutes( 1.0 ) )
-				return TimerPriority.FiveSeconds;
+			m_Running = false;
+			OnTick();
 
-			if ( ts >= TimeSpan.FromSeconds( 10.0 ) )
-				return TimerPriority.OneSecond;
+			if (m_Reschedule)
+			{
+				/* If count is 0, reschedule indefinitely */
+				if (m_Count == 0)
+				{
+					m_Delay = m_Interval;
+					Start();
+					return;
+				}
 
-			if ( ts >= TimeSpan.FromSeconds( 5.0 ) )
-				return TimerPriority.TwoFiftyMS;
+				/* Otherwise, decrement count and reschedule */
+				m_Count--;
+				m_Delay = m_Interval;
 
-			if ( ts >= TimeSpan.FromSeconds( 2.5 ) )
-				return TimerPriority.FiftyMS;
+				/* If this is the last reschedule, mark to not reschedule again*/
+				if (m_Count == 1)
+				{
+					m_Reschedule = false;
+				}
 
-			if ( ts >= TimeSpan.FromSeconds( 1.0 ) )
-				return TimerPriority.TwentyFiveMS;
-
-			if ( ts >= TimeSpan.FromSeconds( 0.5 ) )
-				return TimerPriority.TenMS;
-
-			return TimerPriority.EveryTick;
+				Start();
+			}
 		}
 
 		#region DelayCall(..)
@@ -482,11 +380,6 @@ namespace Server
 		public static Timer DelayCall( TimeSpan delay, TimeSpan interval, int count, TimerCallback callback )
 		{
 			Timer t = new DelayCallTimer( delay, interval, count, callback );
-
-			if ( count == 1 )
-				t.Priority = ComputePriority( delay );
-			else
-				t.Priority = ComputePriority( interval );
 
 			t.Start();
 
@@ -511,11 +404,6 @@ namespace Server
 		public static Timer DelayCall( TimeSpan delay, TimeSpan interval, int count, TimerStateCallback callback, object state )
 		{
 			Timer t = new DelayStateCallTimer( delay, interval, count, callback, state );
-
-			if ( count == 1 )
-				t.Priority = ComputePriority( delay );
-			else
-				t.Priority = ComputePriority( interval );
 
 			t.Start();
 
@@ -543,11 +431,6 @@ namespace Server
 		{
 			Timer t = new DelayStateCallTimer<T>( delay, interval, count, callback, state );
 
-			if( count == 1 )
-				t.Priority = ComputePriority( delay );
-			else
-				t.Priority = ComputePriority( interval );
-
 			t.Start();
 
 			return t;
@@ -561,12 +444,9 @@ namespace Server
 
 			public TimerCallback Callback{ get{ return m_Callback; } }
 
-			public override bool DefRegCreation{ get{ return false; } }
-
 			public DelayCallTimer( TimeSpan delay, TimeSpan interval, int count, TimerCallback callback ) : base( delay, interval, count )
 			{
 				m_Callback = callback;
-				RegCreation();
 			}
 
 			protected override void OnTick()
@@ -588,14 +468,10 @@ namespace Server
 
 			public TimerStateCallback Callback{ get{ return m_Callback; } }
 
-			public override bool DefRegCreation{ get{ return false; } }
-
 			public DelayStateCallTimer( TimeSpan delay, TimeSpan interval, int count, TimerStateCallback callback, object state ) : base( delay, interval, count )
 			{
 				m_Callback = callback;
 				m_State = state;
-
-				RegCreation();
 			}
 
 			protected override void OnTick()
@@ -617,20 +493,16 @@ namespace Server
 
 			public TimerStateCallback<T> Callback { get { return m_Callback; } }
 
-			public override bool DefRegCreation { get { return false; } }
-
 			public DelayStateCallTimer( TimeSpan delay, TimeSpan interval, int count, TimerStateCallback<T> callback, T state )
 				: base( delay, interval, count )
 			{
 				m_Callback = callback;
 				m_State = state;
-
-				RegCreation();
 			}
 
 			protected override void OnTick()
 			{
-				if( m_Callback != null )
+				if ( m_Callback != null )
 					m_Callback( m_State );
 			}
 
@@ -643,36 +515,37 @@ namespace Server
 
 		public void Start()
 		{
-			if ( !m_Running )
+			if (m_Running == true)
 			{
-				m_Running = true;
-				TimerThread.AddTimer( this );
-
-				TimerProfile prof = GetProfile();
-
-				if ( prof != null ) {
-					prof.Started++;
-				}
+				return;
+			}
+			m_Running = true;
+			m_Expiration = Core.Now + m_Delay;
+			if (m_Delay > 0)
+			{
+				m_TimeWheel.Insert(this);
+			}
+			else
+			{
+				Expire();
 			}
 		}
 
 		public void Stop()
 		{
-			if ( m_Running )
+			if (m_Running)
 			{
+				m_TimeWheel.Remove(this);
+				m_Expiration = 0;
 				m_Running = false;
-				TimerThread.RemoveTimer( this );
-
-				TimerProfile prof = GetProfile();
-
-				if ( prof != null ) {
-					prof.Stopped++;
-				}
 			}
+			m_Reschedule = false;
 		}
 
+		/* Override this method in a subclass */
 		protected virtual void OnTick()
 		{
 		}
+
 	}
 }

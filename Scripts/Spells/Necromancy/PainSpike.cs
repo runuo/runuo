@@ -64,9 +64,10 @@ namespace Server.Spells.Necromancy
 
 					if( t != null )
 					{
-						t.Delay += TimeSpan.FromSeconds( 2.0 );
-
-						buffTime = t.Next - DateTime.UtcNow;
+						t.Stop();
+						t.Delay = t.Remaining + TimeSpan.FromSeconds( 2.0 );
+						t.Start();
+						buffTime = t.Remaining;
 					}
 				}
 				else
