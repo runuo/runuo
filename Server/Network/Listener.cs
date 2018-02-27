@@ -233,8 +233,6 @@ namespace Server.Network
 			lock ( m_AcceptedSyncRoot ) {
 				m_Accepted.Enqueue( socket );
 			}
-
-			Core.Set();
 		}
 
 		private void Release( Socket socket ) {

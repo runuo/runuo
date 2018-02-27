@@ -107,6 +107,37 @@ namespace Server
 		public static Thread Thread { get { return m_Thread; } }
 		public static MultiTextWriter MultiConsoleOut { get { return m_MultiConOut; } }
 
+		/* In this game engine, time is divided into fixed-size, discrete intervals often called
+		 * 'ticks'. A tick constitutes one loop through the main engine loop (see the Run()
+		 * function). Below, define a target for how long a game engine tick should be in milliseconds.
+		 * A server running at 40Hz, for instance, has 25ms ticks. This is just a request - the actual
+		 * number will be a power of two in hardware ticks. */
+		private static readonly int REQUESTED_MILLISECONDS_PER_TICK = 25;
+
+		/* Hardware provides time in units also called ticks, but these ticks are different for each
+		 * system. Calculate the number of hardware ticks in a millisecond. */
+		public static readonly long HW_TICKS_PER_MILLISECOND = Stopwatch.Frequency / 1000;
+
+		/* Figure out how many hardware ticks are in the requested game engine tick size, then round
+		 * to the nearest power of two less than that value. This will be the smallest resolution of
+		 * time kept in the game engine. A power of two is used because this value is often used
+		 * as a divisor in other calculations. Dividing in general is slow, but dividing by a power
+		 * of two is fast. */
+		public static readonly int HW_TICKS_PER_ENGINE_TICK_POW_2 = (int)Math.Log(REQUESTED_MILLISECONDS_PER_TICK * HW_TICKS_PER_MILLISECOND, 2);
+		public static readonly long HW_TICKS_PER_ENGINE_TICK = 1 << HW_TICKS_PER_ENGINE_TICK_POW_2;
+
+		/* Calculate the actual number of milliseconds per game engine tick, after rounding the hardware
+		 * ticks to the nearest power of two. */
+		public static readonly double MILLISECONDS_PER_ENGINE_TICK = (double)HW_TICKS_PER_ENGINE_TICK / HW_TICKS_PER_MILLISECOND;
+
+		/* Cached value of the current time, in units of timer ticks.
+		 * This value is updated each time the main game engine loops around. */
+		private static long m_Now = Stopwatch.GetTimestamp() >> HW_TICKS_PER_ENGINE_TICK_POW_2;
+
+		/* Return the number of game engine ticks elapsed since the last
+		 * system reboot. */
+		public static long Now { get { return m_Now; } }
+
 		private static readonly double _MillisecondsPerTick = 1000.0 / Stopwatch.Frequency;
 
 		public static long TickCount { get { return (long)(Stopwatch.GetTimestamp() * _MillisecondsPerTick); } }
@@ -316,13 +347,6 @@ namespace Server
 		private static bool m_Closing;
 		public static bool Closing { get { return m_Closing; } }
 
-		private static int m_CycleIndex = 1;
-		private static readonly float[] m_CyclesPerSecond = new float[100];
-
-		public static float CyclesPerSecond { get { return m_CyclesPerSecond[(m_CycleIndex - 1) % m_CyclesPerSecond.Length]; } }
-
-		public static float AverageCPS { get { return m_CyclesPerSecond.Take(m_CycleIndex).Average(); } }
-
 		public static void Kill()
 		{
 			Kill( false );
@@ -356,10 +380,6 @@ namespace Server
 
 			Console.WriteLine( "done" );
 		}
-
-		private static readonly AutoResetEvent m_Signal = new AutoResetEvent( true );
-
-		public static void Set() { m_Signal.Set(); }
 
 		public static void Main( string[] args )
 		{
@@ -470,7 +490,7 @@ namespace Server
 
 			ScriptCompiler.Invoke( "Initialize" );
 
-			MessagePump messagePump = m_MessagePump = new MessagePump();
+			m_MessagePump = new MessagePump();
 
 			timerThread.Start();
 
@@ -481,44 +501,60 @@ namespace Server
 
 			EventSink.InvokeServerStarted();
 
+			Run();
+		}
+
+		private static void Run()
+		{
 			try
 			{
-				long now, last = TickCount;
+				long last = Now;
+				long next;
 
-				const int sampleInterval = 100;
-				const float ticksPerSecond = 1000.0f * sampleInterval;
-
-				long sample = 0;
-
-				while( !m_Closing )
+				while (!m_Closing)
 				{
-					m_Signal.WaitOne();
+					/* First, get the current time */
+					next = Stopwatch.GetTimestamp() >> HW_TICKS_PER_ENGINE_TICK_POW_2;
 
-					Mobile.ProcessDeltaQueue();
-					Item.ProcessDeltaQueue();
-
-					Timer.Slice();
-					messagePump.Slice();
-
-					NetState.FlushAll();
-					NetState.ProcessDisposedQueue();
-
-					if( Slice != null )
-						Slice();
-
-					if (sample++ % sampleInterval != 0)
+					/* Figure out how many ticks should have occurred between the last time through
+					 * the loop and now. The goal is to execute the loop only once every
+					 * MILLISECONDS_PER_ENGINE_TICK. */
+					if (next == last)
 					{
+						/* The loop is currently running fast. Sleep a little while */
+						Thread.Sleep((int)MILLISECONDS_PER_ENGINE_TICK / 2);
 						continue;
 					}
 
-					now = TickCount;
-					m_CyclesPerSecond[m_CycleIndex++ % m_CyclesPerSecond.Length] = ticksPerSecond / (now - last);
-					last = now;
+					if (next > (last + 2))
+					{
+						/* If more than two ticks occurred since we last got here, the server is falling behind. */
+						Console.WriteLine("Game Engine Unable to Keep up with Tick Rate");
+					}
+
+					last = next;
+
+					while (Now < next)
+					{
+						/* Advance the current time by 1 tick */
+						m_Now++;
+
+						Mobile.ProcessDeltaQueue();
+						Item.ProcessDeltaQueue();
+
+						Timer.Slice();
+						m_MessagePump.Slice();
+
+						NetState.FlushAll();
+						NetState.ProcessDisposedQueue();
+
+						Slice?.Invoke();
+					}
 				}
 			}
-			catch( Exception e )
+			catch (Exception e)
 			{
-				CurrentDomain_UnhandledException( null, new UnhandledExceptionEventArgs( e, true ) );
+				CurrentDomain_UnhandledException(null, new UnhandledExceptionEventArgs(e, true));
 			}
 		}
 

@@ -309,7 +309,6 @@ namespace Server
 			{
 				long now;
 				int i, j;
-				bool loaded;
 
 				while ( !Core.Closing )
 				{
@@ -320,8 +319,6 @@ namespace Server
 					}
 
 					ProcessChanged();
-
-					loaded = false;
 
 					for ( i = 0; i < m_Timers.Length; i++)
 					{
@@ -341,8 +338,6 @@ namespace Server
 
 								lock ( m_Queue )
 									m_Queue.Enqueue( t );
-
-								loaded = true;
 									
 								if ( t.m_Count != 0 && (++t.m_Index >= t.m_Count) )
 								{
@@ -355,9 +350,6 @@ namespace Server
 							}
 						}
 					}
-
-					if ( loaded )
-						Core.Set();
 
 					m_Signal.WaitOne(1, false);
 				}

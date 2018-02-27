@@ -9971,8 +9971,6 @@ namespace Server
 					m_DeltaQueue.Enqueue( this );
 				}
 			}
-
-			Core.Set();
 		}
 
 		private bool m_NoMoveHS;

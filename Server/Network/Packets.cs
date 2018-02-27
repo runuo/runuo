@@ -4639,8 +4639,6 @@ namespace Server.Network
 
 		public void OnSend()
 		{
-			Core.Set();
-
 			lock (this) {
 				if ((m_State & (State.Acquired | State.Static)) == 0)
 					Free();
