@@ -138,9 +138,7 @@ namespace Server
 		 * system reboot. */
 		public static long Now { get { return m_Now; } }
 
-		private static readonly double _MillisecondsPerTick = 1000.0 / Stopwatch.Frequency;
-
-		public static long TickCount { get { return (long)(Stopwatch.GetTimestamp() * _MillisecondsPerTick); } }
+		public static long TickCount { get { return (long)(Now * MILLISECONDS_PER_ENGINE_TICK); } }
 
 		public static readonly bool Is64Bit = Environment.Is64BitProcess;
 
