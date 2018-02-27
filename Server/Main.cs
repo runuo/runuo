@@ -107,40 +107,9 @@ namespace Server
 		public static Thread Thread { get { return m_Thread; } }
 		public static MultiTextWriter MultiConsoleOut { get { return m_MultiConOut; } }
 
-		/* 
-		 * DateTime.Now and DateTime.UtcNow are based on actual system clock time.
-		 * The resolution is acceptable but large clock jumps are possible and cause issues.
-		 * GetTickCount and GetTickCount64 have poor resolution.
-		 * GetTickCount64 is unavailable on Windows XP and Windows Server 2003.
-		 * Stopwatch.GetTimestamp() (QueryPerformanceCounter) is high resolution, but
-		 * somewhat expensive to call because of its defference to DateTime.Now,
-		 * which is why Stopwatch has been used to verify HRT before calling GetTimestamp(),
-		 * enabling the usage of DateTime.UtcNow instead.
-		 */
+		private static readonly double _MillisecondsPerTick = 1000.0 / Stopwatch.Frequency;
 
-		private static readonly bool _HighRes = Stopwatch.IsHighResolution;
-
-		private static readonly double _HighFrequency = 1000.0 / Stopwatch.Frequency;
-		private static readonly double _LowFrequency = 1000.0 / TimeSpan.TicksPerSecond;
-
-		private static bool _UseHRT;
-
-		public static bool UsingHighResolutionTiming { get { return _UseHRT && _HighRes && !Unix; } }
-
-		public static long TickCount { get { return (long)Ticks; } }
-
-		public static double Ticks
-		{
-			get
-			{
-				if (_UseHRT && _HighRes && !Unix)
-				{
-					return Stopwatch.GetTimestamp() * _HighFrequency;
-				}
-
-				return DateTime.UtcNow.Ticks * _LowFrequency;
-			}
-		}
+		public static long TickCount { get { return (long)(Stopwatch.GetTimestamp() * _MillisecondsPerTick); } }
 
 		public static readonly bool Is64Bit = Environment.Is64BitProcess;
 
@@ -411,8 +380,6 @@ namespace Server
 					m_HaltOnWarning = true;
 				else if ( Insensitive.Equals( a, "-vb" ) )
 					m_VBdotNET = true;
-				else if ( Insensitive.Equals( a, "-usehrt" ) )
-					_UseHRT = true;
 			}
 
 			try
@@ -480,9 +447,6 @@ namespace Server
 
 			if ( GCSettings.IsServerGC )
 				Console.WriteLine("Core: Server garbage collection mode enabled");
-
-			if (_UseHRT)
-				Console.WriteLine("Core: Requested high resolution timing ({0})", UsingHighResolutionTiming ? "Supported" : "Unsupported");
 
 			Console.WriteLine("RandomImpl: {0} ({1})", RandomImpl.Type.Name, RandomImpl.IsHardwareRNG ? "Hardware" : "Software");
 
@@ -581,9 +545,6 @@ namespace Server
 
 				if ( m_VBdotNET )
 					Utility.Separate( sb, "-vb", " " );
-
-				if ( _UseHRT )
-					Utility.Separate( sb, "-usehrt", " " );
 
 				return sb.ToString();
 			}
