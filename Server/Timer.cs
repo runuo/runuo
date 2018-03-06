@@ -20,6 +20,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
@@ -339,8 +340,7 @@ namespace Server
 							{
 								t.m_Queued = true;
 
-								lock ( m_Queue )
-									m_Queue.Enqueue( t );
+								m_Queue.Enqueue( t );
 
 								loaded = true;
 									
@@ -364,39 +364,34 @@ namespace Server
 			}
 		}
 
-		private static Queue<Timer> m_Queue = new Queue<Timer>();
+		private static ConcurrentQueue<Timer> m_Queue = new ConcurrentQueue<Timer>();
 		private static int m_BreakCount = 20000;
 
 		public static int BreakCount{ get{ return m_BreakCount; } set{ m_BreakCount = value; } }
-
-		private static int m_QueueCountAtSlice;
 
 		private bool m_Queued;
 
 		public static void Slice()
 		{
-			lock ( m_Queue )
-			{
-				m_QueueCountAtSlice = m_Queue.Count;
+			int count = 0;
 
-				int index = 0;
+			while (count++ < m_BreakCount) {
 
-				while ( index < m_BreakCount && m_Queue.Count != 0 )
-				{
-					Timer t = m_Queue.Dequeue();
-					TimerProfile prof = t.GetProfile();
+				if (!m_Queue.TryDequeue(out Timer t)) {
+					break;
+				}
 
-					if ( prof != null ) {
-						prof.Start();
-					}
+				TimerProfile prof = t.GetProfile();
 
-					t.OnTick();
-					t.m_Queued = false;
-					++index;
+				if ( prof != null ) {
+					prof.Start();
+				}
 
-					if ( prof != null ) {
-						prof.Finish();
-					}
+				t.OnTick();
+				t.m_Queued = false;
+
+				if ( prof != null ) {
+					prof.Finish();
 				}
 			}
 		}
