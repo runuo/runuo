@@ -380,14 +380,17 @@ namespace Server.Mobiles
 						{
 							e.Handled = true;
 
-							if ( AccountGold.Enabled )
-								break;
-
 							if ( e.Mobile.Criminal )
 							{
 								this.Say( 500389 ); // I will not do business with a criminal!
 								break;
 							}
+							
+							if (AccountGold.Enabled && e.Mobile.Account != null)
+								{
+									this.Say("We no longer offer a checking service.");
+									break;
+								}
 
 							string[] split = e.Speech.Split( ' ' );
 

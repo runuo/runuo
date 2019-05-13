@@ -9,6 +9,7 @@ using Server.Misc;
 using Server.Engines.BulkOrders;
 using Server.Regions;
 using Server.Factions;
+using Server.Accounting;
 
 namespace Server.Mobiles
 {
@@ -1009,8 +1010,29 @@ namespace Server.Mobiles
 			{
 				if ( cont.ConsumeTotal( typeof( Gold ), totalCost ) )
 					bought = true;
-				else if ( totalCost < 2000 )
-					SayTo( buyer, 500192 ); // Begging thy pardon, but thou canst not afford that.
+			}
+			if (!bought)
+			{
+				if (totalCost <= Int32.MaxValue)
+				{
+					if (Banker.Withdraw(buyer, (int)totalCost))
+					{
+						bought = true;
+						fromBank = true;
+					}
+				}
+				else if (buyer.Account != null && AccountGold.Enabled)
+				{
+					if (buyer.Account.WithdrawCurrency(totalCost / AccountGold.CurrencyThreshold))
+					{
+						bought = true;
+						fromBank = true;
+					}
+					else if ( totalCost < 100 )
+					{
+					SayTo( buyer, 500191 ); //Begging thy pardon, but thy bank account lacks these funds.
+					}
+				}
 			}
 
 			if ( !bought && totalCost >= 2000 )
@@ -1023,7 +1045,7 @@ namespace Server.Mobiles
 				}
 				else
 				{
-					SayTo( buyer, 500191 ); //Begging thy pardon, but thy bank account lacks these funds.
+					SayTo( buyer, 500192 ); // Begging thy pardon, but thou canst not afford that.
 				}
 			}
 

@@ -209,12 +209,14 @@ namespace Server.Misc
 				}
 				else
 				{
+					Utility.PushColor(ConsoleColor.DarkRed);
 					Console.WriteLine( "Client: {0}: Deleting character {1} (0x{2:X})", state, index, m.Serial.Value );
 
 					acct.Comments.Add( new AccountComment( "System", String.Format( "Character #{0} {1} deleted by {2}", index + 1, m, state ) ) );
 
 					m.Delete();
 					state.Send( new CharacterListUpdate( acct ) );
+					Utility.PopColor();
 				}
 			}
 		}
@@ -285,8 +287,10 @@ namespace Server.Misc
 
 			if ( !CanCreate( state.Address ) )
 			{
+				Utility.PushColor(ConsoleColor.Red);
 				Console.WriteLine( "Login: {0}: Account '{1}' not created, ip already has {2} account{3}.", state, un, MaxAccountsPerIP, MaxAccountsPerIP == 1 ? "" : "s" );
 				return null;
+				Utility.PopColor();
 			}
 
 			Console.WriteLine( "Login: {0}: Creating new account '{1}'", state, un );
@@ -329,8 +333,10 @@ namespace Server.Misc
 				}
 				else
 				{
+					Utility.PushColor(ConsoleColor.Red);
 					Console.WriteLine( "Login: {0}: Invalid username '{1}'", e.State, un );
 					e.RejectReason = ALRReason.Invalid;
+					Utility.PopColor();
 				}
 			}
 			else if ( !acct.HasAccess( e.State ) )
@@ -340,19 +346,25 @@ namespace Server.Misc
 			}
 			else if ( !acct.CheckPassword( pw ) )
 			{
+				Utility.PushColor(ConsoleColor.Red);
 				Console.WriteLine( "Login: {0}: Invalid password for '{1}'", e.State, un );
 				e.RejectReason = ALRReason.BadPass;
+				Utility.PopColor();
 			}
 			else if ( acct.Banned )
 			{
+				Utility.PushColor(ConsoleColor.Red);
 				Console.WriteLine( "Login: {0}: Banned account '{1}'", e.State, un );
 				e.RejectReason = ALRReason.Blocked;
+				Utility.PopColor();
 			}
 			else
 			{
+				Utility.PushColor(ConsoleColor.Green);
 				Console.WriteLine( "Login: {0}: Valid credentials for '{1}'", e.State, un );
 				e.State.Account = acct;
 				e.Accepted = true;
+				Utility.PopColor();
 
 				acct.LogAccess( e.State );
 			}
@@ -386,27 +398,35 @@ namespace Server.Misc
 			}
 			else if ( !acct.HasAccess( e.State ) )
 			{
+				Utility.PushColor(ConsoleColor.Red);
 				Console.WriteLine( "Login: {0}: Access denied for '{1}'", e.State, un );
 				e.Accepted = false;
+				Utility.PopColor();
 			}
 			else if ( !acct.CheckPassword( pw ) )
 			{
+				Utility.PushColor(ConsoleColor.Red);
 				Console.WriteLine( "Login: {0}: Invalid password for '{1}'", e.State, un );
 				e.Accepted = false;
+				Utility.PopColor();
 			}
 			else if ( acct.Banned )
 			{
+				Utility.PushColor(ConsoleColor.Red);
 				Console.WriteLine( "Login: {0}: Banned account '{1}'", e.State, un );
 				e.Accepted = false;
+				Utility.PopColor();
 			}
 			else
 			{
 				acct.LogAccess( e.State );
 
+				Utility.PushColor(ConsoleColor.Cyan);
 				Console.WriteLine( "Login: {0}: Account '{1}' at character list", e.State, un );
 				e.State.Account = acct;
 				e.Accepted = true;
 				e.CityInfo = StartingCities;
+				Utility.PopColor();
 			}
 
 			if ( !e.Accepted )

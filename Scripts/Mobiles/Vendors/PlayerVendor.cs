@@ -10,6 +10,7 @@ using Server.Targeting;
 using Server.Misc;
 using Server.Multis;
 using Server.ContextMenus;
+using Server.Accounting;
 
 namespace Server.Mobiles
 {
@@ -680,8 +681,17 @@ namespace Server.Mobiles
 						if ( House.MovingCrate == null )
 							House.MovingCrate = new MovingCrate( House );
 
-						if ( HoldGold > 0 )
-							Banker.Deposit( House.MovingCrate, HoldGold );
+						if (HoldGold > 0)
+                        {
+                            if (AccountGold.Enabled)
+                            {
+                                Banker.Deposit(Owner, HoldGold);
+                            }
+                            else
+                            {
+                                Banker.Deposit(House.MovingCrate, HoldGold);
+                            }
+                        }
 
 						foreach ( Item item in list )
 						{
@@ -705,9 +715,18 @@ namespace Server.Mobiles
 				{
 					Container backpack = new Backpack();
 
-					if ( HoldGold > 0 )
-						Banker.Deposit( backpack, HoldGold );
-
+					if (HoldGold > 0)
+                    {
+                        if (AccountGold.Enabled && Owner != null)
+                        {
+                            Banker.Deposit(Owner, HoldGold);
+                        }
+                        else
+                        {
+                            Banker.Deposit(backpack, HoldGold);
+                        }
+                    }
+					
 					foreach ( Item item in list )
 					{
 						backpack.DropItem( item );

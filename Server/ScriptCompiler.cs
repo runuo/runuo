@@ -157,12 +157,16 @@ namespace Server
 
 		public static bool CompileCSScripts( bool debug, bool cache, out Assembly assembly )
 		{
+		    Utility.PushColor(ConsoleColor.Green);
 			Console.Write( "Scripts: Compiling C# scripts..." );
+			Utility.PopColor();
 			string[] files = GetScripts( "*.cs" );
 
 			if( files.Length == 0 )
 			{
+				Utility.PushColor(ConsoleColor.Red);
 				Console.WriteLine( "no files found." );
+				Utility.PopColor();
 				assembly = null;
 				return true;
 			}
@@ -203,7 +207,9 @@ namespace Server
 											m_AdditionalReferences.Add( assembly.Location );
 										}
 
+										Utility.PushColor(ConsoleColor.Green);
 										Console.WriteLine( "done (cached)" );
+										Utility.PopColor();
 
 										return true;
 									}
@@ -439,7 +445,9 @@ namespace Server
 				if( errors.Count > 0 )
 					Console.WriteLine( "failed ({0} errors, {1} warnings)", errors.Count, warnings.Count );
 				else
+				    Utility.PushColor(ConsoleColor.Green);
 					Console.WriteLine( "done ({0} errors, {1} warnings)", errors.Count, warnings.Count );
+					Utility.PopColor();
 
 				string scriptRoot = Path.GetFullPath( Path.Combine( Core.BaseDirectory, "Scripts" + Path.DirectorySeparatorChar ) );
 				Uri scriptRootUri = new Uri( scriptRoot );
@@ -496,7 +504,9 @@ namespace Server
 			}
 			else
 			{
+				Utility.PushColor(ConsoleColor.Green);
 				Console.WriteLine( "done (0 errors, 0 warnings)" );
+				Utility.PopColor();
 			}
 		}
 
@@ -579,7 +589,9 @@ namespace Server
 			}
 			else
 			{
+				Utility.PushColor(ConsoleColor.DarkRed);
 				Console.WriteLine( "Scripts: Skipping VB.NET Scripts...done (use -vb to enable)");
+				Utility.PopColor();
 			}
 
 			if( assemblies.Count == 0 )
@@ -589,7 +601,9 @@ namespace Server
 
 			m_Assemblies = assemblies.ToArray();
 
+			Utility.PushColor(ConsoleColor.Yellow);
 			Console.Write( "Scripts: Verifying..." );
+			Utility.PopColor();
 
 			Stopwatch watch = Stopwatch.StartNew();
 			
@@ -597,7 +611,10 @@ namespace Server
 			
 			watch.Stop();
 
-			Console.WriteLine("done ({0} items, {1} mobiles) ({2:F2} seconds)", Core.ScriptItems, Core.ScriptMobiles, watch.Elapsed.TotalSeconds);
+			Utility.PushColor(ConsoleColor.Green);
+			Console.WriteLine(
+			"done ({0} items, {1} mobiles) ({2:F2} seconds)", Core.ScriptItems, Core.ScriptMobiles, watch.Elapsed.TotalSeconds);
+			Utility.PopColor();
 
 			return true;
 		}

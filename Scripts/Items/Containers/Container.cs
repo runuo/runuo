@@ -4,6 +4,8 @@ using Server.Multis;
 using Server.Mobiles;
 using Server.Network;
 using Server.ContextMenus;
+using Server.Accounting;
+using System.Linq;
 
 namespace Server.Items
 {
@@ -135,7 +137,33 @@ namespace Server.Items
 		{
 			DisplayTo( from );
 		}
+		
+		public void CheckBank(BankBox bank, Mobile from)
+        {
+            if (AccountGold.Enabled && bank.Owner == from && from.Account != null)
+            {
+                List<BankCheck> checks = new List<BankCheck>(Items.OfType<BankCheck>());
 
+                foreach (BankCheck check in checks)
+                {
+                    if (from.Account.DepositGold(check.Worth))
+                    {
+                        from.SendLocalizedMessage(1042672, true, check.Worth.ToString("#,0"));
+                        check.Delete();
+                    }
+                    else
+                    {
+                        from.AddToBackpack(check);
+                    }
+                }
+
+                checks.Clear();
+                checks.TrimExcess();
+
+                UpdateTotals();
+            }
+        }
+		
 		public BaseContainer( Serial serial ) : base( serial )
 		{
 		}

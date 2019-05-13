@@ -864,7 +864,9 @@ namespace Server
 				return;
 			}
 
+			Utility.PushColor(ConsoleColor.Yellow);
 			Console.Write( "Regions: Loading..." );
+			Utility.PopColor();
 
 			XmlDocument doc = new XmlDocument();
 			doc.Load( System.IO.Path.Combine( Core.BaseDirectory, "Data/Regions.xml" ) );
@@ -890,7 +892,9 @@ namespace Server
 				}
 			}
 
+			Utility.PushColor(ConsoleColor.Green);
 			Console.WriteLine( "done" );
+			Utility.PopColor();
 		}
 
 		private static void LoadRegions( XmlElement xml, Map map, Region parent )

@@ -7,6 +7,7 @@ using Server.Misc;
 using Server.Multis;
 using Server.ContextMenus;
 using Server.Prompts;
+using Server.Accounting;
 
 namespace Server.Mobiles
 {
@@ -190,8 +191,16 @@ namespace Server.Mobiles
 				if ( House.MovingCrate == null )
 					House.MovingCrate = new MovingCrate( House );
 
-				Banker.Deposit( House.MovingCrate, RentalGold );
-				RentalGold = 0;
+				if (AccountGold.Enabled && Landlord != null)
+                {
+                    Banker.Deposit(Landlord, RentalGold);
+                }
+                else
+                {
+                    Banker.Deposit(House.MovingCrate, RentalGold);
+                }
+
+                RentalGold = 0;
 			}
 
 			base.Destroy( toBackpack );

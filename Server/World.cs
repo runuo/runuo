@@ -341,7 +341,9 @@ namespace Server {
 			m_Loaded = true;
 			m_LoadingType = null;
 
+			Utility.PushColor(ConsoleColor.Yellow);
 			Console.Write( "World: Loading..." );
+			Utility.PopColor();
 
 			Stopwatch watch = Stopwatch.StartNew();
 
@@ -660,7 +662,10 @@ namespace Server {
 
 			watch.Stop();
 
-			Console.WriteLine( "done ({1} items, {2} mobiles) ({0:F2} seconds)", watch.Elapsed.TotalSeconds, m_Items.Count, m_Mobiles.Count );
+			Utility.PushColor(ConsoleColor.Green);
+			Console.WriteLine(
+			"done ({1} items, {2} mobiles) ({0:F2} seconds)", watch.Elapsed.TotalSeconds, m_Items.Count, m_Mobiles.Count );
+			Utility.PopColor();
 		}
 
 		private static void ProcessSafetyQueues() {
@@ -770,9 +775,13 @@ namespace Server {
 				Broadcast( 0x35, true, "The world is saving, please wait." );
 
 			SaveStrategy strategy = SaveStrategy.Acquire();
+			Utility.PushColor(ConsoleColor.Cyan);
 			Console.WriteLine( "Core: Using {0} save strategy", strategy.Name.ToLowerInvariant() );
+			Utility.PopColor();
 
+			Utility.PushColor(ConsoleColor.Yellow);
 			Console.Write( "World: Saving..." );
+			Utility.PopColor();
 
 			Stopwatch watch = Stopwatch.StartNew();
 
@@ -805,7 +814,9 @@ namespace Server {
 
 			strategy.ProcessDecay();
 
+			Utility.PushColor(ConsoleColor.DarkYellow);
 			Console.WriteLine( "Save done in {0:F2} seconds.", watch.Elapsed.TotalSeconds );
+			Utility.PopColor();
 
 			if ( message )
 				Broadcast( 0x35, true, "World save complete. The entire process took {0:F1} seconds.", watch.Elapsed.TotalSeconds );
