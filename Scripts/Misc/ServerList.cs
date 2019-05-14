@@ -85,15 +85,25 @@ namespace Server.Misc
 		}
 
 		private static void AutoDetection()
-		{
-			if ( !HasPublicIPAddress() ) {
-				Console.Write( "ServerList: Auto-detecting public IP address..." );
+		{			
+			if (!HasPublicIPAddress())
+			{
+				Utility.PushColor(ConsoleColor.Yellow);
+				Console.Write("ServerList: Auto-detecting public IP address...");
+				Utility.PopColor();
 				m_PublicAddress = FindPublicAddress();
 
-				if ( m_PublicAddress != null )
-					Console.WriteLine( "done ({0})", m_PublicAddress.ToString() );
+				if (m_PublicAddress != null)
+				{
+					Utility.PushColor(ConsoleColor.Green);
+					Console.WriteLine("done ({0})", m_PublicAddress.ToString());
+					Utility.PopColor();
+				}
+
 				else
+					Utility.PushColor(ConsoleColor.Red);
 					Console.WriteLine( "failed" );
+					Utility.PopColor();				
 			}
 		}
 
