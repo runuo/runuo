@@ -100,8 +100,12 @@ namespace Server.Misc
 
 			if ( map == null )
 				return false;
+			
+			if ( map == Map.Felucca || map == Map.Trammel )
+				if ( from.X >= 5189 && from.Y >= 696 && from.X <= 5192 && from.Y <= 698 )
+					return false;
 
-			object surface = map.GetTopSurface( new Point3D( from.X, from.Y, from.Z + 1 );
+			object surface = map.GetTopSurface( from.Location );
 
 			if ( surface is LandTile ) {
 				int id = ((LandTile)surface).ID;
