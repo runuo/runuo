@@ -101,7 +101,7 @@ namespace Server.Misc
 			if ( map == null )
 				return false;
 
-			object surface = map.GetTopSurface( from.Location );
+			object surface = map.GetTopSurface( new Point3D( from.X, from.Y, from.Z + 1 );
 
 			if ( surface is LandTile ) {
 				int id = ((LandTile)surface).ID;
