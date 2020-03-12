@@ -36,6 +36,8 @@ namespace Server
 	{
 		protected GenericReader() { }
 
+		public abstract int PeekInt();
+
 		public abstract string ReadString();
 		public abstract DateTime ReadDateTime();
 		public abstract DateTimeOffset ReadDateTimeOffset();
@@ -634,6 +636,7 @@ namespace Server
 		{
 			WriteMobileList( list, false );
 		}
+
 		public override void WriteMobileList( ArrayList list, bool tidy )
 		{
 			if( tidy )
@@ -657,6 +660,7 @@ namespace Server
 		{
 			WriteItemList( list, false );
 		}
+
 		public override void WriteItemList( ArrayList list, bool tidy )
 		{
 			if( tidy )
@@ -680,6 +684,7 @@ namespace Server
 		{
 			WriteGuildList( list, false );
 		}
+
 		public override void WriteGuildList( ArrayList list, bool tidy )
 		{
 			if( tidy )
@@ -703,6 +708,7 @@ namespace Server
 		{
 			Write( list, false );
 		}
+
 		public override void Write( List<Item> list, bool tidy )
 		{
 			if( tidy )
@@ -726,6 +732,7 @@ namespace Server
 		{
 			WriteItemList<T>( list, false );
 		}
+
 		public override void WriteItemList<T>( List<T> list, bool tidy )
 		{
 			if( tidy )
@@ -749,6 +756,7 @@ namespace Server
 		{
 			Write( set, false );
 		}
+
 		public override void Write( HashSet<Item> set, bool tidy )
 		{
 			if( tidy )
@@ -768,6 +776,7 @@ namespace Server
 		{
 			WriteItemSet( set, false );
 		}
+
 		public override void WriteItemSet<T>( HashSet<T> set, bool tidy ) 
 		{
 			if( tidy )
@@ -787,6 +796,7 @@ namespace Server
 		{
 			Write( list, false );
 		}
+
 		public override void Write( List<Mobile> list, bool tidy )
 		{
 			if( tidy )
@@ -810,6 +820,7 @@ namespace Server
 		{
 			WriteMobileList<T>( list, false );
 		}
+
 		public override void WriteMobileList<T>( List<T> list, bool tidy )
 		{
 			if( tidy )
@@ -833,6 +844,7 @@ namespace Server
 		{
 			Write( set, false );
 		}
+
 		public override void Write( HashSet<Mobile> set, bool tidy )
 		{
 			if( tidy )
@@ -852,6 +864,7 @@ namespace Server
 		{
 			WriteMobileSet( set, false );
 		}
+
 		public override void WriteMobileSet<T>( HashSet<T> set, bool tidy )
 		{
 			if( tidy )
@@ -871,6 +884,7 @@ namespace Server
 		{
 			Write( list, false );
 		}
+
 		public override void Write( List<BaseGuild> list, bool tidy )
 		{
 			if( tidy )
@@ -894,6 +908,7 @@ namespace Server
 		{
 			WriteGuildList<T>( list, false );
 		}
+
 		public override void WriteGuildList<T>( List<T> list, bool tidy )
 		{
 			if( tidy )
@@ -917,6 +932,7 @@ namespace Server
 		{
 			Write( set, false );
 		}
+
 		public override void Write( HashSet<BaseGuild> set, bool tidy )
 		{
 			if( tidy )
@@ -936,6 +952,7 @@ namespace Server
 		{
 			WriteGuildSet( set, false );
 		}
+
 		public override void WriteGuildSet<T>( HashSet<T> set, bool tidy )
 		{
 			if( tidy )
@@ -974,6 +991,15 @@ namespace Server
 		public long Seek( long offset, SeekOrigin origin )
 		{
 			return m_File.BaseStream.Seek( offset, origin );
+		}
+
+		public override int PeekInt()
+		{
+			var peek = m_File.ReadInt32();
+
+			m_File.BaseStream.Seek( -4, SeekOrigin.Current );
+
+			return peek;
 		}
 
 		public override string ReadString()
@@ -1768,6 +1794,7 @@ namespace Server
 		{
 			WriteMobileList( list, false );
 		}
+
 		public override void WriteMobileList( ArrayList list, bool tidy )
 		{
 			if( tidy )
@@ -1791,6 +1818,7 @@ namespace Server
 		{
 			WriteItemList( list, false );
 		}
+
 		public override void WriteItemList( ArrayList list, bool tidy )
 		{
 			if( tidy )
@@ -1814,6 +1842,7 @@ namespace Server
 		{
 			WriteGuildList( list, false );
 		}
+
 		public override void WriteGuildList( ArrayList list, bool tidy )
 		{
 			if( tidy )
@@ -1837,6 +1866,7 @@ namespace Server
 		{
 			Write( list, false );
 		}
+
 		public override void Write( List<Item> list, bool tidy )
 		{
 			if( tidy )
@@ -1883,6 +1913,7 @@ namespace Server
 		{
 			Write( set, false );
 		}
+
 		public override void Write( HashSet<Item> set, bool tidy )
 		{
 			if( tidy )
@@ -1902,6 +1933,7 @@ namespace Server
 		{
 			WriteItemSet( set, false );
 		}
+
 		public override void WriteItemSet<T>( HashSet<T> set, bool tidy )
 		{
 			if( tidy )
@@ -1921,6 +1953,7 @@ namespace Server
 		{
 			Write( list, false );
 		}
+
 		public override void Write( List<Mobile> list, bool tidy )
 		{
 			if( tidy )
@@ -1944,6 +1977,7 @@ namespace Server
 		{
 			WriteMobileList<T>( list, false );
 		}
+
 		public override void WriteMobileList<T>( List<T> list, bool tidy )
 		{
 			if( tidy )
@@ -1967,6 +2001,7 @@ namespace Server
 		{
 			Write( set, false );
 		}
+
 		public override void Write( HashSet<Mobile> set, bool tidy )
 		{
 			if( tidy )
@@ -1986,6 +2021,7 @@ namespace Server
 		{
 			WriteMobileSet( set, false );
 		}
+
 		public override void WriteMobileSet<T>( HashSet<T> set, bool tidy )
 		{
 			if( tidy )
@@ -2005,6 +2041,7 @@ namespace Server
 		{
 			Write( list, false );
 		}
+
 		public override void Write( List<BaseGuild> list, bool tidy )
 		{
 			if( tidy )
@@ -2028,6 +2065,7 @@ namespace Server
 		{
 			WriteGuildList<T>( list, false );
 		}
+
 		public override void WriteGuildList<T>( List<T> list, bool tidy )
 		{
 			if( tidy )
@@ -2051,6 +2089,7 @@ namespace Server
 		{
 			Write( set, false );
 		}
+
 		public override void Write( HashSet<BaseGuild> set, bool tidy )
 		{
 			if( tidy )
@@ -2070,6 +2109,7 @@ namespace Server
 		{
 			WriteGuildSet( set, false );
 		}
+
 		public override void WriteGuildSet<T>( HashSet<T> set, bool tidy )
 		{
 			if( tidy )

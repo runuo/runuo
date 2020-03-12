@@ -4478,7 +4478,7 @@ namespace Server
 
 					foreach(NetState ns in eable) {
 						if (ns.StygianAbyss)
-								continue;
+							continue;
 
 						if( ns.Mobile != this && ns.Mobile.CanSee( this ) && ns.Mobile.InLOS( this ) && ns.Mobile.CanSee( root ) ) {
 							if (p == null) {
@@ -8129,7 +8129,7 @@ namespace Server
 								}
 							}
 
-							Timer.DelayCall( TimeSpan.Zero, delegate { item.Delete(); } );
+							Timer.DelayCall( item.Delete );
 						}
 					}
 
@@ -9662,6 +9662,7 @@ namespace Server
 		{
 			return true;
 		}
+
 		public bool OpenTrade(Mobile from)
 		{
 			return OpenTrade(from, null);

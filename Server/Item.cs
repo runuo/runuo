@@ -3820,7 +3820,7 @@ namespace Server
 
 		public virtual bool OnDroppedToMobile( Mobile from, Mobile target )
 		{
-			if( Nontransferable && from.Player )
+			if( Nontransferable && from.Player && from.AccessLevel < AccessLevel.GameMaster )
 			{
 				HandleInvalidTransfer( from );
 				return false;
@@ -3853,7 +3853,7 @@ namespace Server
 			{
 				return false;
 			}
-			else if( Nontransferable && from.Player && target != from.Backpack )
+			else if( Nontransferable && from.Player && target != from.Backpack && from.AccessLevel < AccessLevel.GameMaster )
 			{
 				HandleInvalidTransfer( from );
 				return false;
@@ -3874,7 +3874,7 @@ namespace Server
 				return false;
 			else if ( !from.OnDroppedItemOnto( this, target ) )
 				return false;
-			else if( Nontransferable && from.Player && target != from.Backpack )
+			else if( Nontransferable && from.Player && target != from.Backpack && from.AccessLevel < AccessLevel.GameMaster )
 			{
 				HandleInvalidTransfer( from );
 				return false;
@@ -3908,7 +3908,7 @@ namespace Server
 
 		public virtual bool OnDroppedToWorld( Mobile from, Point3D p )
 		{
-			if( Nontransferable && from.Player )
+			if( Nontransferable && from.Player && from.AccessLevel < AccessLevel.GameMaster )
 			{
 				HandleInvalidTransfer( from );
 				return false;

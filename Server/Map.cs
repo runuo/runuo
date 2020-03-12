@@ -116,7 +116,7 @@
  * Map property from the Gump; The list of names may not be what you expect,
  * in which case, enabling this update will fix it.
  */
-//#define Map_InternalProtection
+#define Map_InternalProtection
 
 #endregion
 
