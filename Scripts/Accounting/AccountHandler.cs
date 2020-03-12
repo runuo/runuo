@@ -214,6 +214,7 @@ namespace Server.Misc
 					acct.Comments.Add( new AccountComment( "System", String.Format( "Character #{0} {1} deleted by {2}", index + 1, m, state ) ) );
 
 					m.Delete();
+
 					state.Send( new CharacterListUpdate( acct ) );
 				}
 			}
@@ -306,7 +307,7 @@ namespace Server.Misc
 				Console.WriteLine( "Login: {0}: Past IP limit threshold", e.State );
 
 				using ( StreamWriter op = new StreamWriter( "ipLimits.log", true ) )
-					op.WriteLine( "{0}\tPast IP limit threshold\t{1}", e.State, DateTime.UtcNow );
+					op.WriteLine( "{0}\tPast IP limit threshold\t{1}", e.State, DateTime.Now );
 
 				return;
 			}
@@ -370,7 +371,7 @@ namespace Server.Misc
 				Console.WriteLine( "Login: {0}: Past IP limit threshold", e.State );
 
 				using ( StreamWriter op = new StreamWriter( "ipLimits.log", true ) )
-					op.WriteLine( "{0}\tPast IP limit threshold\t{1}", e.State, DateTime.UtcNow );
+					op.WriteLine( "{0}\tPast IP limit threshold\t{1}", e.State, DateTime.Now );
 
 				return;
 			}

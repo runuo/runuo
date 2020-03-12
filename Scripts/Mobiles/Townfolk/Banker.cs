@@ -63,11 +63,13 @@ namespace Server.Mobiles
 			if (AccountGold.Enabled && m.Account != null)
 			{
 				int goldStub;
+
 				m.Account.GetGoldBalance(out goldStub, out balance);
 
 				if (balance > Int32.MaxValue)
 				{
 					gold = checks = new Item[0];
+
 					return Int32.MaxValue;
 				}
 			}
@@ -182,6 +184,7 @@ namespace Server.Mobiles
 				else
 				{
 					item.Delete();
+
 					foreach (var curItem in items)
 					{
 						curItem.Delete();
@@ -210,6 +213,7 @@ namespace Server.Mobiles
 			}
 
 			var amountLeft = amount;
+
 			while (amountLeft > 0)
 			{
 				Item item;

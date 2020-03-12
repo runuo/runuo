@@ -77,7 +77,7 @@ namespace Server.Mobiles
 		}
 
 		#region Faction
-		public virtual int GetPriceScalar()
+		public virtual int GetPriceScalar( Mobile buyer )
 		{
 			Town town = Town.FromRegion( this.Region );
 
@@ -87,9 +87,9 @@ namespace Server.Mobiles
 			return 100;
 		}
 
-		public void UpdateBuyInfo()
+		public void UpdateBuyInfo( Mobile buyer )
 		{
-			int priceScalar = GetPriceScalar();
+			int priceScalar = GetPriceScalar( buyer );
 
 			IBuyItemInfo[] buyinfo = (IBuyItemInfo[])m_ArmorBuyInfo.ToArray( typeof( IBuyItemInfo ) );
 
@@ -512,7 +512,7 @@ namespace Server.Mobiles
 		{
 			m_LastRestock = DateTime.UtcNow;
 
-			IBuyItemInfo[] buyInfo = this.GetBuyInfo();
+			IBuyItemInfo[] buyInfo = this.GetBuyInfo( );
 
 			foreach ( IBuyItemInfo bii in buyInfo )
 				bii.OnRestock();
@@ -537,7 +537,7 @@ namespace Server.Mobiles
 			if ( DateTime.UtcNow - m_LastRestock > RestockDelay )
 				Restock();
 
-			UpdateBuyInfo();
+			UpdateBuyInfo( from );
 
 			int count = 0;
 			List<BuyItemState> list;
@@ -710,7 +710,7 @@ namespace Server.Mobiles
 			{
 				IShopSellInfo[] info = GetSellInfo();
 
-				Dictionary<Item, SellItemState> table = new Dictionary<Item, SellItemState>();
+				List<SellItemState> table = new List<SellItemState>();
 
 				foreach ( IShopSellInfo ssi in info )
 				{
@@ -721,8 +721,13 @@ namespace Server.Mobiles
 						if ( item is Container && ( (Container)item ).Items.Count != 0 )
 							continue;
 
+						LockableContainer parentcon = item.Parent as LockableContainer;
+
+						if ( parentcon != null && parentcon.Locked )
+							continue;
+
 						if ( item.IsStandardLoot() && item.Movable && ssi.IsSellable( item ) )
-							table[item] = new SellItemState( item, ssi.GetSellPriceFor( item ), ssi.GetNameFor( item ) );
+							table.Add( new SellItemState( item, ssi.GetSellPriceFor( item ), ssi.GetNameFor( item ) ) );
 					}
 				}
 
@@ -730,7 +735,7 @@ namespace Server.Mobiles
 				{
 					SendPacksTo( from );
 
-					from.Send( new VendorSellList( this, table.Values ) );
+					from.Send( new VendorSellList( this, table ) );
 				}
 				else
 				{
@@ -928,7 +933,7 @@ namespace Server.Mobiles
 				return false;
 			}
 
-			UpdateBuyInfo();
+			UpdateBuyInfo( buyer );
 
 			IBuyItemInfo[] buyInfo = this.GetBuyInfo();
 			IShopSellInfo[] info = GetSellInfo();
@@ -1282,8 +1287,6 @@ namespace Server.Mobiles
 						seller.SendGump( new SmallBODAcceptGump( seller, (SmallBOD)bulkOrder ) );
 				}
 			}
-			//no cliloc for this?
-			//SayTo( seller, true, "Thank you! I bought {0} item{1}. Here is your {2}gp.", Sold, (Sold > 1 ? "s" : ""), GiveGold );
 
 			return true;
 		}
@@ -1389,7 +1392,7 @@ namespace Server.Mobiles
 			if ( IsParagon )
 				IsParagon = false;
 
-			Timer.DelayCall( TimeSpan.Zero, new TimerCallback( CheckMorph ) );
+			Timer.DelayCall( CheckMorph );
 		}
 
 		public override void AddCustomContextEntries( Mobile from, List<ContextMenuEntry> list )
@@ -1409,12 +1412,12 @@ namespace Server.Mobiles
 			base.AddCustomContextEntries( from, list );
 		}
 
-		public virtual IShopSellInfo[] GetSellInfo()
+		public virtual IShopSellInfo[] GetSellInfo( )
 		{
 			return (IShopSellInfo[])m_ArmorSellInfo.ToArray( typeof( IShopSellInfo ) );
 		}
 
-		public virtual IBuyItemInfo[] GetBuyInfo()
+		public virtual IBuyItemInfo[] GetBuyInfo( )
 		{
 			return (IBuyItemInfo[])m_ArmorBuyInfo.ToArray( typeof( IBuyItemInfo ) );
 		}

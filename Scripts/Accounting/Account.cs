@@ -763,6 +763,7 @@ namespace Server.Accounting
 		public Account( XmlElement node )
 		{
 			m_Username = Utility.GetText( node["username"], "empty" );
+			m_Email = Utility.GetText( node["email"], "none" );
 
 			string plainPassword = Utility.GetText( node["password"], null );
 			string cryptPassword = Utility.GetText( node["cryptPassword"], null );
@@ -1127,6 +1128,10 @@ namespace Server.Accounting
 			xml.WriteStartElement( "username" );
 			xml.WriteString( m_Username );
 			xml.WriteEndElement();
+
+			xml.WriteStartElement( "email" );
+			xml.WriteString( m_Email );
+            xml.WriteEndElement();
 
 			if ( m_PlainPassword != null )
 			{
