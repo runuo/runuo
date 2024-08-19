@@ -93,11 +93,11 @@ namespace Server.Spells.Seventh
 					{
 						Mobile m = targets[i];
 
-						toDeal  = damage;
+						toDeal = damage;
 
 						if ( !Core.AOS && CheckResisted( m ) )
 						{
-							damage *= 0.5;
+							toDeal *= 0.5;
 
 							m.SendLocalizedMessage( 501783 ); // You feel yourself resisting magical energy.
 						}
