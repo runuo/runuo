@@ -1,0 +1,43 @@
+FROM ubuntu:18.04 AS builder
+
+RUN apt-get update -y \
+&&apt-get install -y sudo busybox git wget unzip dos2unix zlib1g zlib1g-dbg zlib1g-dev \
+&&DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata \
+&&apt install -y mono-complete
+
+RUN wget https://github.com/runuo/runuo/archive/refs/tags/v2.7.tar.gz -O /v2.7.tar.gz\
+&&wget -q https://github.com/runuo/runuo/files/5899868/Server.zip -O /Server.zip \
+&&wget -q https://github.com/nerun/runuo-nerun-distro/releases/download/153/NerunsDistro-r153.zip -O /NerunsDistro-r153.zip \
+&&tar -xzf /v2.7.tar.gz \
+&&unzip -qq -o /Server.zip -d /runuo-2.7/ \
+&&unzip -qq -o /NerunsDistro-r153.zip \
+&&cp -R /distro/Distro/* /runuo-2.7/ \
+&&cd /runuo-2.7 \
+&&mcs -optimize+ -unsafe -t:exe -out:RunUO.exe -win32icon:Server/runuo.ico -nowarn:219,414 -d:NEWTIMERS -d:NEWPARENT -d:MONO -reference:System.Drawing -recurse:Server/*.cs \
+&&find ./ -name *.cs -exec dos2unix '{}' \;
+
+FROM ubuntu:18.04
+RUN apt-get update -y \
+&&apt-get install -y sudo busybox git wget dos2unix unzip zlib1g zlib1g-dbg zlib1g-dev \
+&&DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata \
+&&apt install -y mono-complete
+
+RUN apt install -y software-properties-common sudo curl \
+&& add-apt-repository -y ppa:purplei2p/i2pd \
+&& apt-get update \
+&& apt-get install -y i2pd net-tools
+
+#&& ln -s /etc/i2pd/tunnels.conf /var/lib/i2pd/tunnels.conf \
+#&& chown -R i2pd:i2pd /var/lib/i2pd* \
+
+COPY --from=builder /runuo-2.7 /install
+
+#COPY ./i2pd.conf /etc/i2pd/
+COPY ./tunnels.conf /etc/i2pd/
+#COPY ssh.dat /var/lib/i2pd/
+
+COPY init.sh.runuo_i2p /init.sh
+
+USER root
+
+ENTRYPOINT [ "/init.sh" ]

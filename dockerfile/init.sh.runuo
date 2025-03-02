@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+echo "Starting services..."
+if [ ! -d /data ]; then 
+    echo 'Please mount /data volume.'
+    exit 0
+else
+    [ ! -d /data/runuo-2.7 ] && cp -R /install /data/runuo-2.7 || echo '/data/runuo-2.7 exist'
+fi
+
+cd /data/runuo-2.7/
+
+if [ -n "${UOPath}" ]; then
+    if [ ! -d "${UOPath}" ]; then
+	echo 'Please mount '$UOPath' volume.'
+	exit 0
+    else
+	sed -i 's/private static string CustomPath \= null/private static string CustomPath \= \@\"\'$UOPath'\"/g' /data/runuo-2.7/Scripts/Misc/DataPath.cs
+	echo 'UO Path added to '$UOPath
+    fi
+else
+    echo 'Please set UOPath environment variable and mount UOClient volume'
+    exit 0
+fi
+
+cMaxAcc=`grep 'private static int MaxAccountsPerIP =' Scripts/Accounting/AccountHandler.cs|sed 's/\;//g'|awk -F" " '{print $6}'`
+cAddr=`grep 'string Address = ' Scripts/Misc/ServerList.cs|sed 's/\;//g'|sed 's/\"//g'|awk -F" " '{print $7}'`
+
+if [ -z "${MaxAccPerIP}" ]; then
+    sed -i 's/MaxAccountsPerIP \= '$cMaxAcc'\;/MaxAccountsPerIP \= 1\;/g' /data/runuo-2.7/Scripts/Accounting/AccountHandler.cs
+else
+    sed -i "s/MaxAccountsPerIP \= "$cMaxAcc"\;/MaxAccountsPerIP \= 1\;/g" /data/runuo-2.7/Scripts/Accounting/AccountHandler.cs
+    sed -i "s/MaxAccountsPerIP \= 1\;/MaxAccountsPerIP \= "$MaxAccPerIP"\;/g" /data/runuo-2.7/Scripts/Accounting/AccountHandler.cs
+fi
+
+mono ./RunUO.exe
